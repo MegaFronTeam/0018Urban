@@ -8,10 +8,10 @@
 		--sTPB: #{rem(40)};
 	}
 	@include media-breakpoint-up(xl) {
-		--bs-body-font-size: #{$em-base};
+		--bs-body-font-size: calc(#{$em-base} + 0.125vw);
 	}
 	@media (min-width: 1537px) {
-		--bs-body-font-size: calc(#{$em-base} + 0.125vw);
+		--bs-body-font-size: 20px;
 	}
 
 	--sPT: #{rem(80 * 0.5)};
