@@ -507,9 +507,9 @@ iframe {
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-	--bs-gutter-x: #{rem(32)};
+	--bs-gutter-x: 32px;
 	@include media-breakpoint-up(xl) {
-		--bs-gutter-x: #{rem(48)};
+		--bs-gutter-x: 48px;
 	}
 }
 .container-fluid {
