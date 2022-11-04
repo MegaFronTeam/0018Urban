@@ -505,3 +505,10 @@ iframe {
 	--bs-btn-hover-color: #{$white};
 	--bs-btn-active-color: #{$white};
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	--bs-gutter-x: #{rem(32)};
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(48)};
+	}
+}
