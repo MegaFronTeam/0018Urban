@@ -1,4 +1,4 @@
-$rfs-rem-value: 16 !default;
+$rfs-rem-value: 18 !default;
 $em-base: $rfs-rem-value * 1px;
 $small: rem(14);
 $url: "../img/";
@@ -503,10 +503,10 @@ $border-color-translucent: rgba($black, 0.175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: 0.375rem !default;
-$border-radius-sm: 0.25rem !default;
-$border-radius-lg: 0.5rem !default;
-$border-radius-xl: 1rem !default;
+$border-radius: rem(16) !default;
+$border-radius-sm: rem(8) !default;
+$border-radius-lg: rem(32) !default;
+$border-radius-xl: rem(44) !default;
 $border-radius-2xl: 2rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -574,15 +574,15 @@ $font-weight-bolder: bolder !default;
 
 $font-weight-base: $font-weight-normal !default;
 
-$line-height-base: 1.5 !default;
+$line-height-base: 1.333 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
+$h1-font-size: rem(48) !default;
+$h2-font-size: rem(40) !default;
+$h3-font-size: rem(32) !default;
+$h4-font-size: rem(24) !default;
+$h5-font-size: rem(22) !default;
 $h6-font-size: $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -751,8 +751,8 @@ $input-btn-border-width: $border-width !default;
 // For each of Bootstrap's buttons, define text, background, and border color.
 
 // scss-docs-start btn-variables
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-y: rem(5) !default;
+$btn-padding-x: rem(8) !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
@@ -780,7 +780,7 @@ $btn-link-hover-color: var(--#{$prefix}link-hover-color) !default;
 $btn-link-disabled-color: $gray-600 !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius: $border-radius !default;
+$btn-border-radius: $border-radius-xl !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 
@@ -816,8 +816,8 @@ $form-label-color: null !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables
-$input-padding-y: $input-btn-padding-y !default;
-$input-padding-x: $input-btn-padding-x !default;
+$input-padding-y: rem(7) !default;
+$input-padding-x: rem(7) !default;
 $input-font-family: $input-btn-font-family !default;
 $input-font-size: $input-btn-font-size !default;
 $input-font-weight: $font-weight-base !default;
@@ -837,11 +837,11 @@ $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
 $input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
+$input-border-color: $secondary !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
-$input-border-radius: $border-radius !default;
+$input-border-radius: $border-radius-xl !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
