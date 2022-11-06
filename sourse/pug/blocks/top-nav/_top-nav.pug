@@ -20,14 +20,29 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
+		.container-fluid
+			+e.row.row
+				.col-auto
+					+e.logo(href='/')
+						+img('img/svg/logotype.svg')
+				.col
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							+menu-toggle()
 							+mnu()
-					
+				.col-auto
+					+e.controls
+						+e.btn
+							+icon('notifications')
+							+e.btn-count
+								span 86
+						+e.btn--person(href="#")
+							+icon('person')
+							+e.SPAN.btn-text 
+								span Алексей А.
+								span Участник
+							+e.btn-count
+								span 3
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav
