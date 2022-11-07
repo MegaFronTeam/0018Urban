@@ -38,9 +38,9 @@
 }
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: 2px;
+	--color: #{$body-color};
+	--position: calc(var(--h) * 2.5);
 	&.on span {
 		--color: transparent;
 	}
@@ -50,9 +50,9 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h) * 12);
+	height: calc(var(--h) * 20);
 	position: relative;
-	font-size: 32px;
+	font-size: 18px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -66,15 +66,6 @@
 		display: block;
 	}
 
-	span:before {
-		top: var(--position);
-		transform: rotate3d(0, 0, 1, var(--rotate, 0));
-	}
-
-	span:after {
-		bottom: var(--position);
-		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
-	}
 	span,
 	span:after,
 	span:before {
@@ -85,6 +76,17 @@
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		transform-origin: 50% 50%;
+	}
+	span:before {
+		top: var(--position);
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
+		background-color: #{$body-color};
+	}
+
+	span:after {
+		bottom: var(--position);
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
+		background-color: #{$body-color};
 	}
 }
 @include media-breakpoint-down(lg) {
