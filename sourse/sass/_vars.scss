@@ -413,7 +413,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
+$body-bg: $light !default;
 $body-color: $gray-900 !default;
 $body-text-align: null !default;
 
@@ -831,7 +831,7 @@ $input-padding-y-lg: $input-btn-padding-y-lg !default;
 $input-padding-x-lg: $input-btn-padding-x-lg !default;
 $input-font-size-lg: $input-btn-font-size-lg !default;
 
-$input-bg: $body-bg !default;
+$input-bg: $white !default;
 $input-disabled-color: null !default;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
