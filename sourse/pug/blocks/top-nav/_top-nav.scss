@@ -103,6 +103,7 @@
 
 		&:hover {
 			color: $link-hover-color;
+
 		}
 		&--person {
 			@include media-breakpoint-up(lg) {
