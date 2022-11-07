@@ -1,0 +1,240 @@
+// start .sProfile
+.sProfile {
+	display: flex;
+	max-width: 1050px;
+	margin: 0 auto;
+	padding-left: 16px;
+	border-radius: 8px;
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
+	--sTPB: #{rem(14)};
+	@include media-breakpoint-down(sm) {
+		flex-direction: column;
+		padding-right: 16px;
+	}
+	&__img-block {
+		width: 130px;
+		background-image: url('../img/svg/profile-dark-bg.svg');
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: auto 100%;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			height: 116px;
+			background-size: 100%;
+			border-radius: 8px;
+			background-image: url('../img/svg/profile-dark-hor.svg');
+		}
+		img {
+			position: relative;
+			width: 144px;
+			height: 144px;
+			border-radius: 50%;
+			right: -33%;
+   		top: 33px;
+			z-index: 10;
+			@include media-breakpoint-down(sm) {
+				right: auto;
+   			top: 19px;
+				left: calc(50% - 72px);
+			}
+		}
+	}
+	&__info-block {
+		position: relative;
+		left: -16px;
+		background: $white;
+		background-image: url('../img/svg/profile-bg.svg');
+		background-repeat: no-repeat;
+		background-position: top left;
+		background-size: auto 100%;
+		border-radius: 8px;
+		z-index: 2;
+		@include media-breakpoint-down(sm) {
+			top: -16px;
+			left: 0;
+			background-image: url('../img/svg/profile-bg-hor.svg');
+			background-size: 100%;
+		}
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	&__personal {
+		display: inline-block;
+		padding-left: 70px;
+		padding-right: 20px;
+		padding-top: 32px;
+		vertical-align: top;
+		width: 60%;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			padding: 80px 0 0;
+			text-align: center;
+		}
+	}
+	.section-title{
+		h1 {
+			font-weight: 700;
+			font-size: 32px;
+			line-height: 100%;
+			@include media-breakpoint-down(sm) {
+				font-size: 22px;
+				line-height: 109%;
+			}
+		}
+	}
+	&__age {
+		margin-bottom: 18px;
+		font-size: rem(14);
+		line-height: 114%;
+		color: $gray-600;
+	}
+	&__contacts-list {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 26px;
+		list-style-type: none;
+		@include media-breakpoint-down(sm) {
+			align-items: stretch;
+		}
+	}
+	&__contacts-item {
+		display: flex;
+		justify-content: center;
+		padding: 3px 8px;
+		margin-bottom: 8px;
+		min-width: 47%;
+		background: #4ED0C8;
+		border-radius: $border-radius;
+		& a {
+			color: $white;
+			font-size: rem(18);
+			line-height: 133%;
+		}
+	}
+	&__activity {
+		display: inline-block;
+		position: relative;
+		width: 39%;
+		padding-left: rem(30);
+		padding-right: rem(30);
+		padding-top: 35px;
+		@include media-breakpoint-down(sm) {
+			position: static;
+			width: 100%;
+			text-align: center;
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			left: 0;
+			top: 35px;
+			width: 1px;
+			height: calc(100% - 26px);
+			background-color: $gray-300;
+		}
+	}
+
+	&__like-btn {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		right: 0;
+    top: 10px;
+		padding: 0;
+		width: 24px;
+		height: 24px;
+		background-color: $white;
+		border: none;
+		@include media-breakpoint-up(lg) {
+			right: -15px;
+		}
+		@include media-breakpoint-down(sm) {
+			top: -92px;
+			right: 9px;
+		}
+		.icon {
+			display: inline-block;
+			height: 35px;
+    	width: 22px;
+			fill: #00A89E
+		}
+	}
+	&__status {
+		display: inline-block;
+		width: auto;
+		padding: 4px 15px;
+		margin-bottom: 12px;
+		font-weight: 700;
+		font-size: rem(14);
+		line-height: 114%;
+		color: #00A89E;
+		background: rgba(78, 208, 200, 0.15);
+		border-radius: $border-radius;
+	}
+
+	&__position {
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 111%;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sProfile
+.application {
+	padding-left: 70px;
+	padding-bottom: 25px;
+	&__row {
+		max-width: 732px;
+		padding: 16px 0 11px;
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-300;
+		}
+	}
+	&__title {
+		margin-bottom: 8px;
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 133%;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		list-style-type: none;
+	}
+	&__item {
+		padding: 4px 8px;
+		margin-bottom: 5px;
+		border: 1px solid $gray-100;
+		border-radius: $border-radius;
+		font-size: 14px;
+		line-height: 114%;
+		color: #00A89E;
+		background-color: $white;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__download-link {
+		display: flex;
+		align-items: center;
+		color: #00A89E;
+	}
+	.icon-download {
+		margin: 0 5px;
+		width: 20px;
+		height: 20px;
+	}
+}

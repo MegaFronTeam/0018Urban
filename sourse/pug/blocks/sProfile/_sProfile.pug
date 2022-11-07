@@ -1,0 +1,53 @@
+mixin sProfile(data)
+	// start sProfile
+	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
+		+e.img-block
+			+img('../img/profile-img.png').profile-img
+		+e.info-block.container-fluid
+			+e.personal
+				+b.section-title
+					h1 Летунова Александра Петровна
+				+e.age 16 июня 1990г.  ( 32 года )
+				+e.contacts-list.UL
+					+e.contacts-item.LI
+						a(href="mailto:Ivanov@yandex.ru") Ivanov@yandex.ru
+					+e.contacts-item.LI
+						a(href="tel:+79009009090") +7 (900)-900-90-90
+			+e.activity
+				+e.like-btn.BUTTON
+					+icon('like-btn')
+				+e.status В поиске работы
+				+e.position Директор по развитию
+				p Федеральное бюджетное учреждение &laquo;Агентство автомобильного транспорта&raquo;
+				+soc
+			+b.application
+				+e.row
+					+e.title Сообщества пользователя
+					+e.list.UL
+						+e.item.LI Название группы 1
+						+e.item.LI Название группы 2
+				+e.row
+					+e.title Год стажировки
+					+e.list.UL
+						+e.item.LI 2011-2012 г.
+				+e.row
+					+e.title Область экспертизы
+					+e.list.UL
+						+e.item.LI Поддержка и развитие креативных индустрий
+						+e.item.LI Область 2
+						+e.item.LI Область 1
+				+e.row
+					+e.title Интересы, хобби
+					+e.list.UL
+						+e.item.LI Спорт
+						+e.item.LI Интерес 2
+				+e.row
+					+e.title Чем могу быть полезен
+					p Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.
+				+e.row
+					+e.title Эссе
+					+e.download-link(href="#" download) Скачать файл
+						+icon('download') 
+				
+			+e.row.row
+	// end sProfile
