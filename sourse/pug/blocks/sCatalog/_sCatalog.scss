@@ -60,3 +60,14 @@
 		padding: rem(20);
 	}
 }
+
+.network-filter {
+	padding: 24px 0;
+	&__dropdown-btn {
+		padding: 8px;
+		min-width: 216px;
+		background: #FFFFFF;
+		border-radius: 44px;
+		border: 1px solid transparent;
+	}
+}

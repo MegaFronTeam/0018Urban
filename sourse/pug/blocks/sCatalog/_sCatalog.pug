@@ -11,6 +11,38 @@ mixin product-item(i, t, p ,pr)
 			+e.btn(href='#')
 	// /.product-item
 
+mixin networkFilter
+	// start filter
+	+b.network-filter
+		.row
+			.col-auto
+				+e.dropdown-item
+					+e.dropdown-btn.BUTTON Все интересы
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','Интерес 1','interest')
+							+in-c('checkbox','Интерес 2','interest')
+							+in-c('checkbox','Интерес 3','interest')
+			.col-auto
+				+input("Все ОИВ",'select', '')
+			.col-auto
+				+input("Все области экспертизы",'select', '')
+			.col-auto
+				+e.dropdown-item
+					+e.dropdown-btn.BUTTON Все годы стажировки
+					+e.dropdown-body
+						+e.dropdown-content
+							+in-c('checkbox','годы 1','years')
+							+in-c('checkbox','годы 2','years')
+							+in-c('checkbox','годы 3','years')
+			.col-auto
+				+e.radio-wrap
+					+in-c('radio','Трудоустроен','status')
+					+in-c('radio','В поиске работы','status')
+	// end filter
+
+
+
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)

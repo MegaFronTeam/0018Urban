@@ -1,21 +1,18 @@
-mixin headerBlock()
+mixin headerBlock(title,p,network)
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container-fluid
 			+b.section-title.text-center
-				h1 Lorem ipsum dolor sit amet
-				h2 Lorem ipsum dolor sit amet
-				h3 Lorem ipsum dolor sit amet
-				h4 Lorem ipsum dolor sit amet
-				h5 Lorem ipsum dolor sit amet
-				h6 Lorem ipsum dolor sit amet
-			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repudiandae exercitationem dicta eaque alias explicabo quae dolorem at quia distinctio odio, provident laudantium ipsa omnis facilis pariatur tempora! Ea, necessitatibus.
-			+btn('Все мероприятия', typ= "a").btn.btn-primary
-			+btn('Все участники', typ= "a").btn.btn-secondary
-			+btn('Все участники', typ= "a").btn.btn-outline-primary
-			+btn('Все участники', typ= "a").btn.btn-outline-secondary
+				h1= title
+			if p
+				+e.descr
+					p.text-center!= p
+			if network
+				.row
+					.col-6
+						+input("Введите ФИО или должность",'', 'Поиск')
+					.col-6
+						+input("Все участники",'select', 'Группа')
 
-			+form-wrap
-				+input("placeholder",'', 'Label')
-				+input("Интересы",'select', 'Label')
+
 	// end headerBlock
