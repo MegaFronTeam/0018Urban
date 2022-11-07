@@ -32,6 +32,8 @@ mixin top-nav()
 							+mnu()
 				.col-auto
 					+e.controls
+						+e.btn(href="#").d-lg-none
+							+icon('help')
 						+e.btn
 							+icon('notifications')
 							+e.btn-count
