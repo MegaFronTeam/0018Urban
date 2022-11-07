@@ -2,7 +2,8 @@ mixin sProfile(data)
 	// start sProfile
 	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
 		+e.img-block
-			+img('../img/profile-img.png').profile-img
+			+e.img-wrap
+				+img('../img/profile-img.png').profile-img
 		+e.info-block.container-fluid
 			+e.personal
 				+b.section-title
@@ -24,23 +25,31 @@ mixin sProfile(data)
 				+e.row
 					+e.title Сообщества пользователя
 					+e.list.UL
-						+e.item.LI Название группы 1
-						+e.item.LI Название группы 2
+						+e.item.LI
+							a(href="#") Название группы 1
+						+e.item.LI
+							a(href="#") Название группы 2
 				+e.row
 					+e.title Год стажировки
 					+e.list.UL
-						+e.item.LI 2011-2012 г.
+						+e.item.LI 
+							a(href="#") 2011-2012 г.
 				+e.row
 					+e.title Область экспертизы
 					+e.list.UL
-						+e.item.LI Поддержка и развитие креативных индустрий
-						+e.item.LI Область 2
-						+e.item.LI Область 1
+						+e.item.LI.long 
+							a(href="#") Поддержка и развитие креативных индустрий
+						+e.item.LI 
+							a(href="#") Область 2
+						+e.item.LI 
+							a(href="#") Область 1
 				+e.row
 					+e.title Интересы, хобби
 					+e.list.UL
-						+e.item.LI Спорт
-						+e.item.LI Интерес 2
+						+e.item.LI
+							a(href="#")  Спорт
+						+e.item.LI
+							a(href="#")  Интерес 2
 				+e.row
 					+e.title Чем могу быть полезен
 					p Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.
