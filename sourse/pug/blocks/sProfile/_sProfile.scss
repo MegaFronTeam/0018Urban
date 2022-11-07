@@ -103,6 +103,7 @@
 		list-style-type: none;
 		@include media-breakpoint-down(md) {
 			align-items: stretch;
+			margin-bottom: 0;
 		}
 	}
 	&__contacts-item {
@@ -113,6 +114,9 @@
 		min-width: 47%;
 		background: #4ED0C8;
 		border-radius: $border-radius;
+		@include media-breakpoint-down(md) {
+			padding: 6px 8px
+		}
 		& a {
 			color: $white;
 			font-size: rem(18);
@@ -127,6 +131,9 @@
 		padding-right: rem(30);
 		padding-top: 35px;
 		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-direction: column;
+			padding-top: 8px;
 			position: static;
 			width: 100%;
 			text-align: center;
@@ -190,6 +197,14 @@
 		font-weight: 700;
 		font-size: rem(18);
 		line-height: 111%;
+	}
+
+	.soc {
+		@include media-breakpoint-down(md) {
+			margin-bottom: 24px;
+			justify-content: center;
+			order: -1;
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
