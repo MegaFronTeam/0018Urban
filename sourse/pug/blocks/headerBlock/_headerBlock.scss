@@ -1,20 +1,55 @@
 // start .headerBlock
 .headerBlock {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()}; 
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
+	--sPT: #{rem(48)};
+	--sPB: #{rem(0)};
+	--sTPB: #{rem(8)}; 
+	// min-height: 100vh;
+	// min-height: calc(var(--vh, 1vh) * 100);
+	background-image: url('../img/svg/network-header-bg.svg');
+	background-position: center -10px;
+	background-size: 100% auto;
 	
+	.section-title {
+		h1 {
+			font-weight: 700;
+			font-size: 48px;
+			line-height: 117%;
+		}
+	}
+
+	&__descr {
+		margin: 0 auto;
+		margin-bottom: 24px;
+		max-width: 900px;
+		font-size: rem(18);
+		line-height:133%;
+		color: $black;
+	}
 	
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
+
+	&__input-wrap {
+		margin-bottom: 28px;
+		label {
+			width: 100%;
+		}
 	}
+
+	&__input-title {
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	&__input {
+		width: 100%;
+		padding-left: 15px;
+		border: 1px solid transparent;
+	}
+	
 	&__col{
 
 	}
