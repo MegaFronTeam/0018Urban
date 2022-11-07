@@ -38,9 +38,18 @@
 }
 
 .toggle-menu-mobile {
-	--h: #{em(2)};
-	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--h: 2px;
+	--color: #{$body-color};
+	--position: calc(var(--h) * 2.5);
+	z-index: 9999;
+	&::before {
+		content: "";
+		position: absolute;
+		left: -7px;
+		top: 0;
+		width: 32px;
+		height: 100%;
+	}
 	&.on span {
 		--color: transparent;
 	}
@@ -50,9 +59,9 @@
 		--rotate: 45deg;
 	}
 	display: block;
-	height: calc(var(--h) * 12);
+	height: calc(var(--h) * 20);
 	position: relative;
-	font-size: 32px;
+	font-size: 18px;
 	width: 1em;
 	cursor: pointer;
 	span:after,
@@ -66,15 +75,6 @@
 		display: block;
 	}
 
-	span:before {
-		top: var(--position);
-		transform: rotate3d(0, 0, 1, var(--rotate, 0));
-	}
-
-	span:after {
-		bottom: var(--position);
-		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
-	}
 	span,
 	span:after,
 	span:before {
@@ -86,6 +86,17 @@
 		backface-visibility: hidden;
 		transform-origin: 50% 50%;
 	}
+	span:before {
+		top: var(--position);
+		transform: rotate3d(0, 0, 1, var(--rotate, 0));
+		background-color: #{$body-color};
+	}
+
+	span:after {
+		bottom: var(--position);
+		transform: rotate3d(0, 0, 1, calc(-1 * var(--rotate, 0)));
+		background-color: #{$body-color};
+	}
 }
 @include media-breakpoint-down(lg) {
 	.menu-mobile {
@@ -95,13 +106,14 @@
 		max-width: 100%;
 		// height: calc(var(--vh, 1vh) * 100);
 		// height: 100vh;
-		width: 360px;
+		width: 400px;
 		bottom: 64px;
 		// left: 0;
-		left: 0;
+		right: 0;
 		background-color: $body-bg;
+		border-radius: 8px 8px 0 0;
 		&:not(.active) {
-			transform: translate3d(-120%, 0, 0);
+			transform: translate3d(120%, 0, 0);
 			--opacity: 0;
 			.toggle-menu-mobile {
 				opacity: 0;
@@ -110,25 +122,24 @@
 		@include mt(0.6s);
 		will-change: transform;
 
-		.toggle-menu-mobile {
-			margin-left: -15%;
-			position: absolute;
-			left: 0;
-			right: auto;
-			color: #fff;
-			top: 10px;
-			z-index: 9999;
-			span:after,
-			span:before {
-				--color: #ffffff;
-			}
-		}
+		// .toggle-menu-mobile {
+		// 	margin-left: -15%;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	right: auto;
+		// 	color: #fff;
+		// 	top: 10px;
+		// 	z-index: 9999;
+		// 	span:after,
+		// 	span:before {
+		// 		--color: #ffffff;
+		// 	}
+		// }
 		&__inner {
-			padding: calc(env(safe-area-inset-top, 0px) + #{rem(20)}) 0 calc(env(safe-area-inset-bottom, 0px) + #{rem(20)});
+			padding: calc(env(safe-area-inset-top, 0px) + 20px) 0 calc(env(safe-area-inset-bottom, 0px) + 16px);
 			overflow-x: hidden;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
-
 			max-height: 100vh;
 			// @include mt(.3s);
 			// transition-delay: .4s;
@@ -153,7 +164,7 @@
 			a {
 				// font-size: 16px;
 
-				padding: 10px;
+				padding: 12px 32px;
 				display: block;
 			}
 		}
