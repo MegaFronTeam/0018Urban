@@ -1,5 +1,5 @@
 //- pugination
-mixin pugin()
+mixin pagin()
 	//- nav(aria-label='...')
 	//- 	ul.pagination.justify-content-center
 	//- 		li.page-item.disabled
@@ -24,27 +24,45 @@ mixin pugin()
 	//- 		li.page-item
 	//- 			a.page-link(href='#') 
 	//- 				i(class="fas fa-chevron-right")
-	.pagination-wrapper
-		ul.page-numbers
-			mixin li(n)
-				li
-					if n
-						a.page-numbers(href='#')= n 
-					else
-						block
+	//- .pagination-wrapper
+	//- 	ul.page-numbers
+	//- 		mixin li(n)
+	//- 			li
+	//- 				if n
+	//- 					a.page-numbers(href='#')= n 
+	//- 				else
+	//- 					block
+			//- +li()
+			//- 	span.prev.page-numbers( )
+			//- 		img(src="img/svg/prev-double.svg", alt="")
+			+li()
+				span.page-numbers.current  1
+			- for (var x = 2; x < 6; x++)
+				+li(x)
+			//- +li()
+			//- 	a.next.page-numbers(href='#')
+			//- 		img(src="img/svg/next-double.svg", alt="")
+		ul.page-controls
 			+li()
 				span.prev.page-numbers( )
 					img(src="img/svg/prev.svg", alt="")
 			+li()
-				span.prev.page-numbers( )
-					img(src="img/svg/prev-double.svg", alt="")
-			+li()
-				span.page-numbers.current  1
-			- for (var x = 1; x < 5; x++)
-				+li(x)
-			+li()
 				a.next.page-numbers(href='#')
 					img(src="img/svg/next.svg", alt="")
-			+li()
-				a.next.page-numbers(href='#')
-					img(src="img/svg/next-double.svg", alt="")
+	nav.pagination-nav
+		ul.pagination
+			li.page-item.active
+				a.page-link(href="#") 1
+			li.page-item
+				a.page-link(href="#") 2
+			li.page-item
+				a.page-link(href="#") 3
+			li.page-item
+				a.page-link(href="#") 4
+			li.page-item
+				a.page-link(href="#") 5
+		ul.pagination.pagination--conrols
+			li.page-item.disabled
+				a.page-link.page-link--prev(href="#")
+			li.page-item
+				a.page-link.page-link--next(href="#")

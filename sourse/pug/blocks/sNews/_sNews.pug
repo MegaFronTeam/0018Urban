@@ -1,0 +1,35 @@
+mixin newsListItem(img, cat, date='26 сентября',title="Встреча с академическим руководителем и студентами ")
+	.col-md-6.col-lg-4
+		+b.news-preview(href="#")
+			+e.img-wrap
+				+img(`img/news-preview-${img}.jpg`)
+			+e.details
+				+e.category= cat
+				+e.date= date
+			+e.title!= title
+
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+e.row.row
+				+newsListItem(1,'Статья')
+				+newsListItem(2,'Вебинар')
+				+newsListItem(3,'Статья')
+				+newsListItem(4,'Статья')
+				+newsListItem(1,'Статья')
+				+newsListItem(2,'Вебинар')
+				+newsListItem(3,'Статья')
+				+newsListItem(4,'Статья')
+				+newsListItem(1,'Статья')
+				+newsListItem(2,'Вебинар')
+				+newsListItem(3,'Статья')
+				+newsListItem(4,'Статья')
+				+newsListItem(1,'Статья')
+				+newsListItem(2,'Вебинар')
+				+newsListItem(3,'Статья')
+				+newsListItem(4,'Статья')
+				+newsListItem(3,'Статья')
+				+newsListItem(4,'Статья')
+			+pagin()
+	// end sNews

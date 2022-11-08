@@ -1194,11 +1194,11 @@ $pagination-padding-x-sm: 0.5rem !default;
 $pagination-padding-y-lg: 0.75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-font-size: $font-size-base !default;
+$pagination-font-size: 16px !default;
 
-$pagination-color: var(--#{$prefix}link-color) !default;
-$pagination-bg: $white !default;
-$pagination-border-radius: $border-radius !default;
+$pagination-color: $dark !default;
+$pagination-bg: transparent !default;
+$pagination-border-radius: 4px !default;
 $pagination-border-width: $border-width !default;
 $pagination-margin-start: calc(
   $pagination-border-width * -1

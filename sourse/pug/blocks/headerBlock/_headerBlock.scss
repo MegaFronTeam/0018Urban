@@ -8,12 +8,24 @@
 	background-image: url('../img/svg/network-header-bg.svg');
 	background-position: center -10px;
 	background-size: 100% auto;
-	
+	&.news {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		@include media-breakpoint-down(md) {
+		--sPT: #{rem(24)};
+		--sPB: #{rem(24)};
+		background-size: cover;
+		}
+	}
 	.section-title {
 		h1 {
 			font-weight: 700;
 			font-size: 48px;
 			line-height: 117%;
+			@include media-breakpoint-down(md) {
+				font-size: 32px;
+				line-height: 1;
+			}
 		}
 	}
 
