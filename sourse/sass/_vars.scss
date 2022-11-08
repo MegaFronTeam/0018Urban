@@ -681,7 +681,7 @@ $table-th-font-weight: null !default;
 
 $table-striped-color: $table-color !default;
 $table-striped-bg-factor: 0.05 !default;
-$table-striped-bg: rgba($black, $table-striped-bg-factor) !default;
+$table-striped-bg: rgba($gray-600, $table-striped-bg-factor) !default;
 
 $table-active-color: $table-color !default;
 $table-active-bg-factor: 0.1 !default;
@@ -693,9 +693,9 @@ $table-hover-bg: rgba($black, $table-hover-bg-factor) !default;
 
 $table-border-factor: 0.1 !default;
 $table-border-width: $border-width !default;
-$table-border-color: var(--#{$prefix}border-color) !default;
+$table-border-color: $gray-100 !default;
 
-$table-striped-order: odd !default;
+$table-striped-order: even !default;
 $table-striped-columns-order: even !default;
 
 $table-group-separator-color: currentcolor !default;

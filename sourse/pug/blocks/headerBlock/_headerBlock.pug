@@ -20,14 +20,18 @@ mixin headerBlock(title,p,network)
 mixin newsItemHeader
 	// start newsItemHeader
 	+b.newsItemHeader.section#headerBlock&attributes(attributes)
-		.container-fluid
-			.row
-				.col-6
-					+e.img-wrap
-						+img('img/news-header.jpg')
-				.col-6
+		+e.container.container
+			+e.row.row
+				+e.text-block.col-sm-6.order-sm-2
 					h1 Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления
 					+e.details
-						
+						+e.category Вебинар
+						+e.date 
+							+icon('calendar')
+							| 26 сентября
+				.col-sm-6.order-sm-1
+					+e.img-wrap
+						+img('img/news-header.jpg')
+
 
 	// end newsItemHeader

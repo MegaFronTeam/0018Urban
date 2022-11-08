@@ -1,0 +1,176 @@
+// start .sNewsItem
+.sNewsItem {
+	--sPT: #{rem(0)};
+	--sPB: #{rem(72)};
+	// --sTPB: #{rem()};
+	&__wrap {
+		padding: 32px 48px 40px;
+		background: #FFFFFF;
+		border-radius: $border-radius-sm;
+		@include media-breakpoint-down(lg) {
+			padding: 20px;
+		}
+		@include media-breakpoint-down(lg) {
+			padding: 16px;
+		}
+	}
+	p {
+		font-size: 16px;
+		line-height: 125%;
+	}
+	h2 {
+		font-size: rem(40);
+		@include media-breakpoint-down(lg) {
+			font-size: rem(30);
+		}
+		@include media-breakpoint-down(md) {
+			font-size: rem(25);
+		}
+	}
+	ul {
+		padding-left: 32px;
+		font-size: 18px;
+		line-height: 125%;
+		li {
+			position: relative;
+			margin-bottom: 16px;
+			list-style-type: none;
+			&::before {
+				position: absolute;
+				top: 3px;
+				left: -32px;
+				content: '᛫';
+			}
+		}
+	}
+	figure {
+		padding: 16px 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 8px;
+	}
+	figcaption {
+		font-family: $caption-font;
+		font-size: 12px;
+		line-height: 16px;
+		color: $gray-600;
+	}
+	&__table-wrap {
+		overflow: auto;
+	}
+	table {
+		@extend .table, .table-striped;
+		margin-bottom: 24px;
+		min-width: 648px;
+		caption {
+			font-family: $caption-font;
+			caption-side: top;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 171%;
+			color: $dark;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		th {
+			font-family: $caption-font;
+			font-weight: 700;
+			font-size: 12px;
+			line-height: 133%;
+			color: $gray-600;
+		}
+		td {
+			font-size: 16px;
+			line-height: 125%;
+			color: $dark;
+		}
+	}
+	h3 {
+		font-size: rem(32);
+		line-height: 1;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(26);
+		}
+		@include media-breakpoint-down(md) {
+			font-size: rem(22);
+		}
+	}
+	blockquote {
+		position: relative;
+		padding: 16px 16px 16px 48px;
+		margin-bottom: 50px;
+		background: $teal;
+		border-radius: 8px 8px 8px 0px;
+		color: $white;
+		font-size: 24px;
+		line-height: 133%;
+		background-image: url('../img/svg/commas.svg');
+		background-repeat: no-repeat;
+		background-position: 16px 16px;
+		@include media-breakpoint-down(lg) {
+			font-size: rem(19);
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			bottom: -15px;
+			left: 0;
+			border: 15px solid transparent;
+			border-left: 15px solid $teal;
+			border-top: 15px solid $teal;
+		}
+	}
+	ol {
+		list-style-type: none; 
+		counter-reset: num;
+		padding-left: 0;
+		margin: 0 0 30px 30px;
+		font-size: 18px;
+		line-height: 133%;
+		li {
+			position: relative;
+			margin-bottom: 16px;
+			&::before {
+				content: counter(num) '.'; 
+				counter-increment: num;
+				display: inline-block;	
+				position: absolute;
+				top: 0px;
+				left: -26px;
+				width: 20px; 
+			}
+		}
+	}
+	h4 {
+		margin-bottom: 16px;
+		font-size: 24px;
+		line-height:  133%;
+		@include media-breakpoint-down(lg) {
+			font-size: 19px;
+		}
+	}
+	h5 {
+		margin-bottom: 16px;
+		font-size: 18px;
+		line-height:  133%;
+	}
+	&__video-wrap {
+		@include block(928,476);
+		iframe {
+			position: absolute;
+			width: 100% !important;
+			height: 100% !important;
+			top: 0;
+			left: 0;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sNewsItem
