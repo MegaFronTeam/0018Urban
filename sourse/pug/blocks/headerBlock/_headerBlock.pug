@@ -16,3 +16,18 @@ mixin headerBlock(title,p,network)
 
 
 	// end headerBlock
+
+mixin newsItemHeader
+	// start newsItemHeader
+	+b.newsItemHeader.section#headerBlock&attributes(attributes)
+		.container-fluid
+			.row
+				.col-6
+					+e.img-wrap
+						+img('img/news-header.jpg')
+				.col-6
+					h1 Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления
+					+e.details
+						
+
+	// end newsItemHeader

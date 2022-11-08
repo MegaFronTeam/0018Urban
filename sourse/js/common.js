@@ -325,6 +325,33 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
+	// Дропдаун фильтра в каталоге
+
+	const dropBtns = document.querySelectorAll('.network-filter__dropdown-btn');
+	
+	dropBtns.forEach(btn => {
+		btn.addEventListener('click', function(event) {
+			if (event.target.nextElementSibling.classList.contains('active')) {
+				event.target.nextElementSibling.classList.remove('active');
+			} 
+			else if (!(event.target.nextElementSibling.classList.contains('active'))) {
+				event.target.nextElementSibling.classList.add('active');
+				event._isOpen = true;
+				console.log(event);
+			}
+		});
+		// const dropBody = document.querySelector(btn.dataset.toggle);
+		// document.addEventListener('click', function(event) {
+		// 	console.log(event.composedPath());
+		// 	if (event.composedPath().includes(dropBody)) return;
+		// 	if (!event._isOpen) {
+		// 		event.target.nextElementSibling.classList.remove('active');
+		// 	}
+		// });
+	});
+
+	
+	// / Дропдаун фильтра в каталоге
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');

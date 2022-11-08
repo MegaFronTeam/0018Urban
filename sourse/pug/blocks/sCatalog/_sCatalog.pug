@@ -1,14 +1,22 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
+mixin profile-item(name, img, age, position, company, interests, groups)
+	+b.ARTICLE.profile-item
+		+e.header
+			+e.header-text
+				h2= name
+				+e.age= age
+			+e.img-wrap(href="#")
+				+img(`img/profile-${img}.jpg`)
+		+e.body
+			+e.position= position
+			+e.company!= company
 			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
+			+e.inteterst-list.UL
+				each interest in interests
+					li= interest
+			+e.groups-list.UL
+				each group in groups
+					li= group
+		+e.btn(href='#') Посмотреть профиль
 	// /.product-item
 
 mixin networkFilter
@@ -17,8 +25,8 @@ mixin networkFilter
 		.row
 			.col-auto
 				+e.dropdown-item
-					+e.dropdown-btn.BUTTON Все интересы
-					+e.dropdown-body
+					+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
+					+e.dropdown-body(id = "interest")
 						+e.dropdown-content
 							+in-c('checkbox','Интерес 1','interest')
 							+in-c('checkbox','Интерес 2','interest')
@@ -37,7 +45,7 @@ mixin networkFilter
 							+in-c('checkbox','годы 3','years')
 			.col-auto
 				+e.radio-wrap
-					+in-c('radio','Трудоустроен','status')
+					+in-c('radio','Трудоустроен','status')(checked)
 					+in-c('radio','В поиске работы','status')
 	// end filter
 
@@ -46,11 +54,7 @@ mixin networkFilter
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
+		//- .container
 			+e.row.row
 				- const wrapClass="col-3"
 				+e.col(class= wrapClass)

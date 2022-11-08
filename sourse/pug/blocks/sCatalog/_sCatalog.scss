@@ -1,6 +1,6 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
+	--sPT: #{rem(0)};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
 	&__row{
@@ -63,11 +63,84 @@
 
 .network-filter {
 	padding: 24px 0;
+	&__dropdown-item {
+		position: relative;
+	}
 	&__dropdown-btn {
+		position: relative;
 		padding: 8px;
+		padding-right: 40px;
 		min-width: 216px;
 		background: #FFFFFF;
 		border-radius: 44px;
 		border: 1px solid transparent;
+		&::after {
+			position: absolute;
+			right: 17px;
+			top: 50%;
+			content: '';
+			display: inline-block;
+      height: 7px;
+      width: 7px;
+      border-bottom: 2px solid $dark;
+      border-right: 2px solid $dark;
+      transform: rotate(45deg) translateY(calc(-50% - 3px));
+		}
+	}
+	&__dropdown-body {
+		position: absolute;
+		padding: 20px;
+		top: 55px;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		background-color: $white;
+		border-radius: $border-radius;
+		z-index: 10;
+		@include mt;
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	&__input {
+		border: 1px solid transparent;
+	}
+	&__radio-wrap {
+		display: flex;
+		align-items: center;
+		padding: 4px 5px;
+		background-color: $white;
+		border-radius: 32px;
+		.custom-input {
+			position: relative;
+			margin: 0;
+			padding-left: 0;
+			padding: 4px 8px;
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+			&__input {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				border-radius: 24px;
+				border: 1px solid transparent;;
+				transform: translateX(-50%) translateY(-50%);
+				&:checked[type=radio] {
+					box-shadow: none;	
+					background-image: none;
+					& + .custom-input__text {
+						color: $white;
+					}
+				}
+			}
+			&__text {
+				position: relative;
+			}
+		}
 	}
 }
