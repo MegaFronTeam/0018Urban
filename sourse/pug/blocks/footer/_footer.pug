@@ -1,9 +1,12 @@
 mixin footer()
 	+b.FOOTER.footer.section
-		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
+		.container-fluid
+			+e.row.row
 				.col-auto
+					+e.policy(href="#") Политика конфиденциальности
+				.col-auto
+					+e.copyright © #[span.currentYear]
+				.col
+					+e.design
+						+icon('coalla-logo')
+						span Сделано в&nbsp;Coalla Agency
