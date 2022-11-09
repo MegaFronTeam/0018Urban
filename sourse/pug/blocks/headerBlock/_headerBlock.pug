@@ -9,11 +9,10 @@ mixin headerBlock(title,p,network)
 					p.text-center!= p
 			if network
 				.row
-					.col-6
+					.col-12.col-md-6
 						+input("Введите ФИО или должность",'', 'Поиск')
-					.col-6
+					.d-none.d-md-block.col-6
 						+input("Все участники",'select', 'Группа')
-
 
 	// end headerBlock
 

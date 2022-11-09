@@ -1,16 +1,17 @@
-mixin profile-item(name, img, age, position, company, interests, groups)
+mixin profile-item(name, img, age, position, company, interests=[], groups=[])
 	+b.ARTICLE.profile-item
 		+e.header
 			+e.header-text
 				h2= name
 				+e.age= age
-			+e.img-wrap(href="#")
-				+img(`img/profile-${img}.jpg`)
+			+e.header-img
+				+e.img-wrap(href="#")
+					+img(`img/profile-${img}.jpg`)
 		+e.body
 			+e.position= position
 			+e.company!= company
 			+e.text!= p
-			+e.inteterst-list.UL
+			+e.interest-list.UL
 				each interest in interests
 					li= interest
 			+e.groups-list.UL
@@ -21,32 +22,35 @@ mixin profile-item(name, img, age, position, company, interests, groups)
 
 mixin networkFilter
 	// start filter
-	+b.network-filter
-		.row
-			.col-auto
-				+e.dropdown-item
-					+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
-					+e.dropdown-body(id = "interest")
-						+e.dropdown-content
-							+in-c('checkbox','Интерес 1','interest')
-							+in-c('checkbox','Интерес 2','interest')
-							+in-c('checkbox','Интерес 3','interest')
-			.col-auto
-				+input("Все ОИВ",'select', '')
-			.col-auto
-				+input("Все области экспертизы",'select', '')
-			.col-auto
-				+e.dropdown-item
-					+e.dropdown-btn.BUTTON Все годы стажировки
-					+e.dropdown-body
-						+e.dropdown-content
-							+in-c('checkbox','годы 1','years')
-							+in-c('checkbox','годы 2','years')
-							+in-c('checkbox','годы 3','years')
-			.col-auto
-				+e.radio-wrap
-					+in-c('radio','Трудоустроен','status')(checked)
-					+in-c('radio','В поиске работы','status')
+	.filter-wrap
+		button.filter-btn.d-md-none Фильтр
+			+icon('filter')
+		+b.network-filter
+			+e.row.row
+				.col-12.col-md-auto
+					+e.dropdown-item
+						+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
+						+e.dropdown-body(id = "interest")
+							+e.dropdown-content
+								+in-c('checkbox','Интерес 1','interest')
+								+in-c('checkbox','Интерес 2','interest')
+								+in-c('checkbox','Интерес 3','interest')
+				.col-12.col-md-auto
+					+input("Все ОИВ",'select', '')
+				.col-12.col-md-auto
+					+input("Все области экспертизы",'select', '')
+				.col-12.col-md-auto
+					+e.dropdown-item
+						+e.dropdown-btn.BUTTON Все годы стажировки
+						+e.dropdown-body
+							+e.dropdown-content
+								+in-c('checkbox','годы 1','years')
+								+in-c('checkbox','годы 2','years')
+								+in-c('checkbox','годы 3','years')
+				.col-12.col-md-auto
+					+e.radio-wrap
+						+in-c('radio','Трудоустроен','status')(checked)
+						+in-c('radio','В поиске работы','status')
 	// end filter
 
 
@@ -54,24 +58,39 @@ mixin networkFilter
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		//- .container
+		.container-fluid
 			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+				- const wrapClass="col-sm-6 col-lg-4"
+					+e.col(class= wrapClass)
+						+profile-item('Летунова Александра Петровна', '1', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Агадуллина Елена', '2', '41 год', '', '', [''], ['Название группы 1',  'Название группы 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Анашкина Елена Владимировна', '3', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Афанасьева Ольга Валентиновна', '4', '41 год', '', '', ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Барановская Татьяна Артуровна', '5', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Андрощук Виктор Владимирович', '6', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Бек Надежда Николаевна', '7', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Название группы 1', 'Название группы 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Богатая Светлана Ивановна', '8', '41 год', 'Директор по развитию', '', ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Васин Сергей ', '9', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Великая Елена Васильевна', '10', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Вернигорова Валентина Анатольевна', '11', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы 1', 'Название группы 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Вишневский Александр Александрович', '12', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Володин Сергей Николаевич', '13', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы 1', 'Название группы 2'])
+					+e.col(class= wrapClass)
+						+profile-item('Гайдукова Тамара Михайловна', '14', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы'])
+					+e.col(class= wrapClass)
+						+profile-item('Гасанова Сабина Эльмировна', '15', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»',  ['Спорт','Интерес 2'], ['Название группы 1', 'Название группы 2'])
+			+pagin()
 
 	// end sCatalog

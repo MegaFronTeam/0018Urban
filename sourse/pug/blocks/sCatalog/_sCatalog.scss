@@ -1,7 +1,10 @@
 // start .sCatalog
 .sCatalog {
 	--sPT: #{rem(0)};
-	// --sPB: #{rem()};
+	--sPB: #{rem(0)};
+	@include media-breakpoint-down(md) {
+		--sPT: #{rem(24)};
+	}
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
@@ -41,28 +44,162 @@
 	}
 }
 
-.product-item{
+.profile-item{
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	min-height: 100%;
+	padding: 16px;
 	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
+	border: 1px solid transparent;
+	border-radius: $border-radius-sm;
 	overflow: hidden;
-	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
+	@include mt;
+	&:hover {
+		border: 1px solid #4ED0C8;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+		h2 {
+			color: #00A89E;
+		}
 	}
-	&__caption{
-		flex-grow: 1;
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 16px;
+	}
+	&__header-text {
+		max-width: 70%;
+		h2 {
+			margin-bottom: 0;
+			font-weight: 700;
+			font-size: rem(24);
+			line-height: 133%;
+			@include mt;
+			@include media-breakpoint-down(md) {
+				font-size: rem(19);
+				line-height: 126%;
+			}
+		}
+	}
+	&__age {
+		font-size: 14px;
+		line-height: 16px;
+		color: $gray-600;
+	}
+	&__header-img {
+		width: 24%;
+		min-width: 88px;
+	}
+	&__img-wrap {
+		display: block;
+		width: 88px;
+		height: 88px;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+	&__body {
 		display: flex;
 		flex-direction: column;
-		padding: rem(20);
+		flex-grow: 1;
+		padding-top: 16px;
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		border-top: 1px solid $gray-100;
+		border-bottom: 1px solid $gray-100;
+	}
+	&__position {
+		margin-bottom: 7px;
+		font-weight: 700;
+		font-size: rem(18);
+		line-height: 111%;
+		@include media-breakpoint-down(md) {
+			font-size: rem(16);
+			line-height: 125%;
+		}
+	}
+	&__company {
+		margin-bottom: 7px;
+		font-size: rem(18);
+		line-height: 133%;
+		@include media-breakpoint-down(md) {
+			font-size: rem(16);
+			line-height: 125%;
+		}
+	}
+	&__interest-list {
+		display: flex;
+		list-style-type: none;
+		flex-wrap: wrap;
+		margin-bottom: 7px;
+		li {
+			font-size: rem(18);
+			line-height: 136%;
+			color: $gray-600;
+			@include media-breakpoint-down(md) {
+				font-size: rem(16);
+				line-height: 125%;
+			}
+			&:not(:last-child) {
+				position: relative;
+				margin-right: 5px;
+				&::after {
+					content: ',';
+				}
+			}
+		}
+	}
+	&__groups-list {
+		display: flex;
+		list-style-type: none;
+		flex-wrap: wrap;
+		margin-bottom: 7px;
+		li {
+			font-weight: 700;
+			font-size: rem(18);
+			line-height: 111%;
+			@include media-breakpoint-down(md) {
+				font-size: rem(16);
+				line-height: 125%;
+			}
+			&:not(:last-child) {
+				position: relative;
+				margin-right: 5px;
+				&::after {
+					content: ',';
+				}
+			}
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary, .stretched-link;
 	}
 }
-
+.network-filter-container {
+	@include media-breakpoint-down(md) {
+		position: relative;
+    height: 280px;
+		background-color: #d2f3f0;
+	}
+}
 .network-filter {
 	padding: 24px 0;
+	@include media-breakpoint-down(md) {
+		// position: absolute;
+		padding: 17px 9px;
+		// left: calc(var(--bs-gutter-x)*.5);
+		// top: 0;
+		// width: calc(100% - var(--bs-gutter-x));
+		background-color: $white;
+		border-bottom-left-radius: 16px;
+		border-bottom-right-radius: 16px;
+		z-index: 1;
+	}
+	&__row {
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
 	&__dropdown-item {
 		position: relative;
 	}
@@ -74,6 +211,11 @@
 		background: #FFFFFF;
 		border-radius: 44px;
 		border: 1px solid transparent;
+		@include media-breakpoint-down(md) {
+			width: 100%;
+			text-align: left;
+			border: 1px solid $gray-300;
+		}
 		&::after {
 			position: absolute;
 			right: 17px;
@@ -105,6 +247,9 @@
 	}
 	&__input {
 		border: 1px solid transparent;
+		@include media-breakpoint-down(md) {
+			border: 1px solid $gray-300;
+		}
 	}
 	&__radio-wrap {
 		display: flex;
@@ -112,13 +257,26 @@
 		padding: 4px 5px;
 		background-color: $white;
 		border-radius: 32px;
+		@include media-breakpoint-down(md) {
+			justify-content: space-between;
+			border: 1px solid $gray-300;
+		}
+		
 		.custom-input {
 			position: relative;
 			margin: 0;
 			padding-left: 0;
 			padding: 4px 8px;
+			@include media-breakpoint-down(md) {
+				flex-grow: 1;
+				padding: 4px;
+				text-align: center;
+			}
 			&:not(:last-child) {
 				margin-right: 10px;
+				@include media-breakpoint-down(md) {
+					margin-right: 5px
+				}
 			}
 			&__input {
 				position: absolute;

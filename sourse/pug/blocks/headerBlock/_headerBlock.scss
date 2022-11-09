@@ -1,22 +1,41 @@
 // start .headerBlock
 .headerBlock {
+	position: relative;
 	--sPT: #{rem(48)};
 	--sPB: #{rem(0)};
 	--sTPB: #{rem(8)}; 
-	// min-height: 100vh;
-	// min-height: calc(var(--vh, 1vh) * 100);
-	background-image: url('../img/svg/network-header-bg.svg');
-	background-position: center -10px;
-	background-size: 100% auto;
+	// background-image: url('../img/svg/network-header-bg-2.svg');
+	// background-position: center -10px;
+	// background-size: 100% auto;
+	// background-color: #D2F3F0;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	// background: linear-gradient(45deg, #d2f3f0, #d2f3f0 25%,#c0eeeb 25%,#c0eeeb 33%,#b8ece8 33%,#b8ece8 40%,#B0EAE6 40%,#B0EAE6 50%),	linear-gradient(to bottom right, #B0EAE6 50%,#B0EAE6 60%, #b8ece8 60%, #b8ece8 73%, #c0eeeb 73%,#c0eeeb 85%,#d2f3f0 85%, #d2f3f0);
+	&::before, &::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		width: 50%;
+		height: 100%;
+		z-index: -1;
+	}
+	&::before {
+		left: 0;
+		background: linear-gradient(45deg, #d2f3f0, #d2f3f0 35%,#c0eeeb 35%,#c0eeeb 43%,#b8ece8 43%,#b8ece8 50%,#B0EAE6 50%,#B0EAE6);
+	}
+	&::after {
+		right: 0;
+		background: linear-gradient(-45deg, #d2f3f0, #d2f3f0 35%,#c0eeeb 35%,#c0eeeb 43%,#b8ece8 43%,#b8ece8 50%,#B0EAE6 50%,#B0EAE6);
+	}
 	&.news {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(40)};
 		@include media-breakpoint-down(md) {
-		--sPT: #{rem(24)};
-		--sPB: #{rem(24)};
-		background-size: cover;
+			--sPT: #{rem(24)};
+			--sPB: #{rem(24)};
+			background-size: cover;
 		}
 	}
+
 	.section-title {
 		h1 {
 			font-weight: 700;
@@ -46,6 +65,9 @@
 
 	&__input-wrap {
 		margin-bottom: 28px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 9px;
+		}
 		label {
 			width: 100%;
 		}
@@ -187,5 +209,23 @@
 			margin: 0 4px;
 			font-size: 16px;
 		}
+	}
+}
+
+.filter-btn {
+	display: flex;
+	align-items: center;
+	margin-bottom: 24px;
+	padding: 8px 15px;
+	width: 100%;
+	font-size: rem(16);
+	line-height: 125%;
+	background-color: $white;
+	border: 1px solid transparent;
+	border-radius: $border-radius;
+	.icon {
+		margin-left: auto;
+		width: 16px;
+		height: 16px;
 	}
 }
