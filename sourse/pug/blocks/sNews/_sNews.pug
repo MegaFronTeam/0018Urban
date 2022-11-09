@@ -1,5 +1,5 @@
 mixin newsListItem(img, cat, date='26 сентября',title="Встреча с академическим руководителем и студентами ")
-	.col-md-6.col-lg-4
+	.col-sm-6.col-lg-4
 		+b.news-preview(href="#")
 			+e.img-wrap
 				+img(`img/news-preview-${img}.jpg`)
@@ -11,7 +11,7 @@ mixin newsListItem(img, cat, date='26 сентября',title="Встреча с
 mixin sNews(data)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)
-		.container
+		.container-fluid
 			+e.row.row
 				+newsListItem(1,'Статья')
 				+newsListItem(2,'Вебинар')
