@@ -402,7 +402,12 @@ function eventHandler() {
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
-		watchOverflow: true
+		watchOverflow: true,
+		IOSEdgeSwipeDetection: true,
+    onTouchStart: function()
+    {
+        return false;
+    },
 	});
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
