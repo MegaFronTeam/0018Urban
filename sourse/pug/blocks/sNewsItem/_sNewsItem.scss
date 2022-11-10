@@ -45,6 +45,7 @@
 	}
 	figure {
 		padding: 16px 0;
+		text-align: center;
 	}
 	img {
 		max-width: 100%;
@@ -110,7 +111,7 @@
 		background-repeat: no-repeat;
 		background-position: 16px 16px;
 		@include media-breakpoint-down(lg) {
-			font-size: rem(19);
+			font-size: rem(21);
 		}
 		&::after {
 			position: absolute;

@@ -6,11 +6,12 @@
 	padding-left: 16px;
 	border-radius: 8px;
 	--sPT: #{rem(0)};
-	--sPB: #{rem(0)};
+	--sPB: #{rem(50)};
 	--sTPB: #{rem(14)};
 	@include media-breakpoint-down(md) {
 		flex-direction: column;
 		padding-right: 16px;
+		--sPB: #{rem(32)};
 	}
 	&__img-block {
 		width: 130px;
@@ -255,7 +256,8 @@
 	padding-bottom: 25px;
 	@include media-breakpoint-down(md) {
 		padding-left: 25px;;
-		padding-right: 25px;;
+		padding-right: 25px;
+		padding-bottom: 0;;
 	}
 	@include media-breakpoint-down(sm) {
 		padding-left: 0;

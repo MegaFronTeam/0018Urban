@@ -29,6 +29,7 @@
 
 .news-preview {	
 	position: relative;
+	display: block;
 	&:hover {
 		.news-preview__img-wrap::after {
 			opacity: 1;
@@ -45,8 +46,8 @@
 		&::before {
 			background-image: url('../img/svg/news-preview-bg.svg');
 			background-repeat: no-repeat;
-			background-size: auto 100%;
-			background-position: left top;
+			background-size: auto 103%;
+			background-position: -3px 0;
 			@include mt;
 			@include media-breakpoint-down(sm) {
 				background-position: -5px top;
@@ -84,6 +85,9 @@
 		font-size: 13px;
 		line-height: 16px;
 		font-weight: 700;
+		@include media-breakpoint-down(md){
+			top: 14px;
+		}
 	}
 	&__category {
 		align-items: center;
@@ -116,5 +120,8 @@
 		font-weight: 700;
 		font-size: 18px;
 		line-height: 111%;
+		@include media-breakpoint-down(md){
+			bottom: 14px;
+		}
 	}
 }

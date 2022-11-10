@@ -180,7 +180,6 @@
 				font-size: rem(20);
 			}
 			@include media-breakpoint-down(sm) {
-				max-width: 270px;
 				font-size: rem(22);
 			}
 		}
