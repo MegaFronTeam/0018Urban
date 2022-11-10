@@ -111,14 +111,22 @@
 				<div class="container-fluid network-filter-container">
 					<!-- start filter-->
 					<div class="filter-wrap">
-						<button class="filter-btn d-md-none">Фильтр
-							<svg class="icon icon-filter ">
-								<use xlink:href="img/svg/sprite.svg#filter"></use>
-							</svg>
-						</button>
+						<button class="filter-btn d-md-none">Фильтр</button>
 						<div class="network-filter">
 							<div class="network-filter__row row">
-								<div class="col-12 col-md-auto">
+								<div class="col-12 d-md-none flex-grow-1">
+									<div class="network-filter__input-wrap form-group">
+										<select class="network-filter__input form-select" name="select">
+											<option value="Все участники">Все участники</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__dropdown-item">
 										<button class="network-filter__dropdown-btn" data-toggle="interest">Все интересы
 										</button>
@@ -134,7 +142,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="col-12 col-md-auto">
+								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__input-wrap form-group">
 										<select class="network-filter__input form-select" name="select">
 											<option value="Все ОИВ">Все ОИВ</option>
@@ -146,7 +154,7 @@
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
-								<div class="col-12 col-md-auto">
+								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__input-wrap form-group">
 										<select class="network-filter__input form-select" name="select">
 											<option value="Все области экспертизы">Все области экспертизы</option>
@@ -158,7 +166,7 @@
 									</div>
 									<!-- +e.input-wrap-->
 								</div>
-								<div class="col-12 col-md-auto">
+								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__dropdown-item">
 										<button class="network-filter__dropdown-btn">Все годы стажировки
 										</button>

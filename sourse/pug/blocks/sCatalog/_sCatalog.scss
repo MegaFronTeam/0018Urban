@@ -89,6 +89,9 @@
 	&__header-img {
 		width: 24%;
 		min-width: 88px;
+		@include media-breakpoint-down(md) {
+			min-width: 68px;
+		}
 	}
 	&__img-wrap {
 		display: block;
@@ -96,6 +99,10 @@
 		height: 88px;
 		border-radius: 50%;
 		overflow: hidden;
+		@include media-breakpoint-down(md) {
+			width: 68px;
+			height: 68px;
+		}
 		img {
 			width: 100%;
 		}
@@ -180,11 +187,50 @@
 .network-filter-container {
 	@include media-breakpoint-down(md) {
 		position: relative;
-    height: 280px;
+		padding-bottom: 24px;
 		background-color: #d2f3f0;
 	}
 }
+.filter-wrap {
+	
+}
+.filter-wrap.active {
+	background-color: $white;
+	border-radius: $border-radius;
+}
+.filter-btn {
+	display: flex;
+	position: relative;
+	align-items: center;
+	padding: 8px 40px 8px 15px;
+	width: 100%;
+	font-size: rem(16);
+	line-height: 125%;
+	background-color: $white;
+	border: 1px solid transparent;
+	border-radius: $border-radius;
+	&::after {
+		position: absolute;
+		content: '';
+		right: 15px;
+		top: 50%;
+		width: 16px;
+		height: 16px;
+		background-image: url('../img/svg/filter.svg');
+		background-size: cover;
+		transform: translateY(-50%);
+	}
+	&.active::after {
+		background-image: url('../img/svg/filter.svg');
+	}
+	.icon {
+		margin-left: auto;
+		width: 16px;
+		height: 16px;
+	}
+}
 .network-filter {
+	width: 100%;
 	padding: 24px 0;
 	@include media-breakpoint-down(md) {
 		// position: absolute;
@@ -196,6 +242,11 @@
 		border-bottom-left-radius: 16px;
 		border-bottom-right-radius: 16px;
 		z-index: 1;
+		display: none;
+		@include mt;
+		&.active {
+			display: block;
+		}
 	}
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -208,9 +259,11 @@
 		padding: 8px;
 		padding-right: 40px;
 		min-width: 216px;
+		width: 100%;
 		background: #FFFFFF;
 		border-radius: 44px;
 		border: 1px solid transparent;
+		text-align: left;
 		@include media-breakpoint-down(md) {
 			width: 100%;
 			text-align: left;
@@ -239,6 +292,7 @@
 		background-color: $white;
 		border-radius: $border-radius;
 		z-index: 10;
+		box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
 		@include mt;
 		&.active {
 			opacity: 1;

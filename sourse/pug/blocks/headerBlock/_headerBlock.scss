@@ -211,20 +211,11 @@
 	}
 }
 
-.filter-btn {
-	display: flex;
-	align-items: center;
-	margin-bottom: 24px;
-	padding: 8px 15px;
-	width: 100%;
-	font-size: rem(16);
-	line-height: 125%;
-	background-color: $white;
-	border: 1px solid transparent;
-	border-radius: $border-radius;
-	.icon {
-		margin-left: auto;
-		width: 16px;
-		height: 16px;
+
+.headerBlock__input-title {
+	@include media-breakpoint-down(md) {
+		display: none;
 	}
 }
+
+

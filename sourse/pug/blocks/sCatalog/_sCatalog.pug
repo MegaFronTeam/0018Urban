@@ -24,10 +24,12 @@ mixin networkFilter
 	// start filter
 	.filter-wrap
 		button.filter-btn.d-md-none Фильтр
-			+icon('filter')
+			//- +icon('filter')
 		+b.network-filter
 			+e.row.row
-				.col-12.col-md-auto
+				.col-12.d-md-none.flex-grow-1
+					+input("Все участники",'select', '')
+				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
 						+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
 						+e.dropdown-body(id = "interest")
@@ -35,11 +37,11 @@ mixin networkFilter
 								+in-c('checkbox','Интерес 1','interest')
 								+in-c('checkbox','Интерес 2','interest')
 								+in-c('checkbox','Интерес 3','interest')
-				.col-12.col-md-auto
+				.col-12.col-md-auto.flex-grow-1
 					+input("Все ОИВ",'select', '')
-				.col-12.col-md-auto
+				.col-12.col-md-auto.flex-grow-1
 					+input("Все области экспертизы",'select', '')
-				.col-12.col-md-auto
+				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
 						+e.dropdown-btn.BUTTON Все годы стажировки
 						+e.dropdown-body
