@@ -164,6 +164,9 @@
 			width: 1px;
 			height: calc(100% - 26px);
 			background-color: $gray-300;
+			@include media-breakpoint-down(md) {
+				content: none;
+			}
 		}
 	}
 	p {
@@ -194,6 +197,7 @@
 		@include media-breakpoint-down(md) {
 			top: -92px;
 			right: 9px;
+			border-radius: 4px;
 		}
 		.icon {
 			display: inline-block;
