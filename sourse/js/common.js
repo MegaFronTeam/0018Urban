@@ -403,11 +403,10 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true,
-		IOSEdgeSwipeDetection: true,
-    onTouchStart: function()
-    {
-        return false;
-    },
+		freeMode: {
+			enabled: true,
+			sticky: true,
+		},
 	});
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
