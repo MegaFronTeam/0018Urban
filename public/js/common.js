@@ -398,9 +398,11 @@ function eventHandler() {
 			if (menu.classList.contains('active')) {
 				menu.classList.remove('active')
 				filterWrap.classList.remove('active')
+				mobFilterBtn.classList.remove('active')
 			} else if (!(menu.classList.contains('active'))) {
 				menu.classList.add('active')
 				filterWrap.classList.add('active')
+				mobFilterBtn.classList.add('active')
 				event._isOpen = true;
 			}
 		});
@@ -409,6 +411,7 @@ function eventHandler() {
 			if (!event._isOpen) {
 				menu.classList.remove('active')
 				filterWrap.classList.remove('active')
+				mobFilterBtn.classList.remove('active')
 			}
 		})
 		window.addEventListener('resize', () => {

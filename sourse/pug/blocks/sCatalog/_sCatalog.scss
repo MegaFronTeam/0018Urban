@@ -209,6 +209,10 @@
 	background-color: $white;
 	border: 1px solid transparent;
 	border-radius: $border-radius;
+	&.active::after {
+		background-image: url('../img/svg/close.svg') !important;
+		background-size: 14px 14px;
+	}
 	&::after {
 		position: absolute;
 		content: '';
@@ -218,6 +222,7 @@
 		height: 16px;
 		background-image: url('../img/svg/filter.svg');
 		background-size: cover;
+		background-repeat: no-repeat;
 		transform: translateY(-50%);
 	}
 	&.active::after {
