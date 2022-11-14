@@ -126,9 +126,11 @@
 	width: 24px;
 	height: 24px;
 	margin-right: 8px;
-	background-image: url('../img/svg/checked.svg') !important;
 	background-repeat: no-repeat !important;
 	background-size: contain !important;
+	&:checked {
+		background-image: url('../img/svg/checked.svg') !important;
+	}
 	// @include media-breakpoint-down(md) {
 	// 	width: 18px;
 	// 	height: 18px;

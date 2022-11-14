@@ -11,6 +11,8 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
 		<link href="libs/air-datepicker/air-datepicker.css" rel="stylesheet"/>
+		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
+		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="account-page">
@@ -111,12 +113,7 @@
 										<form>
 											<fieldset>
 												<div class="form-wrap__form-caption form-wrap__form-caption--photo">Фото
-												</div>
-												<div class="upload-field">
-													<label class="upload-field__wrap"><span class="upload-field__file-name">Перетащиетe свой файл или загрузите с компьютера</span><span class="upload-field__input-wrap"><span class="upload-field__btn">
-														<input class="input-upload" type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.webp"/><span>Выбрать файл</span></span></span>
-													</label>
-												</div>
+												</div><input type="file" class="filepond-round" name="filepond" accept="image/png, image/jpeg, image/gif"/>
 												<div class="form-wrap__input-wrap form-group">
 													<label><input class="form-wrap__input form-control" name="" type="text" placeholder="ivanov@yandex.ru" disabled="disabled"/><span class="form-wrap__input-title">Электронная почта</span>
 													</label>
@@ -231,12 +228,7 @@
 											</div>
 											<!-- +e.input-wrap-->
 											<div class="form-wrap__form-caption">Эссе
-											</div>
-											<div class="upload-field">
-												<label class="upload-field__wrap"><span class="upload-field__file-name">Перетащите свой файл или загрузите с компьютера</span><span class="upload-field__input-wrap"><span class="upload-field__btn">
-													<input class="input-upload" type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.webp"/><span>Выбрать файл</span></span></span>
-												</label>
-											</div>
+											</div><input type="file"  class="filepond" name="filepond" multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 											<button class="form-wrap__button btn btn-primary" type="submit">Сохранить
 											</button>
 										</form>
@@ -335,6 +327,15 @@
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="libs/air-datepicker/air-datepicker.js"></script>
 		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"> </script>
+		<script src="https://unpkg.com/filepond-plugin-image-crop/dist/filepond-plugin-image-crop.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
+		<script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
+		<script src="libs/filepond/filepond.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

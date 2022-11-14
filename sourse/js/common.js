@@ -326,21 +326,11 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	let prevYearBtn = {
-		content: 'url(../img/svg/required.svg)',
-		className: 'year-btn',
-		onClick: (dp) => {
-			let date = new Date('2021-07-26');
-			dp.selectDate(date);
-			dp.setViewDate(date);
-		}
-	}
 	const dataPicker = document.querySelector('.data-picker--js');
 	new AirDatepicker(dataPicker, {
 		navTitles: {
 			days: 'yyyy <i>MMMM</i>',
 		},
-		buttons: [prevYearBtn]
 	});
 
 	const selects = document.querySelectorAll('.js-choice');
@@ -367,6 +357,9 @@ function eventHandler() {
 					editItems: true,
 					maxItemCount: 5,
 					removeItemButton: true,
+					addItemText: (value) => {
+						return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
+					},
 				}
 			)
 		});
@@ -387,13 +380,53 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	FilePond.registerPlugin(
+		// encodes the file as base64 data
+		FilePondPluginFileEncode,
+	
+		// validates the size of the file
+		FilePondPluginFileValidateSize,
+		
+		// corrects mobile image orientation
+		FilePondPluginImageExifOrientation,
+		
+		// previews dropped images
+		FilePondPluginImagePreview,
+		FilePondPluginImageCrop,
+		FilePondPluginImageResize,
+		FilePondPluginImageTransform,
+		FilePondPluginImageEdit
+	);
+	FilePond.create(
+		document.querySelector('.filepond'),
+		{
+			// labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
+			labelIdle: `Перетащите свой файл или загрузите с компьютера`,
+		}
+	);
+	FilePond.create(
+		document.querySelector('.filepond-round'),
+		{
+			labelIdle: `Перетащиетe свой файл или загрузите с компьютера`,
+			imagePreviewHeight: 128,
+			imageCropAspectRatio: '1:1',
+			imageResizeTargetWidth: 200,
+			imageResizeTargetHeight: 200,
+			stylePanelLayout: 'compact circle',
+			styleLoadIndicatorPosition: 'center bottom',
+			styleProgressIndicatorPosition: 'right bottom',
+			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonProcessItemPosition: 'right bottom',
+		}
+	);
+
 	// Мобильный фильтр
 
 	const mobFilterBtn = document.querySelector('.filter-btn');
-	const menu = document.querySelector(mobFilterBtn.dataset.toggle);
 	const filterWrap = document.querySelector('.filter-wrap')
-
+	
 	if (mobFilterBtn) {
+		const menu = document.querySelector(mobFilterBtn.dataset.toggle);
 		mobFilterBtn.addEventListener('click', function(event) {
 			if (menu.classList.contains('active')) {
 				menu.classList.remove('active')

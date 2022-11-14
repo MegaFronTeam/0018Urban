@@ -76,7 +76,7 @@
 			}
 			h2 {
 				font-weight: 400;
-				font-size: rem(17);
+				font-size: rem(16);
 				line-height: 133%;
 			}
 		}
@@ -236,6 +236,33 @@
 		height: 142px;
 		border-radius: 24px;
 	}
+	.filepond-round {
+		margin: 0 auto 16px;
+		width:128px;
+		max-height: 128px;
+		.filepond--drop-label {
+			font-size: 14px;
+			label {
+				line-height: 114%;
+			}
+		}
+	} 
+
+	.filepond--root {
+    // max-height: rem(60);
+		margin-bottom: 32px;
+		font-family: $default-font;
+	}
+	.filepond--drop-label {
+    color: $dark;
+		font-size: 16px;
+		line-height: 125%;
+	}
+	.filepond--panel-root {
+    background-color: $gray-100;
+		border-radius: 4px;
+		border: 1px solid $gray-300;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -246,15 +273,27 @@
 } // end.sAccount
 .account-title {
 	text-align: center;
+	&.validated {
+		.custom-input {
+			border: 1px solid $red;
+		}
+		.account-title__caption {
+			color: $red;
+		}
+	}
 	.custom-input {
-		padding: 8px 60px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		padding: 8px 30px;
 		margin-bottom: 10px;
 		border: 1px solid $teal;
 		border-radius: 48px;
 		background-repeat: no-repeat;
 		background-size: contain;
+		overflow: hidden;
 		@include media-breakpoint-down(sm) {
-			padding: 8px 20px;
+			padding: 8px 10px;
 			input {
 				float: none;
 				margin-right: 10px;
@@ -268,7 +307,7 @@
 			line-height: 133%;
 		}
 		&__input {
-			margin-left: -15px;
+			margin-left:0;
 			margin-top: 0;
 			width: 24px;
 			height: 24px;
@@ -280,6 +319,16 @@
 				background-repeat: no-repeat;
 				background-position: 50%;
 				background-color: $teal;
+				& + .custom-input__text::after {
+					position: absolute;
+					display: block;
+					content: '';
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: rgba(78, 208, 200, 0.2);
+				}
 			}
 		}
 	}

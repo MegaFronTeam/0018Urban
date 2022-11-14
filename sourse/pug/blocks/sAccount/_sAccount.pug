@@ -22,7 +22,8 @@ mixin sAccount(data)
 						+form-wrap
 							fieldset
 								+e.form-caption.--photo Фото
-								+upload-field('Перетащиетe свой файл или загрузите с компьютера')
+								//- +upload-field('Перетащиетe свой файл или загрузите с компьютера')
+								<input type="file" class="filepond-round" name="filepond" accept="image/png, image/jpeg, image/gif"/>
 								+input("ivanov@yandex.ru",'', 'Электронная почта')(disabled)
 								+in-c('checkbox','Не отображать почту для других пользователей','email')
 								+input("Введите Вашу фамилию",'', 'Фамилия')(required)(class="required")
@@ -48,7 +49,8 @@ mixin sAccount(data)
 							+input('Введите Ваш текст', 'textarea','Чем могу быть полезен')
 							+input('Интересы','select', 'О себе')(multiple).remove-btn--js
 							+e.form-caption Эссе
-							+upload-field('Перетащите свой файл или загрузите с компьютера')
+							//- +upload-field('Перетащите свой файл или загрузите с компьютера')
+							<input type="file"  class="filepond" name="filepond" multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">
 							+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
 					.tabs__content.tabs__content--contacts
 						+form-wrap
