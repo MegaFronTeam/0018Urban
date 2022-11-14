@@ -49,3 +49,14 @@ mixin page-head(t,...items)
 mixin chat
 	+b.chat
 		+icon('help')
+
+mixin upload-field(text)
+	+b.upload-field
+		//- +e.title.form-wrap__input-title!=title
+		+e.LABEL.wrap
+			+e.SPAN.file-name!= text
+			+e.SPAN.input-wrap
+				+e.btn
+					input.input-upload(type='file' name='file' accept=".jpg,.jpeg,.png,.pdf,.webp")
+					//- +icon('clip')
+					span Выбрать файл

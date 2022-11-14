@@ -9,6 +9,8 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 		<link href="libs/swiper/swiper-bundle.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
+		<link href="libs/choices.js/public/assets/styles/choices.min.css" rel="stylesheet"/>
+		<link href="libs/air-datepicker/air-datepicker.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -85,21 +87,21 @@
 						<div class="row">
 							<div class="col-12 col-md-6">
 								<div class="headerBlock__input-wrap form-group">
-									<label><span class="headerBlock__input-title">Поиск</span><input class="headerBlock__input form-control" name="" type="text" placeholder="Введите ФИО или должность"/>
+									<label><input class="headerBlock__input form-control" name="" type="text" placeholder="Введите ФИО или должность"/><span class="headerBlock__input-title">Поиск</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
 							</div>
 							<div class="d-none d-md-block col-6">
 								<div class="headerBlock__input-wrap form-group">
-									<label><span class="headerBlock__input-title">Группа</span>
-										<select class="headerBlock__input form-select" name="select">
+									<label>
+										<select class="headerBlock__input form-select js-choice" name="select">
 											<option value="Все участники">Все участники</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>
 											<option value=" placeholder 3">placeholder 3</option>
 											<option value=" placeholder 4">placeholder 4</option>
-										</select>
+										</select><span class="headerBlock__input-title">Группа</span>
 									</label>
 								</div>
 								<!-- +e.input-wrap-->
@@ -116,7 +118,7 @@
 							<div class="network-filter__row row">
 								<div class="col-12 d-md-none flex-grow-1">
 									<div class="network-filter__input-wrap form-group">
-										<select class="network-filter__input form-select" name="select">
+										<select class="network-filter__input form-select js-choice" name="select">
 											<option value="Все участники">Все участники</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>
@@ -144,7 +146,7 @@
 								</div>
 								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__input-wrap form-group">
-										<select class="network-filter__input form-select" name="select">
+										<select class="network-filter__input form-select js-choice" name="select">
 											<option value="Все ОИВ">Все ОИВ</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>
@@ -156,7 +158,7 @@
 								</div>
 								<div class="col-12 col-md-auto flex-grow-1">
 									<div class="network-filter__input-wrap form-group">
-										<select class="network-filter__input form-select" name="select">
+										<select class="network-filter__input form-select js-choice" name="select">
 											<option value="Все области экспертизы">Все области экспертизы</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>
@@ -183,7 +185,7 @@
 									</div>
 								</div>
 								<div class="col-12 col-md-auto">
-									<div class="network-filter__radio-wrap">
+									<div class="radio-wrap">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Трудоустроен</span>
 										</label>
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio"/><span class="custom-input__text form-check-label">В поиске работы</span>
@@ -200,7 +202,7 @@
 					<div class="container-fluid">
 						<div class="sCatalog__row row">
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Летунова Александра Петровна</h2>
@@ -227,13 +229,13 @@
 											<li>Группа 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Агадуллина Елена</h2>
@@ -260,13 +262,13 @@
 											<li>Название группы 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Анашкина Елена Владимировна</h2>
@@ -293,13 +295,13 @@
 											<li>Группа 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Афанасьева Ольга Валентиновна</h2>
@@ -326,13 +328,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Барановская Татьяна Артуровна</h2>
@@ -359,13 +361,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Андрощук Виктор Владимирович</h2>
@@ -392,13 +394,13 @@
 											<li>Группа 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Бек Надежда Николаевна</h2>
@@ -426,13 +428,13 @@
 											<li>Название группы 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Богатая Светлана Ивановна</h2>
@@ -459,13 +461,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Васин Сергей </h2>
@@ -492,13 +494,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Великая Елена Васильевна</h2>
@@ -525,13 +527,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Вернигорова Валентина Анатольевна</h2>
@@ -559,13 +561,13 @@
 											<li>Название группы 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Вишневский Александр Александрович</h2>
@@ -592,13 +594,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Володин Сергей Николаевич</h2>
@@ -626,13 +628,13 @@
 											<li>Название группы 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Гайдукова Тамара Михайловна</h2>
@@ -659,13 +661,13 @@
 											<li>Название группы</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
 							<div class="sCatalog__col col-sm-6 col-lg-4">
-								<article class="profile-item">
+								<article class="profile-item" href="#">
 									<div class="profile-item__header">
 										<div class="profile-item__header-text">
 											<h2>Гасанова Сабина Эльмировна</h2>
@@ -693,8 +695,8 @@
 											<li>Название группы 2</li>
 										</ul>
 									</div>
-									<a class="profile-item__btn" href="#">Посмотреть профиль
-									</a>
+									<div class="profile-item__btn">Посмотреть профиль
+									</div>
 								</article>
 								<!-- /.product-item-->
 							</div>
@@ -771,7 +773,9 @@
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
-		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/air-datepicker/air-datepicker.js"></script>
+		<script src="libs/choices.js/public/assets/scripts/choices.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

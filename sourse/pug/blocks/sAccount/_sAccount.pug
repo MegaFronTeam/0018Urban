@@ -1,0 +1,63 @@
+mixin sAccount(data)
+	// start sAccount
+	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
+		+e.container.container
+			+e.top
+				+b.section-title.text-center
+					h1 Мои настройки
+				+form-wrap
+					+b.account-title
+						+in-c('checkbox','Опубликовать анкету на сайте','published')
+						+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
+			+e.body
+				.tabs.swiper
+					.tabs__caption.swiper-wrapper
+						.tabs__btn.swiper-slide.active
+							h2 Персональные данные
+						.tabs__btn.swiper-slide
+							h2 Информация
+						.tabs__btn.swiper-slide
+							h2 Контакты
+					.tabs__content.tabs__content--personal.active
+						+form-wrap
+							fieldset
+								+e.form-caption.--photo Фото
+								+upload-field('Перетащиетe свой файл или загрузите с компьютера')
+								+input("ivanov@yandex.ru",'', 'Электронная почта')(disabled)
+								+in-c('checkbox','Не отображать почту для других пользователей','email')
+								+input("Введите Вашу фамилию",'', 'Фамилия')(required)(class="required")
+								+input("Введите Вашу имя",'', 'Имя')(required)
+								+input("Введите Вашу отчество",'', 'Отчество')
+								+input("чч. мм. гг.",'date', 'Дата рождения')(required).data-picker--js
+							fieldset
+								legend Смена пароля
+								+input("Введите старый пароль",'password', 'Старый пароль')
+								+input("Введите новый пароль",'password', 'Новый пароль')
+								+input("Введите пароль ещё раз",'password', 'Повторите пароль')
+								+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
+					.tabs__content.tabs__content--info
+						+form-wrap
+							+e.form-caption Статус
+							.radio-wrap
+								+in-c('radio','Трудоустроен','status')(checked)
+								+in-c('radio','В поиске работы','status')
+							+input('2011-2012','select', 'Год стажировки').js-choice
+							+input("Введите Вашу должность",'', 'Должность')
+							+input('ОИВ','select', 'ОИВ/Подведомственная организация').js-choice
+							+input('', 'text', 'Область экспертизы')(value="Область 1,Область 2").remove-btn--js
+							+input('Введите Ваш текст', 'textarea','Чем могу быть полезен')
+							+input('Интересы','select', 'О себе')(multiple).remove-btn--js
+							+e.form-caption Эссе
+							+upload-field('Перетащите свой файл или загрузите с компьютера')
+							+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
+					.tabs__content.tabs__content--contacts
+						+form-wrap
+							+input('+7 (ХХХ)-ХХ-ХХ', 'tel', 'Телефон')
+							+in-c('checkbox','Не отображать телефон для других пользователей')
+							+input('https://vk.com/your_name').social--vk
+							+input('https://ok.ru/profile/your_id').social--ok
+							+input('@your_name').social--telegram
+							+input('Телефон от аккаунта WhatsApp').social--whatsapp
+							+in-c('checkbox','Требуется одобрение для показа контактов')
+							+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
+	// end sAccount

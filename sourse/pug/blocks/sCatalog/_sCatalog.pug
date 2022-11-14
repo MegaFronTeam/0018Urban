@@ -1,5 +1,5 @@
 mixin profile-item(name, img, age, position, company, interests=[], groups=[])
-	+b.ARTICLE.profile-item
+	+b.ARTICLE.profile-item(href='#')
 		+e.header
 			+e.header-text
 				h2= name
@@ -17,7 +17,7 @@ mixin profile-item(name, img, age, position, company, interests=[], groups=[])
 			+e.groups-list.UL
 				each group in groups
 					li= group
-		+e.btn(href='#') Посмотреть профиль
+		+e.btn Посмотреть профиль
 	// /.product-item
 
 mixin networkFilter
@@ -28,7 +28,7 @@ mixin networkFilter
 		+b.network-filter
 			+e.row.row
 				.col-12.d-md-none.flex-grow-1
-					+input("Все участники",'select', '')
+					+input("Все участники",'select', '').js-choice
 				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
 						+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
@@ -38,9 +38,9 @@ mixin networkFilter
 								+in-c('checkbox','Интерес 2','interest')
 								+in-c('checkbox','Интерес 3','interest')
 				.col-12.col-md-auto.flex-grow-1
-					+input("Все ОИВ",'select', '')
+					+input("Все ОИВ",'select', '').js-choice
 				.col-12.col-md-auto.flex-grow-1
-					+input("Все области экспертизы",'select', '')
+					+input("Все области экспертизы",'select', '').js-choice
 				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
 						+e.dropdown-btn.BUTTON Все годы стажировки
@@ -50,7 +50,7 @@ mixin networkFilter
 								+in-c('checkbox','годы 2','years')
 								+in-c('checkbox','годы 3','years')
 				.col-12.col-md-auto
-					+e.radio-wrap
+					.radio-wrap
 						+in-c('radio','Трудоустроен','status')(checked)
 						+in-c('radio','В поиске работы','status')
 	// end filter

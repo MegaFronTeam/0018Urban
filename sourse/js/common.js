@@ -308,7 +308,7 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
-	// JSCCommon.tabscostume('tabs');
+	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
@@ -325,6 +325,52 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+	const dataPicker = document.querySelector('.data-picker--js');
+	new AirDatepicker(dataPicker);
+
+	const selects = document.querySelectorAll('.js-choice');
+	if (selects) {
+		selects.forEach(choice => {
+			let choices = new Choices(choice, {
+				searchEnabled: false,
+				searchChoices: false,
+				itemSelectText: '',
+				allowHTML: true,
+				position: 'auto',
+			});
+		});
+	}
+
+	const textRemoveBtns = document.querySelectorAll('.remove-btn--js');
+
+	if (textRemoveBtns) {
+		textRemoveBtns.forEach(textRemoveBtn => {
+			let textRemoveInput = new Choices(textRemoveBtn,
+				{
+					allowHTML: true,
+					delimiter: ',',
+					editItems: true,
+					maxItemCount: 5,
+					removeItemButton: true,
+				}
+			)
+		});
+	}
+
+	// let multipleSelect = new Choices(
+	// 	document.querySelector('.js-choice-multiple'),
+	// 	{
+	// 		allowHTML: true,
+	// 		delimiter: ',',
+	// 		editItems: true,
+	// 		maxItemCount: 5,
+	// 		removeItemButton: true,
+	// 	}
+	// );
+
+	const TabsSlider = new Swiper(".tabs", {
+		slidesPerView: 'auto',
+	});
 
 	// Дропдаун фильтра в каталоге
 

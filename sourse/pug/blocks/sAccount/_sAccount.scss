@@ -1,0 +1,292 @@
+// start .sAccount
+.sAccount {
+	background-image: url('../img/svg/account-bg.svg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 100% auto;
+	--sPT: #{rem(24)};
+	--sPB: #{rem(60)};
+	--sTPB: #{rem(24)};
+	&__container {
+		padding: 24px 0 42px;
+		max-width: 608px !important;
+		background: $white;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+		border-radius: $border-radius-sm;
+	}
+	&__top {
+		padding: 0 min(rem(100), 100px);
+		@include media-breakpoint-down(sm) {
+			padding: 0 16px;
+		}
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+		
+	}
+	.section-title{
+		h1 {
+			font-size: rem(40);
+			@include media-breakpoint-down(sm) {
+				font-size: rem(25);
+				line-height: 96%;
+			}
+		}
+	}
+	&__body {
+		position: relative;
+		padding: 0 min(rem(100), 100px);
+		@include media-breakpoint-down(sm) {
+			padding: 0 16px;
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			display: block;
+			top: rem(24);
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: $gray-300;
+		}
+	}
+	.tabs {
+		&__caption {
+			position: relative;
+			margin-bottom: 33px;
+		}
+		&__btn {
+			width: auto;
+			&:not(:last-child) {
+				margin-right: 24px;
+			}
+			&.active {
+				position: relative;
+				color: $primary;
+				&::after {
+					position: absolute;
+					content: '';
+					width: 100%;
+					left: 0;
+					bottom: rem(6);
+					height: 2px;
+					background-color: $primary;
+				}
+			}
+			h2 {
+				font-weight: 400;
+				font-size: rem(17);
+				line-height: 133%;
+			}
+		}
+		&__content {
+			&--personal {
+				.upload-field {
+					@include media-breakpoint-down(sm) {
+						margin-bottom: 37px;
+					}
+				}
+			}
+			&--info {
+				.upload-field__wrap {
+					padding: 10px;
+					margin-bottom: 32px;
+					width: 100%;
+					height: 60px;
+					background: $gray-100;
+					border: 1px solid $gray-300;
+					border-radius: 4px;
+				}
+			}
+		}
+	}
+	.form-wrap {
+		&__input-wrap {
+			margin-bottom: 16px;
+		}
+		&__form-caption, &__input-title {
+			padding-left: 8px;
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 114%;
+		}
+		&__form-caption--photo {
+			text-align: center;
+		}
+		&__input.social {
+			padding-left: 40px;
+			background-repeat: no-repeat;
+			background-position: 12px;
+			&--vk {
+				background-image: url('../img/svg/vk.svg');
+				background-size: 18px 11px;
+			}
+			&--ok {
+				background-image: url('../img/svg/ok.svg');
+				background-size: 12px 20px;
+			}
+			&--telegram {
+				background-image: url('../img/svg/telegram.svg');
+				background-size: 18px 15px;
+
+			}
+			&--whatsapp {
+				background-image: url('../img/svg/whatsapp.svg');
+				background-size: 20px 20px;
+			}
+		}
+		&__input[required] + .form-wrap__input-title {
+			position: relative; 
+			&::after {
+				position: absolute;
+				content: '';
+				display: inline-block;
+				left: 0;
+				bottom: -12px;
+				width: 5px;
+				height: 5px;
+				background-image: url('../img/svg/required.svg');
+				background-repeat: no-repeat;
+			}
+		}
+		&__button {
+			width: 100%;
+			font-weight: 700;
+		}
+	}
+	.form-group {
+		label {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+	.form-check {
+		margin-bottom: 16px;
+	}
+	
+
+	legend {
+		font-size: 24px;
+		line-height: 133%;
+	}
+	
+	.upload-field {
+		&__wrap {
+			position: relative;
+			width: 128px;
+			height: 128px;
+			margin: 0 auto;
+			background-color: $gray-100;
+			border: 1px solid #C9CAD1;
+			border-radius: 100%;
+			overflow: hidden;
+		}
+		&__file-name {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			width: 100%;
+			height: 100%;
+			font-size: 14px;
+			line-height: 114%;
+			text-align: center;
+		}
+		&__input-wrap, &__btn, .input-upload {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+		}
+	}
+	.choices {
+		margin-bottom: 0;
+	}
+	.radio-wrap {
+		margin-bottom: 16px;
+		border: 1px solid $gray-600;
+		.form-check {
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
+	.choices__inner {
+		border: 1px solid $gray-600 !important;
+		min-height: 0;
+	}
+	.choices__input {
+		background-color: transparent;
+		margin-bottom: 0;
+	}
+	.choices__list--multiple .choices__item {
+		margin-bottom: 2px;
+		background-color: $primary;
+    border: 1px solid transparent;
+	}
+	.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+		border-left: none;
+	}
+	.choices__input .choices__input--cloned {
+		margin-bottom: 0;
+	}
+	textarea {
+		height: 142px;
+		border-radius: 24px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAccount
+.account-title {
+	text-align: center;
+	.custom-input {
+		padding: 8px 60px;
+		margin-bottom: 10px;
+		border: 1px solid $teal;
+		border-radius: 48px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		@include media-breakpoint-down(sm) {
+			padding: 8px 20px;
+			input {
+				float: none;
+				margin-right: 10px;
+			}
+		}
+		&.active {
+			background-color: rgba(78, 208, 200, 0.2);
+		}
+		&__text {
+			font-size: rem(18);
+			line-height: 133%;
+		}
+		&__input {
+			margin-left: -15px;
+			margin-top: 0;
+			width: 24px;
+			height: 24px;
+			background: rgba(78, 208, 200, 0.2);
+			border: 1px solid $teal;
+			border-radius: 4px;
+			&:checked[type=checkbox] {
+				background-image: url('../img/svg/checked.svg');
+				background-repeat: no-repeat;
+				background-position: 50%;
+				background-color: $teal;
+			}
+		}
+	}
+	&__caption {
+		margin-bottom: 24px;
+		font-size: 14px;
+		line-height: 114%;
+		color: #757B8A;
+	}
+}

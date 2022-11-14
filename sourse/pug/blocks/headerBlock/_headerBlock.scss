@@ -63,6 +63,11 @@
 
 	}
 
+	label {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
 	&__input-wrap {
 		margin-bottom: 28px;
 		@include media-breakpoint-down(md) {
@@ -74,6 +79,7 @@
 	}
 
 	&__input-title {
+		padding-left: 16px;
 		font-size: 14px;
 		line-height: 16px;
 	}
@@ -83,6 +89,7 @@
 		padding-left: 15px;
 		border: 1px solid transparent;
 	}
+
 	
 	&__col{
 
