@@ -289,6 +289,10 @@
 				margin-left: 0;
 				margin-right: 8px;
 				background-image: url('../img/svg/checked.svg') !important;
+				@include media-breakpoint-down(md) {
+					width: 18px;
+					height: 18px;
+				}
 			}
 		}
 	}
@@ -307,6 +311,11 @@
 			text-align: left;
 			border: 1px solid $gray-300;
 		}
+		&.active::after {
+			border-color:$dark transparent transparent $dark;
+			border-width: 2px 0 0 2px;
+			border-style: solid none none solid;
+		}		
 		&::after {
 			position: absolute;
 			right: 17px;
@@ -322,7 +331,7 @@
 	}
 	&__dropdown-body {
 		position: absolute;
-		top: 44px;
+		top: rem(40);
 		width: 100%;
 		opacity: 0;
 		visibility: hidden;

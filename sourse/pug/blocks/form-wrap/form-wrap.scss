@@ -129,6 +129,10 @@
 	background-image: url('../img/svg/checked.svg') !important;
 	background-repeat: no-repeat !important;
 	background-size: contain !important;
+	// @include media-breakpoint-down(md) {
+	// 	width: 18px;
+	// 	height: 18px;
+	// }
 }
 .form-check-label{
 	
@@ -152,6 +156,10 @@
 			border: 1px solid #C9CAD1;
 			border-radius: 4px;
 			transform: translateY(-50%);
+			@include media-breakpoint-down(md) {
+				width: 18px;
+				height: 18px;
+			}
 		}
 	}
 }

@@ -325,11 +325,22 @@ function eventHandler() {
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
+
+	let prevYearBtn = {
+		content: 'url(../img/svg/required.svg)',
+		className: 'year-btn',
+		onClick: (dp) => {
+			let date = new Date('2021-07-26');
+			dp.selectDate(date);
+			dp.setViewDate(date);
+		}
+	}
 	const dataPicker = document.querySelector('.data-picker--js');
 	new AirDatepicker(dataPicker, {
 		navTitles: {
 			days: 'yyyy <i>MMMM</i>',
-		}
+		},
+		buttons: [prevYearBtn]
 	});
 
 	const selects = document.querySelectorAll('.js-choice');
@@ -376,7 +387,7 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
-	// Мобмльный фильтр
+	// Мобильный фильтр
 
 	const mobFilterBtn = document.querySelector('.filter-btn');
 	const menu = document.querySelector(mobFilterBtn.dataset.toggle);
@@ -409,7 +420,7 @@ function eventHandler() {
 		 });
 	}
 
-	// / Мобмльный фильтр
+	// / Мобильный фильтр
 
 	// Дропдаун фильтра в каталоге
 
@@ -420,9 +431,11 @@ function eventHandler() {
 			btn.addEventListener('click', function(event) {
 				let dropBody = document.getElementById(btn.dataset.toggle);
 				if (dropBody.classList.contains('active')) {
+					btn.classList.remove('active');
 					dropBody.classList.remove('active');
 				} 
 				else if (!(dropBody.classList.contains('active'))) {
+					btn.classList.add('active');
 					dropBody.classList.add('active');
 					event._isOpen = true;
 				}
@@ -430,14 +443,13 @@ function eventHandler() {
 					if (event.composedPath().includes(dropBody)) return;
 					if (!event._isOpen) {
 						dropBody.classList.remove('active');
+						btn.classList.remove('active');
 					}
 				});
 			});
 		});
 	}
-	
-
-	
+		
 	// / Дропдаун фильтра в каталоге
 
 	function setFixedNav() {
