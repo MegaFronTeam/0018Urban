@@ -23,16 +23,16 @@ mixin profile-item(name, img, age, position, company, interests=[], groups=[])
 mixin networkFilter
 	// start filter
 	.filter-wrap
-		button.filter-btn.d-md-none Фильтр
+		button.filter-btn.d-md-none(data-toggle="#dropdown") Фильтр
 			//- +icon('filter')
-		+b.network-filter
+		+b.network-filter(id="dropdown")
 			+e.row.row
 				.col-12.d-md-none.flex-grow-1
 					+input("Все участники",'select', '').js-choice
 				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
 						+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
-						+e.dropdown-body(id = "interest")
+						+e.dropdown-body(id="interest")
 							+e.dropdown-content
 								+in-c('checkbox','Интерес 1','interest')
 								+in-c('checkbox','Интерес 2','interest')
@@ -43,8 +43,8 @@ mixin networkFilter
 					+input("Все области экспертизы",'select', '').js-choice
 				.col-12.col-md-auto.flex-grow-1
 					+e.dropdown-item
-						+e.dropdown-btn.BUTTON Все годы стажировки
-						+e.dropdown-body
+						+e.dropdown-btn.BUTTON(data-toggle="years") Все годы стажировки
+						+e.dropdown-body(id="years")
 							+e.dropdown-content
 								+in-c('checkbox','годы 1','years')
 								+in-c('checkbox','годы 2','years')

@@ -326,7 +326,11 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 	const dataPicker = document.querySelector('.data-picker--js');
-	new AirDatepicker(dataPicker);
+	new AirDatepicker(dataPicker, {
+		navTitles: {
+			days: 'yyyy <i>MMMM</i>',
+		}
+	});
 
 	const selects = document.querySelectorAll('.js-choice');
 	if (selects) {
@@ -372,30 +376,66 @@ function eventHandler() {
 		slidesPerView: 'auto',
 	});
 
+	// Мобмльный фильтр
+
+	const mobFilterBtn = document.querySelector('.filter-btn');
+	const menu = document.querySelector(mobFilterBtn.dataset.toggle);
+	const filterWrap = document.querySelector('.filter-wrap')
+
+	if (mobFilterBtn) {
+		mobFilterBtn.addEventListener('click', function(event) {
+			if (menu.classList.contains('active')) {
+				menu.classList.remove('active')
+				filterWrap.classList.remove('active')
+			} else if (!(menu.classList.contains('active'))) {
+				menu.classList.add('active')
+				filterWrap.classList.add('active')
+				event._isOpen = true;
+			}
+		});
+		document.addEventListener('click', function(event) {
+			if (event.composedPath().includes(menu)) return;
+			if (!event._isOpen) {
+				menu.classList.remove('active')
+				filterWrap.classList.remove('active')
+			}
+		})
+		window.addEventListener('resize', () => {
+			if (window.innerWidth >= 768) {
+				filterWrap.classList.remove('active');
+			} else {
+				filterWrap.classList.add('active');
+			}
+		 });
+	}
+
+	// / Мобмльный фильтр
+
 	// Дропдаун фильтра в каталоге
 
 	const dropBtns = document.querySelectorAll('.network-filter__dropdown-btn');
 	
-	dropBtns.forEach(btn => {
-		btn.addEventListener('click', function(event) {
-			if (event.target.nextElementSibling.classList.contains('active')) {
-				event.target.nextElementSibling.classList.remove('active');
-			} 
-			else if (!(event.target.nextElementSibling.classList.contains('active'))) {
-				event.target.nextElementSibling.classList.add('active');
-				event._isOpen = true;
-				console.log(event);
-			}
+	if (dropBtns) {
+		dropBtns.forEach(btn => {
+			btn.addEventListener('click', function(event) {
+				let dropBody = document.getElementById(btn.dataset.toggle);
+				if (dropBody.classList.contains('active')) {
+					dropBody.classList.remove('active');
+				} 
+				else if (!(dropBody.classList.contains('active'))) {
+					dropBody.classList.add('active');
+					event._isOpen = true;
+				}
+				document.addEventListener('click', function(event) {
+					if (event.composedPath().includes(dropBody)) return;
+					if (!event._isOpen) {
+						dropBody.classList.remove('active');
+					}
+				});
+			});
 		});
-		// const dropBody = document.querySelector(btn.dataset.toggle);
-		// document.addEventListener('click', function(event) {
-		// 	console.log(event.composedPath());
-		// 	if (event.composedPath().includes(dropBody)) return;
-		// 	if (!event._isOpen) {
-		// 		event.target.nextElementSibling.classList.remove('active');
-		// 	}
-		// });
-	});
+	}
+	
 
 	
 	// / Дропдаун фильтра в каталоге

@@ -24,6 +24,7 @@
 		height: auto;
 	}
 
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -190,10 +191,8 @@
 		position: relative;
 		padding-bottom: 24px;
 		background-color: #d2f3f0;
+		box-shadow: 0px 2.99128px 2.99128px -2.99128px rgba(0, 0, 0, 0.2);
 	}
-}
-.filter-wrap {
-	
 }
 .filter-wrap.active {
 	background-color: $white;
@@ -249,6 +248,12 @@
 			display: block;
 		}
 	}
+	.choices__inner {
+		@include media-breakpoint-down(md) {
+			border: 1px solid $gray-300!important;
+			min-height: 0;
+		}
+	}
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
@@ -261,16 +266,22 @@
 			display: flex;
 			align-items: center;
 			padding: 8px 12px;
-			&:not(:last-child) {
-				border-bottom: 1px solid $gray-300;
-			}
-			&:hover {
-				background: #DCF6F4;
-				.custom-input__input {
+			&__input {
+				&:not(:checked):hover {
 					background: $gray-100;
 					box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 					background-image: none !important;
+					& + .custom-input__text {
+						background-color: #DCF6F4;
+						z-index: -1;
+					}
 				}
+			}
+			&:not(:last-child) {
+				border-bottom: 1px solid $gray-300;
+			}
+			&:checked[type=checkbox] {
+				background: $primary;
 			}
 			&__input {
 				width: 24px;
@@ -283,7 +294,7 @@
 	}
 	&__dropdown-btn {
 		position: relative;
-		padding: 8px;
+		padding: 7px;
 		padding-right: 40px;
 		min-width: 216px;
 		width: 100%;
@@ -317,12 +328,35 @@
 		visibility: hidden;
 		background-color: $white;
 		border-radius: $border-radius-sm;
+		border: 1px solid $gray-300;
 		z-index: 10;
-		box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+		// box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+		overflow: hidden;
 		@include mt;
 		&.active {
 			opacity: 1;
 			visibility: visible;
+		}
+		.custom-input {
+			position: relative;
+			&__text {
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				padding-left: 44px;
+				display: flex;
+				align-items: center;
+				z-index: 1;
+			}
+			&__input:checked {
+				z-index: 5;
+				border: 1px solid $white;
+				& + .custom-input__text {
+					background-color: $primary;
+				}
+			}
 		}
 	}
 	&__input {
