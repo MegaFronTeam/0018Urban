@@ -330,6 +330,7 @@ function eventHandler() {
 	const dataPicker = document.querySelector('.data-picker--js');
 	const dataPickerIcon = document.querySelector(`.data-picker ~ .icon`);
 	new AirDatepicker(dataPicker, {
+		autoClose: true,
 		onShow() {
 			dataPickerIcon.classList.add('active');
 		},
