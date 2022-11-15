@@ -32,7 +32,7 @@ mixin sAccount(validated)
 								<input type="file" class="filepond-round" name="filepond" accept="image/png, image/jpeg, image/gif"/>
 								+input("ivanov@yandex.ru",'', 'Электронная почта')(disabled)
 								+in-c('checkbox','Не отображать почту для других пользователей','email')
-								+input("Введите Вашу фамилию",'', 'Фамилия')(required)(class="required")
+								+input("Введите Вашу фамилию",'', 'Фамилия')(required class="required")
 								+input("Введите Вашу имя",'', 'Имя')(required)
 								+input("Введите Вашу отчество",'', 'Отчество')
 								+input("чч. мм. гг.",'text', 'Дата рождения','datett')(required autocomplete="off"  class="date-input").data-picker--js
