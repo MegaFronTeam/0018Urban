@@ -107,8 +107,22 @@
 	}
 	&__request-btn {
 		@extend .btn, .btn-primary;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			margin-top: 20px;
+		}
+	}
+	&__sent-btn {
+		@extend .btn, .btn-primary;
+		background-color: #00A89E;
+		border-color: #00A89E;
+		@include media-breakpoint-up(md) {
+			margin-top: 20px;
+		}
+		.icon {
+			margin-right: 5px;
+			width: 20px;
+			height: 20px;
+			color: $white;
 		}
 	}
 	&__contacts-list {

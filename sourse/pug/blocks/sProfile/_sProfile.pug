@@ -1,4 +1,4 @@
-mixin sProfile(request)
+mixin sProfile(request, sent)
 	// start sProfile
 	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
 		+e.img-block
@@ -11,6 +11,10 @@ mixin sProfile(request)
 				+e.age 16 июня 1990г.  ( 32 года )
 				if request
 					+e.request-btn.contacts-item(href=`#` data-src="contact-request" data-fancybox="modal") Обменяться контактами
+				else if sent
+					+e.sent-btn.contacts-item
+						+icon('checked')
+						| Ваша заявка отправлена
 				else
 					+e.contacts-list.UL
 						+e.contacts-item.LI
