@@ -115,6 +115,7 @@
 		@extend .btn, .btn-primary;
 		background-color: #00A89E;
 		border-color: #00A89E;
+		pointer-events: none;
 		@include media-breakpoint-up(md) {
 			margin-top: 20px;
 		}
