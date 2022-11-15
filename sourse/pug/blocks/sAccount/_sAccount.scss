@@ -281,6 +281,12 @@
 		border-radius: 4px;
 		border: 1px solid $gray-300;
 	}
+	.icon-calendar {
+		@include mt;
+	}
+	.icon-calendar.active {
+		color: $primary;
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

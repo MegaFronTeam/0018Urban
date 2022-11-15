@@ -1,4 +1,5 @@
 "use strict";
+
 const JSCCommon = { 
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -327,13 +328,19 @@ function eventHandler() {
 	}
 
 	const dataPicker = document.querySelector('.data-picker--js');
+	const dataPickerIcon = document.querySelector(`.data-picker ~ .icon`);
 	new AirDatepicker(dataPicker, {
-		dataPicker.classList.add('active');
+		onShow() {
+			dataPickerIcon.classList.add('active');
+		},
+		onHide() {
+			dataPickerIcon.classList.remove('active');
+		},
 		navTitles: {
 			days: 'yyyy <i>MMMM</i>',
 		},
 	});
-
+	
 	const selects = document.querySelectorAll('.js-choice');
 	if (selects) {
 		selects.forEach(choice => {

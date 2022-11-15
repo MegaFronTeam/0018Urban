@@ -1,4 +1,4 @@
-mixin sProfile(data)
+mixin sProfile(request)
 	// start sProfile
 	+b.SECTION.sProfile.section#sProfile&attributes(attributes)
 		+e.img-block
@@ -9,11 +9,14 @@ mixin sProfile(data)
 				+b.section-title
 					h1 Летунова Александра Петровна
 				+e.age 16 июня 1990г.  ( 32 года )
-				+e.contacts-list.UL
-					+e.contacts-item.LI
-						a(href="mailto:Ivanov@yandex.ru") Ivanov@yandex.ru
-					+e.contacts-item.LI
-						a(href="tel:+79009009090") +7 (900)-900-90-90
+				if request
+					+e.request-btn.contacts-item(href=`#` data-src="contact-request" data-fancybox="modal") Обменяться контактами
+				else
+					+e.contacts-list.UL
+						+e.contacts-item.LI
+							a(href="mailto:Ivanov@yandex.ru") Ivanov@yandex.ru
+						+e.contacts-item.LI
+							a(href="tel:+79009009090") +7 (900)-900-90-90
 			+e.activity
 				+e.like-btn.BUTTON
 					+icon('like-btn')

@@ -105,6 +105,12 @@
 		line-height: 114%;
 		color: $gray-600;
 	}
+	&__request-btn {
+		@extend .btn, .btn-primary;
+		@include media-breakpoint-up(lg) {
+			margin-top: 20px;
+		}
+	}
 	&__contacts-list {
 		display: flex;
 		flex-direction: column;
