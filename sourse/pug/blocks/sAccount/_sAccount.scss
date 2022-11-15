@@ -52,9 +52,12 @@
 		}
 	}
 	.tabs {
-		&__caption {
+		&__slider{
+
 			position: relative;
 			margin-bottom: 33px;
+		}
+		&__caption {
 		}
 		&__btn {
 			width: auto;
