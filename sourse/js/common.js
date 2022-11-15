@@ -328,6 +328,7 @@ function eventHandler() {
 
 	const dataPicker = document.querySelector('.data-picker--js');
 	new AirDatepicker(dataPicker, {
+		dataPicker.classList.add('active');
 		navTitles: {
 			days: 'yyyy <i>MMMM</i>',
 		},
