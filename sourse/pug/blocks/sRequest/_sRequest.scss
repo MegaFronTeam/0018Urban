@@ -1,0 +1,96 @@
+// start .sRequest
+.sRequest {
+	--sPT: #{rem(0)};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__tabs-caption {
+		display: flex;
+		justify-content: center;
+		padding-top: rem(27);
+		background-image: url('../img/svg/request-bg.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: top left;
+	}
+	&__tabs-btn {
+		position: relative;
+		bottom: -1px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 13px 5px;
+		width: 312px;
+		background-color: rgba($primary, .8);
+		border-radius: $border-radius-sm $border-radius-sm 0px 0px;
+		color: $white;
+		font-weight: 700;
+		font-size:rem(18);
+		line-height: 133%;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&.active {
+			background: $gray-100;
+			border-left: 1px solid $gray-300;
+			border-top: 1px solid $gray-300;
+			border-right: 1px solid $gray-300;
+			color: #008981;
+		}
+		.icon {
+			margin-right: 5px;
+		}
+	}
+	.icon-like-btn {
+		width: 18px;
+		height: 18px;
+	}
+	.icon-in {
+		width: 22px;
+		height: 10px;
+	}
+	.icon-out {
+		width: 22px;
+		height: 10px;
+	}
+	.sCatalog {
+		padding-top: 26px;
+	}
+	&__requests-list {
+		padding: 32px 0;
+		list-style-type: none;
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+		
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sRequest
+
+.request-item {
+	display: flex;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	border-radius: $border-radius-sm;
+	overflow: hidden;
+	&__reason {
+		width: 67%;
+		background-color: $white;
+		padding: 22px 22px 16px 39px;
+	}
+}

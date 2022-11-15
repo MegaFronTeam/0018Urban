@@ -1,4 +1,4 @@
-mixin sAccount(data)
+mixin sAccount(validated)
 	// start sAccount
 	+b.SECTION.sAccount.section#sAccount&attributes(attributes)
 		+e.container.container
@@ -6,9 +6,14 @@ mixin sAccount(data)
 				+b.section-title.text-center
 					h1 Мои настройки
 				+form-wrap
-					+b.account-title
-						+in-c('checkbox','Опубликовать анкету на сайте','published')
-						+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
+					if validated
+						+b.account-title.validated
+							+in-c('checkbox','Опубликовать анкету на сайте','published')
+							+e.caption Заполните обязательные поля, отмеченные звездочкой
+					else
+						+b.account-title
+							+in-c('checkbox','Опубликовать анкету на сайте','published')
+							+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
 			+e.body
 				.tabs.swiper
 					.tabs__caption.swiper-wrapper
@@ -29,7 +34,8 @@ mixin sAccount(data)
 								+input("Введите Вашу фамилию",'', 'Фамилия')(required)(class="required")
 								+input("Введите Вашу имя",'', 'Имя')(required)
 								+input("Введите Вашу отчество",'', 'Отчество')
-								+input("чч. мм. гг.",'text', 'Дата рождения')(required).data-picker--js
+								+input("чч. мм. гг.",'text', 'Дата рождения')(required class="date-input").data-picker--js
+									+icon('calendar')
 							fieldset
 								legend Смена пароля
 								+input("Введите старый пароль",'password', 'Старый пароль')

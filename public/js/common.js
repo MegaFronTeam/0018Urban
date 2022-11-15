@@ -402,12 +402,16 @@ function eventHandler() {
 		{
 			// labelIdle: `Drag & Drop your picture or <span class="filepond--label-action">Browse</span>`,
 			labelIdle: `Перетащите свой файл или загрузите с компьютера`,
+			labelMaxFileSizeExceeded: `Файл слишком большого размера`,
+			labelMaxFileSize: `Максимальный размер - 10Мб`,
 		}
 	);
 	FilePond.create(
 		document.querySelector('.filepond-round'),
 		{
-			labelIdle: `Перетащиетe свой файл или загрузите с компьютера`,
+			labelIdle: `Перетащиетe свой файл или&nbsp;загрузите с компьютера`,
+			labelMaxFileSizeExceeded: `Файл слишком большого размера`,
+			labelMaxFileSize: `Максимальный размер - 10Мб`,
 			imagePreviewHeight: 128,
 			imageCropAspectRatio: '1:1',
 			imageResizeTargetWidth: 200,
@@ -415,7 +419,7 @@ function eventHandler() {
 			stylePanelLayout: 'compact circle',
 			styleLoadIndicatorPosition: 'center bottom',
 			styleProgressIndicatorPosition: 'right bottom',
-			styleButtonRemoveItemPosition: 'left bottom',
+			styleButtonRemoveItemPosition: 'center bottom',
 			styleButtonProcessItemPosition: 'right bottom',
 		}
 	);

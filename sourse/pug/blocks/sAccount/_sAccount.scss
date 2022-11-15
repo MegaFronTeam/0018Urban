@@ -170,6 +170,15 @@
 		font-size: 24px;
 		line-height: 133%;
 	}
+	label{
+		position: relative;
+	}
+	.icon-calendar {
+		position: absolute;
+		right: 10px;
+		top: 55%;
+		font-size: 18px;
+	}
 	
 	.upload-field {
 		&__wrap {
@@ -253,10 +262,16 @@
 		margin-bottom: 32px;
 		font-family: $default-font;
 	}
+	.filepond--root .filepond--credits {
+		display: none;
+	}
 	.filepond--drop-label {
     color: $dark;
 		font-size: 16px;
 		line-height: 125%;
+		label {
+			max-width: 250px;
+		}
 	}
 	.filepond--panel-root {
     background-color: $gray-100;

@@ -1,0 +1,43 @@
+mixin request-item(p, received, status, title)
+	+b.request-item
+		+profile-item('Летунова Александра Петровна', '1', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+		+e.reason
+			+e.reason-text
+				strong Причина запроса
+				p!= p
+			+e.reason-buttons
+				if received
+					+e.btn--approve Одобрить
+					+e.btn--reject Отклонить
+				+e.status(class=`${status}`)= title
+
+mixin sRequest(data)
+	// start sRequest
+	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
+		+e.tabs.tabs
+			+e.tabs-caption.tabs__caption
+				+e.tabs-btn.tabs__btn.active
+					+e.tab-btn 
+						+icon('like-btn')
+						| Избранные участники
+				+e.tabs-btn.tabs__btn
+					+e.tab-btn 
+						+icon('in')
+						| Запросы на обмен контактами
+				+e.tabs-btn.tabs__btn
+					+e.tab-btn 
+						+icon('out')
+						| Отправленные запросы
+			+e.tabs__content.tabs__content.active
+				+sCatalog
+			+e.tabs__content.tabs__content
+				.container-fluid
+					+e.requests-list.UL
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','received')
+			+e.tabs__content.tabs__content
+				.container-fluid
+					+e.requests-list.UL
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','','sdfse','Одобрено')
+	// end sRequest
