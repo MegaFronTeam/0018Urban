@@ -376,7 +376,7 @@ function eventHandler() {
 	// 	}
 	// );
 
-	const TabsSlider = new Swiper(".tabs", {
+	const TabsSlider = new Swiper(".tabs__slider--js", {
 		slidesPerView: 'auto',
 	});
 
