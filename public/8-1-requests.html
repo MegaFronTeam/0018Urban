@@ -79,31 +79,34 @@
 			<main>
 				<!-- start sRequest-->
 				<section class="sRequest section" id="sRequest">
-					<div class="sRequest__tabs tabs">
-						<div class="sRequest__tabs-caption tabs__caption">
-							<div class="sRequest__tabs-btn tabs__btn active">
-								<div class="sRequest__tab-btn"> 
-									<svg class="icon icon-like-btn ">
-										<use xlink:href="img/svg/sprite.svg#like-btn"></use>
-									</svg>Избранные участники
-								</div>
-							</div>
-							<div class="sRequest__tabs-btn tabs__btn">
-								<div class="sRequest__tab-btn"> 
-									<svg class="icon icon-in ">
-										<use xlink:href="img/svg/sprite.svg#in"></use>
-									</svg>Запросы на обмен контактами
-								</div>
-							</div>
-							<div class="sRequest__tabs-btn tabs__btn">
-								<div class="sRequest__tab-btn"> 
-									<svg class="icon icon-out ">
-										<use xlink:href="img/svg/sprite.svg#out"></use>
-									</svg>Отправленные запросы
-								</div>
+					<div class="sRequest__tabs">
+						<div class="sRequest__select-wrap d-lg-none">
+							<div class="container-fluid">
+								<select class="sRequest__select form-control form-select">
+									<option class="tabs-option" data-tabs-path="all">Избранные участники</option>
+									<option class="tabs-option" data-tabs-path="sent">Запросы на обмен контактами</option>
+									<option class="tabs-option" data-tabs-path="received">Отправленные запросы</option>
+								</select>
 							</div>
 						</div>
-						<div class="sRequest__tabs__content tabs__content active">
+						<div class="sRequest__tabs-caption d-none d-lg-flex tabs__caption">
+							<div class="sRequest__tabs-btn active" data-tabs-path="all">
+								<svg class="icon icon-like-btn ">
+									<use xlink:href="img/svg/sprite.svg#like-btn"></use>
+								</svg>Избранные участники
+							</div>
+							<div class="sRequest__tabs-btn" data-tabs-path="sent">
+								<svg class="icon icon-in ">
+									<use xlink:href="img/svg/sprite.svg#in"></use>
+								</svg>Запросы на обмен контактами
+							</div>
+							<div class="sRequest__tabs-btn" data-tabs-path="received">
+								<svg class="icon icon-out ">
+									<use xlink:href="img/svg/sprite.svg#out"></use>
+								</svg>Отправленные запросы
+							</div>
+						</div>
+						<div class="sRequest__tabs-content active" data-tabs-target="all">
 							<!-- start sCatalog-->
 							<div class="sCatalog section">
 								<div class="container-fluid">
@@ -625,7 +628,7 @@
 							</div>
 							<!-- end sCatalog-->
 						</div>
-						<div class="sRequest__tabs__content tabs__content">
+						<div class="sRequest__tabs-content" data-tabs-target="sent">
 							<div class="container-fluid">
 								<ul class="sRequest__requests-list">
 									<li>
@@ -633,28 +636,30 @@
 											<article class="profile-item" href="#">
 												<div class="profile-item__header">
 													<div class="profile-item__header-text">
-														<h2>Летунова Александра Петровна</h2>
+														<h2>Агадуллина Елена</h2>
 														<div class="profile-item__age">41 год
 														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
 													</div>
 													<div class="profile-item__header-img">
-														<a class="profile-item__img-wrap" href="#"><img src="img/profile-1.jpg" alt="" loading="lazy"/>
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-2.jpg" alt="" loading="lazy"/>
 														</a>
 													</div>
 												</div>
 												<div class="profile-item__body">
-													<div class="profile-item__position">Директор по развитию
+													<div class="profile-item__position">
 													</div>
-													<div class="profile-item__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+													<div class="profile-item__company">
 													</div>
 													<div class="profile-item__text">
 													</div>
 													<ul class="profile-item__interest-list">
-														<li>Спорт</li>
-														<li>Интерес 2</li>
+														<li></li>
 													</ul>
 													<ul class="profile-item__groups-list">
-														<li>Группа 2</li>
+														<li>Название группы 1</li>
+														<li>Название группы 2</li>
 													</ul>
 												</div>
 												<div class="profile-item__btn">Посмотреть профиль
@@ -662,7 +667,9 @@
 											</article>
 											<!-- /.product-item-->
 											<div class="request-item__reason">
-												<div class="request-item__reason-text"><strong>Причина запроса</strong>
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
 													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
 												</div>
 												<div class="request-item__reason-buttons">
@@ -670,18 +677,10 @@
 													</div>
 													<div class="request-item__btn request-item__btn--reject">Отклонить
 													</div>
-													<div class="request-item__status undefined">
-													</div>
 												</div>
 											</div>
 										</li>
 									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="sRequest__tabs__content tabs__content">
-							<div class="container-fluid">
-								<ul class="sRequest__requests-list">
 									<li>
 										<li class="request-item">
 											<article class="profile-item" href="#">
@@ -690,6 +689,8 @@
 														<h2>Летунова Александра Петровна</h2>
 														<div class="profile-item__age">41 год
 														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
 													</div>
 													<div class="profile-item__header-img">
 														<a class="profile-item__img-wrap" href="#"><img src="img/profile-1.jpg" alt="" loading="lazy"/>
@@ -716,17 +717,298 @@
 											</article>
 											<!-- /.product-item-->
 											<div class="request-item__reason">
-												<div class="request-item__reason-text"><strong>Причина запроса</strong>
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
+													<p>Федеральное бюджетное учреждение «Агентство автомобильного транспорта»</p>
+												</div>
+												<div class="request-item__reason-buttons">
+													<div class="request-item__btn request-item__btn--approve">Одобрить
+													</div>
+													<div class="request-item__btn request-item__btn--reject">Отклонить
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+									<li>
+										<li class="request-item">
+											<article class="profile-item" href="#">
+												<div class="profile-item__header">
+													<div class="profile-item__header-text">
+														<h2>Анашкина Елена Владимировна</h2>
+														<div class="profile-item__age">41 год
+														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
+													</div>
+													<div class="profile-item__header-img">
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-3.jpg" alt="" loading="lazy"/>
+														</a>
+													</div>
+												</div>
+												<div class="profile-item__body">
+													<div class="profile-item__position">Директор по развитию
+													</div>
+													<div class="profile-item__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+													</div>
+													<div class="profile-item__text">
+													</div>
+													<ul class="profile-item__interest-list">
+														<li>Спорт</li>
+														<li>Интерес 2</li>
+													</ul>
+													<ul class="profile-item__groups-list">
+														<li>Группа 2</li>
+													</ul>
+												</div>
+												<div class="profile-item__btn">Посмотреть профиль
+												</div>
+											</article>
+											<!-- /.product-item-->
+											<div class="request-item__reason">
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
 													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
 												</div>
 												<div class="request-item__reason-buttons">
-													<div class="request-item__status sdfse">Одобрено
+													<div class="request-item__btn request-item__btn--approve">Одобрить
+													</div>
+													<div class="request-item__btn request-item__btn--reject">Отклонить
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+									<li>
+										<li class="request-item">
+											<article class="profile-item" href="#">
+												<div class="profile-item__header">
+													<div class="profile-item__header-text">
+														<h2>Афанасьева Ольга Валентиновна</h2>
+														<div class="profile-item__age">41 год
+														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
+													</div>
+													<div class="profile-item__header-img">
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-4.jpg" alt="" loading="lazy"/>
+														</a>
+													</div>
+												</div>
+												<div class="profile-item__body">
+													<div class="profile-item__position">
+													</div>
+													<div class="profile-item__company">
+													</div>
+													<div class="profile-item__text">
+													</div>
+													<ul class="profile-item__interest-list">
+														<li>Спорт</li>
+														<li>Интерес 2</li>
+													</ul>
+													<ul class="profile-item__groups-list">
+														<li>Название группы</li>
+													</ul>
+												</div>
+												<div class="profile-item__btn">Посмотреть профиль
+												</div>
+											</article>
+											<!-- /.product-item-->
+											<div class="request-item__reason">
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
+													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
+												</div>
+												<div class="request-item__reason-buttons">
+													<div class="request-item__btn request-item__btn--approve">Одобрить
+													</div>
+													<div class="request-item__btn request-item__btn--reject">Отклонить
 													</div>
 												</div>
 											</div>
 										</li>
 									</li>
 								</ul>
+								<nav class="pagination-nav">
+									<ul class="pagination">
+										<li class="page-item active"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">4</a></li>
+										<li class="page-item"><a class="page-link" href="#">5</a></li>
+									</ul>
+									<ul class="pagination pagination--conrols">
+										<li class="page-item disabled"><a class="page-link page-link--prev" href="#"></a></li>
+										<li class="page-item"><a class="page-link page-link--next" href="#"></a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="sRequest__tabs-content" data-tabs-target="received">
+							<div class="container-fluid">
+								<ul class="sRequest__requests-list">
+									<li>
+										<li class="request-item">
+											<article class="profile-item" href="#">
+												<div class="profile-item__header">
+													<div class="profile-item__header-text">
+														<h2>Барановская Татьяна Артуровна</h2>
+														<div class="profile-item__age">41 год
+														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
+													</div>
+													<div class="profile-item__header-img">
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-5.jpg" alt="" loading="lazy"/>
+														</a>
+													</div>
+												</div>
+												<div class="profile-item__body">
+													<div class="profile-item__position">Директор по развитию
+													</div>
+													<div class="profile-item__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+													</div>
+													<div class="profile-item__text">
+													</div>
+													<ul class="profile-item__interest-list">
+														<li>Спорт</li>
+														<li>Интерес 2</li>
+													</ul>
+													<ul class="profile-item__groups-list">
+														<li>Название группы</li>
+													</ul>
+												</div>
+												<div class="profile-item__btn">Посмотреть профиль
+												</div>
+											</article>
+											<!-- /.product-item-->
+											<div class="request-item__reason">
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
+													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
+												</div>
+												<div class="request-item__reason-buttons">
+													<div class="request-item__status request-item__status request-item__status--approved">Одобрено
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+									<li>
+										<li class="request-item">
+											<article class="profile-item" href="#">
+												<div class="profile-item__header">
+													<div class="profile-item__header-text">
+														<h2>Андрощук Виктор Владимирович</h2>
+														<div class="profile-item__age">41 год
+														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
+													</div>
+													<div class="profile-item__header-img">
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-6.jpg" alt="" loading="lazy"/>
+														</a>
+													</div>
+												</div>
+												<div class="profile-item__body">
+													<div class="profile-item__position">Директор по развитию
+													</div>
+													<div class="profile-item__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+													</div>
+													<div class="profile-item__text">
+													</div>
+													<ul class="profile-item__interest-list">
+														<li>Спорт</li>
+														<li>Интерес 2</li>
+													</ul>
+													<ul class="profile-item__groups-list">
+														<li>Группа 2</li>
+													</ul>
+												</div>
+												<div class="profile-item__btn">Посмотреть профиль
+												</div>
+											</article>
+											<!-- /.product-item-->
+											<div class="request-item__reason">
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
+													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
+												</div>
+												<div class="request-item__reason-buttons">
+													<div class="request-item__status request-item__status request-item__status--rejected">Отклонено
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+									<li>
+										<li class="request-item">
+											<article class="profile-item" href="#">
+												<div class="profile-item__header">
+													<div class="profile-item__header-text">
+														<h2>Бек Надежда Николаевна</h2>
+														<div class="profile-item__age">41 год
+														</div>
+														<button class="profile-item__show-more d-sm-none">Подробнее
+														</button>
+													</div>
+													<div class="profile-item__header-img">
+														<a class="profile-item__img-wrap" href="#"><img src="img/profile-7.jpg" alt="" loading="lazy"/>
+														</a>
+													</div>
+												</div>
+												<div class="profile-item__body">
+													<div class="profile-item__position">Директор по развитию
+													</div>
+													<div class="profile-item__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+													</div>
+													<div class="profile-item__text">
+													</div>
+													<ul class="profile-item__interest-list">
+														<li>Спорт</li>
+														<li>Интерес 2</li>
+													</ul>
+													<ul class="profile-item__groups-list">
+														<li>Название группы 1</li>
+														<li>Название группы 2</li>
+													</ul>
+												</div>
+												<div class="profile-item__btn">Посмотреть профиль
+												</div>
+											</article>
+											<!-- /.product-item-->
+											<div class="request-item__reason">
+												<div class="request-item__reason-text">
+													<div class="request-item__title">Причина запроса
+													</div>
+													<p>Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.</p>
+												</div>
+												<div class="request-item__reason-buttons">
+													<div class="request-item__status request-item__status request-item__status--pending">На рассмотрении
+													</div>
+												</div>
+											</div>
+										</li>
+									</li>
+								</ul>
+								<nav class="pagination-nav">
+									<ul class="pagination">
+										<li class="page-item active"><a class="page-link" href="#">1</a></li>
+										<li class="page-item"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">4</a></li>
+										<li class="page-item"><a class="page-link" href="#">5</a></li>
+									</ul>
+									<ul class="pagination pagination--conrols">
+										<li class="page-item disabled"><a class="page-link page-link--prev" href="#"></a></li>
+										<li class="page-item"><a class="page-link page-link--next" href="#"></a></li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>

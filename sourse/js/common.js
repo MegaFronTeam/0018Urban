@@ -501,6 +501,52 @@ function eventHandler() {
 		
 	// / Дропдаун фильтра в каталоге
 
+	// Кнопка "подробнее" в карточках запросов контактов	
+	const moreBtns = document.querySelectorAll('.profile-item__show-more');
+	
+	if (moreBtns) {
+		moreBtns.forEach(btn => {
+			btn.addEventListener('click', function(event) {
+				let profileBody = btn.closest('.profile-item').querySelector('.profile-item__body');
+				profileBody.classList.add('active');
+				btn.hidden = true;
+			});
+		});
+	}
+	// / Кнопка "подробнее" в карточках запросов контактов
+
+	// Табы из селекта на странице запросов
+	const requestTabs = document.querySelector('.sRequest__tabs');
+	const selectTabs = document.querySelector('.sRequest__select');
+  const selectTabsBtn = document.querySelectorAll('.tabs-option');
+  const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
+  const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
+
+  if (selectTabs) {
+    selectTabs.addEventListener('change', (event) => {
+			const tabsPath = selectTabs.options[event.target.selectedIndex].dataset.tabsPath;
+			selectTabsBtn.forEach(el => {el.classList.remove('active')});
+			document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('active');
+			tabsHandler(tabsPath);
+    });
+  }
+
+	if (requestTabs) {
+		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
+			const tabsPath = e.target.dataset.tabsPath;
+			requestTabsBtn.forEach(el => {el.classList.remove('active')});
+			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => {el.classList.add('active')});
+			tabsHandler(tabsPath);
+		})
+	}
+
+  const tabsHandler = (path) => {
+    tabsContent.forEach(el => {el.classList.remove('active')});
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
+  };
+	// /Табы из селекта на странице запросов
+	
+
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
 		if (!topNav) return;

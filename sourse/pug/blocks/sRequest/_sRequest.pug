@@ -1,43 +1,96 @@
+mixin request-profile-item(name, img, age, position, company, interests=[], groups=[])
+	+b.ARTICLE.profile-item(href='#')
+		+e.header
+			+e.header-text
+				h2= name
+				+e.age= age
+				+e.show-more.d-sm-none.BUTTON Подробнее
+			+e.header-img
+				+e.img-wrap(href="#")
+					+img(`img/profile-${img}.jpg`)
+		+e.body
+			+e.position= position
+			+e.company!= company
+			+e.text!= p
+			+e.interest-list.UL
+				each interest in interests
+					li= interest
+			+e.groups-list.UL
+				each group in groups
+					li= group
+		+e.btn Посмотреть профиль
+	// /.product-item
+
 mixin request-item(p, received, status, title)
 	+b.request-item
-		+profile-item('Летунова Александра Петровна', '1', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+		block
+		//- +request-profile-item('Летунова Александра Петровна', '1', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
 		+e.reason
 			+e.reason-text
-				strong Причина запроса
+				+e.title Причина запроса
 				p!= p
 			+e.reason-buttons
 				if received
 					+e.btn--approve Одобрить
 					+e.btn--reject Отклонить
-				+e.status(class=`${status}`)= title
+				else
+					+e.status(class=`request-item__status--${status}`)= title
 
 mixin sRequest(data)
 	// start sRequest
 	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
-		+e.tabs.tabs
-			+e.tabs-caption.tabs__caption
-				+e.tabs-btn.tabs__btn.active
-					+e.tab-btn 
-						+icon('like-btn')
-						| Избранные участники
-				+e.tabs-btn.tabs__btn
-					+e.tab-btn 
-						+icon('in')
-						| Запросы на обмен контактами
-				+e.tabs-btn.tabs__btn
-					+e.tab-btn 
-						+icon('out')
-						| Отправленные запросы
-			+e.tabs__content.tabs__content.active
+		+e.tabs
+			+e.select-wrap.d-lg-none
+				.container-fluid
+					select.sRequest__select.form-control.form-select
+						option.tabs-option(data-tabs-path="all") Избранные участники
+						option.tabs-option(data-tabs-path="sent") Запросы на обмен контактами
+						option.tabs-option(data-tabs-path="received") Отправленные запросы
+			+e.tabs-caption.d-none.d-lg-flex.tabs__caption
+				+e.tabs-btn(data-tabs-path="all").active
+					+icon('like-btn')
+					| Избранные участники
+				+e.tabs-btn(data-tabs-path="sent")
+					+icon('in')
+					| Запросы на обмен контактами
+				+e.tabs-btn(data-tabs-path="received")
+					+icon('out')
+					| Отправленные запросы
+			+e.tabs-content.active(data-tabs-target="all")
 				+sCatalog
-			+e.tabs__content.tabs__content
+			+e.tabs-content(data-tabs-target="sent")
 				.container-fluid
 					+e.requests-list.UL
 						li
 							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','received')
-			+e.tabs__content.tabs__content
+								+request-profile-item('Агадуллина Елена', '2', '41 год', '', '', [''], ['Название группы 1',  'Название группы 2'])
+
+						li
+							+request-item('Федеральное бюджетное учреждение «Агентство автомобильного транспорта»','received')
+								+request-profile-item('Летунова Александра Петровна', '1', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','received')
+								+request-profile-item('Анашкина Елена Владимировна', '3', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','received')
+								+request-profile-item('Афанасьева Ольга Валентиновна', '4', '41 год', '', '', ['Спорт','Интерес 2'], ['Название группы'])
+					+pagin()
+			+e.tabs-content(data-tabs-target="received")
 				.container-fluid
 					+e.requests-list.UL
 						li
-							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','','sdfse','Одобрено')
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','','approved','Одобрено')
+								+request-profile-item('Барановская Татьяна Артуровна', '5', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Название группы'])
+
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','','rejected','Отклонено')
+								+request-profile-item('Андрощук Виктор Владимирович', '6', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Группа 2'])
+
+						li
+							+request-item('Планирую развиваться в&nbsp;маркетинге, мои цели на&nbsp;ближайшее время&nbsp;&mdash; научиться создавать действенные триггерные рассылки и&nbsp;обучиться таргетированной рекламе.','','pending','На рассмотрении')
+								+request-profile-item('Бек Надежда Николаевна', '7', '41 год', 'Директор по развитию', 'Федеральное бюджетное учреждение «Агентство автомобильного транспорта»', ['Спорт','Интерес 2'], ['Название группы 1', 'Название группы 2'])
+					+pagin()
+
 	// end sRequest
