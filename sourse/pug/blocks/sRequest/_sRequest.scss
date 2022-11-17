@@ -12,9 +12,10 @@
 		background-size: 100%;
 		background-position: top left;
 	}
-	&__select-wrap {
+	&__select-container {
 		position: relative;
-		padding: 18px 0;
+		padding-top: 18px;
+		padding-bottom: 18px;
 		&::before, &::after {
 			position: absolute;
 			content: '';
@@ -30,6 +31,50 @@
 		&::after {
 			right: 0;
 			background: linear-gradient(-45deg, #d2f3f0, #d2f3f0 35%,#c0eeeb 35%,#c0eeeb 43%,#b8ece8 43%,#b8ece8 50%,#B0EAE6 50%,#B0EAE6);
+		}
+	}
+	.choices__list--dropdown {
+		.choices__item {
+			padding-left: 10px !important;
+			color: $body-color;
+			font-weight: 400;
+			&::before  {
+				content: none;
+			}
+		}
+	}
+	.choices__item--selectable {
+		position: relative;
+		padding-left: 30px;
+		font-weight: 700;
+		color: #008981;
+		&::before {
+			position: absolute;
+			display: inline-block;
+			top: 50%;
+			left: 0;
+			width: 22px;
+			content: '';
+			background-repeat: no-repeat;
+			transform: translateY(-50%);
+		}
+		&[data-value="all"] {
+			&::before {
+				height: 22px;
+				background-image: url('../img/svg/like-btn.svg');
+			}
+		}
+		&[data-value="sent"] {
+			&::before {
+				height: 10px;
+				background-image: url('../img/svg/sent.svg');
+			}
+		}
+		&[data-value="received"] {
+			&::before {
+				height: 10px;
+				background-image: url('../img/svg/received.svg');
+			}
 		}
 	}
 	&__tabs-btn {

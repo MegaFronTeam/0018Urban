@@ -40,12 +40,12 @@ mixin sRequest(data)
 	// start sRequest
 	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
 		+e.tabs
-			+e.select-wrap.d-lg-none
-				.container-fluid
-					select.sRequest__select.form-control.form-select
-						option.tabs-option(data-tabs-path="all") Избранные участники
-						option.tabs-option(data-tabs-path="sent") Запросы на обмен контактами
-						option.tabs-option(data-tabs-path="received") Отправленные запросы
+			+e.select-container.container-fluid.d-lg-none
+				+e.select-wrap--js.SELECT
+					//- select.sRequest__select.form-control.form-select.js-choice
+						//- option.tabs-option(data-tabs-path="all") Избранные участники
+						//- option.tabs-option(data-tabs-path="sent") Запросы на обмен контактами
+						//- option.tabs-option(data-tabs-path="received") Отправленные запросы
 			+e.tabs-caption.d-none.d-lg-flex.tabs__caption
 				+e.tabs-btn(data-tabs-path="all").active
 					+icon('like-btn')

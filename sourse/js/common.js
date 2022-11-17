@@ -370,23 +370,71 @@ function eventHandler() {
 						return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
 					},
 				}
-			)
+				)
+			});
+		}
+		
+	// Табы из селекта на странице запросов
+	const requestTabs = document.querySelector('.sRequest__tabs');
+	const selectTabsBtn = document.querySelectorAll('.tabs-option');
+	const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
+	const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
+	const requestSelect = document.querySelector('.sRequest__select-wrap--js');
+	const requestChoice = new Choices(requestSelect, {
+		itemSelectText: '',
+	});
+
+	requestChoice.setChoices([
+		{
+			value: 'all', 
+			label: 'Избранные участники', 
+			selected: true,
+			customProperties: {
+				dataTabsPath: 'all'
+			}
+		},
+		{
+			value: 'sent', 
+			label: 'Запросы на обмен контактами',
+			customProperties: {
+				dataTabsPath: 'sent'
+			}
+		},
+		{
+			value: 'received', 
+			label: 'Отправленные запросы', 
+			customProperties: {
+				dataTabsPath: 'received'
+			} 
+		}
+	],
+	);
+	
+	if (requestSelect) {
+		requestSelect.addEventListener('change',(event) => {
+			const tabsPath = requestChoice.getValue().customProperties.dataTabsPath;
+			selectTabsBtn.forEach(el => {el.classList.remove('active')});
+			tabsHandler(tabsPath);
 		});
 	}
 
-	// let multipleSelect = new Choices(
-	// 	document.querySelector('.js-choice-multiple'),
-	// 	{
-	// 		allowHTML: true,
-	// 		delimiter: ',',
-	// 		editItems: true,
-	// 		maxItemCount: 5,
-	// 		removeItemButton: true,
-	// 	}
-	// );
+	if (requestTabs) {
+		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
+			const tabsPath = e.target.dataset.tabsPath;
+			requestTabsBtn.forEach(el => {el.classList.remove('active')});
+			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => {el.classList.add('active')});
+			tabsHandler(tabsPath);
+		})
+	}
 
-	const TabsSlider = new Swiper(".tabs__slider--js", {
-		slidesPerView: 'auto',
+	const tabsHandler = (path) => {
+		tabsContent.forEach(el => {el.classList.remove('active')});
+		document.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
+	};
+	// /Табы из селекта на странице запросов
+		
+		const TabsSlider = new Swiper(".tabs__slider--js", {
+			slidesPerView: 'auto',
 	});
 
 	FilePond.registerPlugin(
@@ -515,36 +563,6 @@ function eventHandler() {
 	}
 	// / Кнопка "подробнее" в карточках запросов контактов
 
-	// Табы из селекта на странице запросов
-	const requestTabs = document.querySelector('.sRequest__tabs');
-	const selectTabs = document.querySelector('.sRequest__select');
-  const selectTabsBtn = document.querySelectorAll('.tabs-option');
-  const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
-  const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
-
-  if (selectTabs) {
-    selectTabs.addEventListener('change', (event) => {
-			const tabsPath = selectTabs.options[event.target.selectedIndex].dataset.tabsPath;
-			selectTabsBtn.forEach(el => {el.classList.remove('active')});
-			document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add('active');
-			tabsHandler(tabsPath);
-    });
-  }
-
-	if (requestTabs) {
-		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
-			const tabsPath = e.target.dataset.tabsPath;
-			requestTabsBtn.forEach(el => {el.classList.remove('active')});
-			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => {el.classList.add('active')});
-			tabsHandler(tabsPath);
-		})
-	}
-
-  const tabsHandler = (path) => {
-    tabsContent.forEach(el => {el.classList.remove('active')});
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
-  };
-	// /Табы из селекта на странице запросов
 	
 
 	function setFixedNav() {
