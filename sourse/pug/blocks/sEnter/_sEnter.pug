@@ -1,0 +1,31 @@
+mixin enter-form(validated)
+	+e.title Вход
+	+form-wrap
+		+input("Электронная почта",'email', 'Электронная почта')(required)
+		if validated
+			+input("Пароль",'password', 'Пароль').validated(required)
+			+e.alert Неверный пароль
+		else
+			+input("Пароль",'password', 'Пароль')(required)
+		+e.btn.BUTTON Войти
+	+e.recovery(href="2-3-enter-pass-recovery.pug") Забыли пароль
+
+mixin recovery-form()
+	+e.title Восстановление пароля
+	+form-wrap
+		+input("Электронная почта",'email', 'Электронная почта')(required)
+		+e.btn.BUTTON Отправить
+		+e.caption На&nbsp;указанный вами адрес электронной почты будет отправлена инструкция по&nbsp;восстановления пароля
+	+e.return(href="2-2-enter-pass-recovery.html") Назад
+
+mixin sEnter(data)
+	// start sEnter
+	+b.SECTION.sEnter.section#sEnter&attributes(attributes)
+		.container
+			+e.container
+				+e.logo(href="#").d-none.d-sm-block
+					+img('img/svg/logo-light.svg')
+				block
+
+			+e.row.row
+	// end sEnter
