@@ -1,37 +1,40 @@
- 
-	  
-.soc{
-	@include roww(10px, m);
+.soc {
+	@include roww(24px);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(24)};
+	}
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
-		height: 20px;
-		// font-size: rem(20);
+	.icon {
+		// height: 20px;
+		font-size: 20px;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(20);
+		}
 		&-vk {
-			// font-size: 12px;
-			height: 12px;
+			font-size: 12px;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(12);
+			}
+			// height: 12px;
 		}
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -39,23 +42,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -69,24 +69,23 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 
-
-.search-block{
+.search-block {
 	position: relative;
-	input{
+	input {
 		font-size: 14px;
 		width: 100%;
 		border: none !important;
@@ -95,11 +94,11 @@
 		padding-top: rem(14);
 		padding-bottom: rem(14);
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		border: none !important;
 	}
-	button{
+	button {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -122,7 +121,7 @@
 	list-style: none;
 }
 
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
 	&:not(:first-child) {
 		& a::before {
@@ -134,10 +133,10 @@
 			content: "";
 			height: 16px;
 			margin: 0 5px;
-			width: 16px;			
+			width: 16px;
 		}
 	}
-	& a {		
+	& a {
 		display: flex;
 		align-items: center;
 		color: $gray-900;
@@ -196,7 +195,7 @@
 		position: absolute;
 		right: 50%;
 		top: 50%;
-		content: '';
+		content: "";
 		display: inline-block;
 		height: 7px;
 		width: 7px;
@@ -214,7 +213,7 @@
 		position: absolute;
 		right: 17px;
 		top: 50%;
-		content: '';
+		content: "";
 		display: inline-block;
 		height: 7px;
 		width: 7px;
@@ -234,7 +233,7 @@
 	width: 56px;
 	height: 56px;
 	border-radius: 50%;
-	background: #4ED0C8;
+	background: #4ed0c8;
 	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
 	z-index: 100;
 	@include media-breakpoint-down(lg) {
