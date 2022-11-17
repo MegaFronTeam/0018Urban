@@ -2,6 +2,8 @@
  1. <https://megafronteam.github.io/0018Urban/public>
  2. <https://megafronteam.github.io/0018Urban/public/00-modal.html>
  2. <https://megafronteam.github.io/0018Urban/public/2-1-enter.html>
+ 2. <https://megafronteam.github.io/0018Urban/public/2-2-enter-validated.html>
+ 2. <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-1-account.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-2-account.html>
  4. <https://megafronteam.github.io/0018Urban/public/6-1-networking.html>
