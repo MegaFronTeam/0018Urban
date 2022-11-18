@@ -1,6 +1,147 @@
 mixin sEvents(data)
 	// start sEvents
 	+b.SECTION.sEvents.section#sEvents&attributes(attributes)
+		+b.event-calendar
+			+e.header
+				+e.button--prev
+				+e.title Ноябрь
+				+e.button--next
+			table
+				thead.d-md-none
+					tr
+						th Пн
+						th Вт
+						th Ср
+						th Чт
+						th Пт
+						th Сб
+						th Вс
+				thead.full-head
+					tr
+						th Понедельник
+						th Вторник
+						th Среда
+						th Четверг
+						th Пятница
+						th Суббота
+						th Воскресенье
+				tbody 
+					tr
+						td.not-current
+							+e.day
+								+e.date 31
+						td.today
+							+e.day
+								+e.date 1
+						td
+							+e.day
+								+e.date 2
+						td
+							+e.day
+								+e.date 3
+						td
+							+e.day
+								+e.date 4
+						td
+							+e.day
+								+e.date 5
+								+e.event.BUTTON 2
+						td
+							+e.day
+								+e.date 6
+					tr
+						td
+							+e.day
+								+e.date 7
+						td
+							+e.day
+								+e.date 8
+						td
+							+e.day
+								+e.date 9
+								+e.event.BUTTON 1
+						td
+							+e.day
+								+e.date 10
+						td
+							+e.day
+								+e.date 11
+						td
+							+e.day
+								+e.date 12
+						td
+							+e.day
+								+e.date 13
+					tr
+						td
+							+e.day
+								+e.date 14
+						td
+							+e.day
+								+e.date 15
+						td
+							+e.day
+								+e.date 16
+						td
+							+e.day
+								+e.date 17
+						td.chosen
+							+e.day
+								+e.date 18
+								+e.event.BUTTON 2
+						td
+							+e.day
+								+e.date 19
+						td
+							+e.day
+								+e.date 20
+					tr
+						td
+							+e.day
+								+e.date 21
+						td
+							+e.day
+								+e.date 22
+						td
+							+e.day
+								+e.date 23
+								+e.event.BUTTON 3
+						td
+							+e.day
+								+e.date 24
+						td
+							+e.day
+								+e.date 25
+						td
+							+e.day
+								+e.date 26
+						td
+							+e.day
+								+e.date 27
+					tr
+						td
+							+e.day
+								+e.date 28
+						td
+							+e.day
+								+e.date 29
+						td
+							+e.day
+								+e.date 30
+						td.not-current
+							+e.day
+								+e.date 1 #[span день]
+						td.not-current
+							+e.day
+								+e.date 2
+						td.not-current
+							+e.day
+								+e.date 3
+						td.not-current
+							+e.day
+								+e.date 4
+
+
 		.container-fluid
 			+e.row.row
 				+newsListItem(5,'Вебинар','26 сентября','Как совершенствовать организцию приёма обучения')

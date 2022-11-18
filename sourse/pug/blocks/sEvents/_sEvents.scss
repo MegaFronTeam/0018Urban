@@ -3,6 +3,11 @@
 	--sPT: #{rem(32)};
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
+	&.calendar {
+		.event-calendar {
+			display: block;
+		}
+	}
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -57,3 +62,113 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sEvents
 
+.event-calendar {
+	display: none;
+	position: relative;
+	top: -32px;
+	padding: 24px 20px;
+	background-color: $white;
+	z-index: -1;
+	// @include media-breakpoint-down(md) {
+	// 	margin-bottom: 16px;
+	// }
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 24px;
+	}
+	&__button {
+		width: 14px;
+		height: 19px;
+		background-image: url('../img/svg/prev-arrow.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		&--next {
+			transform: rotate(180deg);
+		}
+	}
+	&__title {
+		margin: 0 40px;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 1;
+		@include media-breakpoint-down(md) {
+			font-size: rem(19);
+		}
+	}
+	table {
+		@extend .table, .table-bordered;
+		margin: 0 auto;
+		max-width: 1121px;
+		width: 100%;
+  	table-layout: fixed;
+	}
+	thead {
+		border-left-color: transparent;
+		border-top-color: transparent;
+		border-right-color: transparent;
+	}
+	.full-head {
+		display: none;
+		@include media-breakpoint-up(md) {
+			display: table-header-group;
+		}
+	}
+	th {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 16px;
+		color: $gray-600;
+	}
+	td {
+		position: relative;
+		font-weight: 700;
+		width: 100%;
+		@include media-breakpoint-down(md) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+			padding: .2rem !important;
+		}
+	}
+	.not-current {
+		color: $gray-300;
+	}
+	.today {
+		background-color: #D2F3F0;
+	}
+	.chosen {
+		border: 3px solid $primary;
+	}
+	&__date, &__event {
+		display: inline-block;
+	}
+	&__date span {
+		font-size: 14px;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+	}
+	&__day {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__event {
+		@extend .stretched-link;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 26px;
+		height: 26px;
+		border-radius: 50%;
+		border: none;
+		background-color: $primary;
+		color: $white;
+		@include media-breakpoint-down(md) {
+			width: 15px;
+			height: 15px;
+		}
+	}
+}
