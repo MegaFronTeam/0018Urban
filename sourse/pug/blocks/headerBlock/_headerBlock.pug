@@ -54,4 +54,19 @@ mixin eventsHeader
 							span.custom-input__text.form-check-label
 								+icon('calendar')
 
+
+mixin sUsefulHeader
+	+b.headerBlock--useful.section#headerBlock&attributes(attributes)
+		.container-fluid
+			+b.section-title.text-center
+				h1 Полезные материалы
+			+b.events-filter
+				+e.btn--js.d-md-none.BUTTON(data-toggle="#useful-dropdown") Фильтр
+				+e.filter-wrap(id="useful-dropdown")
+					+e.radio-wrap.radio-wrap
+						+in-c('radio','Все материалы','useful')(checked)
+						+in-c('radio','Обязательные','useful')
+						+in-c('radio','Факультативные','useful')
+						+in-c('radio','Рекомендации','useful')
+
 	// end newsItemHeader

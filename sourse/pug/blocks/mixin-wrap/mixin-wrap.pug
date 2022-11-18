@@ -60,3 +60,42 @@ mixin upload-field(text)
 					input.input-upload(type='file' name='file' accept=".jpg,.jpeg,.png,.pdf,.webp")
 					//- +icon('clip')
 					span Выбрать файл
+
+
+mixin useful-item(type, text, i)
+	.col-md-6
+		+b.useful-item(href="#")
+			+e.content
+				+e.head
+					block
+					//- +label('', 'Факультативные')
+					//- +label('', 'Просмотрено')
+				+e.body
+					.row
+						.col
+							p!= text
+						+e.col.col-auto
+							if i
+								+e.img-wrap--gradient
+									+img(`img/useful-item-${i}.jpg`, 'bg')
+							else
+								+e.img-wrap
+			+e.footer
+				.row
+					.col
+						+e.label(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
+							span!= type
+					.col-auto
+						+useful-label('calendar', '26 сентября').px-0(style= "--label-c: #999EAB;" )
+					.col-auto
+						+useful-label('clock', '7 миннут').px-0(style= "--label-c: #999EAB;" )
+
+
+mixin useful-label(i, t)
+	if i
+		+e.label--icon&attributes(attributes)
+			+icon(i)
+			span!= t
+	else
+		+e.label&attributes(attributes)
+			span!= t

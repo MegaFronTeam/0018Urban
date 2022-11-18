@@ -1,0 +1,83 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sUseful/_sUseful.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Полезные материалы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+
+
+	+header()
+		+top-nav()
+	main
+		+sUsefulHeader
+		+sUseful()
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+				
+			+useful-item(`Документы`, `Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления`, '')
+				+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+				+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" )
+
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '2')
+				+useful-label('', 'Обязательные')(style= "--label-c: #43790C; --label-bg: #A1EAA480;" )
+				+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" )
+
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			
+			+useful-item(`Статья`, `Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления`, '')
+				+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+				+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '3')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			
+			+useful-item(`Статья`, `Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления`, '')
+				+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '2')
+				+useful-label('', 'Обязательные')(style= "--label-c: #43790C; --label-bg: #A1EAA480;" )
+
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			
+			+useful-item(`Статья`, `Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления`, '')
+				+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '3')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '2')
+				+useful-label('', 'Обязательные')(style= "--label-c: #43790C; --label-bg: #A1EAA480;" )
+			
+			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
+				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+		
+	+footer()
+	+chat
+
+
+
+

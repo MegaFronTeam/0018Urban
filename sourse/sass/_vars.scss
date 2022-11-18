@@ -503,10 +503,10 @@ $border-color-translucent: rgba($black, 0.175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: rem(16) !default;
-$border-radius-sm: rem(8) !default;
-$border-radius-lg: rem(32) !default;
-$border-radius-xl: rem(44) !default;
+$border-radius: 16px !default;
+$border-radius-sm: 8px !default;
+$border-radius-lg: 32px !default;
+$border-radius-xl: 44px !default;
 $border-radius-2xl: 2rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -878,7 +878,7 @@ $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: null !default;
 
-$form-check-input-active-filter: brightness(90%) !default;
+$form-check-input-active-filter: none !default;
 
 $form-check-input-bg: $input-bg !default;
 $form-check-input-border: 1px solid rgba($black, 0.25) !default;
