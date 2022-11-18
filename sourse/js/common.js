@@ -380,43 +380,47 @@ function eventHandler() {
 	const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
 	const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
 	const requestSelect = document.querySelector('.sRequest__select-wrap--js');
-	const requestChoice = new Choices(requestSelect, {
-		itemSelectText: '',
-	});
-
-	requestChoice.setChoices([
-		{
-			value: 'all', 
-			label: 'Избранные участники', 
-			selected: true,
-			customProperties: {
-				dataTabsPath: 'all'
-			}
-		},
-		{
-			value: 'sent', 
-			label: 'Запросы на обмен контактами',
-			customProperties: {
-				dataTabsPath: 'sent'
-			}
-		},
-		{
-			value: 'received', 
-			label: 'Отправленные запросы', 
-			customProperties: {
-				dataTabsPath: 'received'
-			} 
-		}
-	],
-	);
-	
 	if (requestSelect) {
-		requestSelect.addEventListener('change',(event) => {
-			const tabsPath = requestChoice.getValue().customProperties.dataTabsPath;
-			selectTabsBtn.forEach(el => {el.classList.remove('active')});
-			tabsHandler(tabsPath);
+		const requestChoice = new Choices(requestSelect, {
+			itemSelectText: '',
+			allowHTML: true,
+			searchEnabled: false,
 		});
+		requestChoice.setChoices([
+			{
+				value: 'all', 
+				label: 'Избранные участники', 
+				selected: true,
+				customProperties: {
+					dataTabsPath: 'all'
+				}
+			},
+			{
+				value: 'sent', 
+				label: 'Запросы на обмен контактами',
+				customProperties: {
+					dataTabsPath: 'sent'
+				}
+			},
+			{
+				value: 'received', 
+				label: 'Отправленные запросы', 
+				customProperties: {
+					dataTabsPath: 'received'
+				} 
+			}
+		],
+		);
+		if (requestSelect) {
+			requestSelect.addEventListener('change',(event) => {
+				const tabsPath = requestChoice.getValue().customProperties.dataTabsPath;
+				selectTabsBtn.forEach(el => {el.classList.remove('active')});
+				tabsHandler(tabsPath);
+			});
+		}
 	}
+
+	
 
 	if (requestTabs) {
 		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
@@ -562,6 +566,35 @@ function eventHandler() {
 		});
 	}
 	// / Кнопка "подробнее" в карточках запросов контактов
+
+	// Мобильный фильтр в мероприятиях
+	const eventsBtn = document.querySelector('.events-filter__btn--js');
+	
+	if (eventsBtn) {
+		const eventsMenu = document.querySelector(eventsBtn.dataset.toggle);
+			
+		eventsBtn.addEventListener('click', function(event) {
+			if (eventsMenu.classList.contains('active')) {
+				eventsMenu.classList.remove('active')
+				eventsBtn.classList.remove('active')
+				return
+			} else if (!(eventsMenu.classList.contains('active'))) {
+				eventsMenu.classList.add('active')
+				eventsBtn.classList.add('active')
+				event._isOpen = true;
+			}
+		})
+	
+		document.addEventListener('click', function(event) {
+			if (event.composedPath().includes(eventsMenu)) return;
+			if (!event._isOpen) {
+				eventsMenu.classList.remove('active')
+				eventsBtn.classList.remove('active')
+			}
+		})
+	}
+
+	// /Мобильный фильтр в мероприятиях
 
 	
 

@@ -32,5 +32,26 @@ mixin newsItemHeader
 					+e.img-wrap
 						+img('img/news-header.jpg')
 
+mixin eventsHeader
+	+b.headerBlock--events.section#headerBlock&attributes(attributes)
+		.container-fluid
+			+b.section-title.text-center
+				h1 Мероприятия
+			+b.events-filter
+				+e.btn--js.d-md-none.BUTTON(data-toggle="#events-dropdown") Фильтр
+				+e.filter-wrap(id="events-dropdown")
+					+e.radio-wrap.radio-wrap
+						+in-c('radio','Все мероприятия','events')(checked)
+						+in-c('radio','Прошедшие мероприятия','events')
+						+in-c('radio','Мои мероприятия','events')
+					+e.radio-wrap--icon.radio-wrap
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name="events-app" type="radio" checked="checked")
+							span.custom-input__text.form-check-label
+								+icon('list')
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name="events-app" type="radio")
+							span.custom-input__text.form-check-label
+								+icon('calendar')
 
 	// end newsItemHeader

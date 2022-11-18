@@ -1,11 +1,14 @@
 // start .sEnter
 .sEnter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background-color: $primary;
 	background-image: url('../img/enter-bg.jpg');
 	background-size: cover;
 	min-height: 100vh;
-	--sPT: #{rem(150px)};
-	// --sPB: #{rem()};
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
