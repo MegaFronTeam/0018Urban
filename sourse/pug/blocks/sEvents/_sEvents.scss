@@ -1,0 +1,59 @@
+// start .sEvents
+.sEvents {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(0)};
+	// --sTPB: #{rem()};
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+	.news-preview__img-wrap {
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 11.76%, rgba(0, 0, 0, 0.2) 21.72%, rgba(0, 0, 0, 0.2) 44.85%, rgba(0, 0, 0, 0.4) 85.66%);
+	}
+	.news-preview__img-wrap:before {
+		background-image: url('../img/svg/events-preview-bg.svg');
+	}
+	.news-preview__title-block {
+		bottom: 20px;
+		@include media-breakpoint-down(md) {
+			bottom: 10px;
+		}
+	}
+	.news-preview__title {
+		display: block;
+	}
+	.news-preview__btn {
+		display: inline-block;
+		margin-top: 8px;
+		padding: 4px 16px;
+		text-align: center;
+		font-size: 14px;
+		line-height: 1;
+		border-radius: 16px;
+		background: #008981;
+		color: $white;
+		&--registred {
+			color: #008981;
+			background: rgba(255, 255, 255, 0.75);
+			pointer-events: none;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEvents
+

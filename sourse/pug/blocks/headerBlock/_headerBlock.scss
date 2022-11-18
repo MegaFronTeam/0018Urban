@@ -35,6 +35,11 @@
 			background-size: cover;
 		}
 	}
+	&--events {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(16)};
+		--sTPB: #{rem(24)}; 
+	}
 
 	.section-title {
 		h1 {
@@ -219,10 +224,105 @@
 	}
 }
 
-
 .headerBlock__input-title {
 	@include media-breakpoint-down(md) {
 		display: none;
+	}
+}
+.events-filter {
+	&__btn {
+		display: flex;
+		position: relative;
+		align-items: center;
+		padding: 8px 40px 8px 15px;
+		width: 100%;
+		font-size: rem(16);
+		line-height: 125%;
+		background-color: $white;
+		border: 1px solid transparent;
+		border-radius: $border-radius;
+		&::after {
+			position: absolute;
+			content: '';
+			right: 15px;
+			top: 50%;
+			width: 16px;
+			height: 16px;
+			background-image: url('../img/svg/filter.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			transform: translateY(-50%);
+		}
+		&.active::after {
+			background-image: url('../img/svg/close.svg');
+			background-size: 14px 14px;
+		}
+		.icon {
+			margin-left: auto;
+			width: 16px;
+			height: 16px;
+		}
+	}
+	@include media-breakpoint-down(md) {
+		background-color: $white;
+		background: #FFFFFF;
+		border-radius: $border-radius;
+	}
+	&__filter-wrap {
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-down(md) {
+			display: none;
+			flex-direction: column;
+			padding: 16px;
+			&.active {
+				display: block;
+			}
+		}
+	}
+	&__radio-wrap {
+		@include media-breakpoint-down(md) {
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 10px;
+			}
+		}
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+		&--icon {
+			@include media-breakpoint-down(sm) {
+				margin-left: 4px;
+				margin-right: 4px;
+			}
+		}
+		&:not(.events-filter__radio-wrap--icon) {
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+				border: none;
+				.custom-input {
+					width: 100%;
+					margin-bottom: 8px;
+					margin-right: 0;
+					padding: 7px;
+				}
+				.custom-input__input {
+					border: 1px solid $gray-300;
+				}
+			}
+		}
+		&--icon {
+			color: $primary;
+			.icon {
+				font-size: 16px;
+			}
+		}
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
 	}
 }
 
