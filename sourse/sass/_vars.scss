@@ -878,7 +878,7 @@ $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: null !default;
 
-$form-check-input-active-filter: brightness(90%) !default;
+$form-check-input-active-filter: none !default;
 
 $form-check-input-bg: $input-bg !default;
 $form-check-input-border: 1px solid rgba($black, 0.25) !default;
