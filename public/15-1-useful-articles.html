@@ -77,15 +77,30 @@
 			</header>
 			<!-- end header-->
 			<main>
-				<!-- start headerBlock-->
-				<div class="headerBlock section" id="headerBlock">
+				<div class="headerBlock headerBlock--useful section" id="headerBlock">
 					<div class="container-fluid">
 						<div class="section-title text-center">
 							<h1>Полезные материалы</h1>
 						</div>
+						<div class="events-filter">
+							<button class="events-filter__btn events-filter__btn--js d-md-none" data-toggle="#useful-dropdown">Фильтр
+							</button>
+							<div class="events-filter__filter-wrap" id="useful-dropdown">
+								<div class="events-filter__radio-wrap radio-wrap">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="useful" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все материалы</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="useful" type="radio"/><span class="custom-input__text form-check-label">Обязательные</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="useful" type="radio"/><span class="custom-input__text form-check-label">Факультативные</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="useful" type="radio"/><span class="custom-input__text form-check-label">Рекомендации</span>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<!-- end headerBlock-->
+				<!-- end newsItemHeader-->
 				<!-- start sUseful-->
 				<div class="sUseful section" id="sUseful">
 					<div class="container-fluid">
