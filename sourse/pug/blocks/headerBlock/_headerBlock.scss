@@ -9,6 +9,7 @@
 	// background-size: 100% auto;
 	// background-color: #D2F3F0;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	z-index: 5;
 	// background: linear-gradient(45deg, #d2f3f0, #d2f3f0 25%,#c0eeeb 25%,#c0eeeb 33%,#b8ece8 33%,#b8ece8 40%,#B0EAE6 40%,#B0EAE6 50%),	linear-gradient(to bottom right, #B0EAE6 50%,#B0EAE6 60%, #b8ece8 60%, #b8ece8 73%, #c0eeeb 73%,#c0eeeb 85%,#d2f3f0 85%, #d2f3f0);
 	&::before,
 	&::after {
@@ -55,6 +56,10 @@
 			--sPB: #{rem(24)};
 			background-size: cover;
 		}
+	}
+	&.faq {
+		--sPT: #{rem(35)};
+		--sPB: #{rem(20)};
 	}
 	&--events {
 		--sPT: #{rem(40)};

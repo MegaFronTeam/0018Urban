@@ -16,3 +16,5 @@
  10. <https://megafronteam.github.io/0018Urban/public/12-1-events.html>
  10. <https://megafronteam.github.io/0018Urban/public/12-2-events-calendar.html>
  12. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
+ 12. <https://megafronteam.github.io/0018Urban/public/404.html>
+ 12. <https://megafronteam.github.io/0018Urban/public/28-faq.html>

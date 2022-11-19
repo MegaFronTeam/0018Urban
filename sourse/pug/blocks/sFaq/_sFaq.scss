@@ -1,0 +1,112 @@
+// start .sFaq
+.sFaq {
+	--sPT: #{rem(24)};
+	--sPB: #{rem(74)};
+	// --sTPB: #{rem()};
+	&__container {
+		padding: 16px 56px 40px;
+		background-color: $white;
+		border-radius: $border-radius-sm;
+		@include media-breakpoint-down(md) {
+			padding: 16px;
+		}
+	}
+	.dd-group__item {
+		position: relative;
+		&:not(:first-child) {
+			border-top: 1px solid $gray-300;
+		}
+		&:not(.active) {
+			.dd-group__head:hover::before {
+				opacity: 1;
+			}
+		}
+		&.active {
+			.dd-group__head::after {
+				color: $gray-300;
+				background-color: $gray-100;
+				transform-origin: right 25%;
+				transform: rotate(45deg);
+			}
+		}
+	}
+	.dd-group__head {
+		position: relative;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		font-weight: 700;
+		font-size: rem(24);
+		&:hover {
+			cursor: pointer;
+			// &::before {
+			// 	opacity: 1;
+			// }
+		}
+		&::after {
+			position: absolute;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			content: '+';
+			top: 50%;
+			right: 24px;
+			width: 32px;
+			height: 32px;
+			padding-top: 5px;
+			color: $white;
+			font-size: 32px;
+			border-radius: 50%;
+			background-color: $primary;
+			transform: translateY(-50%);
+			@include mt;
+			@include media-breakpoint-down(md) {
+				right: 0;
+			}
+		}
+		&::before {
+			position: absolute;
+			content: '';
+			display: inline-block;
+			top: 0;
+			left: -10px;
+			width: calc(100% + 20px);
+			height: 100%;
+			background: rgba(78, 208, 200, 0.1);
+			border: 1px solid #00A89E;
+			border-radius: 8px;
+			opacity: 0;
+			@include mt;
+		}
+		@include media-breakpoint-down(md) {
+			padding-top: 16px;
+			padding-bottom: 16px;
+			padding-right: 35px;
+			font-size: rem(19);
+		}
+	}
+	.dd-group__content:not(.active) {
+		display: none;
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		
+	}
+	&__col{
+
+	}
+	&__item{
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sFaq

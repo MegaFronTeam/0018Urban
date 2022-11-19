@@ -141,3 +141,29 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sEnter
+
+.error {
+	color: $white;
+	text-align: center;
+	h1 {
+		margin-bottom: 16px;
+		font-weight: 700;
+		font-size: rem(64);
+		@include media-breakpoint-down(md) {
+			font-size: rem(48);
+		}
+	}
+	p {
+		margin-bottom: 40px;
+		max-width: 400px;
+		font-weight: 700;
+		line-height: 111%;
+	}
+	a {
+		@extend .btn, .btn-primary;
+		width: min(100%, 287px);
+		padding-top: 10px;
+		padding-bottom: 10px;
+		
+	}
+}

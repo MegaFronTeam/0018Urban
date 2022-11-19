@@ -49,7 +49,6 @@
 		&--registred {
 			color: #008981;
 			background: rgba(255, 255, 255, 0.75);
-			pointer-events: none;
 		}
 	}
 
@@ -68,7 +67,7 @@
 	top: -32px;
 	padding: 24px 20px;
 	background-color: $white;
-	z-index: -1;
+	// z-index: -1;
 	// @include media-breakpoint-down(md) {
 	// 	margin-bottom: 16px;
 	// }
@@ -84,6 +83,9 @@
 		background-image: url('../img/svg/prev-arrow.svg');
 		background-repeat: no-repeat;
 		background-size: cover;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
 		&--next {
 			transform: rotate(180deg);
 		}
@@ -152,11 +154,11 @@
 		}
 	}
 	&__day {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 	}
 	&__event {
-		@extend .stretched-link;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -166,6 +168,7 @@
 		border: none;
 		background-color: $primary;
 		color: $white;
+		@extend .stretched-link;
 		@include media-breakpoint-down(md) {
 			width: 15px;
 			height: 15px;

@@ -18,6 +18,17 @@ mixin recovery-form()
 		+e.caption На&nbsp;указанный вами адрес электронной почты будет отправлена инструкция по&nbsp;восстановления пароля
 	+e.return(href="2-1-enter.html") Назад
 
+mixin error
+	+b.SECTION.sEnter.section#sEnter&attributes(attributes)
+			.container
+				+e.container
+					+e.logo(href="#")
+						+img('img/svg/logo-light.svg')
+					+b.error
+						h1 Ошибка 404
+						p Страница не найдена. Она не существовала или срок публикации истёк.
+						a(href='#') На главную
+
 mixin sEnter(data)
 	// start sEnter
 	+b.SECTION.sEnter.section#sEnter&attributes(attributes)
