@@ -33,8 +33,13 @@ block pagecontent
 			+breadcrumb('Главная', 'Полезные материалы', 'Оранизационный план проведения мероприятия')
 		// Пример без изображения
 		+sArticle('', `Оранизационный план <br> проведения мероприятия`)
-		//- // Пример с изображением
-		//- +sArticle('i', `Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.`)
+			+useful-label('', 'Обязательные')(style= "--label-c: #43790C; --label-bg: #A1EAA480;" )
+			+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" ).useful-label--viewed
+		// Пример с изображением
+		+sArticle('i', `Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.`)
+			+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+			+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" ).useful-label--viewed
 		+sNewsItem
 	+footer()
 	+chat
