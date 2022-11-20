@@ -83,7 +83,7 @@ mixin useful-item(type, text, i)
 			+e.footer
 				.row
 					.col
-						+e.label(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
+						+b.useful-label(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
 							span!= type
 					.col-auto
 						+useful-label('calendar', '26 сентября').px-0(style= "--label-c: #999EAB;" )
@@ -93,9 +93,9 @@ mixin useful-item(type, text, i)
 
 mixin useful-label(i, t)
 	if i
-		+e.label--icon&attributes(attributes)
+		+b.useful-label--icon&attributes(attributes)
 			+icon(i)
 			span!= t
 	else
-		+e.label&attributes(attributes)
+		+b.useful-label&attributes(attributes)
 			span!= t
