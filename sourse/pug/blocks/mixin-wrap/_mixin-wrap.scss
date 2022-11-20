@@ -292,9 +292,14 @@
 		}
 	}
 	&__footer {
-		margin-top: 17px;
-		.row {
-			--bs-gutter-x: 12px;
+		@include roww(8px, m);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		--bs-gutter-y: 8px;
+		margin-top: calc((-1 * var(--bs-gutter-y)) + 17px);
+		& > * {
+			margin-top: var(--bs-gutter-y);
 		}
 	}
 	&__body {
@@ -313,7 +318,7 @@
 				font-size: 20px;
 			}
 			@include media-breakpoint-up(md) {
-				font-size: rem(18);;
+				font-size: rem(18);
 			}
 		}
 		.row {
@@ -369,27 +374,39 @@
 			top: 0;
 		}
 	}
-	
 }
 
 .useful-label {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 24px;
 	padding: 2.5px 15px 3.5px;
 	font-size: 13px;
 	font-weight: bold;
-	line-height: 16px;
+	line-height: calc(16 / 13);
 	border: 1px solid transparent;
-	background-color: var(--label-bg, #fff);
+	background-color: var(--label-bg, transparent);
 	color: var(--label-c, inherit);
 	border-color: var(--label-bdc, transparent);
+	@include media-breakpoint-up(xl) {
+		font-size: rem(13);
+		line-height: 18px;
+		border-radius: rem(24);
+		padding: rem(3) rem(15);
+	}
 	&--icon {
 		padding-left: 4px;
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(4);
+		}
 	}
 	.icon {
 		font-size: 16px;
 		margin-right: 4px;
+		@include media-breakpoint-up(xl) {
+			font-size: rem(16);
+			margin-right: rem(4);
+		}
 	}
 }
