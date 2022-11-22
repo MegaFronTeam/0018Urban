@@ -25,8 +25,9 @@
 			.dd-group__head::after {
 				color: $gray-300;
 				background-color: $gray-100;
-				transform-origin: right 25%;
-				transform: rotate(45deg);
+				// transform-origin: right 25%;
+				// transform: rotate(45deg);
+				transform: rotate(45deg) translate(-37.5%, -37.5%);
 			}
 		}
 	}

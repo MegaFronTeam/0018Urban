@@ -1,0 +1,47 @@
+extends ../layout/main.pug
+
+include ../blocks/header/_header.pug
+include ../blocks/topLine/_topLine.pug
+include ../blocks/top-nav/_top-nav.pug 
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sArticle/_sArticle.pug
+include ../blocks/sNewsItem/_sNewsItem.pug
+include ../blocks/footer/_footer.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Оранизационный план проведения мероприятия'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+header()
+		+top-nav()
+	main
+		.container-fluid
+			+breadcrumb('Главная', 'Полезные материалы', 'Оранизационный план проведения мероприятия')
+		// Пример без изображения
+		+sArticle('', `Оранизационный план <br> проведения мероприятия`)
+			+useful-label('', 'Обязательные')(style= "--label-c: #43790C; --label-bg: #A1EAA480;" )
+			+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" ).useful-label--viewed
+		// Пример с изображением
+		+sArticle('i', `Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.`)
+			+useful-label('', 'Факультативные')(style= "--label-c: #3C61A9; --label-bg: #77CEFF80;" )
+			+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )
+			+useful-label('checked', 'Просмотрено')(style= "--label-c: #FFFFFF; --label-bg: #C9CAD1;" ).useful-label--viewed
+		+sNewsItem
+	+footer()
+	+chat
+
+

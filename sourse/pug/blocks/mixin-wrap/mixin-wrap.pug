@@ -81,21 +81,17 @@ mixin useful-item(type, text, i)
 							else
 								+e.img-wrap
 			+e.footer
-				.row
-					.col
-						+e.label(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
-							span!= type
-					.col-auto
-						+useful-label('calendar', '26 сентября').px-0(style= "--label-c: #999EAB;" )
-					.col-auto
-						+useful-label('clock', '7 миннут').px-0(style= "--label-c: #999EAB;" )
+				+b.useful-label.me-auto(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
+					span!= type
+				+useful-label('calendar', '26 сентября').px-0(style= "--label-c: #999EAB;" )
+				+useful-label('clock', '7 минут').px-0(style= "--label-c: #999EAB;" )
 
 
 mixin useful-label(i, t)
 	if i
-		+e.label--icon&attributes(attributes)
+		+b.useful-label--icon&attributes(attributes)
 			+icon(i)
 			span!= t
 	else
-		+e.label&attributes(attributes)
+		+b.useful-label&attributes(attributes)
 			span!= t

@@ -1,0 +1,25 @@
+mixin sArticle(i, h)
+	// start sArticle
+	+b.SECTION.sArticle.section#sArticle&attributes(attributes)
+		.container-fluid
+			+e.item
+				+e.row.row
+					+e.col.col-sm-auto.order-sm-last
+						+e.item-head
+							if i
+								+e.img-wrap--gradient
+									+img(`img/useful-item-1.jpg`, 'bg')
+							else
+								+e.img-wrap
+					.col
+						+e.item-body
+							+e.labels
+								block
+							+b.section-title.order-sm-first
+								h1!= h
+							+e.item-footer
+								+useful-label('', 'Документы')(style= "--label-c: #999EAB; --label-bdc: #999EAB;" )
+								+useful-label('calendar', '26 сентября').px-0(style= "--label-c: #999EAB;" )
+								+useful-label('clock', '7 минут').px-0(style= "--label-c: #999EAB;" )
+								+e.btn.btn.btn-primary(href="#" download) Скачать файл
+	// end sArticle
