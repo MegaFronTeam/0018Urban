@@ -9,15 +9,19 @@ mixin request-profile-item(name, img, age, position, company, interests=[], grou
 				+e.img-wrap(href="#")
 					+img(`img/profile-${img}.jpg`)
 		+e.body
-			+e.position= position
-			+e.company!= company
-			+e.text!= p
-			+e.interest-list.UL
-				each interest in interests
-					li= interest
-			+e.groups-list.UL
-				each group in groups
-					li= group
+			if position
+				+e.position= position
+			if company
+				+e.company!= company
+			//- +e.text!= p
+			if interests
+				+e.interest-list.UL
+					each interest in interests
+						li= interest
+			if groups
+				+e.groups-list.UL
+					each group in groups
+						li= group
 		+e.btn Посмотреть профиль
 	// /.product-item
 

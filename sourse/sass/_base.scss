@@ -626,7 +626,8 @@ iframe {
 // 			padding-right: 10px;
 // 	}
 // }
-.choices[data-type*=select-one]::after {
+.choices[data-type*=select-one]::after,
+.choices[data-type*=select-multiple]::after {
 	position: absolute;
 	right: 17px;
 	top: 50%;

@@ -356,22 +356,44 @@ function eventHandler() {
 	}
 
 	const textRemoveBtns = document.querySelectorAll('.remove-btn--js');
+	const interestRemoveBtns = document.querySelector('.interest-btn--js');
 
 	if (textRemoveBtns) {
 		textRemoveBtns.forEach(textRemoveBtn => {
 			let textRemoveInput = new Choices(textRemoveBtn,
 				{
+					placeholder: true,
 					allowHTML: true,
 					delimiter: ',',
 					editItems: true,
 					maxItemCount: 5,
 					removeItemButton: true,
+					itemSelectText: 'Нажмите, чтобы выбрать',
+					noChoicesText: 'Больше вариантов нет',
 					addItemText: (value) => {
 						return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
 					},
 				}
 				)
 			});
+		}
+
+	if (interestRemoveBtns) {
+		let interestRemoveInput = new Choices(interestRemoveBtns,
+			{
+				placeholder: true,
+				placeholderValue: 'Интересы',
+				allowHTML: true,
+				delimiter: ',',
+				editItems: true,
+				maxItemCount: 5,
+				removeItemButton: true,
+				itemSelectText: 'Нажмите, чтобы выбрать',
+				noChoicesText: 'Больше вариантов нет',
+				addItemText: (value) => {
+					return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
+				},
+			})
 		}
 		
 	// Табы из селекта на странице запросов
@@ -652,6 +674,10 @@ function eventHandler() {
 			sticky: true,
 		},
 	});
+
+	const newsSwiper = new Swiper('.sNewsItem__slider--js', {
+		...defaultSl
+	})
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,

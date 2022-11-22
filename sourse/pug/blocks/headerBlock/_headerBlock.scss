@@ -61,6 +61,11 @@
 		--sPT: #{rem(35)};
 		--sPB: #{rem(20)};
 	}
+	&.network {
+		@include media-breakpoint-down(md) {
+			box-shadow: none;
+		}
+	}
 	&--events {
 		--sPT: #{rem(40)};
 		--sPB: #{rem(16)};
@@ -146,6 +151,9 @@
 	}
 	&__slide {
 		height: auto;
+	}
+	.choices {
+		margin-bottom: 0;
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -292,10 +300,11 @@
 		padding: 8px 40px 8px 15px;
 		width: 100%;
 		font-size: rem(16);
-		line-height: 125%;
+		line-height: 1;
 		background-color: $white;
 		border: 1px solid transparent;
 		border-radius: $border-radius;
+		color: $body-color;
 		&::after {
 			position: absolute;
 			content: "";
@@ -349,6 +358,15 @@
 			}
 		}
 		&--icon {
+			@include media-breakpoint-up(md) {
+				.custom-input__input {
+					width: 32px;
+					height: 32px;
+				}
+			}
+			.custom-input__text {
+				line-height: 1;
+			}
 			@include media-breakpoint-down(sm) {
 				margin-left: 4px;
 				margin-right: 4px;

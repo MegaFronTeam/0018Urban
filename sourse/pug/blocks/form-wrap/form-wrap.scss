@@ -148,7 +148,7 @@
 	.choices__item {
 		position: relative;
 		padding-left: 44px !important;
-		&::before {
+		&:not(.has-no-choices)::before {
 			position: absolute;
 			content: '';
 			left: 10px;
@@ -331,12 +331,25 @@ input::-webkit-inner-spin-button {
 }
 
 .air-datepicker {
-	--adp-nav-arrow-color: #4ed0c8;
-	padding-left: 60px;
-	padding-right: 60px;
+	--adp-nav-arrow-color: #4ed0c8;	
+	@media (min-width: 430px) {
+		width: 400px;
+	}
 	font-family: $default-font;
-	@media (max-width: 400px) {
-		padding: 0;
+	.air-datepicker-nav {
+		justify-content: center;
+	}
+	.air-datepicker-nav--title {
+		line-height: 1;
+		& i {
+			color: $body-color;
+		}
+	}
+	&--content {
+		@media (min-width: 430px) {
+			padding-left: 70px;
+			padding-right: 70px;
+		}
 	}
 	&-body--day-name {
 		color: $gray-300;

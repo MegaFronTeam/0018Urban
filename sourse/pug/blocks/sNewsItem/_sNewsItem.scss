@@ -167,6 +167,33 @@
 			left: 0;
 		}
 	}
+	.swiper-button-hand {
+		background: rgba(#2B2015, .3);
+		border: none;
+		border-radius: 0;
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 9px;
+			height: 9px;
+			transform: rotate(45deg);
+		}
+		&-prev {
+			left: 0;
+			&::after {
+				border-bottom:2px solid $white;
+				border-left:2px solid $white;
+			}
+		}
+		&-next {
+			right: 0;
+			&::after {
+				border-top:2px solid $white;
+				border-right:2px solid $white;
+			}
+		}
+	}
+	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

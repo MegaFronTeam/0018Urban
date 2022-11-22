@@ -79,12 +79,11 @@
 	}
 	&__tabs-btn {
 		position: relative;
-		bottom: -1px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 13px 5px;
-		width: 312px;
+		width: 370px;
 		background-color: rgba($primary, .8);
 		border-radius: $border-radius-sm $border-radius-sm 0px 0px;
 		color: $white;
@@ -189,8 +188,10 @@
 	border-radius: $border-radius-sm;
 	overflow: hidden;
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	height: 357px;
 	@include media-breakpoint-down(sm) {
 		flex-direction: column;
+		height: auto;
 	}
 	&:not(:last-child) {
 		margin-bottom: 24px;
@@ -304,6 +305,10 @@
 	&__status {
 		position: relative;
 		pointer-events: none;
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+			max-width: none;
+		}
 		&--approved {
 			@extend .btn-primary;
 			&::before {

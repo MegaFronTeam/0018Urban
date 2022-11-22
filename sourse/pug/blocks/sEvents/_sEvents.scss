@@ -127,6 +127,7 @@
 		position: relative;
 		font-weight: 700;
 		width: 100%;
+		vertical-align: middle;
 		@include media-breakpoint-down(md) {
 			font-size: 16px;
 		}
@@ -144,6 +145,14 @@
 	.chosen {
 		border: 3px solid $primary;
 	}
+	&__date {
+		line-height: 1;
+		position: relative;
+		top: 1px;
+		@include media-breakpoint-down(md) {
+			font-size: 16px;
+		}
+	}
 	&__date, &__event {
 		display: inline-block;
 	}
@@ -157,8 +166,10 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	&__event {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -168,10 +179,12 @@
 		border: none;
 		background-color: $primary;
 		color: $white;
+		line-height: 1;
 		@extend .stretched-link;
 		@include media-breakpoint-down(md) {
 			width: 15px;
 			height: 15px;
+			font-size: 14px;
 		}
 	}
 }
