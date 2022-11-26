@@ -40,7 +40,73 @@
 		
 	}
 	&__col{
-
+		
+	}
+	&__themes-item {
+		display: grid;
+		grid-template-columns: auto 170px 354px;
+		padding: 20px 16px;
+		border-bottom: 1px solid #EDEFF3;
+		@include media-breakpoint-down(xl) {
+			grid-template-columns: auto 170px 255px;
+		}
+		@include media-breakpoint-down(lg) {
+			grid-template-columns: auto 122px 235px;
+		}
+		@include media-breakpoint-down(md) {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 8px;
+			padding: 8px;
+			border: 1px solid rgba(201, 202, 209, 0.7);
+			border-radius: 4px;
+			border-bottom:1px solid rgba(201, 202, 209, 0.7);
+			.sForum__theme {
+				display: block;
+				margin-bottom: 8px;
+			}
+		}
+		& > *:not(:last-child) {	
+			border-right: 1px solid $gray-100;
+			@include media-breakpoint-down(md) {
+				border: none;
+			}
+		}
+		.sForum__img-wrap {
+			@include media-breakpoint-down(md) {
+				margin-right: 0;
+			}
+		}
+		.sForum__theme {
+			margin-bottom: 4px;
+		}
+		.sForum__counter {
+			@include media-breakpoint-down(md) {
+				order: 3;
+			}
+		}
+		.sForum__branch {
+			@include media-breakpoint-down(md) {
+				order: 1;
+				align-items: flex-start;
+				margin-bottom: 10px;
+			}
+		}
+		.sForum__updating {
+			@include media-breakpoint-down(md) {
+				order: 2;
+			}
+		}
+	}
+	&__text {
+		@include media-breakpoint-down(md) {
+				order: -1;
+				padding-right: 10px;
+			}
+	}
+	&__descr {
+		font-size: 14px;
+		line-height: 114%;
 	}
 	&__item{
 		display: grid;
@@ -101,20 +167,43 @@
 		height: 56px;
 		border: 1px solid $gray-100;
 		border-radius: 50%;
+		&::after {
+			position: absolute;
+			content: '';
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			background-image: url('../img/letter.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		&.inactive {
+			&::after {
+				background-image: url('../img/letter-inactive.png');
+			}
+		}
+		&.closed {
+			&::after {
+				background-image: url('../img/letter-close.png');
+			}
+		}
 		@include media-breakpoint-down(lg) {
 			width: 32px;
 			height: 32px;
 			min-width: 32px;
 			margin-right: 10px;
 		}
-		img {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translateY(-50%) translateX(-50%);
-			width: 20px;
-			height: 20px;
-		}
+		// img {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 50%;
+		// 	transform: translateY(-50%) translateX(-50%);
+		// 	width: 20px;
+		// 	height: 20px;
+		// }
 	}
 	&__theme {
 		font-weight: 700;
@@ -150,13 +239,16 @@
 		margin-right: 10px;
 		width: 40px;
 		height: 40px;
+		min-width: 40px;
 		border-radius: 50%;
 		background: rgba(78, 208, 200, 0.2);
 		@include media-breakpoint-down(lg) {
 			width: 32px;
+			min-width: 32px;
 			height: 32px;
 		}
 		@include media-breakpoint-down(md) {
+			margin-right: 0;
 			background-color: $white;
 		}
 		.icon {
@@ -178,6 +270,7 @@
 		@include media-breakpoint-down(md) {
 			order: -1;
 			font-weight: 700;
+			line-height: 140%;
 		}
 		span {
 			display: block;
@@ -209,6 +302,7 @@
 		margin-bottom: 4px;
 		color: $dark-teal
 	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -217,3 +311,36 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sForum
+
+.forum-pagination {
+	display: flex;
+	align-items: center;
+	padding: 20px 16px;
+	font-weight: 400;
+	font-size: 18px;
+	@include media-breakpoint-down(md) {
+		padding:16px;
+	}
+	.pagination-nav {
+		padding: 0;
+	}
+	.page-item {
+		margin-right: 0;
+		padding: 0 10px;
+		&:not(:last-child) {
+			border-right: 1px solid $gray-100;
+		}
+	}
+	.page-item.active {
+		.page-link {
+			color: $body-color;
+		}
+	}
+	.page-link {
+		height: 24px;
+		background-color: transparent;
+    color: $primary;
+		border: none;
+		min-width: 0;
+	}
+}
