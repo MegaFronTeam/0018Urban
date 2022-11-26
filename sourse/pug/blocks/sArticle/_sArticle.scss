@@ -50,7 +50,7 @@
 			&::before {
 				content: "";
 				position: absolute;
-				background-color: rgba($color: #00a89e, $alpha: 0.2);
+				background-color: rgba($color: $dark-teal, $alpha: 0.2);
 				background-image: url("../img/svg/article-item-bg.svg");
 				background-repeat: no-repeat;
 				background-size: 100%;

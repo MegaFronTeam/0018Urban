@@ -575,7 +575,7 @@ iframe {
 	background: #DCF6F4;
 	&::before  {
 		background-color: #EDEFF3;
-		border: 1px solid #00A89E;
+		border: 1px solid $dark-teal;
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 	}
 }

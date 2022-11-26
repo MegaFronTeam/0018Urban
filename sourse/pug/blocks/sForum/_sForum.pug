@@ -1,0 +1,29 @@
+mixin forum-item(title,theme,msg,upd,date)
+	+e.item
+		+e.branch
+			+e.img-wrap
+				+img('img/letter.png')
+			+e.theme(href="#")!= title
+		+e.counter--theme
+			+e.counter-img
+				+icon('list2')
+			+e.amount!= `${theme} <span>Тем</span>`
+		+e.counter--msg
+			+e.counter-img
+				+icon('msg')
+			+e.amount!= `${msg} <span>Сообщения</span>`
+		+e.updating
+			+e.updating-link(href='#')!= `Обновление: ${upd}`
+			+e.updating-date= date
+mixin sForum(data)
+	// start sForum
+	+b.SECTION.sForum.section#sForum&attributes(attributes)
+		.container-fluid
+			+e.container
+				+e.header
+					h1 Форум
+				+forum-item('В процессе обучения','25','502','В процессе обучения (Фёдоров Сергей)','15.11.2022 12:49:17')
+				+forum-item('Участники в группах по семь человек в формате «равный — равному»','60','1653','Оранизационный план проведения мероприятия (Фёдоров Сергей)','15.11.2022 12:49:17')
+				+forum-item('Выпусники «Urban Лидер»','43','4001','Обновление: В процессе обучения (Фёдоров Сергей)','15.11.2022 12:49:17')
+				+forum-item('Оранизационный план проведения мероприятия','18','39','В процессе обучения (Фёдоров Сергей)','15.11.2022 12:49:17')
+	// end sForum

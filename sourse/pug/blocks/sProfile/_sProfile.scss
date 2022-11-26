@@ -113,8 +113,8 @@
 	}
 	&__sent-btn {
 		@extend .btn, .btn-primary;
-		background-color: #00A89E;
-		border-color: #00A89E;
+		background-color: $dark-teal;
+		border-color: $dark-teal;
 		pointer-events: none;
 		@include media-breakpoint-up(md) {
 			margin-top: 20px;
@@ -225,7 +225,7 @@
 			display: inline-block;
 			height: 35px;
     	width: 22px;
-			fill: #00A89E
+			fill: $dark-teal
 		}
 	}
 	&__status {
@@ -236,7 +236,7 @@
 		font-weight: 700;
 		font-size: rem(14);
 		line-height: 114%;
-		color: #00A89E;
+		color: $dark-teal;
 		background: rgba(78, 208, 200, 0.15);
 		border-radius: $border-radius;
 		@include media-breakpoint-down(md) {
@@ -320,7 +320,7 @@
 		border-radius: $border-radius;
 		font-size: 14px;
 		line-height: 114%;
-		color: #00A89E;
+		color: $dark-teal;
 		background-color: $white;
 		max-width: 100%;
 		text-overflow: clip;
@@ -347,7 +347,7 @@
 	&__download-link {
 		display: flex;
 		align-items: center;
-		color: #00A89E;
+		color: $dark-teal;
 	}
 	.icon-download {
 		margin: 0 5px;
