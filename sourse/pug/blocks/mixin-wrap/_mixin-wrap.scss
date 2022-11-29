@@ -114,11 +114,15 @@
 	max-width: 1050px;
 }
 .breadcrumb {
-	padding: rem(16) 0;
+	padding: 16px 0;
 	font-family: $caption-font;
-	font-size: rem(12);
-	line-height: rem(16);
+	font-size: 12px;
+	line-height: calc(16 / 12);
 	list-style: none;
+	@include media-breakpoint-up(xl) {
+		padding: rem(16) 0;
+		font-size: rem(12);
+	}
 }
 
 .breadcrumb-item {
@@ -134,6 +138,11 @@
 			height: 16px;
 			margin: 0 5px;
 			width: 16px;
+			@include media-breakpoint-up(xl) {
+				height: rem(16);
+				margin: 0 rem(5);
+				width: rem(16);
+			}
 		}
 	}
 	& a {
