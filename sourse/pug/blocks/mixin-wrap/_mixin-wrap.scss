@@ -410,3 +410,73 @@
 		}
 	}
 }
+
+.thanx {
+	@include mt;
+	padding: 12px;
+	position: fixed;
+	right: 8px;
+	bottom: 72px;
+	background-color: #fff;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
+	z-index: 1051;
+	opacity: 1;
+	pointer-events: all;
+	max-width: 372px;
+	width: calc(100% - 16px);
+	@include media-breakpoint-up(lg) {
+		bottom: auto;
+		top: 72px;
+		transform: none;
+		width: auto;
+	}
+	@include media-breakpoint-up(xl) {
+		right: rem(8);
+		top: rem(72);
+	}
+	&:not(.active) {
+		opacity: 0;
+		pointer-events: none;
+		// display: none;
+	}
+	h5 {
+		font-size: 18px;
+		line-height: calc(24 / 18);
+		margin-bottom: 4px;
+		padding-right: 40px;
+	}
+	p {
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+	&__btn {
+		@include mt;
+		cursor: pointer;
+		position: absolute;
+		top: 12px;
+		right: 12px;
+		width: 24px;
+		height: 24px;
+		&:before,
+		&:after {
+			content: "";
+			@include a-cent();
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 2px;
+			border-radius: 4px;
+			background-color: $primary;
+		}
+		&:before {
+			transform: rotate(-45deg);
+		}
+		&:after {
+			transform: rotate(45deg);
+		}
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
