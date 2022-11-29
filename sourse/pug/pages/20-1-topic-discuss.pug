@@ -3,14 +3,14 @@ extends ../layout/main.pug
 include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
-include ../blocks/headerBlock/_headerBlock.pug
-include ../blocks/sForm/_sForm.pug
+//- include ../blocks/headerBlock/_headerBlock.pug
+//- include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
 
-include ../blocks/sContact/_sContact.pug
-include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
-include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sForum/_sForum.pug
 include ../blocks/footer/_footer.pug
 
@@ -30,7 +30,7 @@ block pagecontent
 	main
 		.container-fluid
 			+breadcrumb('Главная', 'Форум', 'В процессе обучения', 'Оранизационный план проведения мероприятия')
-		+sForumThemes.pt-0
+		+sForumDiscuss.pt-0
 
 	+footer()
 	+chat

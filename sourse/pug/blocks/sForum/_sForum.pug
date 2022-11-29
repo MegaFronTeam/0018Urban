@@ -67,3 +67,54 @@ mixin sForumThemes(data)
 				+b.forum-pagination
 					+e.title Страницы:
 					+forum-pagin
+
+
+mixin sForumDiscuss(data)
+	// start sForum
+	+b.SECTION.sForum.section#sForum&attributes(attributes)
+		.container-fluid
+			+e.container
+				+e.pagination-row.row
+					.col
+						+b.forum-pagination.px-1.py-0
+							+e.title Страницы:
+							+forum-pagin
+					+e.pagination-col.col-auto
+						+btn('Ответить').btn.btn-primary
+				+e.header
+					h1 Оранизационный план проведения мероприятия. Все руководители хотели повысить эффективность своих команд, но&nbsp;каждый пришел с&nbsp;конкретной задачей
+				+b.discussion
+					+e.item
+						+e.row.row
+							.col-auto
+								+e.item-head
+									+img('')
+									p Летунова Александра Петровна
+							.col
+								+e.item-content
+									.text-secondary 15.11.2022 12:49:17
+									p Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении. Кадровые сервисы Правительства Москвы спроектировали программу специально для руководителей среднего звена органов власти и&nbsp;подведомственных учреждений.
+									
+									+btn('Цитировать').btn.btn-outline-primary
+					+e.item
+						+e.row.row
+							.col-auto
+								+e.item-head
+									+img('')
+									p Летунова Александра Петровна
+							.col
+								+e.item-content
+									.text-secondary 15.11.2022 12:49:17
+									+e.item-content
+										.text-secondary Цитата
+										p Я&nbsp;получил заряд энергии от&nbsp;успешных людей, профессионалов своего дела, и&nbsp;мотивацию к&nbsp;собственному развитию и&nbsp;развитию своей команды.
+									p Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении. Кадровые сервисы Правительства Москвы спроектировали программу специально для руководителей среднего звена органов власти и&nbsp;подведомственных учреждений.
+									+btn('Цитировать').btn.btn-outline-primary
+
+				+e.pagination-row--bottom.row
+					.col
+						+b.forum-pagination.px-1.py-0
+							+e.title Страницы:
+							+forum-pagin
+					+e.pagination-col.col-auto
+						+btn('Ответить').btn.btn-primary
