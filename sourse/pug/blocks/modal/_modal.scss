@@ -9,6 +9,11 @@
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	& > .carousel__button.is-close {
+		top: 10px;
+		right: 10px;
+		--fancybox-color: #{$body-color};
+	}
 }
 .modal-win {
 	// display: block;
@@ -17,14 +22,13 @@
 	position: relative;
 	width: 608px;
 	border-radius: $border-radius-sm;
-	padding: 40px 16px;
+	padding: 45px 16px;
 	@include media-breakpoint-up(sm) {
-		padding: 40px 27px;
+		padding: 45px 27px;
 	}
 	@include media-breakpoint-up(xl) {
 		width: rem(608);
-		padding: rem(40) rem(27);
-
+		padding: rem(45) rem(27);
 	}
 	// min-height: 100%;
 	// padding: 40px 14%;
@@ -45,18 +49,33 @@
 			max-width: rem(400);
 		}
 		&__title {
-			margin-bottom: 24px;
-			// font-weight: 700;
-			// font-size: rem(40);
-			line-height: 1;
-			@include media-breakpoint-up(xl) {
-				margin-bottom: rem(32);
-				// font-size: rem(25);
+			&.h2 {
+				margin-bottom: 24px;
+				line-height: 1;
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(32);
+				}
+			}
+			&.h4 {
+				margin-bottom: 24px;
+				line-height: calc(32 / 24);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: 16px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(16);
+				}
 			}
 		}
-		&__input-wrap > label {
-			display: flex;
-			flex-direction: column-reverse;
+		&__input-wrap {
+			margin-bottom: 8px;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(8);
+			}
+			& > label {
+				display: flex;
+				flex-direction: column-reverse;
+			}
 		}
 		&__input-title {
 			margin-bottom: 8px;
@@ -66,37 +85,83 @@
 				margin-bottom: rem(8);
 				font-size: rem(14);
 			}
-			&::after {
-				position: absolute;
-				content: "";
-				display: inline-block;
-				left: 0;
-				bottom: -12px;
-				width: 5px;
-				height: 5px;
-				background-image: url("../img/svg/required.svg");
-				background-repeat: no-repeat;
-				@include media-breakpoint-up(xl) {
-					bottom: rem(-12);
-					width: rem(5);
-					height: rem(5);
+			// &::after {
+			// 	position: absolute;
+			// 	content: "";
+			// 	display: inline-block;
+			// 	left: 0;
+			// 	bottom: -12px;
+			// 	width: 5px;
+			// 	height: 5px;
+			// 	background-image: url("../img/svg/required.svg");
+			// 	background-repeat: no-repeat;
+			// 	@include media-breakpoint-up(xl) {
+			// 		bottom: rem(-12);
+			// 		width: rem(5);
+			// 		height: rem(5);
+			// 	}
+			// }
+		}
+		&__input {
+			// &.form-select {
+			// 	color: $gray-600;
+			// }
+			&[required] {
+				+ .form-wrap__input-title {
+					&::after {
+						position: absolute;
+						content: "";
+						display: inline-block;
+						left: 0;
+						bottom: -12px;
+						width: 5px;
+						height: 5px;
+						background-image: url("../img/svg/required.svg");
+						background-repeat: no-repeat;
+						@include media-breakpoint-up(xl) {
+							bottom: rem(-12);
+							width: rem(5);
+							height: rem(5);
+						}
+					}
 				}
 			}
 		}
 		textarea {
 			height: 171px;
-			margin-bottom: 24px;
-			border: 1px solid #757b8a;
+			// border: 1px solid #757b8a;
 			border-radius: 24px;
 			@include media-breakpoint-up(xl) {
 				height: rem(170);
-				margin-bottom: rem(24);
-
 			}
 		}
 		&__btn {
 			@extend .btn, .btn-primary;
 			width: 100%;
+			margin-top: 16px;
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(16);
+			}
+		}
+		&__agree {
+			font-size: 14px;
+			text-align: center;
+			max-width: 28em;
+			margin-left: auto;
+			margin-right: auto;
+			color: $gray-600;
+			margin-top: 16px;
+			line-height: calc(16 / 14);
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(16);
+				font-size: rem(14);
+			}
+			a {
+				&:not(:hover) {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 
