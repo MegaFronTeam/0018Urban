@@ -34,7 +34,7 @@
 			pointer-events: none;
 			// z-index: -1;
 		}
-		h1 {
+		h1, .h1 {
 			margin-bottom: 0;
 			font-weight: 700;
 			font-size: $h4-font-size;
@@ -42,6 +42,13 @@
 			color: $dark-teal;
 			@include media-breakpoint-down(md) {
 				text-align: center;
+			}
+		}
+		&.text-left {
+			h1 {
+				@include media-breakpoint-down(md) {
+					text-align: left;
+				}
 			}
 		}
 	}
@@ -343,6 +350,14 @@
 			width: 100%;
 		}
 	}
+	// &--discuss {
+	// 	h1 {
+	// 		// text-align: left;
+	// 		@include media-breakpoint-down(md) {
+	// 			text-align: left;
+	// 		}
+	// 	}
+	// }
 
 	@include media-breakpoint-up(xl) {
 	}
@@ -399,6 +414,9 @@
 	border: 1px solid $border-color;
 	border-radius: 8px;
 	overflow: hidden;
+	@include media-breakpoint-only(sm) {
+		--paddingW: 12px;
+	}
 	@include media-breakpoint-up(xl) {
 		--paddingW: #{rem(16)};
 	}
@@ -407,13 +425,33 @@
 			border-bottom: 1px solid $border-color;
 		}
 	}
+
 	&__row {
 		--bs-gutter-x: 0;
+	}
+	&__col {
+		@include media-breakpoint-up(sm) {
+			width: 190px;
+		}
+		@include media-breakpoint-up(md) {
+			width: 220px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(230);
+		}
 	}
 	&__item-head {
 		padding: var(--paddingW);
 		background-color: $light;
 		height: 100%;
+		.row {
+			--bs-gutter-y: var(--paddingW);
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	&__item-content {
 		display: flex;
@@ -443,6 +481,42 @@
 		margin-top: auto;
 		@include media-breakpoint-up(xl) {
 			font-size: rem(18);
+		}
+	}
+	&__img-wrap {
+		@include block;
+		background-image: url("../img/svg/avatar-bg.svg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		border-radius: 50%;
+		background-color: $white;
+		overflow: hidden;
+		width: calc(var(--paddingW) * 4.5);
+		max-width: 100%;
+
+		// &--gradient {
+		// 	&::after {
+		// 		content: "";
+		// 		position: absolute;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		left: 0;
+		// 		top: 0;
+		// 		background-image: linear-gradient(
+		// 			180deg,
+		// 			rgba(3, 20, 19, 0.6) 14.89%,
+		// 			rgba(6, 58, 55, 0.3) 35.07%,
+		// 			rgba(8, 71, 67, 0.3) 42.43%,
+		// 			rgba(3, 24, 23, 0.6) 71.92%
+		// 		);
+		// 		background-size: 100%;
+		// 		background-repeat: no-repeat;
+		// 	}
+		// }
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 	}
 }

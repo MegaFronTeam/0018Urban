@@ -61,7 +61,7 @@ $purple: #6f42c1 !default;
 $pink: #db717a;
 $red: #f97272;
 $orange: #fd7e14 !default;
-$yellow: #ffc107 !default;
+$yellow: #F8C86C !default;
 $green: #43790C;
 $teal: #4ed0c8;
 $dark-teal:#00A89E;
@@ -1438,10 +1438,10 @@ $modal-scale-transform: scale(1.02) !default;
 // Define alert colors, border radius, and padding.
 
 // scss-docs-start alert-variables
-$alert-padding-y: $spacer !default;
-$alert-padding-x: $spacer !default;
-$alert-margin-bottom: 1rem !default;
-$alert-border-radius: $border-radius !default;
+$alert-padding-y: rem(11) !default;
+$alert-padding-x: rem(11) !default;
+$alert-margin-bottom: rem(16) !default;
+$alert-border-radius: 4px !default;
 $alert-link-font-weight: $font-weight-bold !default;
 $alert-border-width: $border-width !default;
 $alert-bg-scale: -80% !default;

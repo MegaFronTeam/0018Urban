@@ -73,6 +73,7 @@ mixin sForumDiscuss(data)
 	// start sForum
 	+b.SECTION.sForum.section#sForum&attributes(attributes)
 		.container-fluid
+			.alert.alert-yellow Сообщение успешно добавлено.
 			+e.container
 				+e.pagination-row.row
 					.col
@@ -81,15 +82,19 @@ mixin sForumDiscuss(data)
 							+forum-pagin
 					+e.pagination-col.col-auto
 						+btn('Ответить').btn.btn-primary
-				+e.header
+				+e.header.text-left
 					h1 Оранизационный план проведения мероприятия. Все руководители хотели повысить эффективность своих команд, но&nbsp;каждый пришел с&nbsp;конкретной задачей
 				+b.discussion
 					+e.item
 						+e.row.row
-							.col-auto
+							+e.col.col-12.col-sm-auto
 								+e.item-head
-									+img('')
-									p Летунова Александра Петровна
+									.row
+										.col.col-sm-12
+											p Летунова Александра Петровна
+										.col-auto.col-sm-12.order-sm-first
+											+e.img-wrap
+												+img(`img/profile-img.png`, 'bg')
 							.col
 								+e.item-content
 									.text-secondary 15.11.2022 12:49:17
@@ -98,10 +103,13 @@ mixin sForumDiscuss(data)
 									+btn('Цитировать').btn.btn-outline-primary
 					+e.item
 						+e.row.row
-							.col-auto
+							+e.col.col-12.col-sm-auto
 								+e.item-head
-									+img('')
-									p Летунова Александра Петровна
+									.row
+										.col.col-sm-12
+											p Летунова Александра Петровна
+										.col-auto.col-sm-12.order-sm-first
+											+e.img-wrap
 							.col
 								+e.item-content
 									.text-secondary 15.11.2022 12:49:17
@@ -118,3 +126,6 @@ mixin sForumDiscuss(data)
 							+forum-pagin
 					+e.pagination-col.col-auto
 						+btn('Ответить').btn.btn-primary
+			+e.container.mt-3
+				+e.header
+					.h1 Форма ответов
