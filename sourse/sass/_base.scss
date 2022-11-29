@@ -660,11 +660,13 @@ iframe {
 }
 
 .alert {
-	font-size: 14px;
-	line-height: 16px;
+	&--sm {
+		font-size: 14px;
+		line-height: 16px;
+	}
 	&-yellow {
 		color: #2b2015;
-		border: 1px solid #F8C86C;
-		background-color: #FAF4C2;;
+		border: 1px solid #f8c86c;
+		background-color: #faf4c2;
 	}
 }

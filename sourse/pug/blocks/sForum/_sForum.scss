@@ -34,7 +34,8 @@
 			pointer-events: none;
 			// z-index: -1;
 		}
-		h1, .h1 {
+		h1,
+		.h1 {
 			margin-bottom: 0;
 			font-weight: 700;
 			font-size: $h4-font-size;
@@ -491,9 +492,11 @@
 		border-radius: 50%;
 		background-color: $white;
 		overflow: hidden;
-		width: calc(var(--paddingW) * 4.5);
+		width: calc((var(--paddingW) * 2) + 4.5vw);
 		max-width: 100%;
-
+		@include media-breakpoint-up(sm) {
+			width: calc(var(--paddingW) * 4.5);
+		}
 		// &--gradient {
 		// 	&::after {
 		// 		content: "";
