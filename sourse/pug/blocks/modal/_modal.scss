@@ -4,6 +4,10 @@
 
 .fancybox__backdrop {
 	background-color: rgba(#008981, 0.6);
+	background-image: url("../img/svg/fancybox-backdrop-bg.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center top;
 }
 
 .fancybox__content {
