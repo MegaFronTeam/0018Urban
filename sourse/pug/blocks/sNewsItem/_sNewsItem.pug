@@ -48,21 +48,17 @@ mixin sNewsItem(data)
 				h4 Подробнее о программе и о том, как попасть на обучение
 				h5 Вебинар пройдет 16 февраля
 				p Обучение проходило полностью онлайн: интерактивные задания и&nbsp;материалы курса на&nbsp;площадке онлайн-университета, мастер-классы приглашенных экспертов в&nbsp;формате видеоконференций. В&nbsp;качестве спикеров выступали руководители Правительства Москвы, крупных компаний и&nbsp;внешние эксперты в&nbsp;области управления людьми, которые рассказывали о&nbsp;роли лидера в&nbsp;команде, разбирали с&nbsp;участниками яркие кейсы и&nbsp;знакомили с&nbsp;актуальными трендами в&nbsp;управлении.
-				+e.slider--js.swiper
-					.swiper-wrapper
-						.swiper-slide
-							figure
+				+e.slider-wrapper
+					+e.slider--js.swiper
+						.swiper-wrapper
+							.swiper-slide
 								+img('img/news-2.jpg')
-								figcaption «Urban Лидер» — полноценный 6-месячный образовательный курс без отрыва участников от работы. 
-						.swiper-slide
-							figure
+							.swiper-slide
 								+img('img/news-1.jpg')
-								figcaption «Urban Лидер» — полноценный 6-месячный образовательный курс без отрыва участников от работы. 
-						.swiper-slide
-							figure
+							.swiper-slide
 								+img('img/news-2.jpg')
-								figcaption «Urban Лидер» — полноценный 6-месячный образовательный курс без отрыва участников от работы. 
-					+arrow
+						+arrow
+					+e.slider-caption «Urban Лидер» — полноценный 6-месячный образовательный курс без отрыва участников от работы. 
 				+e.video-wrap
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/CVBKb_jMgsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	// end sNewsItem

@@ -43,20 +43,31 @@
 			}
 		}
 	}
-	figure {
-		padding: 16px 0;
+	&__slider-wrapper {
+		margin-bottom: 32px;
+	}
+	&__slider-wrapper {
+		position: relative;
+	}
+	&__slider {
+		margin-bottom: 8px;
+	}
+	.swiper-slide {
 		text-align: center;
 	}
 	img {
 		max-width: 100%;
 		height: auto;
-		margin-bottom: 8px;
 	}
-	figcaption {
+	&__slider-caption {
 		font-family: $caption-font;
 		font-size: 12px;
 		line-height: 16px;
 		color: $gray-600;
+		text-align: left;
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
 	}
 	&__table-wrap {
 		overflow: auto;
