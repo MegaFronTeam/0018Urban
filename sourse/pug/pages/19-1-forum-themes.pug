@@ -28,7 +28,9 @@ block pagecontent
 	+header()
 		+top-nav()
 	main
-		+sForumThemes
+		.container-fluid
+			+breadcrumb('Главная', 'Форум', 'В процессе обучения')
+		+sForumThemes.pt-0
 
 	+footer()
 	+chat

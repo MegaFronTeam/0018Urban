@@ -95,3 +95,10 @@ mixin useful-label(i, t)
 	else
 		+b.useful-label&attributes(attributes)
 			span!= t
+
+mixin thanx(h, p)
+	+b.thanx.active
+		h5!= h
+		p!= p
+		+e.btn
+

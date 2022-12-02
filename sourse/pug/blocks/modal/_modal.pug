@@ -18,9 +18,33 @@ mixin modal()
 		+b.modal-win
 			+form-wrap
 				.text-center
-					+e.title.form-data.h3 Причина запроса контактов
+					+e.title.form-data.h2 Причина запроса контактов
 				+input('Введите причину запроса контактов', 'textarea','Причина запроса контактов')(required)
 				+e.BUTTON.btn.btn(type="submit") Oтправить  
-	// #modal-call
+	// #contact-request
+
+	div(id="admin-question"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h4 Задать вопрос администратору
+				+input("Выберите категорию",'select', 'Категория вопроса')(required)
+				+input('Введите причину запроса контактов', 'textarea','Причина запроса контактов')(required)
+				+input('ivanov@yandex.ru', 'email','Электронная почта')
+				+e.BUTTON.btn.btn(type="submit") Oтправить
+				+e.agree Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на #[a(href="#") обработку ваших персональных данных].
+	// #admin-question
+
+	div(id="submit-idea"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				.text-center
+					+e.title.form-data.h4 Предложи идею или&nbsp;проект
+				+input("Введите название идеи/проекта",'', 'Название идеи/проекта')(required)
+				+input('Введите описание', 'textarea','Описание идеи/проекта')(required)
+				+e.BUTTON.btn.btn(type="submit") Oтправить
+				+e.agree Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на #[a(href="#") обработку ваших персональных данных].
+	// #submit-idea
+
 	
 	// end modals

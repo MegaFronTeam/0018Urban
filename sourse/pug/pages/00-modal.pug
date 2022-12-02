@@ -15,11 +15,14 @@ block title
 block pagecontent
 	//- +topLine()
 	main
-		.section.container
+		.section.container-fluid
 			h1 Страница для  демонстрации модальных окон
 			.row
 				mixin btn(id, name)
 					.col-auto.mb-2
 						a.btn.btn-primary(href=`#` data-src=id data-fancybox="modal")= name
 				+btn("contact-request", "Причина запроса контактов")
+				+btn("admin-question", "Задать вопрос администратору")
+				+btn("submit-idea", "Предложи идею или проект")
+	+thanx(`Спасибо`, `Ваш вопрос отправлен. Ответ придет вам на&nbsp;указанную почту, время модерации займет 7&nbsp;дней.`)
 

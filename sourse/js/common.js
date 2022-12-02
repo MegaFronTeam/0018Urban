@@ -690,7 +690,12 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-
+	let thanx = document.querySelector('.thanx');
+	if(thanx) {
+		document.querySelector('.thanx__btn').addEventListener('click', function() {
+			thanx.classList.remove('active');
+		});
+	};
 	// modal window
 
 };

@@ -67,3 +67,75 @@ mixin sForumThemes(data)
 				+b.forum-pagination
 					+e.title Страницы:
 					+forum-pagin
+
+
+mixin sForumDiscuss(data)
+	// start sForum
+	+b.SECTION.sForum.section#sForum&attributes(attributes)
+		.container-fluid
+			+b.alert--sm.alert-yellow Сообщение успешно добавлено.
+			+e.container
+				+e.pagination-row.row
+					.col
+						+b.forum-pagination.px-1.py-0
+							+e.title Страницы:
+							+forum-pagin
+					+e.pagination-col.col-auto
+						+btn('Ответить').btn.btn-primary
+				+e.header.text-left
+					h1 Оранизационный план проведения мероприятия. Все руководители хотели повысить эффективность своих команд, но&nbsp;каждый пришел с&nbsp;конкретной задачей
+				+b.discussion
+					+e.item
+						+e.row.row
+							+e.col.col-12.col-sm-auto
+								+e.item-head
+									.row
+										.col.col-sm-12
+											p Летунова Александра Петровна
+										.col-auto.col-sm-12.order-sm-first
+											+e.img-wrap
+												+img(`img/profile-img.png`, 'bg')
+							.col
+								+e.item-content
+									.text-secondary 15.11.2022 12:49:17
+									p Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении. Кадровые сервисы Правительства Москвы спроектировали программу специально для руководителей среднего звена органов власти и&nbsp;подведомственных учреждений.
+									
+									+btn('Цитировать').btn.btn-outline-primary
+					+e.item
+						+e.row.row
+							+e.col.col-12.col-sm-auto
+								+e.item-head
+									.row
+										.col.col-sm-12
+											p Летунова Александра Петровна
+										.col-auto.col-sm-12.order-sm-first
+											+e.img-wrap
+							.col
+								+e.item-content
+									.text-secondary 15.11.2022 12:49:17
+									+e.item-content
+										.text-secondary Цитата
+										p Я&nbsp;получил заряд энергии от&nbsp;успешных людей, профессионалов своего дела, и&nbsp;мотивацию к&nbsp;собственному развитию и&nbsp;развитию своей команды.
+									p Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении. Кадровые сервисы Правительства Москвы спроектировали программу специально для руководителей среднего звена органов власти и&nbsp;подведомственных учреждений.
+									+btn('Цитировать').btn.btn-outline-primary
+
+				+e.pagination-row--bottom.row
+					.col
+						+b.forum-pagination.px-1.py-0
+							+e.title Страницы:
+							+forum-pagin
+					+e.pagination-col.col-auto
+						+btn('Ответить').btn.btn-primary
+	// end sForum
+	
+mixin sForumAnswer(data)
+	// start sForum
+	+b.SECTION.sForum.sForum--answer.section#sForum&attributes(attributes)
+		.container-fluid
+			+e.container
+				+e.header
+					h2 Форма ответов
+				+form-wrap
+					+input('', 'textarea')
+					+btn('Отправить', 'submit').btn.btn-primary
+	// end sForum

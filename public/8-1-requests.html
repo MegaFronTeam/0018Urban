@@ -939,11 +939,11 @@
 				<div class="form-wrap">
 					<form>
 						<div class="text-center">
-							<div class="form-wrap__title form-data h3">Причина запроса контактов
+							<div class="form-wrap__title form-data h2">Причина запроса контактов
 							</div>
 						</div>
 						<div class="form-wrap__input-wrap form-group">
-							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите причину запроса контактов"></textarea><span class="form-wrap__input-title">Причина запроса контактов</span>
+							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите причину запроса контактов" required="required"></textarea><span class="form-wrap__input-title">Причина запроса контактов</span>
 							</label>
 						</div>
 						<!-- +e.input-wrap-->
@@ -953,7 +953,73 @@
 				</div>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<!-- #contact-request-->
+		<div id="admin-question" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Задать вопрос администратору
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label>
+								<select class="form-wrap__input form-select" name="select" required="required">
+									<option value="Выберите категорию">Выберите категорию</option>
+									<option value=" placeholder 1">placeholder 1</option>
+									<option value=" placeholder 2">placeholder 2</option>
+									<option value=" placeholder 3">placeholder 3</option>
+									<option value=" placeholder 4">placeholder 4</option>
+								</select><span class="form-wrap__input-title">Категория вопроса</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите причину запроса контактов" required="required"></textarea><span class="form-wrap__input-title">Причина запроса контактов</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="ivanov@yandex.ru"/><span class="form-wrap__input-title">Электронная почта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">Oтправить
+						</button>
+						<div class="form-wrap__agree">Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на <a href="#">обработку ваших персональных данных</a>.
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #admin-question-->
+		<div id="submit-idea" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h4">Предложи идею или&nbsp;проект
+							</div>
+						</div>
+						<div class="form-wrap__input-wrap form-group">
+							<label><input class="form-wrap__input form-control" name="" type="text" placeholder="Введите название идеи/проекта" required="required"/><span class="form-wrap__input-title">Название идеи/проекта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group">
+							<label><textarea class="form-wrap__input form-control" name="textarea" placeholder="Введите описание" required="required"></textarea><span class="form-wrap__input-title">Описание идеи/проекта</span>
+							</label>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">Oтправить
+						</button>
+						<div class="form-wrap__agree">Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на <a href="#">обработку ваших персональных данных</a>.
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #submit-idea-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>

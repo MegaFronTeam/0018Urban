@@ -3,71 +3,169 @@
 }
 
 .fancybox__backdrop {
-	background-color: rgba(#008981, .6);
+	background-color: rgba(#008981, 0.6);
+	background-image: url("../img/svg/fancybox-backdrop-bg.svg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center top;
 }
 
 .fancybox__content {
 	padding: 0;
 	max-width: 100%;
+	& > .carousel__button.is-close {
+		top: 10px;
+		right: 10px;
+		--fancybox-color: #{$body-color};
+	}
 }
 .modal-win {
 	// display: block;
 	background-color: #fff;
 	max-width: 100%;
 	position: relative;
-	max-width: 608px;
+	width: 608px;
 	border-radius: $border-radius-sm;
-	// min-height: 100%; 
-	padding: 40px 16%;
-	@include media-breakpoint-down(sm) {
-		padding-left: 16px;
-		padding-right: 16px;
+	padding: 45px 16px;
+	@include media-breakpoint-up(sm) {
+		padding: 45px 27px;
 	}
+	@include media-breakpoint-up(xl) {
+		width: rem(608);
+		padding: rem(45) rem(27);
+	}
+	// min-height: 100%;
+	// padding: 40px 14%;
+	// @include media-breakpoint-down(sm) {
+	// 	padding-left: 16px;
+	// 	padding-right: 16px;
+	// }
 
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
 	.form-wrap {
-		&__title {
-			margin-bottom: 32px;
-			font-weight: 700;
-			font-size: rem(40);
-			line-height: 1;
-			@include media-breakpoint-down(sm) {
-				font-size: rem(25);
-			}
-
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(xl) {
+			max-width: rem(400);
 		}
-		&__input-wrap > label {
-			display: flex;
-			flex-direction: column-reverse;
+		&__title {
+			&.h2 {
+				margin-bottom: 24px;
+				line-height: 1;
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(32);
+				}
+			}
+			&.h4 {
+				margin-bottom: 24px;
+				line-height: calc(32 / 24);
+				@include media-breakpoint-up(sm) {
+					margin-bottom: 16px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin-bottom: rem(16);
+				}
+			}
+		}
+		&__input-wrap {
+			margin-bottom: 8px;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(8);
+			}
+			& > label {
+				display: flex;
+				flex-direction: column-reverse;
+			}
 		}
 		&__input-title {
 			margin-bottom: 8px;
 			font-size: 14px;
-			position: relative; 
-			&::after {
-				position: absolute;
-				content: '';
-				display: inline-block;
-				left: 0;
-				bottom: -12px;
-				width: 5px;
-				height: 5px;
-				background-image: url('../img/svg/required.svg');
-				background-repeat: no-repeat;
+			position: relative;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(8);
+				font-size: rem(14);
+			}
+			// &::after {
+			// 	position: absolute;
+			// 	content: "";
+			// 	display: inline-block;
+			// 	left: 0;
+			// 	bottom: -12px;
+			// 	width: 5px;
+			// 	height: 5px;
+			// 	background-image: url("../img/svg/required.svg");
+			// 	background-repeat: no-repeat;
+			// 	@include media-breakpoint-up(xl) {
+			// 		bottom: rem(-12);
+			// 		width: rem(5);
+			// 		height: rem(5);
+			// 	}
+			// }
+		}
+		&__input {
+			// &.form-select {
+			// 	color: $gray-600;
+			// }
+			&[required] {
+				+ .form-wrap__input-title {
+					&::after {
+						position: absolute;
+						content: "";
+						display: inline-block;
+						left: 0;
+						bottom: -12px;
+						width: 5px;
+						height: 5px;
+						background-image: url("../img/svg/required.svg");
+						background-repeat: no-repeat;
+						@include media-breakpoint-up(xl) {
+							bottom: rem(-12);
+							width: rem(5);
+							height: rem(5);
+						}
+					}
+				}
 			}
 		}
 		textarea {
-		height: 171px;
-		margin-bottom: 24px;
-		border: 1px solid #757B8A;
-		border-radius: 24px;
+			height: 171px;
+			// border: 1px solid #757b8a;
+			border-radius: 24px;
+			@include media-breakpoint-up(xl) {
+				height: rem(170);
+			}
 		}
 		&__btn {
 			@extend .btn, .btn-primary;
 			width: 100%;
+			margin-top: 16px;
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(16);
+			}
+		}
+		&__agree {
+			font-size: 14px;
+			text-align: center;
+			max-width: 28em;
+			margin-left: auto;
+			margin-right: auto;
+			color: $gray-600;
+			margin-top: 16px;
+			line-height: calc(16 / 14);
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(16);
+				font-size: rem(14);
+			}
+			a {
+				&:not(:hover) {
+					color: inherit;
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 
@@ -101,7 +199,7 @@ a {
 	top: 0;
 	text-decoration: none;
 	text-align: center;
-	opacity: .65; // padding: 0 0 18px 10px;
+	opacity: 0.65; // padding: 0 0 18px 10px;
 	// color: #fff;
 	font-style: normal;
 	font-size: 28px;
@@ -152,76 +250,86 @@ a {
 	}
 }
 
+//
+@include media-breakpoint-up(xl) {
+}
 
-// 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(lg) {
+}
 
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(md) {
+}
 
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(sm) {
+}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(xs) {
+}
 
-@include media-breakpoint-up(xs) {}
+//
+@include media-breakpoint-between(md, xl) {
+}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+//
+@include media-breakpoint-only(xs) {
+}
 
-// 
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(sm) {
+}
 
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(md) {
+}
 
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(lg) {
+}
 
-@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(xl) {
+}
 
-@include media-breakpoint-only(xl) {}
+//
+@include media-breakpoint-down(xl) {
+}
 
-// 
-@include media-breakpoint-down(xl) {}
+@include media-breakpoint-down(lg) {
+}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(md) {
+}
 
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
+@include media-breakpoint-down(sm) {
+}
 
 @include media-breakpoint-down(xs) {
-
 	.fancybox__container {
 		width: 100% !important;
-		min-height: 100%; 
+		min-height: 100%;
 		transform: none !important;
 	}
 }
 
-
-
 .fancybox-throwOutUp {
-  animation: 0.25s ease both fancybox-throwOutUp;
+	animation: 0.25s ease both fancybox-throwOutUp;
 }
 
 .fancybox-throwOutDown {
-  animation: 0.25s ease both fancybox-throwOutDown;
+	animation: 0.25s ease both fancybox-throwOutDown;
 }
 
 @keyframes fancybox-throwOutUp {
-  from {
-    transform: translate3d(0, -5%, 0);
-    opacity: 0;
-  }
-	
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+	from {
+		transform: translate3d(0, -5%, 0);
+		opacity: 0;
+	}
 
+	to {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
 }
 
 @keyframes fancybox-throwOutDown {
-  to {
-    transform: translate3d(0, 10%, 0);
-    opacity: 0;
-  }
+	to {
+		transform: translate3d(0, 10%, 0);
+		opacity: 0;
+	}
 }
