@@ -65,7 +65,7 @@
 		line-height: 16px;
 		color: $gray-600;
 		text-align: left;
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			display: none;
 		}
 	}

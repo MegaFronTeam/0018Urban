@@ -120,6 +120,8 @@
 		border-top: 1px solid $gray-100;
 		border-bottom: 1px solid $gray-100;
 		@include media-breakpoint-down(sm) {
+			padding-bottom: 0px;
+			margin-bottom: 0px;
 			border-bottom: 1px solid transparent;
 		}
 	}

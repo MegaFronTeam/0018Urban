@@ -345,6 +345,18 @@
 		}
 	}
 	&__radio-wrap {
+		&--text {
+			justify-content: space-between;
+			width: 100%;
+			max-width: 772px;
+			.custom-input {
+				width: 100%;
+				text-align: center;
+			}
+			.custom-input__text {
+				white-space: nowrap;
+			}
+		}
 		@include media-breakpoint-down(md) {
 			&:not(:last-child) {
 				margin-right: 0;

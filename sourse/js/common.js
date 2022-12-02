@@ -395,7 +395,45 @@ function eventHandler() {
 				},
 			})
 		}
-		
+
+	// Tooltip
+	const tooltipButtons = document.querySelectorAll('.sForum__img-wrap');
+	if (tooltipButtons) {
+		tooltipButtons.forEach((btn) => {
+			const tooltip = btn.nextElementSibling;
+			const popperInstance = Popper.createPopper(btn, tooltip, {
+				placement: 'right',
+				modifiers: [
+					{
+						name: 'offset',
+						options: {
+							offset: [0, 8],
+						},
+					},
+				],
+			});
+			function show() {
+				tooltip.setAttribute('data-show', '');
+				popperInstance.update();
+			}
+			
+			function hide() {
+				tooltip.removeAttribute('data-show');
+			}
+			
+			const showEvents = ['mouseenter', 'focus'];
+			const hideEvents = ['mouseleave', 'blur'];
+			
+			showEvents.forEach((event) => {
+				btn.addEventListener(event, show);
+			});
+			
+			hideEvents.forEach((event) => {
+				btn.addEventListener(event, hide);
+			});
+		})
+	}
+  
 	// Табы из селекта на странице запросов
 	const requestTabs = document.querySelector('.sRequest__tabs');
 	const selectTabsBtn = document.querySelectorAll('.tabs-option');
