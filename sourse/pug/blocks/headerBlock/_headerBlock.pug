@@ -16,18 +16,26 @@ mixin headerBlock(title,p,network)
 
 	// end headerBlock
 
-mixin newsItemHeader
+mixin newsItemHeader(title, descr, register, registered)
 	// start newsItemHeader
 	+b.newsItemHeader.section#headerBlock&attributes(attributes)
 		+e.container.container-fluid
 			+e.row.row
 				+e.text-block.col-sm-6.order-sm-2
-					h1 Встречи с&nbsp;признанными экспертами в&nbsp;сфере управления
+					h1!= title
+					if descr
+						+e.descr!= descr
 					+e.details
 						+e.category Вебинар
 						+e.date 
 							+icon('calendar')
 							| 26 сентября
+						if register
+							+e.btn= register
+						else if registered
+							+e.btn--registered
+								+icon('checked')
+								+e.btn-text= registered
 				.col-sm-6.order-sm-1
 					+e.img-wrap
 						+img('img/news-preview-5.jpg')
