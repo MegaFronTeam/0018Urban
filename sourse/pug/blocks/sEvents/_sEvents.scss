@@ -86,6 +86,8 @@
 		border: none;
 		background-color: transparent;
 		cursor: pointer;
+		flex-grow: 0;
+		flex-shrink: 1;
 		&--next {
 			transform: rotate(180deg);
 		}
@@ -175,6 +177,8 @@
 		justify-content: center;
 		width: 26px;
 		height: 26px;
+		min-height: 26px;
+		min-width: 26px;
 		border-radius: 50%;
 		border: none;
 		background-color: $primary;
@@ -182,6 +186,10 @@
 		line-height: 1;
 		@extend .stretched-link;
 		@include media-breakpoint-down(md) {
+			min-height: 15px;
+			min-width: 15px;
+			max-height: 15px;
+			max-width: 15px;
 			width: 15px;
 			height: 15px;
 			font-size: 14px;

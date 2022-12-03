@@ -245,6 +245,10 @@
 		background-color: $primary;
     border: 1px solid transparent;
 	}
+	.choices__list--dropdown, .choices__list[aria-expanded] {
+		z-index: 50;
+	}
+
 	.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
 		border-left: none;
 	}

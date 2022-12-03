@@ -5,15 +5,15 @@ mixin sAccount(validated)
 			+e.top
 				+b.section-title.text-center
 					h1 Мои настройки
-				+form-wrap
-					if validated
-						+b.account-title.validated
-							+in-c('checkbox','Опубликовать анкету на сайте','published')
-							+e.caption Заполните обязательные поля, отмеченные звездочкой
-					else
-						+b.account-title
-							+in-c('checkbox','Опубликовать анкету на сайте','published')
-							+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
+				//- +form-wrap
+				//- 	if validated
+				//- 		+b.account-title.validated
+				//- 			+in-c('checkbox','Опубликовать анкету на сайте','published')
+				//- 			+e.caption Заполните обязательные поля, отмеченные звездочкой
+				//- 	else
+				//- 		+b.account-title
+				//- 			+in-c('checkbox','Опубликовать анкету на сайте','published')
+				//- 			+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
 			+e.body
 				.tabs
 					.tabs__slider.tabs__slider--js.swiper
@@ -51,7 +51,7 @@ mixin sAccount(validated)
 								+in-c('radio','В поиске работы','status')
 							+input('2011-2012','select', 'Год стажировки').js-choice
 							+input("Введите Вашу должность",'', 'Должность')
-							+input('ОИВ','select', 'ОИВ/Подведомственная организация').js-choice
+							+input('ОИВ','text', 'ОИВ/Подведомственная организация')
 							+input('', 'text', 'Область экспертизы')(value="Область 1,Область 2" placeholder="sdfsdf").remove-btn--js
 							+input('Введите Ваш текст', 'textarea','Чем могу быть полезен')
 							+input('Интересы','select', 'О себе')(multiple placeholder="Интересы").interest-btn--js

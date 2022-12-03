@@ -340,6 +340,7 @@
 		border-radius: 44px;
 		border: 1px solid transparent;
 		text-align: left;
+		color: $body-color;
 		@include media-breakpoint-down(md) {
 			width: 100%;
 			text-align: left;
