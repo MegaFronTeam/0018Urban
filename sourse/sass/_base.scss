@@ -719,3 +719,11 @@ iframe {
 .tooltip[data-show] {
   display: block;
 }
+
+.alerts-empty-page {
+	main {
+		display: flex;
+		flex-direction: column;
+		
+	}
+}

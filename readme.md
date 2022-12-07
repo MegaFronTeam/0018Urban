@@ -24,5 +24,6 @@
  12. <https://megafronteam.github.io/0018Urban/public/18-1-forum.html>
  12. <https://megafronteam.github.io/0018Urban/public/19-1-forum-themes.html>
  12. <https://megafronteam.github.io/0018Urban/public/20-1-topic-discuss.html>
+ 12. <https://megafronteam.github.io/0018Urban/public/24-1-alerts-empty.html>
  13. <https://megafronteam.github.io/0018Urban/public/404.html>
  14. <https://megafronteam.github.io/0018Urban/public/28-faq.html>

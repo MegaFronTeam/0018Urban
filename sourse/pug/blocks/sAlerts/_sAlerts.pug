@@ -1,0 +1,21 @@
+mixin sAlerts(data)
+	// start sAlerts
+	+b.sAlerts.section#sAlerts&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sAlerts
+			+e.row.row
+
+			+pagin()
+	// end sAlerts
+
+
+mixin sAlertsEmpty(data)
+	// start sAlerts
+	+b.sAlerts--empty.section#sAlerts&attributes(attributes)
+		.container
+			+e.wrapper
+				+e.icon-empty
+					+icon('alerts')
+				p У&nbsp;вас нет оповещений
+	// end sAlerts
