@@ -677,53 +677,61 @@ iframe {
 	border-radius: 4px;
 	font-size: 14px;
 	line-height: 16px;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 .arrow,
 .arrow::before {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: inherit;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: inherit;
 }
 
 .arrow {
-  visibility: hidden;
+	visibility: hidden;
 }
 
 .arrow::before {
-  visibility: visible;
-  content: '';
-  transform: rotate(45deg);
+	visibility: visible;
+	content: "";
+	transform: rotate(45deg);
 }
-.tooltip[data-popper-placement^='top'] > .arrow {
-  bottom: -4px;
-}
-
-.tooltip[data-popper-placement^='bottom'] > .arrow {
-  top: -4px;
+.tooltip[data-popper-placement^="top"] > .arrow {
+	bottom: -4px;
 }
 
-.tooltip[data-popper-placement^='left'] > .arrow {
-  right: -4px;
+.tooltip[data-popper-placement^="bottom"] > .arrow {
+	top: -4px;
 }
 
-.tooltip[data-popper-placement^='right'] > .arrow {
-  left: -4px;
+.tooltip[data-popper-placement^="left"] > .arrow {
+	right: -4px;
+}
+
+.tooltip[data-popper-placement^="right"] > .arrow {
+	left: -4px;
 }
 .tooltip {
-  /* ... */
-  display: none;
+	/* ... */
+	display: none;
 }
 
 .tooltip[data-show] {
-  display: block;
+	display: block;
 }
 
-.alerts-empty-page {
+.alerts-page {
 	main {
 		display: flex;
 		flex-direction: column;
-		
+	}
+	.pagination-nav {
+		padding: 36px 0 0;
+		@include media-breakpoint-up(md) {
+			padding: 40px 0 0;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(40) 0 0;
+		}
 	}
 }
