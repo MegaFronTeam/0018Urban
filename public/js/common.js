@@ -716,6 +716,19 @@ function eventHandler() {
 	const newsSwiper = new Swiper('.sNewsItem__slider--js', {
 		...defaultSl
 	})
+
+	const mainPageItems = document.querySelectorAll('.sMainUnits__item');
+	if (mainPageItems) {
+		for (let mainItem of  mainPageItems) {
+			const mainItemSlider = new Swiper(mainItem.querySelector('.swiper'), {
+				slidesPerView: 'auto',
+				navigation: {
+					nextEl: mainItem.querySelector('.swiper-button-next'),
+					prevEl: mainItem.querySelector('.swiper-button-prev'),
+				},
+			});
+		}
+	}
 	
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,

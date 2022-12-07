@@ -6,6 +6,8 @@
  2. <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-1-account.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-2-account.html>
+ 4. <https://megafronteam.github.io/0018Urban/public/5-1-main.html>
+ 4. <https://megafronteam.github.io/0018Urban/public/5-1-main-notification.html>
  4. <https://megafronteam.github.io/0018Urban/public/6-1-networking.html>
  5. <https://megafronteam.github.io/0018Urban/public/7-1-profile.html>
  6. <https://megafronteam.github.io/0018Urban/public/7-2-profile-request.html>
