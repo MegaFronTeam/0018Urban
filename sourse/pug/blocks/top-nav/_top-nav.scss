@@ -12,6 +12,9 @@
 		top: 0;
 		bottom: auto;
 	}
+	& > .container-fluid {
+		position: relative;
+	}
 	&::before {
 		content: "";
 		position: absolute;
@@ -69,115 +72,121 @@
 			color: $body-color;
 		}
 	}
-	&__btn {
-		// @extend .btn;
-		@include mt;
-		position: relative;
-		border: none !important;
-		outline: none !important;
-		background-color: transparent;
-		color: $body-color;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		height: 40px;
-		padding: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		@include media-breakpoint-up(lg) {
-			min-width: 28px;
-			border-radius: 32px;
-		}
-		@include media-breakpoint-up(xl) {
-			height: rem(40);
-			min-width: rem(32);
-		}
-		.icon {
-			// @include mt;
-			font-size: 24px;
-			@include media-breakpoint-up(xl) {
-				font-size: rem(24);
-			}
-		}
+	// &__btn {
+	// 	// @extend .btn;
+	// 	@include mt;
+	// 	position: relative;
+	// 	border: none !important;
+	// 	outline: none !important;
+	// 	background-color: transparent;
+	// 	color: $body-color;
+	// 	padding: 0;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	height: 40px;
+	// 	padding: 0;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	cursor: pointer;
+	// 	@include media-breakpoint-up(lg) {
+	// 		min-width: 28px;
+	// 		border-radius: 32px;
+	// 	}
+	// 	@include media-breakpoint-up(xl) {
+	// 		height: rem(40);
+	// 		min-width: rem(32);
+	// 	}
+	// 	.icon {
+	// 		// @include mt;
+	// 		font-size: 24px;
+	// 		@include media-breakpoint-up(xl) {
+	// 			font-size: rem(24);
+	// 		}
+	// 	}
 
-		&:hover {
-			color: $link-hover-color;
-		}
-		&--person {
-			@include media-breakpoint-up(lg) {
-				background-color: $light;
-				padding: 8px 12px 8px 8px;
-			}
-			@include media-breakpoint-up(xl) {
-				padding: rem(8) rem(12) rem(8) rem(8);
-			}
-		}
-	}
-	&__btn-count {
-		position: absolute;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		top: -2px;
-		right: -2px;
-		min-width: 18px;
-		height: 18px;
-		color: $white;
-		background-color: $primary;
-		border-radius: 18px;
-		border: 2px solid $white;
-		font-size: 10px;
-		line-height: 18px;
-		
-		@include media-breakpoint-up(xl) {
-			line-height: rem(18);
-			top: -2px;
-			right: -2px;
-			min-width: rem(18);
-			height: rem(18);
-			border-radius: rem(18);
-			font-size: rem(10);
-		}
-		// span {
-		// 	font-size: 10px;
-		// 	line-height: 1;
-		// 	@include media-breakpoint-up(xl) {
-		// 		font-size: rem(10);
-		// 	}
-		// }
-	}
+	// 	&:hover {
+	// 		color: $link-hover-color;
+	// 	}
+	// 	&--person {
+	// 		@include media-breakpoint-up(lg) {
+	// 			background-color: $light;
+	// 			padding: 8px 12px 8px 8px;
+	// 		}
+	// 		@include media-breakpoint-up(xl) {
+	// 			padding: rem(8) rem(12) rem(8) rem(8);
+	// 		}
+	// 	}
+	// }
+	// &__btn-content {
+	// 	a {
+	// 		display: flex;
 
-	&__btn-text {
-		display: none;
-		margin-left: 8px;
-		font-size: 14px;
-		line-height: 16px;
-		text-align: start;
-		@include media-breakpoint-up(lg) {
-			display: flex;
-			flex-direction: column;
-		}
-		@include media-breakpoint-up(xl) {
-			margin-left: rem(8);
-			font-size: rem(14);
-			line-height: rem(16);
-		}
-		span {
-			&:last-child {
-				font-size: 10px;
-				line-height: 1;
-				margin-left: 5px;
-				letter-spacing: 0.5px;
-				font-weight: bold;
-				@include media-breakpoint-up(xl) {
-					font-size: rem(10);
-					margin-left: rem(5);
-				}
-			}
-		}
-	}
+	// 	}
+	// }
+	// &__btn-count {
+	// 	position: absolute;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// 	top: -2px;
+	// 	right: -2px;
+	// 	min-width: 18px;
+	// 	height: 18px;
+	// 	color: $white;
+	// 	background-color: $primary;
+	// 	border-radius: 18px;
+	// 	border: 2px solid $white;
+	// 	font-size: 10px;
+	// 	line-height: 18px;
+
+	// 	@include media-breakpoint-up(xl) {
+	// 		line-height: rem(18);
+	// 		top: -2px;
+	// 		right: -2px;
+	// 		min-width: rem(18);
+	// 		height: rem(18);
+	// 		border-radius: rem(18);
+	// 		font-size: rem(10);
+	// 	}
+	// 	// span {
+	// 	// 	font-size: 10px;
+	// 	// 	line-height: 1;
+	// 	// 	@include media-breakpoint-up(xl) {
+	// 	// 		font-size: rem(10);
+	// 	// 	}
+	// 	// }
+	// }
+
+	// &__btn-text {
+	// 	display: none;
+	// 	margin-left: 8px;
+	// 	font-size: 14px;
+	// 	line-height: 16px;
+	// 	text-align: start;
+	// 	@include media-breakpoint-up(lg) {
+	// 		display: flex;
+	// 		flex-direction: column;
+	// 	}
+	// 	@include media-breakpoint-up(xl) {
+	// 		margin-left: rem(8);
+	// 		font-size: rem(14);
+	// 		line-height: rem(16);
+	// 	}
+	// 	span {
+	// 		&:last-child {
+	// 			font-size: 10px;
+	// 			line-height: 1;
+	// 			margin-left: 5px;
+	// 			letter-spacing: 0.5px;
+	// 			font-weight: bold;
+	// 			@include media-breakpoint-up(xl) {
+	// 				font-size: rem(10);
+	// 				margin-left: rem(5);
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	@include media-breakpoint-up(md) {
 	}

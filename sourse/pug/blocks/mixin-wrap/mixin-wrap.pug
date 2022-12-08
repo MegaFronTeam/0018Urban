@@ -46,9 +46,26 @@ mixin page-head(t,...items)
 
 			h1= t
 
-mixin chat
-	+b.chat
-		+icon('help')
+//- mixin chat
+//- 	+b.chat
+//- 		+icon('help')
+mixin help()
+	+b.topNav-btnWrap--help
+		+e.btn.d-none.d-lg-flex.toggle-contact-js(data-id= "#ddHelp")
+			+icon('help')
+		+e.btn-content.dropdown-contact-js#ddHelp
+			a(href="#")
+				+icon('telegram-2')
+				span Канал в телеграме
+			a(href="#")
+				+icon('question')
+				span Вопрос админу
+			a(href="#")
+				+icon('pen')
+				span Вопрос преподавателю
+			a(href="#")
+				+icon('help')
+				span FAQ
 
 mixin upload-field(text)
 	+b.upload-field

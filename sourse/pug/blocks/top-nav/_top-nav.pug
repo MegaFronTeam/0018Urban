@@ -32,19 +32,46 @@ mixin top-nav()
 							+mnu()
 				.col-auto
 					+e.controls
-						+e.btn(href="#").d-lg-none
-							+icon('help')
-						+e.btn
-							+icon('notifications')
-							+e.btn-count 86
-								//- span 1860
-						+e.btn--person(href="#")
-							+icon('person')
-							+e.SPAN.btn-text 
-								span Алексей А.
-								span Участник
-							+e.btn-count
-								span 3
+						+b.topNav-btnWrap--help.d-lg-none
+							+e.btn.toggle-contact-js(data-id= "#ddHelp")
+								+icon('help')
+							//- +e.btn-content
+							//- 	a(href="#")
+							//- 		+icon('telegram-2')
+							//- 		span Канал в телеграме
+							//- 	a(href="#")
+							//- 		+icon('question')
+							//- 		span Вопрос админу
+							//- 	a(href="#")
+							//- 		+icon('pen')
+							//- 		span Вопрос преподавателю
+							//- 	a(href="#")
+							//- 		+icon('help')
+							//- 		span FAQ
+						+b.topNav-btnWrap
+							+e.btn(href="#")
+								+icon('notifications')
+								+e.btn-count 86
+									//- span 1860
+						+b.topNav-btnWrap--person
+							+e.btn.toggle-contact-js(data-id= "#ddPerson")
+								+icon('person')
+								+e.SPAN.btn-text 
+									span Алексей А.
+									span Участник
+								+e.btn-count
+									span 3
+							+e.btn-content.dropdown-contact-js#ddPerson
+								a(href="#")
+									+icon('change-contact')
+									span Обмен контактами 
+									+e.btn-count 3
+								a(href="#")
+									+icon('tune')
+									span Настройки
+								a(href="#")
+									+icon('exit')
+									span Выход
 				.col-auto.d-lg-none
 					+menu-toggle()
 	// end top-nav

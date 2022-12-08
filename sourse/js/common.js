@@ -1,6 +1,6 @@
 "use strict";
 
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -24,8 +24,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -34,7 +34,7 @@ const JSCCommon = {
 		});
 		document.addEventListener('click', (event) => {
 			let element = event.target.closest(link)
-			if(!element) return;
+			if (!element) return;
 			let modal = document.querySelector("#" + element.dataset.src);
 			const data = element.dataset;
 
@@ -76,7 +76,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -150,7 +150,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -281,28 +281,28 @@ const JSCCommon = {
 		}
 	},
 	imgToSVG() {
-    const convertImages = (query, callback) => {
+		const convertImages = (query, callback) => {
 			const images = document.querySelectorAll(query);
-	
+
 			images.forEach(image => {
 				fetch(image.src)
 					.then(res => res.text())
 					.then(data => {
 						const parser = new DOMParser();
 						const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-	
+
 						if (image.id) svg.id = image.id;
 						if (image.className) svg.classList = image.classList;
-	
+
 						image.parentNode.replaceChild(svg, image);
 					})
 					.then(callback)
 					.catch(error => console.error(error))
 			});
 		};
-	
+
 		convertImages('.img-svg-js');
-  },
+	},
 };
 const $ = jQuery;
 
@@ -318,7 +318,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -341,7 +341,7 @@ function eventHandler() {
 			days: 'yyyy <i>MMMM</i>',
 		},
 	});
-	
+
 	const selects = document.querySelectorAll('.js-choice');
 	if (selects) {
 		selects.forEach(choice => {
@@ -374,9 +374,9 @@ function eventHandler() {
 						return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
 					},
 				}
-				)
-			});
-		}
+			)
+		});
+	}
 
 	if (interestRemoveBtns) {
 		let interestRemoveInput = new Choices(interestRemoveBtns,
@@ -394,7 +394,7 @@ function eventHandler() {
 					return `Нажмите Enter чтобы добавить <b>"${value}"</b>`;
 				},
 			})
-		}
+	}
 
 	// Tooltip
 	const tooltipButtons = document.querySelectorAll('.sForum__img-wrap');
@@ -416,24 +416,24 @@ function eventHandler() {
 				tooltip.setAttribute('data-show', '');
 				popperInstance.update();
 			}
-			
+
 			function hide() {
 				tooltip.removeAttribute('data-show');
 			}
-			
+
 			const showEvents = ['mouseenter', 'focus'];
 			const hideEvents = ['mouseleave', 'blur'];
-			
+
 			showEvents.forEach((event) => {
 				btn.addEventListener(event, show);
 			});
-			
+
 			hideEvents.forEach((event) => {
 				btn.addEventListener(event, hide);
 			});
 		})
 	}
-  
+
 	// Табы из селекта на странице запросов
 	const requestTabs = document.querySelector('.sRequest__tabs');
 	const selectTabsBtn = document.querySelectorAll('.tabs-option');
@@ -448,69 +448,69 @@ function eventHandler() {
 		});
 		requestChoice.setChoices([
 			{
-				value: 'all', 
-				label: 'Избранные участники', 
+				value: 'all',
+				label: 'Избранные участники',
 				selected: true,
 				customProperties: {
 					dataTabsPath: 'all'
 				}
 			},
 			{
-				value: 'sent', 
+				value: 'sent',
 				label: 'Запросы на обмен контактами',
 				customProperties: {
 					dataTabsPath: 'sent'
 				}
 			},
 			{
-				value: 'received', 
-				label: 'Отправленные запросы', 
+				value: 'received',
+				label: 'Отправленные запросы',
 				customProperties: {
 					dataTabsPath: 'received'
-				} 
+				}
 			}
 		],
 		);
 		if (requestSelect) {
-			requestSelect.addEventListener('change',(event) => {
+			requestSelect.addEventListener('change', (event) => {
 				const tabsPath = requestChoice.getValue().customProperties.dataTabsPath;
-				selectTabsBtn.forEach(el => {el.classList.remove('active')});
+				selectTabsBtn.forEach(el => { el.classList.remove('active') });
 				tabsHandler(tabsPath);
 			});
 		}
 	}
 
-	
+
 
 	if (requestTabs) {
 		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
 			const tabsPath = e.target.dataset.tabsPath;
-			requestTabsBtn.forEach(el => {el.classList.remove('active')});
-			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => {el.classList.add('active')});
+			requestTabsBtn.forEach(el => { el.classList.remove('active') });
+			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => { el.classList.add('active') });
 			tabsHandler(tabsPath);
 		})
 	}
 
 	const tabsHandler = (path) => {
-		tabsContent.forEach(el => {el.classList.remove('active')});
+		tabsContent.forEach(el => { el.classList.remove('active') });
 		document.querySelector(`[data-tabs-target="${path}"]`).classList.add('active');
 	};
 	// /Табы из селекта на странице запросов
-		
-		const TabsSlider = new Swiper(".tabs__slider--js", {
-			slidesPerView: 'auto',
+
+	const TabsSlider = new Swiper(".tabs__slider--js", {
+		slidesPerView: 'auto',
 	});
 
 	FilePond.registerPlugin(
 		// encodes the file as base64 data
 		FilePondPluginFileEncode,
-	
+
 		// validates the size of the file
 		FilePondPluginFileValidateSize,
-		
+
 		// corrects mobile image orientation
 		FilePondPluginImageExifOrientation,
-		
+
 		// previews dropped images
 		FilePondPluginImagePreview,
 		FilePondPluginImageCrop,
@@ -549,10 +549,10 @@ function eventHandler() {
 
 	const mobFilterBtn = document.querySelector('.filter-btn');
 	const filterWrap = document.querySelector('.filter-wrap')
-	
+
 	if (mobFilterBtn) {
 		const menu = document.querySelector(mobFilterBtn.dataset.toggle);
-		mobFilterBtn.addEventListener('click', function(event) {
+		mobFilterBtn.addEventListener('click', function (event) {
 			if (menu.classList.contains('active')) {
 				menu.classList.remove('active')
 				filterWrap.classList.remove('active')
@@ -564,7 +564,7 @@ function eventHandler() {
 				event._isOpen = true;
 			}
 		});
-		document.addEventListener('click', function(event) {
+		document.addEventListener('click', function (event) {
 			if (event.composedPath().includes(menu)) return;
 			if (!event._isOpen) {
 				menu.classList.remove('active')
@@ -578,7 +578,7 @@ function eventHandler() {
 			} else {
 				filterWrap.classList.add('active');
 			}
-		 });
+		});
 	}
 
 	// / Мобильный фильтр
@@ -586,21 +586,21 @@ function eventHandler() {
 	// Дропдаун фильтра в каталоге
 
 	const dropBtns = document.querySelectorAll('.network-filter__dropdown-btn');
-	
+
 	if (dropBtns) {
 		dropBtns.forEach(btn => {
-			btn.addEventListener('click', function(event) {
+			btn.addEventListener('click', function (event) {
 				let dropBody = document.getElementById(btn.dataset.toggle);
 				if (dropBody.classList.contains('active')) {
 					btn.classList.remove('active');
 					dropBody.classList.remove('active');
-				} 
+				}
 				else if (!(dropBody.classList.contains('active'))) {
 					btn.classList.add('active');
 					dropBody.classList.add('active');
 					event._isOpen = true;
 				}
-				document.addEventListener('click', function(event) {
+				document.addEventListener('click', function (event) {
 					if (event.composedPath().includes(dropBody)) return;
 					if (!event._isOpen) {
 						dropBody.classList.remove('active');
@@ -610,15 +610,15 @@ function eventHandler() {
 			});
 		});
 	}
-		
+
 	// / Дропдаун фильтра в каталоге
 
 	// Кнопка "подробнее" в карточках запросов контактов	
 	const moreBtns = document.querySelectorAll('.profile-item__show-more');
-	
+
 	if (moreBtns) {
 		moreBtns.forEach(btn => {
-			btn.addEventListener('click', function(event) {
+			btn.addEventListener('click', function (event) {
 				let profileBody = btn.closest('.profile-item').querySelector('.profile-item__body');
 				profileBody.classList.add('active');
 				btn.hidden = true;
@@ -629,11 +629,11 @@ function eventHandler() {
 
 	// Мобильный фильтр в мероприятиях
 	const eventsBtn = document.querySelector('.events-filter__btn--js');
-	
+
 	if (eventsBtn) {
 		const eventsMenu = document.querySelector(eventsBtn.dataset.toggle);
-			
-		eventsBtn.addEventListener('click', function(event) {
+
+		eventsBtn.addEventListener('click', function (event) {
 			if (eventsMenu.classList.contains('active')) {
 				eventsMenu.classList.remove('active')
 				eventsBtn.classList.remove('active')
@@ -644,8 +644,8 @@ function eventHandler() {
 				event._isOpen = true;
 			}
 		})
-	
-		document.addEventListener('click', function(event) {
+
+		document.addEventListener('click', function (event) {
 			if (event.composedPath().includes(eventsMenu)) return;
 			if (!event._isOpen) {
 				eventsMenu.classList.remove('active')
@@ -656,7 +656,7 @@ function eventHandler() {
 
 	// /Мобильный фильтр в мероприятиях
 
-	
+
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
@@ -702,7 +702,7 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
@@ -719,7 +719,7 @@ function eventHandler() {
 
 	const mainPageItems = document.querySelectorAll('.sMainUnits__item');
 	if (mainPageItems) {
-		for (let mainItem of  mainPageItems) {
+		for (let mainItem of mainPageItems) {
 			const mainItemSlider = new Swiper(mainItem.querySelector('.swiper'), {
 				slidesPerView: 'auto',
 				navigation: {
@@ -729,7 +729,7 @@ function eventHandler() {
 			});
 		}
 	}
-	
+
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
@@ -742,13 +742,37 @@ function eventHandler() {
 
 	});
 	let thanx = document.querySelector('.thanx');
-	if(thanx) {
-		document.querySelector('.thanx__btn').addEventListener('click', function() {
+	if (thanx) {
+		document.querySelector('.thanx__btn').addEventListener('click', function () {
 			thanx.classList.remove('active');
 		});
 	};
 	// modal window
+	document.addEventListener('click', function (event) {
+		let toggle = event.target.closest('.toggle-contact-js');
+		if (!toggle) return;
 
+		let dropdown = document.querySelector(toggle.dataset.id);
+		dropdown.classList.toggle('active');
+		toggle.classList.toggle('active');
+	});
+
+	document.addEventListener('click', function (event) {
+
+		let targetToggleActive = event.target.closest('.toggle-contact-js.active');
+		let targetDropdownActive = event.target.closest(`#ddHelp.active`);
+		let toggleActive = $('.toggle-contact-js');
+		let dropdownActive = $(`#ddHelp`);
+		// console.log(toggleActive);
+		// console.log(dropdownActive);
+
+		if (!targetToggleActive && !targetDropdownActive) {
+			dropdownActive.removeClass('active');
+			toggleActive.removeClass('active');
+		};
+
+
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
