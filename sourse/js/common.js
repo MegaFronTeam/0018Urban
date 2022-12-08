@@ -749,29 +749,22 @@ function eventHandler() {
 	};
 	// modal window
 	document.addEventListener('click', function (event) {
-		let toggle = event.target.closest('.toggle-contact-js');
-		if (!toggle) return;
-
-		let dropdown = document.querySelector(toggle.dataset.id);
-		dropdown.classList.toggle('active');
-		toggle.classList.toggle('active');
-	});
-
-	document.addEventListener('click', function (event) {
-
 		let targetToggleActive = event.target.closest('.toggle-contact-js.active');
-		let targetDropdownActive = event.target.closest(`#ddHelp.active`);
+		let targetDropdownActive = event.target.closest(`.dropdown-contact-js.active`);
 		let toggleActive = $('.toggle-contact-js');
-		let dropdownActive = $(`#ddHelp`);
+		let dropdownActive = $(`.dropdown-contact-js`);
 		// console.log(toggleActive);
 		// console.log(dropdownActive);
-
 		if (!targetToggleActive && !targetDropdownActive) {
 			dropdownActive.removeClass('active');
 			toggleActive.removeClass('active');
 		};
-
-
+		let toggle = event.target.closest('.toggle-contact-js');
+		if (toggle) {
+			let dropdown = document.querySelector(toggle.dataset.id);
+			dropdown.classList.toggle('active');
+			toggle.classList.toggle('active');
+		};
 	});
 };
 if (document.readyState !== 'loading') {
