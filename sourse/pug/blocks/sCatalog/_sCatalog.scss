@@ -273,7 +273,7 @@
 			min-width: 216px;
 			white-space: nowrap;
 			&:not(.radio-wrap) {
-				max-width: 225px ;
+				max-width: 300px ;
 				flex-grow: 1;
 				@include media-breakpoint-down(md) {
 					width: 100%;
@@ -286,6 +286,7 @@
 			}
 		}
 		.choices__list--dropdown {
+			border-radius: $border-radius-sm;
 			.choices__item {
 				white-space: normal;
 			}

@@ -10,14 +10,14 @@ mixin sMainUnits(empty)
 	// start sMainUnits
 	+b.SECTION.sMainUnits.section#sMainUnits&attributes(attributes)
 		.container-fluid
-			+e.row.row
-				.col-sm-7.col-xl-6
+			+e.row
+				+e.unit--lg
 					+main-unit('Материалы','Все материалы').--light-bg
 						.swiper
 							.swiper-wrapper
 								.swiper-slide
 									+e.body--materials
-										+e.text
+										+e.details
 											+e.advice(href="#") Рекомендации
 											+e.date
 												+icon('calendar')
@@ -25,13 +25,14 @@ mixin sMainUnits(empty)
 											+e.time
 												+icon('clock')
 												| 7 миннут
+										+e.text
 											+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
 											+e.tag Статья
 										+e.img-wrap(href="#")
 											+img('img/news-preview-4.jpg')
 								.swiper-slide
 									+e.body--materials
-										+e.text
+										+e.details
 											+e.advice(href="#") Рекомендации
 											+e.date
 												+icon('calendar')
@@ -39,13 +40,14 @@ mixin sMainUnits(empty)
 											+e.time
 												+icon('clock')
 												| 7 миннут
+										+e.text
 											+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
 											+e.tag Статья
 										+e.img-wrap(href="#")
 											+img('img/news-preview-4.jpg')
 								.swiper-slide
 									+e.body--materials
-										+e.text
+										+e.details
 											+e.advice(href="#") Рекомендации
 											+e.date
 												+icon('calendar')
@@ -53,18 +55,20 @@ mixin sMainUnits(empty)
 											+e.time
 												+icon('clock')
 												| 7 миннут
+										+e.text
 											+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
 											+e.tag Статья
 										+e.img-wrap(href="#")
 											+img('img/news-preview-4.jpg')
 							+e.slider-nav
 								+arrow
-				.col-sm-5.col-xl-3
-					+main-unit('оповещения','').--light
-						if empty
+				+e.unit--sm
+					if empty
+						+main-unit('оповещения','').--light
 							+e.empty 
 								p Нет новых оповещений
-						else
+					else
+						+main-unit('оповещения','Все оповещения').--light
 							.swiper
 								.swiper-wrapper
 									.swiper-slide
@@ -84,7 +88,7 @@ mixin sMainUnits(empty)
 											+e.note-btn Посмотреть событие
 								+e.slider-nav
 									+arrow
-				.col-sm-6.col-xl-3
+				+e.unit--sm
 					+main-unit('Нетворкинг','Всё сообщество').--light
 						.swiper
 							.swiper-wrapper
@@ -114,7 +118,7 @@ mixin sMainUnits(empty)
 										+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
 							+e.slider-nav
 								+arrow
-				.col-sm-6.col-xl-4
+				+e.unit--md
 					+main-unit('Форум','Все форумы').--dark
 						.swiper
 							.swiper-wrapper
@@ -141,7 +145,7 @@ mixin sMainUnits(empty)
 											| 5
 							+e.slider-nav
 								+arrow
-				.col-sm-6.col-xl-4
+				+e.unit--md
 					+main-unit('Лента новостей','Все новости').--slider
 						.swiper
 							.swiper-wrapper
@@ -177,7 +181,7 @@ mixin sMainUnits(empty)
 										+img(`img/news-preview-1.jpg`)
 							+e.slider-nav
 								+arrow
-				.col-sm-6.col-xl-4
+				+e.unit--md
 					+main-unit('Форум','Все форумы').--dark
 						+e.body--forum
 							+e.forum-title Предложите идею публикации на нашем портале «Urban Лидер»

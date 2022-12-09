@@ -437,6 +437,10 @@
 			}
 		}
 		&--icon {
+			.icon {
+				position: relative;
+				top: -1px;
+			}
 			@include media-breakpoint-up(md) {
 				.custom-input__input {
 					width: 32px;
