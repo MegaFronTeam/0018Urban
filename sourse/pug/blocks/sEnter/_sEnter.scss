@@ -8,7 +8,7 @@
 	background-size: cover;
 	min-height: 100vh;
 	--sPT: calc(env(safe-area-inset-top, 0) + #{rem(20)});
-	--sPB: calc(env(safe-area-inset-left, 0) + #{rem(20)});
+	--sPB: calc(env(safe-area-inset-bottom, 0) + #{rem(20)});
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
