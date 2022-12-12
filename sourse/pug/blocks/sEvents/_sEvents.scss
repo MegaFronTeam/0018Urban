@@ -82,14 +82,17 @@
 		height: 19px;
 		background-image: url('../img/svg/prev-arrow.svg');
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: contain;
+		background-position: center center;
 		border: none;
 		background-color: transparent;
 		cursor: pointer;
 		flex-grow: 0;
 		flex-shrink: 1;
+		box-shadow: none;
+		outline: none !important;
 		&--next {
-			transform: rotate(180deg);
+			transform: rotateY(180deg);
 		}
 	}
 	&__title {
@@ -182,9 +185,17 @@
 		border-radius: 50%;
 		border: none;
 		background-color: $primary;
+		padding: 0;
 		color: $white;
-		line-height: 1;
+		// line-height: 1;
 		@extend .stretched-link;
+		&::after{
+			// padding: .2rem !important;
+			bottom: -.2rem !important;
+			top: -.2rem !important;
+			right: -.2rem !important;
+			left: -.2rem !important;
+		}
 		@include media-breakpoint-down(md) {
 			min-height: 15px;
 			min-width: 15px;
@@ -192,7 +203,7 @@
 			max-width: 15px;
 			width: 15px;
 			height: 15px;
-			font-size: 14px;
+			font-size: 12px;
 		}
 	}
 }

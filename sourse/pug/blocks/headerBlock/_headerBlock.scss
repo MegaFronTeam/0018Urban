@@ -96,6 +96,7 @@
 		.events-filter {
 			&__radio-wrap {
 				@include media-breakpoint-up(md) {
+					// flex: 1 0 0%;
 					width: 100%;
 					max-width: rem(1030);
 					.custom-input {
@@ -411,6 +412,7 @@
 			}
 		}
 	}
+
 	&__radio-wrap {
 		&--text {
 			justify-content: space-between;
@@ -437,9 +439,28 @@
 			}
 		}
 		&--icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			label{
+				width: 32px;
+				height: 32px;
+				justify-content: center;
+				align-items: center;
+				
+				padding: 0 !important;
+			
+
+			}
+			span{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+			}
 			.icon {
-				position: relative;
-				top: -1px;
+				// position: relative;
+				// top: -1px;
 			}
 			@include media-breakpoint-up(md) {
 				.custom-input__input {
@@ -472,8 +493,10 @@
 		}
 		&--icon {
 			color: $primary;
+		
 			.icon {
 				font-size: 16px;
+				flex: 0 0 auto;
 			}
 		}
 		&:not(:last-child) {

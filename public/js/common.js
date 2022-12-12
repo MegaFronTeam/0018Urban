@@ -564,14 +564,14 @@ function eventHandler() {
 				event._isOpen = true;
 			}
 		});
-		document.addEventListener('click', function (event) {
-			if (event.composedPath().includes(menu)) return;
-			if (!event._isOpen) {
-				menu.classList.remove('active')
-				filterWrap.classList.remove('active')
-				mobFilterBtn.classList.remove('active')
-			}
-		})
+		// document.addEventListener('click', function (event) {
+		// 	if (event.composedPath().includes(menu)) return;
+		// 	if (!event._isOpen) {
+		// 		menu.classList.remove('active')
+		// 		filterWrap.classList.remove('active')
+		// 		mobFilterBtn.classList.remove('active')
+		// 	}
+		// })
 		window.addEventListener('resize', () => {
 			if (window.innerWidth >= 768) {
 				filterWrap.classList.remove('active');
