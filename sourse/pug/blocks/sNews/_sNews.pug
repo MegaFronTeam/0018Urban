@@ -1,15 +1,15 @@
 mixin newsListItem(img, cat, date='26 сентября',title="Встреча с академическим руководителем и студентами", btn)
 	.col-sm-6.col-lg-4
-		+b.news-preview
+		+b.news-preview(href="#")
 			+e.img-wrap
 				+img(`img/news-preview-${img}.jpg`)
 			+e.details
 				+e.category= cat
 				+e.date= date
 			+e.title-block
-				+e.title(href="#")!= title
+				+e.title!= title
 				if btn
-					+e.btn(href="#")&attributes(attributes)= btn
+					+e.btn&attributes(attributes)= btn
 
 mixin sNews(data)
 	// start sNews

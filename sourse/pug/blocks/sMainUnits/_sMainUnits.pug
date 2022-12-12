@@ -149,36 +149,17 @@ mixin sMainUnits(empty)
 					+main-unit('Лента новостей','Все новости').--slider
 						.swiper
 							.swiper-wrapper
-								.swiper-slide
-									+e.slide-bg
-										+e.body--newsline
-											+e.text
-												+e.tag Статья
-												+e.date
-													+icon('calendar')
-													| 26 сентября
-											+e.heading(href="#") Встреча с академическим руководителем и студентами 
-										+img(`img/news-preview-1.jpg`)
-								.swiper-slide
-									+e.slide-bg
-										+e.body--newsline
-											+e.text
-												+e.tag Статья
-												+e.date
-													+icon('calendar')
-													| 26 сентября
-											+e.heading(href="#") Встреча с академическим руководителем и студентами 
-										+img(`img/news-preview-1.jpg`)
-								.swiper-slide
-									+e.slide-bg
-										+e.body--newsline
-											+e.text
-												+e.tag Статья
-												+e.date
-													+icon('calendar')
-													| 26 сентября
-											+e.heading(href="#") Встреча с академическим руководителем и студентами 
-										+img(`img/news-preview-1.jpg`)
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.slide-bg(href="#")
+											+e.body--newsline
+												+e.text
+													+e.tag Статья
+													+e.date
+														+icon('calendar')
+														| 26 сентября
+												+e.heading Встреча с академическим руководителем и студентами 
+											+img(`img/news-preview-1.jpg`)
 							+e.slider-nav
 								+arrow
 				+e.unit--md
