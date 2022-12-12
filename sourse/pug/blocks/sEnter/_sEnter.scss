@@ -1,4 +1,10 @@
 // start .sEnter
+// .enter-page{
+// 	min-height: -webkit-fill-available;
+// 	.main-wrapper{
+// 		min-height: 100%;
+// 	}
+// }
 .sEnter {
 	display: flex;
 	flex-direction: column;
@@ -6,11 +12,10 @@
 	background-color: $primary;
 	background-image: url('../img/enter-bg.jpg');
 	background-size: cover;
-	min-height: calc(var(--vh) * 100);
-	// min-height: 100vh;
+	min-height: calc(var(--vh, 1vh)*100);
 	// --sPT: env(safe-area-inset-top, 0);
 	// --sPB: env(safe-area-inset-top, 0);
-	// padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+	// padding: var(--sat) 0 var(--sab);
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
