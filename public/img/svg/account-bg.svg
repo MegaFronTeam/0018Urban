@@ -1,4 +1,4 @@
-<svg width="1280" height="562" viewBox="0 0 1280 562" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1280" height="656" viewBox="0 0 1280 656" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.4" clip-path="url(#clip0_3105_12842)">
 <g opacity="0.3" clip-path="url(#clip1_3105_12842)">
 <g opacity="0.9" clip-path="url(#clip2_3105_12842)">
@@ -11,7 +11,7 @@
 </g>
 <defs>
 <clipPath id="clip0_3105_12842">
-<rect width="1280" height="562" fill="white"/>
+<rect width="1280" height="656" fill="white"/>
 </clipPath>
 <clipPath id="clip1_3105_12842">
 <rect width="3632" height="1288" fill="white" transform="translate(1288 -2976) rotate(90)"/>

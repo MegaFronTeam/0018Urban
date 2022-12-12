@@ -1,9 +1,18 @@
 // start .sAccount
+.account-page{
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+}
 .sAccount {
 	background-image: url('../img/svg/account-bg.svg');
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: 100% auto;
+	z-index: 2;
+	// min-height: 100%;
+	flex-grow: 1;
 	--sPT: #{rem(24)};
 	--sPB: #{rem(60)};
 	--sTPB: #{rem(24)};
@@ -380,5 +389,12 @@
 		font-size: 14px;
 		line-height: 114%;
 		color: #757B8A;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+
+	.data-picker-wrap .air-datepicker{
+		width: calc(100% - 16px * 2);
 	}
 }

@@ -35,8 +35,9 @@ mixin sAccount(validated)
 								+input("Введите Вашу фамилию",'', 'Фамилия')(required class="required")
 								+input("Введите Вашу имя",'', 'Имя')(required)
 								+input("Введите Вашу отчество",'', 'Отчество')
-								+input("чч. мм. гг.",'text', 'Дата рождения','datett')(required autocomplete="off"  class="date-input").data-picker--js
-									+icon('calendar')
+								.data-picker-wrap
+									+input("чч. мм. гг.",'text', 'Дата рождения','datettime')(required readonly autocomplete="off"  class="date-input").data-picker--js
+										+icon('calendar')
 							fieldset
 								legend Смена пароля
 								+input("Введите старый пароль",'password', 'Старый пароль')

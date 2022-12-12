@@ -327,20 +327,27 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	const dataPicker = document.querySelector('.data-picker--js');
-	const dataPickerIcon = document.querySelector(`.data-picker ~ .icon`);
-	new AirDatepicker(dataPicker, {
-		autoClose: true,
-		onShow() {
-			dataPickerIcon.classList.add('active');
-		},
-		onHide() {
+	
+	const dataPickers = document.querySelectorAll('.data-picker-wrap');
+	for (const dataPickerEll of dataPickers) {
+		const dataPicker = dataPickerEll.querySelector('.data-picker--js');
+		const dataPickerIcon = dataPickerEll.querySelector(`.data-picker ~ .icon`);
+		
+		new AirDatepicker(dataPicker, {
+			autoClose: false,
+			// inline: true,
+			container: dataPickerEll,
+			onShow() {
+				dataPickerIcon.classList.add('active');
+			},
+			onHide() {
 			dataPickerIcon.classList.remove('active');
 		},
 		navTitles: {
 			days: 'yyyy <i>MMMM</i>',
 		},
 	});
+}
 
 	const selects = document.querySelectorAll('.js-choice');
 	if (selects) {
