@@ -13,6 +13,7 @@
 		<link href="libs/air-datepicker/air-datepicker.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="account-page">
@@ -119,7 +120,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content--personal active">
+								<div class="tabs__content tabs__content--personal">
 									<div class="form-wrap">
 										<form>
 											<fieldset>
@@ -181,7 +182,7 @@
 										</form>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content--info">
+								<div class="tabs__content tabs__content--info active">
 									<div class="form-wrap">
 										<form>
 											<div class="form-wrap__form-caption">Статус
@@ -194,13 +195,13 @@
 											</div>
 											<div class="form-wrap__input-wrap form-group">
 												<label>
-													<select class="form-wrap__input form-select js-choice" name="select">
-														<option value="2011-2012">2011-2012</option>
+													<select class="form-wrap__input form-select сustom-select-js" name="select" data-placeholder="placeholder 1">
+														<option value="Год стажировки">Год стажировки</option>
 														<option value=" placeholder 1">placeholder 1</option>
 														<option value=" placeholder 2">placeholder 2</option>
 														<option value=" placeholder 3">placeholder 3</option>
 														<option value=" placeholder 4">placeholder 4</option>
-													</select><span class="form-wrap__input-title">Год стажировки</span>
+													</select><span class="form-wrap__input-title">2011-2012</span>
 												</label>
 											</div>
 											<!-- +e.input-wrap-->
@@ -215,7 +216,14 @@
 											</div>
 											<!-- +e.input-wrap-->
 											<div class="form-wrap__input-wrap form-group">
-												<label><input class="form-wrap__input form-control remove-btn remove-btn--js" name="text" type="text" placeholder="sdfsdf" value="Область 1,Область 2"/><span class="form-wrap__input-title">Область экспертизы</span>
+												<label>
+													<select class="form-wrap__input form-select сustom-select-js" name="select" multiple="multiple" data-placeholder="Интересы">
+														<option value=""></option>
+														<option value=" placeholder 1">placeholder 1</option>
+														<option value=" placeholder 2">placeholder 2</option>
+														<option value=" placeholder 3">placeholder 3</option>
+														<option value=" placeholder 4">placeholder 4</option>
+													</select><span class="form-wrap__input-title">Область экспертизы</span>
 												</label>
 											</div>
 											<!-- +e.input-wrap-->
@@ -226,7 +234,7 @@
 											<!-- +e.input-wrap-->
 											<div class="form-wrap__input-wrap form-group">
 												<label>
-													<select class="form-wrap__input form-select interest-btn interest-btn--js" name="select" multiple="multiple" placeholder="Интересы">
+													<select class="form-wrap__input form-select сustom-select-js" name="select" multiple="multiple" data-placeholder="placeholder 1">
 														<option value="Интересы">Интересы</option>
 														<option value=" placeholder 1">placeholder 1</option>
 														<option value=" placeholder 2">placeholder 2</option>
@@ -448,6 +456,7 @@
 		<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
 		<script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
 		<script src="libs/filepond/filepond.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

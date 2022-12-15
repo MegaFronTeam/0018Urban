@@ -24,6 +24,9 @@
 		height: auto;
 	}
 
+	.select2-container--default .select2-selection--multiple, .headerBlock .select2-container--default .select2-selection--single {
+    border-color: #fff!important;
+}
 	
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -241,6 +244,9 @@
 	}
 }
 .network-filter {
+	.select2-container--default .select2-selection--multiple, .headerBlock .select2-container--default .select2-selection--single {
+    border-color: #fff!important;
+}
 	width: 100%;
 	padding: 24px 0;
 	@include media-breakpoint-down(md) {

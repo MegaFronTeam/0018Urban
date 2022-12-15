@@ -13,6 +13,7 @@
 		<link href="libs/air-datepicker/air-datepicker.css" rel="stylesheet"/>
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
+		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body class="main-page">
@@ -116,7 +117,35 @@
 							<div class="d-none d-md-block col-6">
 								<div class="headerBlock__input-wrap form-group">
 									<label>
-										<select class="headerBlock__input form-select js-choice" name="select">
+										<select class="headerBlock__input form-select сustom-select-js" name="select" data-placeholder="Группа" multiple="multiple">
+											<option value="Все участники">Все участники</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select><span class="headerBlock__input-title">Группа</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-12 col-md-6">
+								<div class="headerBlock__input-wrap form-group">
+									<label>
+										<select class="headerBlock__input form-select сustom-select-js" name="select" data-placeholder="Группа" multiple="multiple">
+											<option value="Все участники">Все участники</option>
+											<option value=" placeholder 1">placeholder 1</option>
+											<option value=" placeholder 2">placeholder 2</option>
+											<option value=" placeholder 3">placeholder 3</option>
+											<option value=" placeholder 4">placeholder 4</option>
+										</select><span class="headerBlock__input-title">Группа</span>
+									</label>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="d-none d-md-block col-6">
+								<div class="headerBlock__input-wrap form-group">
+									<label>
+										<select class="headerBlock__input form-select сustom-select-js" name="select" data-placeholder="Группа">
 											<option value="Все участники">Все участники</option>
 											<option value=" placeholder 1">placeholder 1</option>
 											<option value=" placeholder 2">placeholder 2</option>
@@ -138,7 +167,7 @@
 						<div class="network-filter d-block" id="dropdown">
 							<div class="network-filter__row row">
 								<div class="network-filter__input-wrap form-group">
-									<select class="network-filter__input form-select js-choice" name="select">
+									<select class="network-filter__input form-select сustom-select-js" name="select" data-placeholder="Интересы" multiple="multiple">
 										<option value="Все участники">Все участники</option>
 										<option value=" placeholder 1">placeholder 1</option>
 										<option value=" placeholder 2">placeholder 2</option>
@@ -147,22 +176,8 @@
 									</select>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="network-filter__dropdown-item">
-									<button class="network-filter__dropdown-btn" data-toggle="interest">Все интересы
-									</button>
-									<div class="network-filter__dropdown-body" id="interest">
-										<div class="network-filter__dropdown-content">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="interest" type="checkbox"/><span class="custom-input__text form-check-label">Интерес 1</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="interest" type="checkbox"/><span class="custom-input__text form-check-label">Интерес 2</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="interest" type="checkbox"/><span class="custom-input__text form-check-label">Интерес 3</span>
-											</label>
-										</div>
-									</div>
-								</div>
 								<div class="network-filter__input-wrap form-group">
-									<select class="network-filter__input form-select js-choice" name="select">
+									<select class="network-filter__input form-select сustom-select-js" name="select" data-placeholder="Интересы" multiple="multiple">
 										<option value="Все области экспертизы">Все области экспертизы</option>
 										<option value=" placeholder 1">placeholder 1</option>
 										<option value=" placeholder 2">placeholder 2</option>
@@ -171,20 +186,26 @@
 									</select>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="network-filter__dropdown-item">
-									<button class="network-filter__dropdown-btn" data-toggle="years">Все годы стажировки
-									</button>
-									<div class="network-filter__dropdown-body" id="years">
-										<div class="network-filter__dropdown-content">
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="years" type="checkbox"/><span class="custom-input__text form-check-label">годы 1</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="years" type="checkbox"/><span class="custom-input__text form-check-label">годы 2</span>
-											</label>
-											<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="years" type="checkbox"/><span class="custom-input__text form-check-label">годы 3</span>
-											</label>
-										</div>
-									</div>
+								<div class="network-filter__input-wrap form-group">
+									<select class="network-filter__input form-select сustom-select-js" name="select" data-placeholder="Интересы" multiple="multiple">
+										<option value="Все области экспертизы">Все области экспертизы</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
+								<!-- +e.input-wrap-->
+								<div class="network-filter__input-wrap form-group">
+									<select class="network-filter__input form-select сustom-select-js" name="select" data-placeholder="Интересы" multiple="multiple">
+										<option value="Все области экспертизы">Все области экспертизы</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
+								</div>
+								<!-- +e.input-wrap-->
 								<div class="radio-wrap">
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="status" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Трудоустроен</span>
 									</label>
@@ -788,6 +809,7 @@
 		<script src="https://unpkg.com/filepond-plugin-image-transform/dist/filepond-plugin-image-transform.js"></script>
 		<script src="https://unpkg.com/filepond-plugin-image-edit/dist/filepond-plugin-image-edit.js"></script>
 		<script src="libs/filepond/filepond.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

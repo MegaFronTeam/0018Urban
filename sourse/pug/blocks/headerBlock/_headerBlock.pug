@@ -12,7 +12,12 @@ mixin headerBlock(title,p,network)
 					.col-12.col-md-6
 						+input("Введите ФИО или должность",'', 'Поиск')
 					.d-none.d-md-block.col-6
-						+input("Все участники",'select', 'Группа').js-choice
+						+input("Все участники",'select', 'Группа')(class="сustom-select-js" data-placeholder="Группа" multiple)
+					.col-12.col-md-6
+						//- +input("Введите ФИО или должность",'', 'Поиск')
+						+input("Все участники",'select', 'Группа')(class="сustom-select-js" data-placeholder="Группа" multiple)
+					.d-none.d-md-block.col-6
+						+input("Все участники",'select', 'Группа')(class="сustom-select-js" data-placeholder="Группа" )
 
 	// end headerBlock
 

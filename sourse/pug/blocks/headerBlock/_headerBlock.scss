@@ -225,6 +225,10 @@
 
 	@include media-breakpoint-down(xs) {
 	}
+
+	.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{
+		border-color: #fff !important;
+	}
 }
 
 // end.headerBlock

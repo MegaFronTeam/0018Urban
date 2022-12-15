@@ -32,27 +32,29 @@ mixin networkFilter
 		+b.network-filter(id="dropdown").d-block
 			+e.row.row
 				//- .col-12.d-md-none.flex-grow-1
-				+input("Все участники",'select', '').js-choice
+				+input("Все участники",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 				//- .col-12.col-md-auto.flex-grow-1
-				+e.dropdown-item
-						+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
-						+e.dropdown-body(id="interest")
-							+e.dropdown-content
-								+in-c('checkbox','Интерес 1','interest')
-								+in-c('checkbox','Интерес 2','interest')
-								+in-c('checkbox','Интерес 3','interest')
+				//- +e.dropdown-item
+				//- 		+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
+				//- 		+e.dropdown-body(id="interest")
+				//- 			+e.dropdown-content
+				//- 				+in-c('checkbox','Интерес 1','interest')
+				//- 				+in-c('checkbox','Интерес 2','interest')
+				//- 				+in-c('checkbox','Интерес 3','interest')
 				//- .col-12.col-md-auto.flex-grow-1
 				//- +input("Все ОИВ",'select', '').js-choice
 				//- .col-12.col-md-auto.flex-grow-1
-				+input("Все области экспертизы",'select', '').js-choice
+				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 				//- .col-12.col-md-auto.flex-grow-1
-				+e.dropdown-item
-						+e.dropdown-btn.BUTTON(data-toggle="years") Все годы стажировки
-						+e.dropdown-body(id="years")
-							+e.dropdown-content
-								+in-c('checkbox','годы 1','years')
-								+in-c('checkbox','годы 2','years')
-								+in-c('checkbox','годы 3','years')
+				//- +e.dropdown-item
+				//- 		+e.dropdown-btn.BUTTON(data-toggle="years") Все годы стажировки
+				//- 		+e.dropdown-body(id="years")
+				//- 			+e.dropdown-content
+				//- 				+in-c('checkbox','годы 1','years')
+				//- 				+in-c('checkbox','годы 2','years')
+				//- 				+in-c('checkbox','годы 3','years')
 				//- .col-12.col-md-auto
 				.radio-wrap
 						+in-c('radio','Трудоустроен','status')(checked)

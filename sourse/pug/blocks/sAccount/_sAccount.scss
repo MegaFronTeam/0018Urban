@@ -392,6 +392,11 @@
 	}
 }
 
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	display: none !important;
+}
+
 @include media-breakpoint-down(sm) {
 
 	.data-picker-wrap .air-datepicker{
