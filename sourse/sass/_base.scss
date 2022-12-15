@@ -460,18 +460,20 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
 	/* Firefox */
-	--bs-primary: #dedede;
+	@include media-breakpoint-up(sm) {
 
-	& {
+		--bs-primary: #dedede;
+		
+		& {
 		scrollbar-width: auto;
 		scrollbar-color: var(--bs-primary) transparent;
 	}
-
+	
 	/* Chrome, Edge, and Safari */
 	&::-webkit-scrollbar {
-		width: 4px;
+		width: 6px;
 	}
-
+	
 	&::-webkit-scrollbar-track {
 		background: transparent;
 	}
@@ -481,6 +483,7 @@ iframe {
 		border-radius: 16px;
 		border: 0px solid transparent;
 	}
+}
 }
 
 ::-webkit-calendar-picker-indicator {

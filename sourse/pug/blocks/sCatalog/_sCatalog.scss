@@ -481,3 +481,20 @@
 	// }
 	
 }
+.network-filter, .network{
+	.select2-search__field{
+		// display: none !important;
+	}
+	 .select2-container--default .select2-selection--multiple,
+	 .headerBlock .select2-container--default .select2-selection--single{
+
+		 width: 100%;
+		 max-width: 100%;
+		 white-space: nowrap;
+		 text-overflow: ellipsis;
+		 overflow: hidden;
+		}
+}
+.select2-results__options{
+	@extend .custom-scroll;
+}
