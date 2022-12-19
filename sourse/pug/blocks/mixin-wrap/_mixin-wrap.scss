@@ -541,7 +541,7 @@
 	}
 	&__btn-content {
 		position: absolute;
-		bottom: calc(100% + 11px);
+		bottom: calc(100%);
 		right: rem(16);
 		background-color: $white;
 		padding: 16px;
@@ -550,11 +550,16 @@
 		max-width: 100%;
 		min-width: 255px;
 		box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16);
-		z-index: 5;
+		// z-index: 4;
+		z-index: -1;
 		&:not(.active) {
 			display: none;
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-down(lg) {
+			width: calc(100vw);
+			border-end-start-radius: 0;
+			border-end-end-radius: 0;
+			right: 0;
 		}
 		@include media-breakpoint-up(xl) {
 			min-width: rem(250);
@@ -662,7 +667,11 @@
 	&--help {
 		.topNav-btnWrap__btn-content {
 			position: fixed;
-			bottom: 75px;
+			@include media-breakpoint-up(lg) {
+				bottom: 75px;
+			}
+			bottom: 64px;
+			// bottom: 100%;
 		}
 		@include media-breakpoint-up(lg) {
 			.topNav-btnWrap__btn {
@@ -708,4 +717,9 @@
 			}
 		}
 	}
+}
+
+
+.topNav-btnWrap--help .topNav-btnWrap__btn-content{
+	z-index: 100;
 }

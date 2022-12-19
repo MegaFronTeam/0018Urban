@@ -64,7 +64,7 @@
 		&[data-value="all"] {
 			&::before {
 				height: 22px;
-				background-image: url('../img/svg/like-btn.svg');
+				background-image: var(--like);
 				background-size: contain;
 				@include media-breakpoint-down(lg) {
 					height: 18px;
@@ -74,13 +74,13 @@
 		&[data-value="sent"] {
 			&::before {
 				height: 10px;
-				background-image: url('../img/svg/sent.svg');
+				background-image: var(--sent);
 			}
 		}
 		&[data-value="received"] {
 			&::before {
 				height: 10px;
-				background-image: url('../img/svg/received.svg');
+				background-image: var(--received);
 			}
 		}
 	}
@@ -353,7 +353,7 @@
 			@extend .btn-outline-primary;
 			background-color: $white;
 			&::before {
-				content: url('../img/svg/close-primary.svg');
+				content: var(--close);
 				margin-right: 6px;
 			}
 			// &::before, &::after {

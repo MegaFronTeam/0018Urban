@@ -134,20 +134,20 @@
 			background-repeat: no-repeat;
 			background-position: 12px;
 			&--vk {
-				background-image: url('../img/svg/vk.svg');
+				background-image: var(--vk);
 				background-size: 18px 11px;
 			}
 			&--ok {
-				background-image: url('../img/svg/ok.svg');
+				background-image: var(--ok);
 				background-size: 12px 20px;
 			}
 			&--telegram {
-				background-image: url('../img/svg/telegram.svg');
+				background-image: var(--telegram);
 				background-size: 18px 15px;
 
 			}
 			&--whatsapp {
-				background-image: url('../img/svg/whatsapp.svg');
+				background-image: var(--whatsapp);
 				background-size: 20px 20px;
 			}
 		}

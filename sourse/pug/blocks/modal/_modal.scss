@@ -1,9 +1,10 @@
 :root {
 	--fancybox-content-bg: none;
+	--fancybox-bg: #{rgba(  #008981, 0.6)};
 }
 
 .fancybox__backdrop {
-	background-color: rgba(var(--bs-primary-active, #008981), 0.6);
+	// background-color: rgba(var(--bs-primary-active, #008981), 0.6);
 	background-image: url("../img/svg/fancybox-backdrop-bg.svg");
 	background-repeat: no-repeat;
 	background-size: 100%;

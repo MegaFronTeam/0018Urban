@@ -229,6 +229,9 @@
 	.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{
 		border-color: #fff !important;
 	}
+	.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	display: inline;
+}
 }
 
 // end.headerBlock
@@ -481,6 +484,7 @@
 			}
 		}
 		&:not(.events-filter__radio-wrap--icon) {
+			
 			@include media-breakpoint-down(sm) {
 				flex-direction: column;
 				border: none;

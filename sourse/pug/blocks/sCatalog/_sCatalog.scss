@@ -105,6 +105,11 @@
 		height: 88px;
 		border-radius: 50%;
 		overflow: hidden;
+		// background-color: rgba(var(--bs-primary-rgb), .5);
+		background-image: var(--user);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
 		@include media-breakpoint-down(md) {
 			width: 68px;
 			height: 68px;
@@ -244,6 +249,9 @@
 	}
 }
 .network-filter {
+	.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	display: inline;
+}
 	@include media-breakpoint-down(lg) {
 		.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{
 

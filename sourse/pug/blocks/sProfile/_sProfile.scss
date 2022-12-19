@@ -113,8 +113,8 @@
 	}
 	&__sent-btn {
 		@extend .btn, .btn-primary;
-		background-color: $dark-teal;
-		border-color: $dark-teal;
+		background-color: var(--bs-primary-hover,$dark-teal);
+		border-color: var(--bs-primary-hover,$dark-teal);
 		pointer-events: none;
 		@include media-breakpoint-up(md) {
 			margin-top: 20px;
@@ -146,7 +146,7 @@
 		padding: 3px 8px;
 		margin-bottom: 8px;
 		min-width: 47%;
-		background: #4ED0C8;
+		background: var(--bs-primary);
 		border-radius: $border-radius;
 		@include media-breakpoint-down(md) {
 			padding: 6px 8px
@@ -225,7 +225,7 @@
 			display: inline-block;
 			height: 35px;
     	width: 22px;
-			fill: $dark-teal
+			fill: var(--bs-primary-hover,$dark-teal)
 		}
 	}
 	&__status {
@@ -236,7 +236,7 @@
 		font-weight: 700;
 		font-size: rem(14);
 		line-height: 114%;
-		color: $dark-teal;
+		color: var(--bs-primary-hover,$dark-teal);
 		background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.15);
 		border-radius: $border-radius;
 		@include media-breakpoint-down(md) {
@@ -320,7 +320,7 @@
 		border-radius: $border-radius;
 		font-size: 14px;
 		line-height: 114%;
-		color: $dark-teal;
+		color: var(--bs-primary-hover,$dark-teal);
 		background-color: $white;
 		max-width: 100%;
 		text-overflow: clip;
@@ -347,7 +347,7 @@
 	&__download-link {
 		display: flex;
 		align-items: center;
-		color: $dark-teal;
+		color: var(--bs-primary-hover,$dark-teal);
 	}
 	.icon-download {
 		margin: 0 5px;

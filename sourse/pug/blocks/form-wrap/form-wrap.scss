@@ -376,7 +376,7 @@ input::-webkit-inner-spin-button {
 }
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:not(.select2-results__option--selected){
-	background: #DCF6F4;
+	background: var(--bs-primary-light,#DCF6F4);
 	color: var(--bs-body-color, #{$body-color});
 	&::before{
 		background-color: #fff;
@@ -427,9 +427,7 @@ input::-webkit-inner-spin-button {
 	display: none !important;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice{
-	display: inline;
-}
+
 .selection{
 	// text-overflow: ellipsis;
 	// overflow: hidden;

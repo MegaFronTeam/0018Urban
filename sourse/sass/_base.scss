@@ -462,11 +462,11 @@ iframe {
 	/* Firefox */
 	@include media-breakpoint-up(sm) {
 
-		--bs-primary: #dedede;
+		// --bs-primary: #dedede;
 		
 		& {
 		scrollbar-width: auto;
-		scrollbar-color: var(--bs-primary) transparent;
+		scrollbar-color: #dedede transparent;
 	}
 	
 	/* Chrome, Edge, and Safari */

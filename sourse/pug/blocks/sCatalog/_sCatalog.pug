@@ -6,7 +6,8 @@ mixin profile-item(name, img, age, position, company, interests=[], groups=[])
 				+e.age= age
 			+e.header-img
 				+e.img-wrap(href="#")
-					+img(`img/profile-${img}.jpg`)
+					if img!="8"
+						+img(`img/profile-${img}.jpg`)
 		+e.body
 			if position
 				+e.position= position
@@ -45,20 +46,22 @@ mixin networkFilter
 				//- +input("Все ОИВ",'select', '').js-choice
 				//- .col-12.col-md-auto.flex-grow-1
 				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+
 				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
-				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
-				//- .col-12.col-md-auto.flex-grow-1
-				//- +e.dropdown-item
-				//- 		+e.dropdown-btn.BUTTON(data-toggle="years") Все годы стажировки
-				//- 		+e.dropdown-body(id="years")
-				//- 			+e.dropdown-content
-				//- 				+in-c('checkbox','годы 1','years')
-				//- 				+in-c('checkbox','годы 2','years')
-				//- 				+in-c('checkbox','годы 3','years')
-				//- .col-12.col-md-auto
-				.radio-wrap
-						+in-c('radio','Трудоустроен','status')(checked)
-						+in-c('radio','В поиске работы','status')
+
+				//- +input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				//- //- .col-12.col-md-auto.flex-grow-1
+				//- //- +e.dropdown-item
+				//- //- 		+e.dropdown-btn.BUTTON(data-toggle="years") Все годы стажировки
+				//- //- 		+e.dropdown-body(id="years")
+				//- //- 			+e.dropdown-content
+				//- //- 				+in-c('checkbox','годы 1','years')
+				//- //- 				+in-c('checkbox','годы 2','years')
+				//- //- 				+in-c('checkbox','годы 3','years')
+				//- //- .col-12.col-md-auto
+				//- .radio-wrap
+				//- 		+in-c('radio','Трудоустроен','status')(checked)
+				//- 		+in-c('radio','В поиске работы','status')
 	// end filter
 
 
