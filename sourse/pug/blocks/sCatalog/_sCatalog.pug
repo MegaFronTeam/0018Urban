@@ -29,7 +29,7 @@ mixin networkFilter
 	.filter-wrap
 		button.filter-btn.d-md-none(data-toggle="#dropdown") Фильтр
 			//- +icon('filter')
-		+b.network-filter(id="dropdown").d-block
+		+b.network-filter(id="dropdown")
 			+e.row.row
 				//- .col-12.d-md-none.flex-grow-1
 				+input("Все участники",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)

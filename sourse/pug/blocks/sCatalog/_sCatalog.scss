@@ -244,8 +244,20 @@
 	}
 }
 .network-filter {
+	@include media-breakpoint-down(lg) {
+		.select2-container--default .select2-selection--multiple, .select2-container--default .select2-selection--single{
+
+			border: 1px solid #c9cad1 !important;
+		}
+		.select2-container{
+				width: 100% !important;
+		}
+	}
 	.select2-container--default .select2-selection--multiple, .headerBlock .select2-container--default .select2-selection--single {
-    border-color: #fff!important;
+		@include media-breakpoint-up(lg) {
+
+			border-color: #fff!important;
+		}
 }
 	width: 100%;
 	padding: 24px 0;
