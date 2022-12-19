@@ -44,10 +44,10 @@
 		font-size: 14px;
 		line-height: 1;
 		border-radius: 16px;
-		background: #008981;
+		background: var(--bs-primary-active, #008981);
 		color: $white;
 		&--registred {
-			color: #008981;
+			color: var(--bs-primary-active, #008981);
 			background: rgba(255, 255, 255, 0.75);
 		}
 	}
@@ -148,7 +148,7 @@
 		background-color: #D2F3F0;
 	}
 	.chosen {
-		border: 3px solid $primary;
+		border: 3px solid var(--bs-primary);
 	}
 	&__date {
 		line-height: 1;
@@ -184,7 +184,7 @@
 		min-width: 26px;
 		border-radius: 50%;
 		border: none;
-		background-color: $primary;
+		background-color: var(--bs-primary);
 		padding: 0;
 		color: $white;
 		line-height: 1.6;

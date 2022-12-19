@@ -40,7 +40,7 @@
 			font-weight: 700;
 			font-size: $h4-font-size;
 			line-height: calc(32 / 24);
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 			@include media-breakpoint-down(md) {
 				text-align: center;
 			}
@@ -226,9 +226,9 @@
 	}
 	&__theme {
 		font-weight: 700;
-		color: $dark-teal;
+		color: var(--bs-primary-hover, #{$dark-teal});
 		&:hover {
-			color: $primary;
+			color: var(--bs-primary);
 		}
 		@include media-breakpoint-down(md) {
 			order: -1;
@@ -260,7 +260,7 @@
 		height: 40px;
 		min-width: 40px;
 		border-radius: 50%;
-		background: rgba(78, 208, 200, 0.2);
+		background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.2);
 		@include media-breakpoint-down(lg) {
 			width: 32px;
 			min-width: 32px;
@@ -273,7 +273,7 @@
 		.icon {
 			width: 24px;
 			height: 24px;
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 			@include media-breakpoint-down(lg) {
 				width: 16px;
 				height: 16px;
@@ -320,7 +320,7 @@
 	&__updating-link {
 		display: block;
 		margin-bottom: 4px;
-		color: $dark-teal;
+		color: var(--bs-primary-hover, #{$dark-teal});
 	}
 	&__pagination-row {
 		align-items: center;
@@ -361,7 +361,7 @@
 			font-weight: 700;
 			font-size: $h4-font-size;
 			line-height: calc(32 / 24);
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 			@include media-breakpoint-down(md) {
 				text-align: center;
 			}
@@ -430,13 +430,13 @@
 	}
 	.page-item.active {
 		.page-link {
-			color: $body-color;
+			color: var(--bs-body-color, #{$body-color});
 		}
 	}
 	.page-link {
 		height: 24px;
 		background-color: transparent;
-		color: $primary;
+		color: var(--bs-primary);
 		border: none;
 		min-width: 0;
 	}

@@ -39,7 +39,7 @@
 	.choices__list--dropdown {
 		.choices__item {
 			padding-left: 10px !important;
-			color: $body-color;
+			color: var(--bs-body-color, #{$body-color});
 			font-weight: 400;
 			&::before  {
 				content: none;
@@ -50,7 +50,7 @@
 		position: relative;
 		padding-left: 30px;
 		font-weight: 700;
-		color: #008981;
+		color: var(--bs-primary-active, #008981);
 		&::before {
 			position: absolute;
 			display: inline-block;
@@ -91,7 +91,7 @@
 		justify-content: center;
 		padding: 13px 5px;
 		width: 370px;
-		background-color: rgba($primary, .8);
+		background-color: rgba(var(--bs-primary), .8);
 		border-radius: $border-radius-sm $border-radius-sm 0px 0px;
 		color: $white;
 		font-weight: 700;
@@ -108,7 +108,7 @@
 			border-left: 1px solid $gray-300;
 			border-top: 1px solid $gray-300;
 			border-right: 1px solid $gray-300;
-			color: #008981;
+			color: var(--bs-primary-active, #008981);
 		}
 		.icon {
 			margin-right: 5px;
@@ -162,7 +162,7 @@
 		font-family: $default-font;
 		font-size: rem(18);
 		line-height: 133%;
-		color: #008981 !important;
+		color: var(--bs-primary-active, #008981) !important;
 		font-weight: 700;
 		// padding-left: 32px;
 		// background-image: url('../img/svg/like-btn.svg');
@@ -226,7 +226,7 @@
 			@extend .btn;
 			padding-left: 0;
 			font-size: 14px;
-			color: $primary;
+			color: var(--bs-primary);
 			&::after {
 				position: absolute;
 				right: -5px;
@@ -234,8 +234,8 @@
 				content: '';
 				width: 6px;
 				height: 6px;
-				border-left: 2px solid $primary;
-				border-bottom: 2px solid $primary;
+				border-left: 2px solid var(--bs-primary);
+				border-bottom: 2px solid var(--bs-primary);
 				transform: rotate(-45deg);
 			}
 		}
@@ -248,9 +248,9 @@
 			}
 		}
 		&__btn {
-			background-color: rgba(78, 208, 200, 0.15);
-			border-color: rgba(78, 208, 200, 0.15);
-			color: $primary;
+			background-color: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.15);
+			border-color: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.15);
+			color: var(--bs-primary);
 			font-weight: 700;
 		}
 	}
@@ -365,7 +365,7 @@
 			// 	width: 20px;
 			// 	height: 2px;
 			// 	margin-right: 6px;
-			// 	background-color: $primary;
+			// 	background-color: var(--bs-primary);
 			// }
 			// &::after {				
 			// 	transform: rotate(45deg) translateY(-50%);

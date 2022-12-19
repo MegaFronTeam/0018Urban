@@ -69,7 +69,7 @@
 			pointer-events: all;
 		}
 		a {
-			color: $body-color;
+			color: var(--bs-body-color, #{$body-color});
 		}
 	}
 	// &__btn {
@@ -79,7 +79,7 @@
 	// 	border: none !important;
 	// 	outline: none !important;
 	// 	background-color: transparent;
-	// 	color: $body-color;
+	// 	color: var(--bs-body-color, #{$body-color});
 	// 	padding: 0;
 	// 	display: flex;
 	// 	align-items: center;
@@ -106,7 +106,7 @@
 	// 	}
 
 	// 	&:hover {
-	// 		color: $link-hover-color;
+	// 		color: var(--bs-primary-hover, #{$link-hover-color});
 	// 	}
 	// 	&--person {
 	// 		@include media-breakpoint-up(lg) {
@@ -134,7 +134,7 @@
 	// 	min-width: 18px;
 	// 	height: 18px;
 	// 	color: $white;
-	// 	background-color: $primary;
+	// 	background-color: var(--bs-primary);
 	// 	border-radius: 18px;
 	// 	border: 2px solid $white;
 	// 	font-size: 10px;

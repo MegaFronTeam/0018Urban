@@ -237,7 +237,7 @@
 		font-size: rem(14);
 		line-height: 114%;
 		color: $dark-teal;
-		background: rgba(78, 208, 200, 0.15);
+		background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.15);
 		border-radius: $border-radius;
 		@include media-breakpoint-down(md) {
 			align-self: center;

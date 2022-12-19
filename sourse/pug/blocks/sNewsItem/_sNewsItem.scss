@@ -128,7 +128,7 @@
 		position: relative;
 		padding: 16px 16px 16px 48px;
 		margin-bottom: 50px;
-		background: $teal;
+		background: var(--bs-primary, #{$teal});
 		border-radius: 8px 8px 8px 0px;
 		color: $white;
 		font-size: 24px;
@@ -145,8 +145,8 @@
 			bottom: -15px;
 			left: 0;
 			border: 15px solid transparent;
-			border-left: 15px solid $teal;
-			border-top: 15px solid $teal;
+			border-left: 15px solid var(--bs-primary, #{$teal});
+			border-top: 15px solid var(--bs-primary, #{$teal});
 		}
 	}
 	ol {

@@ -376,7 +376,7 @@
 		background-color: $white;
 		border: 1px solid transparent;
 		border-radius: $border-radius;
-		color: $body-color;
+		color: var(--bs-body-color, #{$body-color});
 		&::after {
 			position: absolute;
 			content: "";
@@ -496,7 +496,7 @@
 			}
 		}
 		&--icon {
-			color: $primary;
+			color: var(--bs-primary);
 		
 			.icon {
 				font-size: 16px;

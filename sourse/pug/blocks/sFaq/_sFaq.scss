@@ -57,7 +57,7 @@
 			color: $white;
 			font-size: 32px;
 			border-radius: 50%;
-			background-color: $primary;
+			background-color: var(--bs-primary);
 			transform: translateY(-50%);
 			@include mt;
 			@include media-breakpoint-down(md) {
@@ -72,8 +72,8 @@
 			left: -10px;
 			width: calc(100% + 20px);
 			height: 100%;
-			background: rgba(78, 208, 200, 0.1);
-			border: 1px solid $dark-teal;
+			background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.1);
+			border: 1px solid var(--bs-primary-hover, #{var(--bs-primary-hover, #{$dark-teal})});
 			border-radius: 8px;
 			opacity: 0;
 			@include mt;

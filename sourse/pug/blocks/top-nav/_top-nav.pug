@@ -22,15 +22,15 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container-fluid
 			+e.row.row
-				.col-auto
+				+e.col-logo.col-auto.order-first
 					+e.logo(href='/')
 						+img('img/svg/logotype.svg')
-				.col
+				+e.col-menu.col
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
 							//- +menu-toggle()
 							+mnu()
-				.col-auto
+				+e.controls-col.col-auto
 					+e.controls
 						+b.topNav-btnWrap--help.d-lg-none
 							+e.btn.toggle-contact-js(data-id= "#ddHelp")
@@ -72,6 +72,5 @@ mixin top-nav()
 								a(href="#")
 									+icon('exit')
 									span Выход
-				.col-auto.d-lg-none
-					+menu-toggle()
+						+menu-toggle()
 	// end top-nav

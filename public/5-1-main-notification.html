@@ -14,9 +14,13 @@
 		<link href="libs/filepond-plugin-image-preview/filepond-plugin-image-preview.min.css" rel="stylesheet"/>
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<!-- для синей темы--><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+		<!-- /для синей темы-->
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class=" main-page theme-school">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
@@ -24,11 +28,11 @@
 				<div class="top-nav block-with-lazy">
 					<div class="container-fluid">
 						<div class="top-nav__row row">
-							<div class="col-auto">
+							<div class="top-nav__col-logo col-auto order-first">
 								<a class="top-nav__logo" href="/"><img src="img/svg/logotype.svg" alt="" loading="lazy"/>
 								</a>
 							</div>
-							<div class="col">
+							<div class="top-nav__col-menu col">
 								<div class="menu-mobile menu-mobile--js">
 									<div class="menu-mobile__inner">
 										<nav>
@@ -44,7 +48,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto">
+							<div class="top-nav__controls-col col-auto">
 								<div class="top-nav__controls">
 									<div class="topNav-btnWrap topNav-btnWrap--help d-lg-none">
 										<div class="topNav-btnWrap__btn toggle-contact-js" data-id="#ddHelp">
@@ -84,10 +88,8 @@
 												</svg><span>Выход</span></a>
 										</div>
 									</div>
-								</div>
-							</div>
-							<div class="col-auto d-lg-none">
-								<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -277,8 +279,8 @@
 														<div class="sMainUnits__position">Директор по развитию
 														</div>
 													</div>
-													<div class="sMainUnits__portrait-wrap"><img src="img/profile-14.jpg" alt="" loading="lazy"/>
-													</div>
+													<a class="sMainUnits__portrait-wrap" href="#"><img src="img/profile-14.jpg" alt="" loading="lazy"/>
+													</a>
 													<div class="sMainUnits__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
 													</div>
 												</div>
@@ -286,13 +288,13 @@
 											<div class="swiper-slide">
 												<div class="sMainUnits__body sMainUnits__body--network">
 													<div class="sMainUnits__text">
-														<a class="sMainUnits__name" href="#">Райская Елена Сергеевна
-														</a>
+														<div class="sMainUnits__name">Райская Елена Сергеевна
+														</div>
 														<div class="sMainUnits__position">Директор по развитию
 														</div>
 													</div>
-													<div class="sMainUnits__portrait-wrap"><img src="img/profile-14.jpg" alt="" loading="lazy"/>
-													</div>
+													<a class="sMainUnits__portrait-wrap" href="#"><img src="img/profile-14.jpg" alt="" loading="lazy"/>
+													</a>
 													<div class="sMainUnits__company">Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
 													</div>
 												</div>
@@ -319,8 +321,8 @@
 												<div class="sMainUnits__body sMainUnits__body--forum">
 													<div class="sMainUnits__forum-group">Форум группы Название группы…
 													</div>
-													<div class="sMainUnits__forum-title">Развитие кадрового потенциала университета
-													</div>
+													<a class="sMainUnits__forum-title" href="#">Развитие кадрового потенциала университета
+													</a>
 													<div class="sMainUnits__comments">
 														<svg class="icon icon-msg ">
 															<use xlink:href="img/svg/sprite.svg#msg"></use>
@@ -332,8 +334,8 @@
 												<div class="sMainUnits__body sMainUnits__body--forum">
 													<div class="sMainUnits__forum-group">Форум группы Название группы…
 													</div>
-													<div class="sMainUnits__forum-title">Развитие кадрового потенциала университета
-													</div>
+													<a class="sMainUnits__forum-title" href="#">Развитие кадрового потенциала университета
+													</a>
 													<div class="sMainUnits__comments">
 														<svg class="icon icon-msg ">
 															<use xlink:href="img/svg/sprite.svg#msg"></use>
@@ -440,8 +442,8 @@
 										</a>
 									</div>
 									<div class="sMainUnits__body sMainUnits__body--forum">
-										<div class="sMainUnits__forum-title">Предложите идею публикации на нашем портале «Urban Лидер»
-										</div>
+										<a class="sMainUnits__forum-title" href="#">Предложите идею публикации на нашем портале «Urban Лидер»
+										</a>
 										<div class="sMainUnits__forum-group">Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
 										</div>
 										<a class="sMainUnits__forum-btn" href="#">Предложить идею

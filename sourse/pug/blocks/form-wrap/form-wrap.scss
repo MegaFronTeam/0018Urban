@@ -377,16 +377,16 @@ input::-webkit-inner-spin-button {
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable:not(.select2-results__option--selected){
 	background: #DCF6F4;
-	color: $body-color;
+	color: var(--bs-body-color, #{$body-color});
 	&::before{
 		background-color: #fff;
-		border: 1px solid $primary;
+		border: 1px solid var(--bs-primary);
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 	}
 }
 .select2-container--default .select2-results__option--selected{
-	background-color: $primary !important;
-	color: $body-color;
+	background-color: var(--bs-primary) !important;
+	color: var(--bs-body-color, #{$body-color});
 	&::after{
 		border: 1px solid #fff;	
 	}
@@ -443,7 +443,7 @@ input::-webkit-inner-spin-button {
 	// display: flex;
 }
 .air-datepicker {
-	--adp-nav-arrow-color: #4ed0c8;	
+	--adp-nav-arrow-color: var(--bs-primary-hover);	
 	@media (min-width: 430px) {
 		width: 400px;
 	}
@@ -454,7 +454,7 @@ input::-webkit-inner-spin-button {
 	.air-datepicker-nav--title {
 		line-height: 1;
 		& i {
-			color: $body-color;
+			color: var(--bs-body-color, #{$body-color});
 		}
 	}
 	&--content {
@@ -468,20 +468,20 @@ input::-webkit-inner-spin-button {
 	}
 	&-cell.-current- {
 		color: $white;
-		background-color: $primary;
+		background-color: var(--bs-primary);
 	}
 	&-cell.-focus- {
-		color: $primary;
-		border: 1px solid $primary;
+		color: var(--bs-primary);
+		border: 1px solid var(--bs-primary);
 		background-color: transparent;
 		&.-selected- {
 			color: $white;
-			background-color: $primary;
+			background-color: var(--bs-primary);
 		}
 	}
 	&-cell.-selected-{
 		color: $white;
-		background-color: $primary;
+		background-color: var(--bs-primary);
 	}
 }
 

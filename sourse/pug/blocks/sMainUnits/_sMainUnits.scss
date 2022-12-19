@@ -103,7 +103,7 @@
 			.sMainUnits__header-btn {
 				border-color: transparent;
 				&:hover {
-					color: $dark-teal;
+					color: var(--bs-primary-hover, #{$dark-teal});
 					background-color: $white;
 					border-color: transparent;
 				}
@@ -202,7 +202,7 @@
 			padding: 3px 10px;
 		}
 		&:hover {
-			background-color: $dark-teal;
+			background-color: var(--bs-primary-hover, #{$dark-teal});
 			border-color: transparent;
 		}
 	}
@@ -321,8 +321,8 @@
 		padding: 3px 16px;
 		font-weight: 700;
 		font-size: 13px;
-		color: #008981;
-		background: rgba(78, 208, 200, 0.5);
+		color: var(--bs-primary-active, #008981);
+		background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), var(--rgb-op, 0.5));
 		border-color: transparent;
 		border-radius: 24px;
 		pointer-events: none;
@@ -334,7 +334,7 @@
 		}
 		&:hover {
 			color: $white;;
-			background-color: $dark-teal;
+			background-color: var(--bs-primary-hover, #{$dark-teal});
 			border-color: transparent;
 		}
 	}
@@ -373,7 +373,7 @@
 			width: 126px;
 			height: 126px;
 			border-radius: 50%;
-			border: 4px solid $dark-teal;
+			border: 4px solid var(--bs-primary-hover, #{$dark-teal});
 			opacity: 0;
 			@include mt;
 		}
@@ -407,7 +407,7 @@
 			font-size: 16px;
 		}
 		&:hover {
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 		}
 	}
 
@@ -443,7 +443,7 @@
 			border: 1px solid transparent;
 			border-radius:	50%;
 			&:hover {
-				background: $dark-teal;
+				background: var(--bs-primary-hover, #{$dark-teal});
 				border: 1px solid transparent;
 				&::after {
 					border-right: 2px solid #FFFFFF;
@@ -458,8 +458,8 @@
 				width: 6px;
 				left: 5px;
 				top: 6px;
-				border-right: 2px solid #4ED0C8;
-    		border-top: 2px solid #4ED0C8;
+				border-right: 2px solid var(--bs-primary);
+    		border-top: 2px solid var(--bs-primary);
 				transform: rotate(45deg);
 			}
 		}
@@ -508,9 +508,9 @@
 		font-weight: 700;
 		font-size: 18px;
 		line-height: 111%;
-		color: $primary;
+		color: var(--bs-primary);
 		&:hover {
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 		}
 	}
 	&__position {
@@ -534,7 +534,7 @@
 			width: 56px;
 			height: 56px;
 			border-radius: 50%;
-			border: 4px solid $dark-teal;
+			border: 4px solid var(--bs-primary-hover, #{$dark-teal});
 			opacity: 0;
 			@include mt;
 		}
@@ -566,8 +566,10 @@
 		font-weight: 700;
 		font-size: rem(18);
 		line-height: 111%;
+		color: var(--bs-body-color, #{$body-color});
+		
 		&:hover {
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 		}
 	}
 	&__comments {
@@ -596,7 +598,7 @@
 			margin-top: 23px;
 		}
 		&:hover {
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 			background-color: $white;
 			border-color: transparent;
 		}

@@ -60,11 +60,11 @@
 	overflow: hidden;
 	@include mt;
 	&:hover {
-		border: 1px solid #4ED0C8;
+		border: 1px solid var(--bs-primary-hover, #4ED0C8);
 		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 		cursor: pointer;
 		h2 {
-			color: $dark-teal;
+			color: var(--bs-primary-hover, #{$dark-teal});
 		}
 	}
 	&__header {
@@ -334,7 +334,7 @@
 				border-bottom: 1px solid $gray-300;
 			}
 			&:checked[type=checkbox] {
-				background: $primary;
+				background: var(--bs-primary);
 			}
 			&__input {
 				width: 24px;
@@ -359,7 +359,7 @@
 		border-radius: 44px;
 		border: 1px solid transparent;
 		text-align: left;
-		color: $body-color;
+		color: var(--bs-body-color, #{$body-color});
 		@include media-breakpoint-down(md) {
 			width: 100%;
 			text-align: left;
@@ -417,7 +417,7 @@
 				z-index: 5;
 				border: 1px solid $white;
 				& + .custom-input__text {
-					background-color: $primary;
+					background-color: var(--bs-primary);
 				}
 			}
 		}

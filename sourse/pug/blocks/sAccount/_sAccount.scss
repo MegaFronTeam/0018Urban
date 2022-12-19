@@ -77,7 +77,7 @@
 			}
 			&.active {
 				position: relative;
-				color: $primary;
+				color: var(--bs-primary);
 				&::after {
 					position: absolute;
 					content: '';
@@ -85,7 +85,7 @@
 					left: 0;
 					bottom: rem(5);
 					height: 2px;
-					background-color: $primary;
+					background-color: var(--bs-primary);
 				}
 			}
 			h2 {
@@ -259,7 +259,7 @@
 	}
 	.choices__list--multiple .choices__item {
 		margin-bottom: 2px;
-		background-color: $primary;
+		background-color: var(--bs-primary);
     border: 1px solid transparent;
 	}
 	.choices__list--dropdown, .choices__list[aria-expanded] {
@@ -313,7 +313,7 @@
 		@include mt;
 	}
 	.icon-calendar.active {
-		color: $primary;
+		color: var(--bs-primary);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -339,7 +339,7 @@
 		justify-content: center;
 		padding: 8px 30px;
 		margin-bottom: 10px;
-		border: 1px solid $teal;
+		border: 1px solid var(--bs-primary, #{$teal});
 		border-radius: 48px;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -352,7 +352,7 @@
 			}
 		}
 		&.active {
-			background-color: rgba(78, 208, 200, 0.2);
+			background-color: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.2);
 		}
 		&__text {
 			font-size: rem(18);
@@ -363,14 +363,14 @@
 			margin-top: 0;
 			width: 24px;
 			height: 24px;
-			background: rgba(78, 208, 200, 0.2);
-			border: 1px solid $teal;
+			background: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.2);
+			border: 1px solid var(--bs-primary, #{$teal});
 			border-radius: 4px;
 			&:checked[type=checkbox] {
 				background-image: url('../img/svg/checked.svg');
 				background-repeat: no-repeat;
 				background-position: 50%;
-				background-color: $teal;
+				background-color: var(--bs-primary, #{$teal});
 				& + .custom-input__text::after {
 					position: absolute;
 					display: block;
@@ -379,7 +379,7 @@
 					left: 0;
 					right: 0;
 					bottom: 0;
-					background-color: rgba(78, 208, 200, 0.2);
+					background-color: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.2);
 				}
 			}
 		}

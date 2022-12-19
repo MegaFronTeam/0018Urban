@@ -170,7 +170,7 @@
 				height: rem(100);
 			}
 			.icon {
-				color: $primary;
+				color: var(--bs-primary);
 				@include a-cent1;
 				font-size: 86px;
 				@include media-breakpoint-up(xl) {

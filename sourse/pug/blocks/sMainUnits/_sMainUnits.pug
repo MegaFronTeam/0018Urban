@@ -92,57 +92,29 @@ mixin sMainUnits(empty)
 					+main-unit('Нетворкинг','Всё сообщество').--light
 						.swiper
 							.swiper-wrapper
-								.swiper-slide
-									+e.body--network
-										+e.text
-											+e.name Райская Елена Сергеевна
-											+e.position Директор по развитию
-										+e.portrait-wrap(href="#")
-											+img('img/profile-14.jpg')
-										+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
-								.swiper-slide
-									+e.body--network
-										+e.text
-											+e.name Райская Елена Сергеевна
-											+e.position Директор по развитию
-										+e.portrait-wrap
-											+img('img/profile-14.jpg')
-										+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
-								.swiper-slide
-									+e.body--network
-										+e.text
-											+e.name(href="#").A Райская Елена Сергеевна
-											+e.position Директор по развитию
-										+e.portrait-wrap
-											+img('img/profile-14.jpg')
-										+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--network
+											+e.text
+												+e.name Райская Елена Сергеевна
+												+e.position Директор по развитию
+											+e.portrait-wrap(href="#")
+												+img('img/profile-14.jpg')
+											+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
 							+e.slider-nav
 								+arrow
 				+e.unit--md
 					+main-unit('Форум','Все форумы').--dark
 						.swiper
 							.swiper-wrapper
-								.swiper-slide
-									+e.body--forum
-										+e.forum-group Форум группы Название группы…
-										+e.forum-title Развитие кадрового потенциала университета
-										+e.comments
-											+icon('msg')
-											| 5
-								.swiper-slide
-									+e.body--forum
-										+e.forum-group Форум группы Название группы…
-										+e.forum-title Развитие кадрового потенциала университета
-										+e.comments
-											+icon('msg')
-											| 5
-								.swiper-slide
-									+e.body--forum
-										+e.forum-group Форум группы Название группы…
-										+e.forum-title(href="#") Развитие кадрового потенциала университета
-										+e.comments
-											+icon('msg')
-											| 5
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--forum
+											+e.forum-group Форум группы Название группы…
+											+e.forum-title(href="#") Развитие кадрового потенциала университета
+											+e.comments
+												+icon('msg')
+												| 5
 							+e.slider-nav
 								+arrow
 				+e.unit--md
@@ -165,7 +137,7 @@ mixin sMainUnits(empty)
 				+e.unit--md
 					+main-unit('Форум','Все форумы').--dark
 						+e.body--forum
-							+e.forum-title Предложите идею публикации на нашем портале «Urban Лидер»
+							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
 							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
 							+e.forum-btn(href="#") Предложить идею
 	// end sMainUnits
