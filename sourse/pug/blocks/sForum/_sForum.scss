@@ -247,7 +247,7 @@
 		@include media-breakpoint-down(md) {
 			justify-content: space-between;
 			padding: 8px;
-			background-color: #c0efeb;
+			background-color:   var(--bs-primary-light, #c0efeb);
 			border-radius: 4px;
 		}
 	}
@@ -542,7 +542,7 @@
 	}
 	&__img-wrap {
 		@include block;
-		background-image: url("../img/svg/avatar-bg.svg");
+		background-image: var(--user);
 		background-size: 100%;
 		background-repeat: no-repeat;
 		border-radius: 50%;

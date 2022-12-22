@@ -158,7 +158,7 @@
 			height: 100px;
 			position: relative;
 			border-radius: 50%;
-			background-color: #dcf6f4;
+			background-color: var(--bs-primary-light, #dcf6f4);
 			margin-bottom: 46px;
 			@include media-breakpoint-up(md) {
 				margin-bottom: 28px;
@@ -172,9 +172,9 @@
 			.icon {
 				color: var(--bs-primary);
 				@include a-cent1;
-				font-size: 86px;
+				font-size: 96px;
 				@include media-breakpoint-up(xl) {
-					font-size: rem(86);
+					font-size: rem(96);
 				}
 			}
 		}

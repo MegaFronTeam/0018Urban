@@ -249,9 +249,9 @@
 		font-weight: 700;
 		font-size: rem(18);
 		line-height: 111%;
+		margin-bottom: 8px;
 		@include media-breakpoint-down(md) {
 			align-self: flex-start;
-			margin-bottom: 8px;
 			font-size: 18px;
 		}
 	}

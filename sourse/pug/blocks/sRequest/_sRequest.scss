@@ -252,6 +252,7 @@
 			border-color: rgba(var(--bs-primary-rgb, #{78, 208, 200}), 0.15);
 			color: var(--bs-primary);
 			font-weight: 700;
+		
 		}
 	}
 	&__reason {
@@ -308,6 +309,12 @@
 		border-top: 1px solid $gray-300;
 		z-index: 1;
 	}
+	&__btn{
+			@include media-breakpoint-down(md) {
+				flex-grow: 1;
+				max-width: 100%;
+			}
+	}
 	&__btn, &__status {
 		@extend .btn;
 		width: 100%;
@@ -319,6 +326,7 @@
 		@include media-breakpoint-down(lg) {
 			max-width: 150px;
 		}		
+		
 		&--approve {
 			@extend .btn-primary;
 			z-index: 1;

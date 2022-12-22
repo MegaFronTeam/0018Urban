@@ -1,4 +1,7 @@
 // start .headerBlock
+.headerBlock.news + .section{
+	padding-top: 0;
+}
 .headerBlock {
 	position: relative;
 	--sPT: #{rem(48)};
