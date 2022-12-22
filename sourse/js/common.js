@@ -446,57 +446,37 @@ function eventHandler() {
 	const selectTabsBtn = document.querySelectorAll('.tabs-option');
 	const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
 	const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
-	const requestSelect = document.querySelector('.sRequest__select-wrap--js');
-	if (requestSelect) {
-		const requestChoice = new Choices(requestSelect, {
-			itemSelectText: '',
-			allowHTML: true,
-			searchEnabled: false,
-		});
-		requestChoice.setChoices([
-			{
-				value: 'all',
-				label: 'Избранные участники',
-				selected: true,
-				customProperties: {
-					dataTabsPath: 'all'
-				}
-			},
-			{
-				value: 'sent',
-				label: 'Запросы на обмен контактами',
-				customProperties: {
-					dataTabsPath: 'sent'
-				}
-			},
-			{
-				value: 'received',
-				label: 'Отправленные запросы',
-				customProperties: {
-					dataTabsPath: 'received'
-				}
-			}
-		],
-		);
-		if (requestSelect) {
-			requestSelect.addEventListener('change', (event) => {
-				const tabsPath = requestChoice.getValue().customProperties.dataTabsPath;
-				selectTabsBtn.forEach(el => { el.classList.remove('active') });
-				tabsHandler(tabsPath);
-			});
-		}
-	}
+	
 
 
 
 	if (requestTabs) {
+		const select = document.querySelector(".tabs-caption-select");
+
+		document.addEventListener('click', (e) => {
+			let target = e.target.closest(".tabs-caption-select__head");
+			let targetActive = e.target.closest(".tabs-caption-select.active");
+			let targetBodyA = e.target.closest(".tabs-caption-select__body.active");
+			if (!targetActive) {
+				console.log(this);
+				$(".tabs-caption-select").removeClass("active").find(".tabs-caption-select__body").removeClass("active")
+			}
+			if (target) { 
+				$(target).parent().toggleClass("active").find(".tabs-caption-select__body").toggleClass("active")
+			}
+		})
 		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
+			const tab = e.target.closest('[data-tabs-path]');
 			const tabsPath = e.target.dataset.tabsPath;
+			const content = tab.innerHTML;
+			// console.log(content);
+			document.querySelector(".tabs-caption-select__head-content").innerHTML = content
 			requestTabsBtn.forEach(el => { el.classList.remove('active') });
-			document.querySelectorAll(`[data-tabs-path="${tabsPath}"]`).forEach(el => { el.classList.add('active') });
+			tab.classList.add('active');
 			tabsHandler(tabsPath);
 		})
 	}
+
 
 	const tabsHandler = (path) => {
 		tabsContent.forEach(el => { el.classList.remove('active') });

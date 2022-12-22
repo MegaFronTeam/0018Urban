@@ -44,6 +44,8 @@
 
 	//  --carousel-button-svg-stroke-width: 2.5;
 	//  --carousel-button-svg-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0/ 0.4));
+	--chevron-down: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.59 8.59L12 13.17L7.41 8.59L6 10L12 16L18 10L16.59 8.59Z" fill="#2B2015"/></svg>');
+
 	--check-white: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.99991 16.1701L4.82991 12.0001L3.40991 13.4101L8.99991 19.0001L20.9999 7.00009L19.5899 5.59009L8.99991 16.1701Z' fill='white'/%3E%3C/svg%3E%0A");
 
 	--picker-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>");
@@ -68,6 +70,7 @@
 
 
 }
+
 @include media-breakpoint-up(xl) {
 }
 

@@ -85,9 +85,11 @@
 	
 	.custom-input {
 		position: relative;
+		flex-grow: 1;
 		margin: 0;
 		padding-left: 0;
 		padding: 4px var(--in-sp-x, 4px);
+		text-align: center;
 		@include media-breakpoint-down(md) {
 			flex-grow: 1;
 			padding: 4px;

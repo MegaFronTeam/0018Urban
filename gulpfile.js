@@ -130,7 +130,7 @@ function styles() {
         cssnano(),
         gcmq(),
     ];
-    return src(sourse + '/sass/main.scss')
+    return src(sourse + '/sass/*.scss')
         .pipe(sassGlob())
         .pipe(
             sass.sync()

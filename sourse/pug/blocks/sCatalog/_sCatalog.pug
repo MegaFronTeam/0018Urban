@@ -33,7 +33,9 @@ mixin networkFilter
 		+b.network-filter(id="dropdown")
 			+e.row.row
 				//- .col-12.d-md-none.flex-grow-1
-				+input("Все участники",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				// поменять классы colов, если будет меняться количество элементов
+				.col-lg-3
+					+input("Все участники",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 				//- .col-12.col-md-auto.flex-grow-1
 				//- +e.dropdown-item
 				//- 		+e.dropdown-btn.BUTTON(data-toggle="interest") Все интересы
@@ -45,9 +47,11 @@ mixin networkFilter
 				//- .col-12.col-md-auto.flex-grow-1
 				//- +input("Все ОИВ",'select', '').js-choice
 				//- .col-12.col-md-auto.flex-grow-1
-				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				.col-lg-3
+					+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 
-				+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
+				.col-lg-3
+					+input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 
 				//- +input("Все области экспертизы",'select', '')(class="сustom-select-js" data-placeholder="Интересы" multiple)
 				//- //- .col-12.col-md-auto.flex-grow-1
@@ -59,9 +63,10 @@ mixin networkFilter
 				//- //- 				+in-c('checkbox','годы 2','years')
 				//- //- 				+in-c('checkbox','годы 3','years')
 				//- //- .col-12.col-md-auto
-				//- .radio-wrap
-				//- 		+in-c('radio','Трудоустроен','status')(checked)
-				//- 		+in-c('radio','В поиске работы','status')
+				.col-lg
+					.radio-wrap
+						+in-c('radio','Трудоустроен','status')(checked)
+						+in-c('radio','В поиске работы','status')
 	// end filter
 
 

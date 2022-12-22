@@ -44,22 +44,23 @@ mixin sRequest(data)
 	// start sRequest
 	+b.SECTION.sRequest.section#sRequest&attributes(attributes)
 		+e.tabs
-			+e.select-container.container-fluid.d-lg-none
-				select.sRequest__select-wrap--js
-					//- select.sRequest__select.form-control.form-select.js-choice
-						//- option.tabs-option(data-tabs-path="all") Избранные участники
-						//- option.tabs-option(data-tabs-path="sent") Запросы на обмен контактами
-						//- option.tabs-option(data-tabs-path="received") Отправленные запросы
-			+e.tabs-caption.d-none.d-lg-flex.tabs__caption
-				+e.tabs-btn(data-tabs-path="all").active
-					+icon('like-btn')
-					| Избранные участники
-				+e.tabs-btn(data-tabs-path="sent")
-					+icon('in')
-					| Запросы на обмен контактами
-				+e.tabs-btn(data-tabs-path="received")
-					+icon('out')
-					| Отправленные запросы
+			+e.head
+				.tabs-caption-select
+					.tabs-caption-select__head.d-lg-none
+						.tabs-caption-select__head-content
+							+e.icon-wrap: +icon('like-btn')
+							| Избранные участники
+					.tabs-caption-select__body
+						+e.tabs-caption.tabs__caption
+							+e.tabs-btn(data-tabs-path="all").active
+								+e.icon-wrap: +icon('like-btn')
+								| Избранные участники
+							+e.tabs-btn(data-tabs-path="sent")
+								+e.icon-wrap: +icon('in')
+								| Запросы на обмен контактами
+							+e.tabs-btn(data-tabs-path="received")
+								+e.icon-wrap: +icon('out')
+								| Отправленные запросы
 			+e.tabs-content.active(data-tabs-target="all")
 				+sCatalog
 			+e.tabs-content(data-tabs-target="sent")

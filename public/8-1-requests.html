@@ -19,6 +19,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 		<!-- /для синей темы-->
 		<link href="css/main.min.css" rel="stylesheet"/>
+		<!-- для синей темы-->
+		<link href="css/theme-school.min.css" rel="stylesheet"/>
 	</head>
 	<body class=" main-page theme-school">
 		<div class="main-wrapper">
@@ -102,24 +104,42 @@
 				<!-- start sRequest-->
 				<section class="sRequest section" id="sRequest">
 					<div class="sRequest__tabs">
-						<div class="sRequest__select-container container-fluid d-lg-none">
-							<select class="sRequest__select-wrap--js"></select>
-						</div>
-						<div class="sRequest__tabs-caption d-none d-lg-flex tabs__caption">
-							<div class="sRequest__tabs-btn active" data-tabs-path="all">
-								<svg class="icon icon-like-btn ">
-									<use xlink:href="img/svg/sprite.svg#like-btn"></use>
-								</svg>Избранные участники
-							</div>
-							<div class="sRequest__tabs-btn" data-tabs-path="sent">
-								<svg class="icon icon-in ">
-									<use xlink:href="img/svg/sprite.svg#in"></use>
-								</svg>Запросы на обмен контактами
-							</div>
-							<div class="sRequest__tabs-btn" data-tabs-path="received">
-								<svg class="icon icon-out ">
-									<use xlink:href="img/svg/sprite.svg#out"></use>
-								</svg>Отправленные запросы
+						<div class="sRequest__head">
+							<div class="tabs-caption-select">
+								<div class="tabs-caption-select__head d-lg-none">
+									<div class="tabs-caption-select__head-content">
+										<div class="sRequest__icon-wrap">
+											<svg class="icon icon-like-btn ">
+												<use xlink:href="img/svg/sprite.svg#like-btn"></use>
+											</svg>
+										</div>Избранные участники
+									</div>
+								</div>
+								<div class="tabs-caption-select__body">
+									<div class="sRequest__tabs-caption tabs__caption">
+										<div class="sRequest__tabs-btn active" data-tabs-path="all">
+											<div class="sRequest__icon-wrap">
+												<svg class="icon icon-like-btn ">
+													<use xlink:href="img/svg/sprite.svg#like-btn"></use>
+												</svg>
+											</div>Избранные участники
+										</div>
+										<div class="sRequest__tabs-btn" data-tabs-path="sent">
+											<div class="sRequest__icon-wrap">
+												<svg class="icon icon-in ">
+													<use xlink:href="img/svg/sprite.svg#in"></use>
+												</svg>
+											</div>Запросы на обмен контактами
+										</div>
+										<div class="sRequest__tabs-btn" data-tabs-path="received">
+											<div class="sRequest__icon-wrap">
+												<svg class="icon icon-out ">
+													<use xlink:href="img/svg/sprite.svg#out"></use>
+												</svg>
+											</div>Отправленные запросы
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="sRequest__tabs-content active" data-tabs-target="all">
