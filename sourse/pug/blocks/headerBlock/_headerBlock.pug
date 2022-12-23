@@ -46,7 +46,7 @@ mixin eventsHeader
 			+b.section-title.text-center
 				h1 Мероприятия
 			+b.events-filter
-				+e.btn--js.d-md-none.BUTTON(data-toggle="#events-dropdown") Фильтр
+				+e.btn--js.d-md-none(data-toggle="#events-dropdown") Фильтр
 				+e.filter-wrap(id="events-dropdown")
 					+e.radio-wrap--text.radio-wrap
 						+in-c('radio','Все мероприятия','events')(checked)
