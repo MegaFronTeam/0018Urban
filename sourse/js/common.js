@@ -458,7 +458,6 @@ function eventHandler() {
 			let targetActive = e.target.closest(".tabs-caption-select.active");
 			let targetBodyA = e.target.closest(".tabs-caption-select__body.active");
 			if (!targetActive) {
-				console.log(this);
 				$(".tabs-caption-select").removeClass("active").find(".tabs-caption-select__body").removeClass("active")
 			}
 			if (target) { 
