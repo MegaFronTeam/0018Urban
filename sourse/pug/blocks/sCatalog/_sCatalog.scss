@@ -223,6 +223,7 @@
 	background-color: $white;
 	border: 1px solid transparent;
 	border-radius: $border-radius;
+	color: var(--bs-body-color);
 	&.active::after {
 		background-image: url('../img/svg/close.svg') !important;
 		background-size: 14px 14px;

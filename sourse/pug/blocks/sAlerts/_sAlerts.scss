@@ -1,6 +1,6 @@
 // start .sAlerts
 .sAlerts {
-	--sPT: 24px;
+	--sPT: 0;
 	--sPB: 52px;
 	@include media-breakpoint-up(md) {
 		--sPT: 24px;
@@ -119,7 +119,7 @@
 	}
 
 	&--empty {
-		--sPT: 24px;
+		--sPT: 0;
 		--sPB: 24px;
 		@include media-breakpoint-up(md) {
 			--sPT: 24px;
