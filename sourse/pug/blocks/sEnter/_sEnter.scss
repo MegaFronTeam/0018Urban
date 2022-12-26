@@ -174,3 +174,15 @@
 		
 	}
 }
+
+.page-404{
+	.sEnter{
+		h1{
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+		&__container{
+			// max-width: 420px;
+		}
+	}
+}

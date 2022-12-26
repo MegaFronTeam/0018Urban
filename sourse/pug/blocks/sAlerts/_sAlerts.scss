@@ -3,11 +3,11 @@
 	--sPT: 0;
 	--sPB: 52px;
 	@include media-breakpoint-up(md) {
-		--sPT: 24px;
+		// --sPT: 24px;
 		--sPB: 56px;
 	}
 	@include media-breakpoint-up(xl) {
-		--sPT: #{rem(24)};
+		// --sPT: #{rem(24)};
 		--sPB: #{rem(56)};
 	}
 	display: flex;
