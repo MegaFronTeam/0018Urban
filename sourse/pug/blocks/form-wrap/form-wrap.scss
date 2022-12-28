@@ -491,3 +491,11 @@ input::-webkit-inner-spin-button {
 .select2-container{
 	max-width: 100%;
 }
+
+.select2-container .select2-search--inline .select2-search__field{
+	font-family: inherit;
+}
+
+.select2-container .select2-search--inline .select2-search__field{
+	font-size: 1rem;
+}
