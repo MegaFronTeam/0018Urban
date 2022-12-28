@@ -28,3 +28,6 @@
  12. <https://megafronteam.github.io/0018Urban/public/24-1-alerts-empty.html>
  13. <https://megafronteam.github.io/0018Urban/public/404.html>
  14. <https://megafronteam.github.io/0018Urban/public/28-faq.html>
+   
+ # School-landing
+ 1. <https://megafronteam.github.io/0018Urban/public/school-landing.html>

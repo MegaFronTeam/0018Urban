@@ -6,7 +6,27 @@ mixin footer()
 					+e.policy(href="#") Политика конфиденциальности
 				.col-auto
 					+e.copyright © #[span.currentYear]
-				.col
+				.col-12.col-sm
+					+e.design
+						+icon('coalla-logo')
+						span Сделано в&nbsp;Coalla Agency
+
+mixin footer-landing()
+	+b.FOOTER.footer.footer--landing.section
+		.container-fluid
+			+e.row.row
+				.col-12.col-md
+					+e.logos
+						+e.row-sm.row
+							.col-sm-auto
+								+img('img/svg/footer-logo-1.svg')
+							.col-sm-auto
+								+img('img/svg/footer-logo-2.svg')
+							.col-sm-auto
+								+img('img/svg/footer-logo-3.svg')
+				.col-auto
+					+e.copyright © #[span.currentYear]
+				.col-auto
 					+e.design
 						+icon('coalla-logo')
 						span Сделано в&nbsp;Coalla Agency

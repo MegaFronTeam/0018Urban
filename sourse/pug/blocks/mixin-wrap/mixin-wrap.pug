@@ -50,7 +50,7 @@ mixin page-head(t,...items)
 //- 	+b.chat
 //- 		+icon('help')
 mixin help()
-	+b.topNav-btnWrap--help
+	+b.topNav-btnWrap--help&attributes(attributes)
 		+e.btn.d-none.d-lg-flex.toggle-contact-js(data-id= "#ddHelp")
 			+icon('help')
 		+e.btn-content.dropdown-contact-js#ddHelp
