@@ -119,16 +119,16 @@
 	}
 
 	&--empty {
-		--sPT: 0;
-		--sPB: 24px;
-		@include media-breakpoint-up(md) {
-			--sPT: 24px;
-			--sPB: 72px;
-		}
-		@include media-breakpoint-up(xl) {
-			--sPT: #{rem(24)};
-			--sPB: #{rem(72)};
-		}
+		// --sPT: 0;
+		// --sPB: 24px;
+		// @include media-breakpoint-up(md) {
+		// 	--sPT: 24px;
+		// 	--sPB: 72px;
+		// }
+		// @include media-breakpoint-up(xl) {
+		// 	--sPT: #{rem(24)};
+		// 	--sPB: #{rem(72)};
+		// }
 		// & > .container {
 		// 	display: flex;
 		// 	flex-direction: column;
