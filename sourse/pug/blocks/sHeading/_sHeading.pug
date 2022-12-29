@@ -1,14 +1,15 @@
 mixin sHeading(data)
 	// start sHeading
-	+b.SECTION.sHeading.section#sHeading&attributes(attributes)
+	+b.SECTION.sHeading.section.bg-wrap#sHeading&attributes(attributes)
+		+img('img/sHeading-bg.jpg', 'bg').img-bg
 		.container
 			+e.row.row
 				.col-auto
-					p lorem
+					+img('img/svg/heading-logo-1.svg')
 				.col-auto
-					p lorem
+					+img('img/svg/heading-logo-2.svg')
 				.col-auto
-					p lorem
+					+img('img/svg/heading-logo-3.svg')
 			+b.section-title
 				h1 Программа MPA для директоров и управленческих команд образовательных организаций города Москвы
 				

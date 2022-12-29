@@ -9,8 +9,8 @@ include ../blocks/sHeading/_sHeading.pug
 
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
-//- include ../blocks/sForm/_sForm.pug
-//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -25,12 +25,12 @@ block pagecontent
 
 
 	+header()
-		+top-nav()
+		+top-navLanding() 
 	main
 		+sHeading()
 		//- +headerBlock 
-		//- +sCatalog
-		//- +sForm()
+		+sCatalog
+		+sForm()
 		//- +sContact()
 
 	+footer-landing()
