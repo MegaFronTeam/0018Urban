@@ -742,6 +742,11 @@ iframe {
 .school-landing {
 	.main-wrapper {
 		padding-top: 0;
+		padding-bottom: 48px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0;
+
+		}
 	}
 	.topNav-btnWrap--person {
 		.topNav-btnWrap__btn {
@@ -801,7 +806,7 @@ iframe {
 		&::before {
 			@include mt;
 			@include media-breakpoint-down(lg) {
-				box-shadow: 0px -8px 16px rgba(0, 0, 0, 0.16);
+				box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16);
 			}
 		}
 		&:not(.fixed) {
@@ -821,12 +826,12 @@ iframe {
 						}
 					}
 				}
-			}
-			.menu {
-				a {
-					color: var(--bs-white);
-					&:hover {
-						color: var(--bs-light);
+				.menu {
+					a {
+						color: var(--bs-white);
+						&:hover {
+							color: var(--bs-light);
+						}
 					}
 				}
 			}

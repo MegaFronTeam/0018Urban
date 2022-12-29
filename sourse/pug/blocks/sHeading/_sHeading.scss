@@ -12,9 +12,21 @@
 	}
 	@include media-breakpoint-up(lg) {
 		min-height: rem(620);
+		--sPT: #{rem(120)};
+		--sPB: #{rem(130)};
 	}
 	@include media-breakpoint-up(xl) {
-		min-height: rem(720);
+		min-height: 720px;
+		--sPB: #{rem(150)};
+	}
+
+	@include media-breakpoint-down(lg) {
+		--sPT: #{rem(30)};
+		--sPB: #{rem(30)};
+	}
+	@include media-breakpoint-down(sm) {
+		--sPT: 8px;
+		--sPB: 8px;
 	}
 
 	&::before {
