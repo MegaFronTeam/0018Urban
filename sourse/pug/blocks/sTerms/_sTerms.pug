@@ -1,0 +1,34 @@
+mixin sTerms(data)
+	// start sTerms
+	+b.sTerms.section#sTerms&attributes(attributes)
+		.container-fluid
+			+e.content.bg-white
+				+e.row.row
+					+e.col.col-auto
+						+e.item
+							+e.count 2
+								span года
+								+icon('cap')
+							+e.title.strong
+								span интенсивного <br> обучения
+					+e.col.col-md-auto
+						+e.braces.text-center
+							+icon('braces').d-none.d-md-block
+							+icon('braces-2').d-md-none
+					+e.col.col-auto
+						+e.item
+							+e.count--thin.text-primary 1740
+							+e.title.ps-3
+								span академических <br> часов
+					+e.col.col-md-auto
+						+e.braces.text-center
+							+icon('braces').d-none.d-md-block
+							+icon('braces-2').d-md-none
+					+e.col.col-auto
+						+e.item--modules
+							+e.count.text-primary 11
+							+e.title
+								span учебных <br> модулей
+								+icon('teacher')
+					
+	// end sTerms

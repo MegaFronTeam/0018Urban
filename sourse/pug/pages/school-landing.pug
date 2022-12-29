@@ -4,13 +4,14 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sHeading/_sHeading.pug
+include ../blocks/sTerms/_sTerms.pug
 //- include ../blocks/sForm/_sForm.pug
 //- include ../blocks/sContent/_sContent.pug
 
 //- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
-include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sForm/_sForm.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -28,6 +29,7 @@ block pagecontent
 		+top-navLanding() 
 	main
 		+sHeading()
+		+sTerms()
 		//- +headerBlock 
 		//- +sCatalog
 		//- +sForm()

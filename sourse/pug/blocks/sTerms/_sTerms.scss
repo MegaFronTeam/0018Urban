@@ -1,0 +1,159 @@
+// start .sTerms
+.sTerms {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	&__row {
+		justify-content: space-between;
+		// --bs-gutter-x: #{rem()};
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: #{rem(16)};
+			justify-content: center;
+		}
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-y: #{rem(12)};
+		}
+	}
+	// .section-title{
+
+	// }
+	// &__col{
+
+	// }
+	&__content {
+		border-radius: rem(24);
+		padding: rem(30) rem(18);
+		@include media-breakpoint-up(sm) {
+			padding: rem(40);
+		}
+	}
+	&__item {
+		display: inline-flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		&--modules {
+			@include media-breakpoint-down(md) {
+				flex-direction: row;
+				.sTerms__count {
+					margin-bottom: 0;
+				}
+				.sTerms__title {
+					display: flex;
+					flex-direction: column;
+					margin-left: rem(8);
+					.icon {
+						margin-left: 0;
+						margin-top: 8px;
+					}
+				}
+			}
+			@include media-breakpoint-up(md) {
+				.sTerms__title {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+	&__title {
+		display: flex;
+		font-weight: 500;
+		line-height: calc(36 / 30);
+		text-transform: uppercase;
+		font-size: rem(24);
+		@include media-breakpoint-up(md) {
+			font-size: rem(20);
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(25);
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(30);
+		}
+		&.strong {
+			font-weight: 900;
+		}
+		span {
+			display: inline-block;
+		}
+		.icon {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 3.7px;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			// font-size: rem(68);
+			font-size: 2.266em;
+			margin-left: rem(8);
+			@include media-breakpoint-down(sm) {
+				font-size: 1.766em;
+			}
+		}
+	}
+	&__count {
+		display: flex;
+		align-items: center;
+		font-weight: 900;
+		line-height: calc(128 / 180);
+		margin-bottom: rem(16);
+		font-size: 136px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem(168);
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(100);
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: rem(145);
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: rem(168);
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(180);
+		}
+
+		&--thin {
+			font-weight: 400;
+		}
+		span {
+			display: block;
+			font-weight: 900;
+			writing-mode: vertical-rl;
+			transform: scale(-1);
+			line-height: 1;
+			font-size: 0.233em;
+			text-transform: uppercase;
+		}
+		.icon {
+			font-size: 0.7em;
+			margin-left: rem(8);
+		}
+	}
+	&__braces {
+		.icon {
+			max-width: 100%;
+			font-size: 32px;
+			@include media-breakpoint-up(md) {
+				font-size: rem(130);
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: rem(150);
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTerms
