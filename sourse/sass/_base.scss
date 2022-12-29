@@ -833,6 +833,9 @@ iframe {
 		}
 		.menu {
 			a {
+				@include media-breakpoint-only(lg) {
+					font-size: 13px;
+				}
 				&:hover {
 					color: var(--bs-link-hover-color);
 				}
