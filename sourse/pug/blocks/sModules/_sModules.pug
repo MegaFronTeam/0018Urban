@@ -1,0 +1,51 @@
+mixin modulesItem(p, i)
+	.col-md-6.col-lg-4
+		+e.item
+			if i
+				+icon('check-rounded')
+			else
+				+img('img/svg/switch-check.svg')
+			p!= p
+
+mixin sModules(data)
+	// start sModules
+	+b.sModules.section&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Модули программы
+				+e.row.row
+					+modulesItem(`Видение и&nbsp;стратегия современного образования.`, `i`)
+					+modulesItem(`Управление воспитательным, образовательным процессом и&nbsp;оценка качества.`, `i`)
+					+modulesItem(`Управление экономикой и&nbsp;хозяйством образовательной организации.`, `i`)
+					+modulesItem(`Современные технологии управления в&nbsp;образовании.`, `i`)
+					+modulesItem(`Профессиональное лидерство руководителя.`, `i`)
+					+modulesItem(`Управление рисками образовательной организации.`, `i`)
+					+modulesItem(`Принятие и&nbsp;реализация управленческих решений.`, `i`)
+					+modulesItem(`Эффективные коммуникации руководителя.`, `i`)
+					+modulesItem(`Управление публичными коммуникациями и&nbsp;информационными потоками.`, `i`)
+					+modulesItem(`Управление клиентоориентированностью в&nbsp;образовании.`, `i`)
+					+modulesItem(`Управление человеческими ресурсами в&nbsp;системе руководителя.`, `i`)
+	// end sModules
+
+mixin sModulesLearn(data)
+	// start sModules
+	+b.sModules.section&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Вы&nbsp;научитесь
+				+e.row.row
+					+modulesItem(`Видение и&nbsp;стратегия современного образования.`)
+					+modulesItem(`Управление воспитательным, образовательным процессом и&nbsp;оценка качества.`)
+					+modulesItem(`Управление экономикой и&nbsp;хозяйством образовательной организации.`)
+					+modulesItem(`Современные технологии управления в&nbsp;образовании.`)
+					+modulesItem(`Профессиональное лидерство руководителя.`)
+					+modulesItem(`Управление рисками образовательной организации.`)
+					+modulesItem(`Принятие и&nbsp;реализация управленческих решений.`)
+					+modulesItem(`Эффективные коммуникации руководителя.`)
+					+modulesItem(`Управление публичными коммуникациями и&nbsp;информационными потоками.`)
+					+modulesItem(`Управление клиентоориентированностью в&nbsp;образовании.`)
+					+modulesItem(`Управление человеческими ресурсами в&nbsp;системе руководителя.`)
+				p В&nbsp;процессе обучения вы&nbsp;создадите новые решения по&nbsp;развитию вашей образовательной организации, разработаете и&nbsp;реализуете собственный проект изменений.
+	// end sModule
