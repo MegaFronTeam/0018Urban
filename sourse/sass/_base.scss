@@ -740,13 +740,18 @@ iframe {
 }
 
 .school-landing {
-	--bs-body-bg: #EEEEEE;
+	--bs-body-bg: #eeeeee;
+	.container-fluid,
+	.container {
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
 	.main-wrapper {
 		padding-top: 0;
 		padding-bottom: 48px;
 		@include media-breakpoint-up(lg) {
 			padding-bottom: 0;
-
 		}
 	}
 	.topNav-btnWrap--person {
@@ -841,6 +846,13 @@ iframe {
 			a {
 				@include media-breakpoint-only(lg) {
 					font-size: 13px;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 15px;
+				}
+				
+				@media (min-width: 1536.98px) {
+					font-size: rem(16);
 				}
 				&:hover {
 					color: var(--bs-link-hover-color);

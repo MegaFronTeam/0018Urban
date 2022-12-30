@@ -1,10 +1,20 @@
 // start .sAbout
 .sAbout {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: 4px;
+	--sPB: 4px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(12)};
+		--sPB: #{rem(12)};
+	}
 	// --sTPB: #{rem()};
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: #{rem(24)};
+		}
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-y: #{rem(8)};
+		}
 	}
 	// .section-title {
 	// }

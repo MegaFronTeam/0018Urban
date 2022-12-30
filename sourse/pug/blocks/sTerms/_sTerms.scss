@@ -1,7 +1,11 @@
 // start .sTerms
 .sTerms {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: 8px;
+	--sPB: 4px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(24)};
+		--sPB: #{rem(12)};
+	}
 	// --sTPB: #{rem()};
 	&__row {
 		justify-content: space-between;
