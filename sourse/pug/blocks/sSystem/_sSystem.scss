@@ -7,7 +7,7 @@
 	--sPB: 4px;
 	@include media-breakpoint-up(sm) {
 		--sPT: #{rem(12)};
-		--sPB: #{rem(12)};
+		--sPB: #{rem(16)};
 	}
 	.row {
 		align-items: center;
@@ -33,6 +33,7 @@
 		}
 		img {
 			max-width: 250px;
+			
 			@include media-breakpoint-up(sm) {
 				max-width: 210px;
 			}
@@ -63,7 +64,9 @@
 			padding: 1rem 3rem;
 		}
 	}
-
+	img {
+		max-height: 190px;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
