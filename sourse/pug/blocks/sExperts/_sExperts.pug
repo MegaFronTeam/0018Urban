@@ -1,0 +1,25 @@
+mixin sExperts(data)
+	// start sExperts
+	+b.SECTION.sExperts.section#sExperts&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Эксперты программы
+				+e.row.row
+					mixin sExpertsCard(i)
+						.col-6.col-sm-4.col-lg-3
+							+e.card
+								+e.img-wrap
+									+img(`img/sExperts-${i}.jpg`, 'bg')
+								+e.caption
+									strong Татьяна Ливанова
+									span Преподаватель в МГУ
+					+sExpertsCard(1)
+					+sExpertsCard(2)
+					+sExpertsCard(1)
+					+sExpertsCard(3)
+					+sExpertsCard(4)
+					+sExpertsCard(1)
+					+sExpertsCard(2)
+					+sExpertsCard(1)
+	// end sExperts
