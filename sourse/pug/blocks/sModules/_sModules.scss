@@ -51,7 +51,7 @@
 	&__col {
 	}
 	&__wrapper {
-		background: var(--bs-white);
+		background-color: var(--bs-white);
 		border-radius: rem(24);
 		padding: 2rem 1rem;
 		@include media-breakpoint-up(sm) {
