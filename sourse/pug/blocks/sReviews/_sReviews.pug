@@ -1,0 +1,31 @@
+mixin sReviews(data)
+	// start sReviews
+	+b.SECTION.sReviews.section#sReviews&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Выпускники о&nbsp;программе
+
+				+e.row.row
+					.col-sm-6.col-lg-4
+						+e.item(href="https://www.youtube.com/watch?v=mJVWLmeJpws" data-fancybox="sReviews-gallery" data-caption="")
+							+e.img-wrap
+								+img('//img.youtube.com/vi/mJVWLmeJpws/mqdefault.jpg', 'bg')
+							+e.caption
+								h6 Богомолова Мария Сергеевна
+								p ГБУ &laquo;Агентство инноваций г.&nbsp;Москвы&raquo;
+					.col-sm-6.col-lg-4
+						+e.item(href="https://www.youtube.com/watch?v=5lCRsLjMeso" data-fancybox="sReviews-gallery" data-caption="")
+							+e.img-wrap
+								+img('//img.youtube.com/vi/5lCRsLjMeso/mqdefault.jpg', 'bg')
+							+e.caption
+								h6 Краснюков Дмитрий Анатольевич
+								p Департамент спорта г.&nbsp;Москвы
+					.col-sm-6.col-lg-4
+						+e.item(href="https://www.youtube.com/watch?v=acXST5FKXyM" data-fancybox="sReviews-gallery" data-caption="")
+							+e.img-wrap
+								+img('//img.youtube.com/vi/acXST5FKXyM/mqdefault.jpg', 'bg')
+							+e.caption
+								h6 Салюков Дмитрий Олегович
+								p Префектура Северо-Западного административного округа г.&nbsp;Москвы
+	// end sReviews

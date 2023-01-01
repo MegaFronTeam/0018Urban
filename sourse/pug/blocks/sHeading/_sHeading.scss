@@ -7,6 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 352px;
+	// min-height: calc(var(--vh, 1vh) * 100);
 	@include media-breakpoint-up(sm) {
 		min-height: rem(520);
 	}

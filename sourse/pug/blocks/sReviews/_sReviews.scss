@@ -1,0 +1,95 @@
+// start .sReviews
+.sReviews {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	--sPT: 8px;
+	--sPB: 8px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(16)};
+		--sPB: #{rem(16)};
+	}
+	&__row {
+		--bs-gutter-y: #{rem(32)};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+		h2 {
+			@extend .h3;
+			@include media-breakpoint-down(sm) {
+				font-size: 19px;
+			}
+		}
+	}
+	// &__col {
+	// }
+	&__wrapper {
+		background-color: var(--bs-white);
+		border-radius: rem(24);
+		padding: 2rem 1rem;
+		@include media-breakpoint-up(sm) {
+			padding: 2.5rem;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 3.25rem 2.5rem;
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		color: var(--bs-body-color);
+		h6 {
+			@include media-breakpoint-up(xl) {
+				font-size: rem(20.3);
+			}
+		}
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@include media-breakpoint-down(xl) {
+				font-size: 14px;
+			}
+		}
+	}
+	&__img-wrap {
+		@include block(364, 204);
+		margin-bottom: 1rem;
+		border-radius: rem(16);
+		overflow: hidden;
+		background-color: var(--bs-white);
+		&::after {
+			content: "";
+			@include a-cent1;
+			width: 16.5%;
+			height: 20.6%;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3e%3cpath d='M62.603 16.596a8.06 8.06 0 0 0-5.669-5.669C51.964 9.57 31.96 9.57 31.96 9.57s-20.005.04-24.976 1.397a8.06 8.06 0 0 0-5.669 5.669C0 21.607 0 32 0 32s0 10.393 1.356 15.404a8.06 8.06 0 0 0 5.669 5.669C11.995 54.43 32 54.43 32 54.43s20.005 0 24.976-1.356a8.06 8.06 0 0 0 5.669-5.669C64 42.434 64 32 64 32s-.04-10.393-1.397-15.404z' fill='red'/%3e%3cpath d='M25.592 41.612L42.187 32l-16.596-9.612z' fill='%23fff'/%3e%3c/svg%3e");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+	&__caption {
+		margin-left: rem(8);
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sReviews

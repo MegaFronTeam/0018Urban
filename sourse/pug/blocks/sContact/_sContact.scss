@@ -3,6 +3,12 @@
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
 	// --sTPB: #{rem()};
+	--sPT: 8px;
+	--sPB: 24px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(16)};
+		--sPB: #{rem(32)};
+	}
 	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: calc(var(--bs-gutter-x) * 1.5);
