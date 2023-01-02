@@ -38,6 +38,12 @@
 		display: flex;
 		flex-direction: column;
 		color: var(--bs-body-color);
+		&:hover {
+			color: var(--bs-link-hover-color);
+			img {
+				transform: scale(1.05);
+			}
+		}
 		h6 {
 			@include media-breakpoint-up(xl) {
 				font-size: rem(20.3);
@@ -65,10 +71,12 @@
 			height: 20.6%;
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3e%3cpath d='M62.603 16.596a8.06 8.06 0 0 0-5.669-5.669C51.964 9.57 31.96 9.57 31.96 9.57s-20.005.04-24.976 1.397a8.06 8.06 0 0 0-5.669 5.669C0 21.607 0 32 0 32s0 10.393 1.356 15.404a8.06 8.06 0 0 0 5.669 5.669C11.995 54.43 32 54.43 32 54.43s20.005 0 24.976-1.356a8.06 8.06 0 0 0 5.669-5.669C64 42.434 64 32 64 32s-.04-10.393-1.397-15.404z' fill='red'/%3e%3cpath d='M25.592 41.612L42.187 32l-16.596-9.612z' fill='%23fff'/%3e%3c/svg%3e");
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: 100%;
 			background-position: center;
+			pointer-events: none;
 		}
 		img {
+			@include mt;
 			position: absolute;
 			left: 0;
 			top: 0;
