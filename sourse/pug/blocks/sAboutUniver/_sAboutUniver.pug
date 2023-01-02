@@ -43,3 +43,28 @@ mixin sAboutUniver(data)
 								li Дополнительное образование
 								li Дополнительное образование
 	// end sAboutUniver
+
+
+mixin sAboutUniver2(data)
+	// start sAboutUniver
+	+b.SECTION.sAboutUniver.section#sAboutUniver&attributes(attributes)
+		.container-fluid
+			+e.row.row
+				+e.col.col-sm-auto.col-md-5.col-xl-auto.order-md-last
+					+e.img-wrap.bg-wrap
+						+img('img/sAboutUniver-2.jpg', 'bg')
+				.col-md
+					+b.section-title
+						h2 Об&nbsp;университете
+					+b.createBlock
+						+e.title
+							span Создан&nbsp;в
+							+e.year 1994
+								span году
+						p Правительством Москвы с&nbsp;целью подготовки высококлассных специалистов для различных сфер городского управления.
+
+					ul
+						li Государственный вуз, который готовит кадры по&nbsp;наиболее востребованным программам высшего и&nbsp;дополнительного профессионального образования для Москвы и&nbsp;регионов&nbsp;РФ.
+						li Успешно реализует отраслевые программы, среди которых &laquo;MPA в&nbsp;здравоохранении&raquo;, MPA &laquo;Управление организациями культуры и&nbsp;искусства&raquo;, &laquo;Управление строительными проектами&raquo;.
+						li Создает индивидуальные образовательные проекты под запрос профессионалов конкретных отраслей.
+	// end sAboutUniver
