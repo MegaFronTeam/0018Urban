@@ -1,0 +1,52 @@
+mixin sStructure(data)
+	// start sStructure
+	+b.SECTION.sStructure.section#sStructure&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Структура программы
+				+e.inner
+					+b.braces
+					+b.braces--bottom
+					+e.base
+						.row
+							.col
+								span Базовая часть
+							.col-auto
+								+e.hours
+									b 1630
+									span академических <br> часов
+					+e.action
+						b +
+						span Специализация на&nbsp;выбор
+					+e.row.row
+						.col-4
+							+e.item
+								+e.title
+									b Школа
+								+e.hours
+									b 110
+									span академических <br> часов
+						.col-4
+							+e.item
+								+e.title
+									b СПО
+									span Среднее профессиональное образование
+								+e.hours
+									b 110
+									span академических <br> часов
+						.col-4
+							+e.item
+								+e.title
+									b ДО
+									span Дополнительное образование
+								+e.hours
+									b 110
+									span академических <br> часов
+				+e.action
+					b =
+					+e.hours.text-primary
+						b 1740
+						span академических <br> часов
+
+	// end sStructure
