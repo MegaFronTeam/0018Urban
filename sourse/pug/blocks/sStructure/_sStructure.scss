@@ -2,9 +2,19 @@
 .sStructure {
 	// --sPT: #{rem()};
 	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sTPB: #{rem(36)};
+	--sPT: 4px;
+	--sPB: 4px;
+	@include media-breakpoint-up(sm) {
+		--sPT: #{rem(16)};
+		--sPB: #{rem(16)};
+	}
+	b,
+	strong {
+		font-weight: bold;
+	}
 	&__row {
-		// --bs-gutter-y: #{rem()};
+		--bs-gutter-y: var(--bs-gutter-x);
 		@include media-breakpoint-up(xl) {
 			--bs-gutter-x: #{rem(32)};
 		}
@@ -21,7 +31,7 @@
 		@include roww(8px, m);
 		display: flex;
 		font-weight: 700;
-		font-size: rem(32);
+		font-size: rem(36);
 		line-height: 1;
 		span {
 			font-weight: 400;
@@ -32,22 +42,29 @@
 		color: var(--bs-white);
 		background-color: var(--bs-primary);
 		border-radius: rem(16);
-		padding: 2.5rem;
+		padding: 2rem;
+		@include media-breakpoint-up(sm) {
+			padding: 2.5rem;
+		}
+		.row {
+			align-items: center;
+			--bs-gutter-y: calc(var(--bs-gutter-x) / 2);
+		}
 	}
 	&__action {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		font-size: rem(65);
+		line-height: 1;
 		& > b {
 			font-weight: 500;
-			font-size: rem(58);
-			line-height: 1;
 		}
 		& > span {
 			font-weight: 700;
-			font-size: rem(16);
 			line-height: calc(20 / 16);
+			font-size: 0.28em;
 		}
 	}
 	&__item {
@@ -68,7 +85,7 @@
 			padding: rem(16) rem(24);
 			background-color: var(--bs-white);
 			b {
-				font-size: rem(32);
+				font-size: rem(36);
 				line-height: 1;
 				color: var(--bs-primary);
 				margin-bottom: rem(4);
@@ -85,8 +102,11 @@
 		position: relative;
 		border-radius: rem(16);
 		border: 1px solid var(--bs-border-color);
-		padding: rem(22);
+		padding: 2rem 1rem;
 		margin: rem(18) 0;
+		@include media-breakpoint-up(sm) {
+			padding: rem(22) rem(22) rem(52) rem(22);
+		}
 		.sStructure__action {
 			margin-bottom: rem(27);
 			margin-top: rem(16);
@@ -99,6 +119,14 @@
 				transform: scale(-1) translateX(50%);
 				bottom: auto;
 				top: 100%;
+			}
+		}
+		& + .sStructure__action {
+			.sStructure__hours {
+				font-size: rem(45);
+				span {
+					font-weight: 700;
+				}
 			}
 		}
 	}

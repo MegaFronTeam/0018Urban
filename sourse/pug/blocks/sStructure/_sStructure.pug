@@ -11,7 +11,7 @@ mixin sStructure(data)
 					+e.base
 						.row
 							.col
-								span Базовая часть
+								b Базовая часть
 							.col-auto
 								+e.hours
 									b 1630
@@ -20,14 +20,16 @@ mixin sStructure(data)
 						b +
 						span Специализация на&nbsp;выбор
 					+e.row.row
-						.col-4
+						.col-md-4
 							+e.item
 								+e.title
 									b Школа
 								+e.hours
 									b 110
 									span академических <br> часов
-						.col-4
+						.col.d-md-none
+							.text-center или
+						.col-md-4
 							+e.item
 								+e.title
 									b СПО
@@ -35,7 +37,9 @@ mixin sStructure(data)
 								+e.hours
 									b 110
 									span академических <br> часов
-						.col-4
+						.col.d-md-none
+							.text-center или
+						.col-md-4
 							+e.item
 								+e.title
 									b ДО
