@@ -3,7 +3,7 @@ mixin sAboutUniver(data)
 	+b.SECTION.sAboutUniver.section#sAboutUniver&attributes(attributes)
 		.container-fluid
 			+e.row.row
-				+e.col.col-sm-auto.col-md-5.col-xl-auto
+				+e.col.col-md-5.col-xl-auto
 					+e.img-wrap.bg-wrap
 						+img('img/sAboutUniver-1.jpg', 'bg')
 				.col-md
@@ -50,13 +50,21 @@ mixin sAboutUniver2(data)
 	+b.SECTION.sAboutUniver.section#sAboutUniver&attributes(attributes)
 		.container-fluid
 			+e.row.row
-				+e.col.col-sm-auto.col-md-5.col-xl-auto.order-md-last
+				+e.col.col-md-5.col-xl-auto.order-md-last
+					+b.section-title.d-md-none
+						h2 Об&nbsp;университете
+					+b.createBlock.d-md-none
+						+e.title
+							span Создан&nbsp;в
+							+e.year 1994
+								span году
+						p Правительством Москвы с&nbsp;целью подготовки высококлассных специалистов для различных сфер городского управления.
 					+e.img-wrap.bg-wrap
 						+img('img/sAboutUniver-2.jpg', 'bg')
 				.col-md
-					+b.section-title
+					+b.section-title.d-none.d-md-block
 						h2 Об&nbsp;университете
-					+b.createBlock
+					+b.createBlock.d-none.d-md-flex
 						+e.title
 							span Создан&nbsp;в
 							+e.year 1994

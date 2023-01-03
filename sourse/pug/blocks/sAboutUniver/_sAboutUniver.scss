@@ -2,10 +2,13 @@
 .sAboutUniver {
 	--sPT: #{rem(24)};
 	--sPB: #{rem(24)};
-	--sTPB: #{rem(24)};
+	--sTPB: #{rem(16)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(48)};
 		--sPB: #{rem(48)};
+		--sTPB: #{rem(24)};
+	}
+	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(32)};
 	}
 	&__row {
@@ -168,6 +171,13 @@
 		background-color: var(--bs-white);
 		border-radius: rem(16);
 		overflow: hidden;
+		margin-bottom: rem(8);
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
 		&__title {
 			position: relative;
 			font-weight: 900;
@@ -176,6 +186,12 @@
 			padding: rem(16);
 			background-color: var(--bs-primary);
 			color: var(--bs-white);
+			@include media-breakpoint-only(md) {
+				font-size: rem(60);
+			}
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+			}
 			span {
 				display: block;
 				font-weight: 700;
@@ -185,7 +201,9 @@
 		&__year {
 			display: flex;
 			align-items: center;
-
+			@include media-breakpoint-down(sm) {
+				justify-content: center;
+			}
 			span {
 				display: block;
 				font-weight: 900;
@@ -202,6 +220,9 @@
 			margin-bottom: 0;
 			font-weight: 700;
 			line-height: calc(20 / 16);
+			@include media-breakpoint-only(md) {
+				font-size: rem(16);
+			}
 		}
 	}
 
