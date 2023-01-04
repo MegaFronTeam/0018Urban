@@ -6,9 +6,9 @@ mixin sStructure(data)
 				+b.section-title.text-center
 					h2 Структура программы
 				+e.inner
-					+b.braces
-					+b.braces--bottom
-					+e.base
+					+b.braces.d-none.d-md-block
+					+b.braces--bottom.d-none.d-md-block
+					+e.base.d-none.d-md-block
 						.row
 							.col
 								b Базовая часть
@@ -16,38 +16,77 @@ mixin sStructure(data)
 								+e.hours
 									b 1630
 									span академических <br> часов
-					+e.action
+					+e.action.d-none.d-md-flex
 						b +
 						span Специализация на&nbsp;выбор
 					+e.row.row
 						.col-md-4
 							+e.item
-								+e.title
-									b Школа
-								+e.hours
-									b 110
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b Школа
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
 									span академических <br> часов
 						.col.d-md-none
 							.text-center или
 						.col-md-4
 							+e.item
-								+e.title
-									b СПО
-									span Среднее профессиональное образование
-								+e.hours
-									b 110
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b СПО
+										span Среднее профессиональное образование
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
 									span академических <br> часов
 						.col.d-md-none
 							.text-center или
 						.col-md-4
 							+e.item
-								+e.title
-									b ДО
-									span Дополнительное образование
-								+e.hours
-									b 110
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b ДО
+										span Дополнительное образование
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
 									span академических <br> часов
-				+e.action
+				+e.action.d-none.d-md-flex
 					b =
 					+e.hours.text-primary
 						b 1740
