@@ -6,8 +6,10 @@ mixin sAboutUniver(data)
 				+e.col.col-md-5.col-xl-auto
 					+e.img-wrap.bg-wrap
 						+img('img/sAboutUniver-1.jpg', 'bg')
+						+e.text.d-md-none
+							h2 Специализации
 				.col-md
-					+b.section-title
+					+b.section-title.d-none.d-md-block
 						h2 Специализации
 					.tabs
 						.tabs__caption
@@ -61,6 +63,8 @@ mixin sAboutUniver2(data)
 						p Правительством Москвы с&nbsp;целью подготовки высококлассных специалистов для различных сфер городского управления.
 					+e.img-wrap.bg-wrap
 						+img('img/sAboutUniver-2.jpg', 'bg')
+						+e.text
+							p Современный учебный корпус, интерактивные классы с высокотехнологичным оборудованием в центре города.
 				.col-md
 					+b.section-title.d-none.d-md-block
 						h2 Об&nbsp;университете
