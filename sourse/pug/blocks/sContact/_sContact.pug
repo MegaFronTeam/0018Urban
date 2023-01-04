@@ -2,12 +2,12 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container-fluid
-			+e.wrapper
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
 				+b.section-title.text-center
 					h2 Контакты
 				+e.row.row
 					.col-md-6
-						+e.item
+						+e.item(data-aos="fade-up" data-aos-delay="200" )
 							ul
 								li.mb-0
 									h4 Виктория Чистякова
@@ -25,7 +25,7 @@ mixin sContact()
 							+e.img-wrap.order-md-first
 								+img('img/contact-avatar.jpg', 'bg')
 					.col-md-6
-						+e.item
+						+e.item(data-aos="fade-up" data-aos-delay="400" )
 							ul
 								li
 									h4 Университет Правительства Москвы

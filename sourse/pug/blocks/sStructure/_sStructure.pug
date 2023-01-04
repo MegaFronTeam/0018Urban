@@ -2,13 +2,13 @@ mixin sStructure(data)
 	// start sStructure
 	+b.SECTION.sStructure.section#sStructure&attributes(attributes)
 		.container-fluid
-			+e.wrapper
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
 				+b.section-title.text-center
 					h2 Структура программы
 				+e.inner
 					+b.braces.d-none.d-md-block
 					+b.braces--bottom.d-none.d-md-block
-					+e.base.d-none.d-md-block
+					+e.base.d-none.d-md-block(data-aos="fade-up" data-aos-delay="150")
 						.row
 							.col
 								b Базовая часть
@@ -17,11 +17,11 @@ mixin sStructure(data)
 									b 1630
 									span академических <br> часов
 					+e.action.d-none.d-md-flex
-						b +
+						b(data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400") +
 						span Специализация на&nbsp;выбор
 					+e.row.row
 						.col-md-4
-							+e.item
+							+e.item(data-aos="fade-right" data-aos-duration="400")
 								+e.item-wrap
 									+e.action.d-md-none
 										b =
@@ -43,7 +43,7 @@ mixin sStructure(data)
 						.col.d-md-none
 							.text-center или
 						.col-md-4
-							+e.item
+							+e.item(data-aos="fade-right" data-aos-delay="200" data-aos-duration="400")
 								+e.item-wrap
 									+e.action.d-md-none
 										b =
@@ -66,7 +66,7 @@ mixin sStructure(data)
 						.col.d-md-none
 							.text-center или
 						.col-md-4
-							+e.item
+							+e.item(data-aos="fade-right" data-aos-delay="400" data-aos-duration="400")
 								+e.item-wrap
 									+e.action.d-md-none
 										b =
@@ -87,8 +87,8 @@ mixin sStructure(data)
 									b 1740
 									span академических <br> часов
 				+e.action.d-none.d-md-flex
-					b =
-					+e.hours.text-primary
+					b(data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400") =
+					+e.hours.text-primary(data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400")
 						b 1740
 						span академических <br> часов
 

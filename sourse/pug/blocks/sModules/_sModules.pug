@@ -1,6 +1,6 @@
 mixin modulesItem(p, i)
 	.col-md-6.col-lg-4
-		+e.item
+		+e.item(data-aos="fade-up" data-aos-delay="150")
 			if i
 				+icon('check-rounded')
 			else
@@ -11,7 +11,7 @@ mixin sModules(data)
 	// start sModules
 	+b.sModules.section&attributes(attributes)
 		.container-fluid
-			+e.wrapper
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
 				+b.section-title.text-center
 					h2 Модули программы
 				+e.row.row
@@ -32,7 +32,7 @@ mixin sModulesLearn(data)
 	// start sModules
 	+b.sModules.section&attributes(attributes)
 		.container-fluid
-			+e.wrapper
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
 				+b.section-title.text-center
 					h2 Вы&nbsp;научитесь
 				+e.row.row

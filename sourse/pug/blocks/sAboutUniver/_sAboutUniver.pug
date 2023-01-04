@@ -3,12 +3,12 @@ mixin sAboutUniver(data)
 	+b.SECTION.sAboutUniver.section#sAboutUniver&attributes(attributes)
 		.container-fluid
 			+e.row.row
-				+e.col.col-md-5.col-xl-auto
+				+e.col.col-md-5.col-xl-auto(data-aos="fade-up" data-aos-delay="300" )
 					+e.img-wrap.bg-wrap
 						+img('img/sAboutUniver-1.jpg', 'bg')
 						+e.text.d-md-none
 							h2 Специализации
-				.col-md
+				.col-md(data-aos="fade-up" data-aos-delay="600" )
 					+b.section-title.d-none.d-md-block
 						h2 Специализации
 					.tabs
@@ -52,7 +52,7 @@ mixin sAboutUniver2(data)
 	+b.SECTION.sAboutUniver.section#sAboutUniver&attributes(attributes)
 		.container-fluid
 			+e.row.row
-				+e.col.col-md-5.col-xl-auto.order-md-last
+				+e.col.col-md-5.col-xl-auto.order-md-last(data-aos="fade-up" data-aos-delay="300" )
 					+b.section-title.text-center.d-md-none
 						h2 Об&nbsp;университете
 					+b.createBlock.d-md-none
@@ -65,7 +65,7 @@ mixin sAboutUniver2(data)
 						+img('img/sAboutUniver-2.jpg', 'bg')
 						+e.text
 							p Современный учебный корпус, интерактивные классы с высокотехнологичным оборудованием в центре города.
-				.col-md
+				.col-md(data-aos="fade-up" data-aos-delay="600" )
 					+b.section-title.d-none.d-md-block
 						h2 Об&nbsp;университете
 					+b.createBlock.d-none.d-md-flex

@@ -46,6 +46,7 @@
     "@fancyapps/ui": "^4.0.31",
     "@popperjs/core": "^2.11.6",
     "air-datepicker": "^3.3.1",
+    "aos": "^2.3.4",
     "choices.js": "^10.1.0",
     "filepond": "^4.30.4",
     "filepond-plugin-image-preview": "^4.6.11",

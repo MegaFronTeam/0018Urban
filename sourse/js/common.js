@@ -753,6 +753,14 @@ function eventHandler() {
 		};
 	});
 
+	AOS.init({
+		disable: 'mobile',
+		// offset: 200,
+		// once: true, 
+		duration: 600,
+		easing: 'ease-in-out-cubic',
+		// delay: 100,
+	});
 
 
 	$(".сustom-select-js").select2({

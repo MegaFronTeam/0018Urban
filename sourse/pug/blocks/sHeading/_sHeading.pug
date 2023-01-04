@@ -2,7 +2,7 @@ mixin sHeading(data)
 	// start sHeading
 	+b.SECTION.sHeading.section.bg-wrap#sHeading&attributes(attributes)
 		+img('img/sHeading-bg.jpg', 'bg').img-bg
-		.container
+		.container(data-aos="fade-up")
 			+e.row.row
 				.col-auto
 					+img('img/svg/heading-logo-1.svg')

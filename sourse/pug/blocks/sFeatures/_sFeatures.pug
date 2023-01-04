@@ -2,11 +2,11 @@ mixin sFeatures(data)
 	// start sFeatures
 	+b.SECTION.sFeatures.section#sFeatures&attributes(attributes)
 		.container-fluid
-			+e.wrapper
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
 				+e.row.row
 					mixin featuresItem(h2, p)
 						.col-md-6.col-lg-4
-							+e.item
+							+e.item(data-aos="fade-up" data-aos-delay="150")
 								if h2
 									h2!= h2
 								else
