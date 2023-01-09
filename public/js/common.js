@@ -65,16 +65,34 @@ const JSCCommon = {
 			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
+	// closeMenu() {
+	// 	const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
+	// 	const menu = document.querySelector(".menu-mobile--js");
+	// 	if (!menu) return;
+	// 	if (menu.classList.contains("active")) {
+	// 		toggle.forEach(element => element.classList.remove("on"));
+	// 		menu.classList.remove("active");
+	// 		[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+	// 	}
+
+	// },
 	closeMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
 		const menu = document.querySelector(".menu-mobile--js");
+		let menuItems = document.querySelectorAll(".menu-item a");
 		if (!menu) return;
 		if (menu.classList.contains("active")) {
 			toggle.forEach(element => element.classList.remove("on"));
 			menu.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
+			[document.body].forEach(el => el.classList.remove("fixed"));
 		}
-
+		for (let menuItem of menuItems) {
+			menuItem.addEventListener('click', function() {
+				document.body.classList.remove('fixed');
+				menu.classList.remove('active');
+				toggle.forEach(element => element.classList.remove("on"));
+			});
+		}
 	},
 	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
