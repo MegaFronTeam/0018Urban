@@ -8,12 +8,12 @@
 		{"name":"Новости", "url":"#"}
 	],
 	"landingNav":[
-		{ "name":"О программе", "url":"#"},
-		{	"name":"Структура программы", "url":"#"},
-		{"name":"Эксперты программы", "url":"#"},
-		{"name":"Об университете", "url":"#"} ,
+		{ "name":"О программе", "url":"#sTerms"},
+		{	"name":"Структура программы", "url":"#sStructure"},
+		{"name":"Эксперты программы", "url":"#sExperts"},
+		{"name":"Об университете", "url":"#sAboutUniver2"} ,
 		{"name":"Как поступить", "url":"#"} ,
-		{"name":"Контакты", "url":"#"}
+		{"name":"Контакты", "url":"#sContact"}
 	],
 	"social":[
 		"vk","ok","telegram","whatsapp"
