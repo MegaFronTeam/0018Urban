@@ -13,7 +13,13 @@
 	}
 	&__row {
 		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(32)};
+		}
 		@include media-breakpoint-up(xl) {
+			--bs-gutter-x: #{rem(38)};
+		}
+		@include media-breakpoint-up(xxl) {
 			--bs-gutter-x: #{rem(56)};
 		}
 	}
