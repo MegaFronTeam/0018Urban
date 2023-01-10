@@ -4,7 +4,8 @@ mixin modulesItem(p, i)
 			if i
 				+icon('check-rounded')
 			else
-				+img('img/svg/switch-check.svg')
+				+e.icon
+					//- +img('img/svg/switch-check.svg')
 			p!= p
 
 mixin sModules(data)
