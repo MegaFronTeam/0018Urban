@@ -11,31 +11,31 @@
 	}
 	&__row {
 		position: relative;
-		&::after,
-		&::before {
-			content: "";
-			position: absolute;
-			top: var(--bs-gutter-y);
-			width: 1px;
-			height: calc(100% - var(--bs-gutter-y));
-			background-color: var(--bs-border-color);
-			display: none;
-		}
-		&::before {
-			@include media-breakpoint-up(md) {
-				display: block;
-				left: 50%;
-			}
-			@include media-breakpoint-up(lg) {
-				left: 33.33333333%;
-			}
-		}
-		&::after {
-			@include media-breakpoint-up(lg) {
-				display: block;
-				right: 33.33333333%;
-			}
-		}
+		// &::after,
+		// &::before {
+		// 	content: "";
+		// 	position: absolute;
+		// 	top: var(--bs-gutter-y);
+		// 	width: 1px;
+		// 	height: calc(100% - var(--bs-gutter-y));
+		// 	background-color: var(--bs-border-color);
+		// 	display: none;
+		// }
+		// &::before {
+		// 	@include media-breakpoint-up(md) {
+		// 		display: block;
+		// 		left: 50%;
+		// 	}
+		// 	@include media-breakpoint-up(lg) {
+		// 		left: 33.33333333%;
+		// 	}
+		// }
+		// &::after {
+		// 	@include media-breakpoint-up(lg) {
+		// 		display: block;
+		// 		right: 33.33333333%;
+		// 	}
+		// }
 		// --bs-gutter-x: #{rem()};
 		// --bs-gutter-y: #{rem()};
 		--bs-gutter-y: 1.5rem;
@@ -46,10 +46,10 @@
 			--bs-gutter-x: 2rem;
 		}
 	}
-	.section-title {
-	}
-	&__col {
-	}
+	// .section-title {
+	// }
+	// &__col {
+	// }
 	&__wrapper {
 		background-color: var(--bs-white);
 		border-radius: rem(24);
@@ -125,48 +125,48 @@
 			}
 		}
 	}
-	&__icon{
+	&__icon {
 		width: rem(40);
-			height: auto;
-			max-width: 100%;
-			flex-shrink: 0;
-			margin-right: 1rem;
-			margin-top: rem(5);
-			@include media-breakpoint-only(lg) {
-				margin-right: 0.5rem;
-			}
-			@include media-breakpoint-up(xl) {
-				width: rem(47);
-			}
+		height: auto;
+		max-width: 100%;
+		flex-shrink: 0;
+		margin-right: 1rem;
+		margin-top: rem(5);
+		@include media-breakpoint-only(lg) {
+			margin-right: 0.5rem;
+		}
+		@include media-breakpoint-up(xl) {
+			width: rem(47);
+		}
+		position: relative;
+		// height: rem(24);
+		&::before {
+			content: "";
+			position: absolute;
+			@include a-cent;
+			width: 100%;
+			height: rem(14);
+			border-radius: rem(100);
+			background: linear-gradient(90deg, #837dff 0%, #09f9bf 50.91%);
+			filter: blur(0.7px);
+		}
+		&::after {
+			content: "";
+			margin-left: auto;
+			width: rem(24);
 			position: relative;
-			// height: rem(24);
-			&::before{
-				content: '';
-				position: absolute;
-				@include a-cent;
-				width: 100%;
-				height: rem(14);
-				border-radius: rem(100);
-				background: linear-gradient(90deg, #837DFF 0%, #09F9BF 50.91%);
-				filter: blur(1.5px);
-			}
-			&::after{
-				content: '';
-				margin-left: auto;
-				width: rem(24);
-				position: relative;
-				z-index: 2;
-				display: block;
-				height: rem(24);
-				border-radius: 50%;
-				background-image: var(--check-white);
-				background-position: center;
-				background-size: 75%;
-				background-repeat: no-repeat;
-				background-color:var(--bs-primary);
-				box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
-				filter: blur(0.5px);
-			}
+			z-index: 2;
+			display: block;
+			height: rem(24);
+			border-radius: 50%;
+			background-image: var(--check-white);
+			background-position: center;
+			background-size: 75%;
+			background-repeat: no-repeat;
+			background-color: var(--bs-primary);
+			box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.25);
+			filter: blur(0.3px);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
@@ -185,12 +185,14 @@
 	}
 } // end.sModules
 
-.sModules--progarm {
+.sModules {
 	.sModules__row {
 		@include media-breakpoint-up(md) {
+			margin-top: 0;
 			display: block;
 			columns: 2;
 			column-gap: 0;
+			column-rule: 1px solid var(--bs-border-color);
 		}
 		@include media-breakpoint-up(lg) {
 			columns: 3;
@@ -200,6 +202,8 @@
 		@include media-breakpoint-up(md) {
 			display: inline-block;
 			width: 100%;
+			margin-top: 0;
+			margin-bottom: var(--bs-gutter-y);
 		}
 	}
 }
