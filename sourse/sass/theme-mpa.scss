@@ -340,6 +340,8 @@ body {
 	--bs-pagination-hover-bg: var(--bs-white);
 	--bs-pagination-hover-border-color: var(--bs-secondary);
 	--bs-pagination-hover-color: var(--bs-primary-hover);
+	--bs-pagination-focus-box-shadow: none;
+	--bs-pagination-focus-bg: var(--bs-white)
 }
 .page-link {
 	border-radius: var(--bs-pagination-border-radius);
