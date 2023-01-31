@@ -12,13 +12,7 @@ $file-format: woff;
 @include font-face ($caption-font, $addr + "Roboto-Regular", 400, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
-@font-face {
-	font-family: 'Moscow Sans';
-	src: url('../fonts/MoscowSans-Regular.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+
 // font-weight helper:
 // 100 Thin
 // 200 Extra Light
