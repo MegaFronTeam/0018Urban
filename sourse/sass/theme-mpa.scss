@@ -466,7 +466,67 @@ body {
 	max-width: rem(300);
 }
 .sEnter {
-	background-image: url(../img/enter-bg-school.jpg);
+	position: relative;
+	background-image: url(../img/enter-bg-mpa.png);
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		width: 668px;
+		max-width: calc(100% - var(--bs-gutter-x)) !important;
+		margin-left: calc(var(--bs-gutter-x) * 0.5);
+		margin-right: calc(var(--bs-gutter-x) * 0.5);
+		border-radius: $border-radius-lg;
+		background-color: var(--bs-white);
+		padding-top: 40px;
+		padding-bottom: 40px;
+		min-height: 530px;
+		@media (min-width: 576px) {
+			min-height: 436px;
+		}
+	}
+	&__container {
+		width: 400px;
+		max-width: 100%;
+	}
+	&__title {
+		color: var(--bs-body-color);
+	}
+
+	&__recovery {
+		color: $body-color;
+		&:hover {
+			color: var(--bs-primary-hover);
+		}
+	}
+
+	.form-wrap__caption {
+		color: $body-color;
+	}
+
+	.form-wrap__input {
+		border-color: $body-color;
+	}
+
+	.form-wrap__input-title {
+		color: var(--bs-body-color);
+	}
+	.form-wrap__input[required] + .form-wrap__input-title:after {
+		background-image: url(../img/svg/required.svg);
+	}
+	// background-image: url(../img/enter-bg-school.jpg);
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 100%;
+	// 	left: 0;
+	// 	top: 0;
+	// 	background-image: url(../img/svg/enter-bg-mpa-arrow.svg);
+	// 	background-repeat: no-repeat;
+	// }
 }
 .page-404 .sEnter {
 	background-image: url(../img/enter-bg-school-404.jpg);
