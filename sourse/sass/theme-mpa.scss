@@ -554,7 +554,19 @@ body {
 	border-color: var(--bs-primary);
 }
 .sAccount {
-	background-image: none;
+	@media (min-width: 768px) {
+		background-image: url(../img/svg/account-bg-mpa-1.svg), url(../img/svg/account-bg-mpa-2.svg);
+		background-repeat: no-repeat, no-repeat;
+		background-position: 0 0, calc(100% + 180px) 0;
+		background-size: 120px 158px, 930px 850px;
+		border-radius: $border-radius;
+		padding: 24px;
+	}
+	// @media (min-width: 1200px) {
+	// 	padding: 24px 24px 36px;
+	// 	background-position: 0 100%, 100% 0;
+	// 	background-size: 81px 153px, 190px 183px;
+	// }
 	&__container {
 		box-shadow: none;
 		overflow: hidden;
@@ -1012,8 +1024,6 @@ body {
 		border: var(--bs-border-width) solid var(--bs-border-color) !important;
 	}
 }
-
-
 
 .account-page,
 .profile-page {
