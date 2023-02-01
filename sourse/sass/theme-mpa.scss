@@ -53,7 +53,7 @@ $light: #f7f7f7;
 	--bs-primary-active: #{$primary-active};
 	--bs-primary-disabled: #{$primary-disabled};
 	--bs-primary-visited: #{$primary-visited};
-
+	--bs-border-color: #757b8a;
 	--bs-form-control-bg: #{$white};
 	--primary-gr: linear-gradient(
 		180deg,
@@ -213,6 +213,15 @@ body {
 	}
 	.filter-btn {
 		background-color: var(--bs-light);
+	}
+	.network-filter .select2-container--default .select2-selection--multiple,
+	.network-filter .select2-container--default .select2-selection--single {
+		@media (max-width: 767.98px) {
+			border: 1px solid #e8e8e8 !important;
+		}
+		@media (max-width: 991.98px) {
+			border: 1px solid transparent !important;
+		}
 	}
 }
 .profile-item {
@@ -535,17 +544,41 @@ body {
 .sEnter__logo {
 	display: none !important;
 }
-.sAccount .section-title {
-	.h1,
-	h1 {
-		color: var(--bs-primary);
-	}
-}
+// .sAccount .section-title {
+// 	.h1,
+// 	h1 {
+// 		color: var(--bs-primary);
+// 	}
+// }
 .form-control:focus {
 	border-color: var(--bs-primary);
 }
 .sAccount {
 	background-image: none;
+	&__container {
+		box-shadow: none;
+		overflow: hidden;
+	}
+	&__body {
+		&::after {
+			top: 27px;
+			background-color: #e8e8e8;
+		}
+	}
+	.tabs__slider {
+		overflow: visible;
+	}
+	.tabs__btn {
+		&.active:after {
+			bottom: 0;
+		}
+		.h2,
+		h2 {
+			font-size: 18px;
+			margin-bottom: 0;
+			padding-bottom: 4px;
+		}
+	}
 }
 
 .breadcrumb-item:not(:first-child) a:before {
@@ -827,16 +860,6 @@ body {
 	padding-bottom: 0.316rem;
 }
 
-// .network-filter .select2-container--default .select2-selection--multiple,
-// .network-filter .select2-container--default .select2-selection--single {
-// 	@media (max-width: 767.98px) {
-// 		border: 1px solid #e8e8e8 !important;
-// 	}
-// 	@media (max-width: 991.98px) {
-// 		border: 1px solid transparent !important;
-// 	}
-// }
-
 .sProfile .section-title .h1,
 .sProfile .section-title h1 {
 	color: var(--bs-primary);
@@ -981,4 +1004,18 @@ body {
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 	border-radius: 8px;
 	border: none !important;
+}
+
+.select2-container--default {
+	.select2-selection--single,
+	.select2-selection--multiple {
+		border: var(--bs-border-width) solid var(--bs-border-color) !important;
+	}
+}
+
+
+
+.account-page,
+.profile-page {
+	background-color: var(--bs-body-bg);
 }
