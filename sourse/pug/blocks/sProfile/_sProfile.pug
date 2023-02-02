@@ -22,7 +22,8 @@ mixin sProfile(request, sent)
 						+e.contacts-item.LI
 							a(href="tel:+79009009090") +7 (900)-900-90-90
 			+e.activity
-				+e.like-btn.BUTTON
+				// активный класс кнопки - .active
+				+e.BUTTON.like-btn.active
 					+icon('like-btn')
 				+e.status В поиске работы
 				+e.position Директор по развитию
