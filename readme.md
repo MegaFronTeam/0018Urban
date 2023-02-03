@@ -12,7 +12,7 @@
  5. <https://megafronteam.github.io/0018Urban/public/7-1-profile.html>
  6. <https://megafronteam.github.io/0018Urban/public/7-2-profile-request.html>
  7. <https://megafronteam.github.io/0018Urban/public/7-3-profile-request-sent.html>
- <!-- 8. <https://megafronteam.github.io/0018Urban/public/8-1-requests.html> -->
+ 8. <https://megafronteam.github.io/0018Urban/public/8-1-requests.html>
  9. <https://megafronteam.github.io/0018Urban/public/10-1-news.html>
  10. <https://megafronteam.github.io/0018Urban/public/11-1-news-item.html>
  10. <https://megafronteam.github.io/0018Urban/public/12-1-events.html>
