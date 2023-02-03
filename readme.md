@@ -1,9 +1,9 @@
 # 0018Urban
  <!-- 1. <https://megafronteam.github.io/0018Urban/public> -->
  2. <https://megafronteam.github.io/0018Urban/public/00-modal.html>
- <!-- 2. <https://megafronteam.github.io/0018Urban/public/2-1-enter.html>
+ 2. <https://megafronteam.github.io/0018Urban/public/2-1-enter.html>
  2. <https://megafronteam.github.io/0018Urban/public/2-2-enter-validated.html>
- 2. <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html> -->
+ 2. <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-1-account.html>
  3. <https://megafronteam.github.io/0018Urban/public/4-2-account.html>
  4. <https://megafronteam.github.io/0018Urban/public/5-1-main.html>
@@ -26,7 +26,7 @@
  12. <https://megafronteam.github.io/0018Urban/public/20-1-topic-discuss.html>
  12. <https://megafronteam.github.io/0018Urban/public/24-1-alerts.html>
  12. <https://megafronteam.github.io/0018Urban/public/24-1-alerts-empty.html>
- <!-- 13. <https://megafronteam.github.io/0018Urban/public/404.html> -->
+ 13. <https://megafronteam.github.io/0018Urban/public/404.html>
  14. <https://megafronteam.github.io/0018Urban/public/28-faq.html>
    
  # School-landing
