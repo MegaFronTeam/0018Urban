@@ -978,12 +978,36 @@ body {
 		background-position: left 0 top 0, right 0 top 0;
 	}
 }
-
+.sForum__counter-img {
+	@media (max-width: 767.98px) {
+		background-color: var(--bs-white);
+	}
+	background-color: var(--bs-light);
+}
+.sForum__theme {
+	color: var(--bs-body-color);
+}
 .sForum__header {
-	background-color: var(--bs-primary-light);
+	background-color: var(--bs-light);
+	@media (min-width: 576px) {
+		background-image: url(../img/svg/forum-bg-mpa.svg);
+		background-repeat: no-repeat;
+		background-size: 150px 46px;
+		background-position: right 0 top 0;
+	}
 	&::before {
 		display: none;
 	}
+	h1,
+	.h1,
+	h2,
+	.h2 {
+		text-align: left;
+		color: var(--bs-body-color);
+	}
+}
+.discussion__item-head {
+	background-color: var(--bs-light);
 }
 .alert,
 .forum-pagination {
