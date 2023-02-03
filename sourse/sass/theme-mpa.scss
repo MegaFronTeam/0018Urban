@@ -573,6 +573,9 @@ body {
 	@media (min-width: 1200px) {
 		padding: 25px calc(var(--bs-gutter-x) / 2);
 	}
+	&:hover {
+		color: var(--bs-link-hover-color);
+	}
 }
 
 .main-wrapper {
@@ -734,7 +737,22 @@ body {
 	// }
 }
 .page-404 .sEnter {
-	background-image: url(../img/enter-bg-school-404.jpg);
+	position: relative;
+	background-image: url(../img/svg/page-404-mpa.svg);
+	background-repeat: no-repeat;
+	&::after {
+		content: url("data:image/svg+xml;charset=UTF-8,%3csvg width='462' height='444' viewBox='0 0 462 444' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M462 0L437.425 61.7605H405.99C339.923 91.4185 295.587 149.694 254.772 209.375C213.958 269.055 186.579 336.991 166.648 406.449C146.952 475.101 133.595 547.289 94.9723 607.424C84.9154 623.066 69.7454 638.89 52.7363 642.985H52.7102C47.3491 644.272 41.8055 644.402 36.1836 642.985C35.7401 642.868 35.3097 642.764 34.8662 642.634C12.6525 636.12 4.16094 609.531 1.1739 586.634C0.730408 583.292 0.352184 579.938 0 576.596C25.9573 523.456 37.9836 463.711 54.4189 406.449C74.3369 336.991 101.716 269.055 142.53 209.375C183.344 149.694 230.028 80.8867 296.082 51.2157H252.307L462 0Z' fill='white'/%3e%3c/svg%3e ");
+	}
+	.container {
+		background-color: var(--bs-gray-medium);
+	}
+	.error {
+		color: var(--bs-body-color);
+		p {
+			font-size: 18px;
+			color: #565656;
+		}
+	}
 }
 
 .sEnter__logo {
