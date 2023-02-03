@@ -1261,6 +1261,7 @@ body {
 // }
 .sEnter .form-wrap__input {
 	background-color: #fff;
+	color: var(--bs-body-color);
 	&::placeholder {
 		color: #c9cad1;
 	}
