@@ -32,3 +32,49 @@ mixin sTerms(data)
 								+icon('teacher')
 					
 	// end sTerms
+
+
+mixin sTerms2(data)
+	// start sTerms
+	+b.sTerms--mpa.section#sTerms&attributes(attributes)
+		.container-fluid
+			+e.content.bg-white
+				+e.row.row
+					+e.col.col-auto
+						+e.item(data-aos="fade-up")
+							+e.count 9
+								span месяцев
+								+icon('cap')
+							+e.title.strong
+								span интенсивного <br> обучения
+					+e.col.col-md-auto
+						+e.braces.text-center(data-aos="fade-right" data-aos-delay="300")
+							+icon('braces').d-none.d-md-block
+							+icon('braces-2').d-md-none
+					+e.col.col-auto
+						+e.item(data-aos="fade-up" data-aos-delay="150")
+							+e.count--thin.text-primary 500
+							+e.title.ps-3
+								span академических <br> часов
+					+e.col.col-md-auto
+						+e.braces.text-center(data-aos="fade-right" data-aos-delay="400")
+							+icon('braces').d-none.d-md-block
+							+icon('braces-2').d-md-none
+					+e.col.col-auto
+						+e.item--modules(data-aos="fade-up" data-aos-delay="300")
+							+e.count.text-primary 5
+							+e.title
+								span учебных <br> модулей
+								+icon('teacher')
+			+e.content--feature.bg-white
+				+e.row-sm.row
+					.col-md-6
+						+e.item
+							+icon('handshake')
+							+e.title.strong индивидуальная работа с&nbsp;наставником
+					.col-md-6
+						+e.item
+							+icon('star-labels')
+							+e.title.strong решение вашей управленческой задачи
+
+	// end sTerms

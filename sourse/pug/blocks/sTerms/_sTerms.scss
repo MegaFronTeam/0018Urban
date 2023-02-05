@@ -125,7 +125,7 @@
 			writing-mode: vertical-rl;
 			transform: scale(-1);
 			line-height: 1;
-			font-size: 0.233em;
+			font-size: 0.1333em;
 			text-transform: uppercase;
 		}
 		.icon {
@@ -142,6 +142,73 @@
 			}
 			@include media-breakpoint-up(lg) {
 				font-size: rem(150);
+			}
+		}
+	}
+
+	&.sTerms--mpa {
+		--sPT: 0;
+		.sTerms__title {
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+			@include media-breakpoint-down(md) {
+				font-size: 24px;
+			}
+			&.strong {
+				font-weight: 800;
+			}
+		}
+		.sTerms__content--feature {
+			margin-top: 8px;
+			.sTerms__row-sm {
+				align-items: center;
+				--bs-gutter-y: 40px;
+				@include media-breakpoint-up(lg) {
+					--bs-gutter-y: 0;
+					flex-direction: row;
+					--bs-gutter-x: 50px;
+				}
+			}
+			.sTerms__item {
+				@include roww(16px, m);
+				margin-top: calc(-1 * var(--bs-gutter-x));
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				@include media-breakpoint-up(md) {
+					flex-direction: row;
+				}
+				& > * {
+					margin-top: var(--bs-gutter-x);
+				}
+				.icon {
+					flex-shrink: 0;
+					&-handshake {
+						font-size: 64px;
+					}
+					&-star-labels {
+						font-size: 74px;
+					}
+				}
+				@include media-breakpoint-only(md) {
+					.icon {
+						&-handshake {
+							font-size: calc(64px * 0.74);
+						}
+						&-star-labels {
+							font-size: calc(74px * 0.74);
+						}
+					}
+				}
+				.sTerms__title {
+					text-align: center;
+					max-width: 18em;
+					@include media-breakpoint-up(md) {
+						text-align: left;
+					}
+				}
 			}
 		}
 	}
