@@ -1,0 +1,30 @@
+mixin sFormats(data)
+	// start sFormats
+	+b.SECTION.sFormats.section#sFormats&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Структура обучения
+				+e.wrap
+					+e.head
+						+e.row.row
+							mixin item(h, ...items)
+								+e.col.col-md-6.col-lg-4
+									+e.item
+										h4!= h
+										ul
+											each item in items
+												li!= item
+							+item('Очно', `Лекции`, `Мастер-классы экспертов`, `Решение кейсов`, `Тренинги`, `Стажировки`, `VR-тренажеры`)
+							+item('Дистанционно', `Вебинары`, `Общение в&nbsp;чате`, `Мастермайнд (групповые встречи для обмена опытом)`)
+							+item('Самостоятельная работа', `Онлайн-курсы`, `Домашние задания`)
+				h4 Форматы поддержки для каждого участника
+				ul
+					li Кураторы программы
+					li Рабочая пятерка
+					li Индивидуальный трекер (наставник)
+					li Группа мастермайнд
+					li Учебная онлайн-платформа
+					li Telegram-канал программы и чат для участников
+
+	// end sFormats
