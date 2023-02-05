@@ -148,6 +148,11 @@
 
 	&.sTerms--mpa {
 		--sPT: 0;
+		--sPB: 4px;
+		@include media-breakpoint-up(sm) {
+		--sPT: 0;
+		--sPB: 16px;
+		}
 		.sTerms__title {
 			text-align: center;
 			@include media-breakpoint-up(md) {

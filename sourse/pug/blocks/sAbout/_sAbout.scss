@@ -106,6 +106,12 @@
 	}
 
 	&.sAbout--mpa {
+		--sPT: 4px;
+		--sPB: 4px;
+		@include media-breakpoint-up(sm) {
+		--sPT: 16px;
+		--sPB: 16px;
+		}
 		.sAbout__item {
 			min-height: unset;
 			h4 {
