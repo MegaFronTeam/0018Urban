@@ -105,6 +105,22 @@
 		}
 	}
 
+	&.sAbout--mpa {
+		.sAbout__item {
+			min-height: unset;
+			h4 {
+				max-width: rem(510);
+			}
+			p {
+				font-size: 16px;
+				max-width: em(510);
+				@include media-breakpoint-up(lg) {
+					font-size: rem(18);
+				}
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

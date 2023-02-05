@@ -22,3 +22,19 @@ mixin sAbout(data)
 							li Кадровый резерв на&nbsp;должность руководителя образовательной организации.
 
 	// end sAbout
+
+
+mixin sAbout2(data)
+	// start sAbout
+	+b.sAbout--mpa.section#sAbout&attributes(attributes)
+		.container-fluid
+			+e.row.row
+				.col-12
+					+e.item(data-aos="fade-up" data-aos-delay="150")
+						+img('img/svg/sAbout-4.svg')
+						
+						h4 Цель
+						p Подготовить руководителей из&nbsp;организаций Транспортного комплекса Москвы для реализации стратегии развития транспортной системы города.
+
+
+	// end sAbout
