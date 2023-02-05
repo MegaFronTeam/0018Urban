@@ -107,3 +107,39 @@ mixin top-navLanding()
 									span Выход
 						+menu-toggle()
 	// end top-nav
+
+
+mixin top-navMPA() 
+	// start top-nav
+	+b.top-nav--mpa.block-with-lazy
+		.container-fluid
+			+e.row.row
+				//- +e.col-logo.col-auto.order-first
+				//- 	+e.logo(href='/')
+				//- 		+img('img/svg/logotype.svg')
+				+e.col-menu.col
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							//- +menu-toggle()
+							+MnuMPA()
+				+e.controls-col.col-auto
+					+e.controls
+						+b.topNav-btnWrap--help.d-lg-none
+							+e.btn.toggle-contact-js(data-id= "#ddHelp")
+								+icon('help')
+						+b.topNav-btnWrap--person
+							+e.btn.toggle-contact-js(data-id= "#ddPerson")
+								+icon('person')
+							+e.btn-content.dropdown-contact-js#ddPerson
+								a(href="#")
+									+icon('change-contact')
+									span Обмен контактами 
+									+e.btn-count 3
+								a(href="#")
+									+icon('tune')
+									span Настройки
+								a(href="#")
+									+icon('exit')
+									span Выход
+						+menu-toggle()
+	// end top-nav

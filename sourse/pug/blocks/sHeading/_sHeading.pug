@@ -14,3 +14,20 @@ mixin sHeading(data)
 				h1 Программа MPA для директоров и управленческих команд образовательных организаций города Москвы
 				
 	// end sHeading
+
+mixin sHeadingMPA(data)
+	// start sHeading
+	+b.SECTION.sHeading--mpa.section.bg-wrap#sHeading&attributes(attributes)
+		+img('img/svg/sHeading-bg-mpa.svg', 'bg').img-bg
+		.container(data-aos="fade-up")
+			+e.row.row
+				.col-auto
+					+img('img/svg/heading-logo-4.svg')
+				.col-auto
+					+img('img/svg/heading-logo-5.svg')
+				.col-auto
+					+img('img/svg/heading-logo-6.svg')
+			+b.section-title
+				h1 &laquo;МТА. Управление в&nbsp;транспортной отрасли&raquo;
+				p Станьте лучшим в&nbsp;своей отрасли
+	// end sHeading

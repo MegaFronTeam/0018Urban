@@ -15,6 +15,12 @@
 		{"name":"Как поступить", "url":"#"} ,
 		{"name":"Контакты", "url":"#sContact"}
 	],
+	"NavMPA":[
+		{ "name":"О программе", "url":"#sTerms"},
+		{	"name":"Структура обучения", "url":"#sStructure"},
+		{"name":"Команда проекта", "url":"#sExperts"},
+		{"name":"Контакты", "url":"#sAboutUniver2"}
+	],
 	"social":[
 		"vk","ok","telegram","whatsapp"
 	],
