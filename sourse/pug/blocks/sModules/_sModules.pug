@@ -1,12 +1,22 @@
 mixin modulesItem(p, i)
 	+e.col.col-md-6.col-lg-4
-		+e.item(data-aos="fade-up" data-aos-delay="150")
+		+e.item(data-aos="fade-up" data-aos-delay="150")&attributes(attributes)
 			if i
-				+icon('check-rounded')
+				+icon(`${i}`)
 			else
 				+e.icon
 					//- +img('img/svg/switch-check.svg')
 			p!= p
+			if block
+				block
+
+mixin modulesItem2(p, i, t)
+	+e.col.col-md-6.col-lg-4
+		+e.item(data-aos="fade-up" data-aos-delay="150")&attributes(attributes)
+			+icon(`${i}`)
+			+e.item-content
+				p!= p
+				span!= t
 
 mixin sModules(data)
 	// start sModules
@@ -16,17 +26,17 @@ mixin sModules(data)
 				+b.section-title.text-center
 					h2 Модули программы
 				+e.row.row
-					+modulesItem(`Видение и&nbsp;стратегия современного образования.`, `i`)
-					+modulesItem(`Современные технологии управления в&nbsp;образовании.`, `i`)
-					+modulesItem(`Принятие и&nbsp;реализация управленческих решений.`, `i`)
-					+modulesItem(`Управление клиентоориентированностью в&nbsp;образовании.`, `i`)
-					+modulesItem(`Управление воспитательным, образовательным процессом и&nbsp;оценка качества.`, `i`)
-					+modulesItem(`Профессиональное лидерство руководителя.`, `i`)
-					+modulesItem(`Эффективные коммуникации руководителя.`, `i`)
-					+modulesItem(`Управление человеческими ресурсами в&nbsp;системе руководителя.`, `i`)
-					+modulesItem(`Управление экономикой и&nbsp;хозяйством образовательной организации.`, `i`)
-					+modulesItem(`Управление рисками образовательной организации.`, `i`)
-					+modulesItem(`Управление публичными коммуникациями и&nbsp;информационными потоками.`, `i`)
+					+modulesItem(`Видение и&nbsp;стратегия современного образования.`, `check-rounded`)
+					+modulesItem(`Современные технологии управления в&nbsp;образовании.`, `check-rounded`)
+					+modulesItem(`Принятие и&nbsp;реализация управленческих решений.`, `check-rounded`)
+					+modulesItem(`Управление клиентоориентированностью в&nbsp;образовании.`, `check-rounded`)
+					+modulesItem(`Управление воспитательным, образовательным процессом и&nbsp;оценка качества.`, `check-rounded`)
+					+modulesItem(`Профессиональное лидерство руководителя.`, `check-rounded`)
+					+modulesItem(`Эффективные коммуникации руководителя.`, `check-rounded`)
+					+modulesItem(`Управление человеческими ресурсами в&nbsp;системе руководителя.`, `check-rounded`)
+					+modulesItem(`Управление экономикой и&nbsp;хозяйством образовательной организации.`, `check-rounded`)
+					+modulesItem(`Управление рисками образовательной организации.`, `check-rounded`)
+					+modulesItem(`Управление публичными коммуникациями и&nbsp;информационными потоками.`, `check-rounded`)
 	// end sModules
 
 mixin sModulesLearn(data)
@@ -45,4 +55,34 @@ mixin sModulesLearn(data)
 					+modulesItem(`Выстраивать работу команд, нацеленных на высокую результативность.`)
 					+modulesItem(`Оценивать и повышать эффективность образовательного и воспитательного процесса.`)
 				p В&nbsp;процессе обучения вы&nbsp;создадите новые решения по&nbsp;развитию вашей образовательной организации, разработаете и&nbsp;реализуете собственный проект изменений.
-	// end sModule
+	// end sModules
+
+
+mixin sModulesMpa(data)
+	// start sModules
+	+b.sModules--mpa.section&attributes(attributes)
+		.container-fluid
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
+				+b.section-title.text-center
+					h2 В&nbsp;результате&nbsp;вы
+				+e.row.row
+					+modulesItem(`Познакомитесь с&nbsp;трендами в&nbsp;стратегическом и&nbsp;тактическом управлении на&nbsp;предприятиях транспорта.`, `arrow-right`)
+					+modulesItem(`Освоите инструменты функционального, продуктового, проектного и&nbsp;процессного подхода`, `arrow-right`)
+					+modulesItem(`Научитесь управлять клиентским сервисом и&nbsp;эффективностью сотрудников в&nbsp;период изменений`, `arrow-right`)
+					+modulesItem(`Узнаете основные направления стратегии цифровой трансформации транспортной отрасли`, `arrow-right`)
+					+modulesItem(`Изучите основы управления экономикой предприятий Транспортного комплекса Москвы`, `arrow-right`)
+					+modulesItem(`Решите управленческую задачу, которую поставите перед собой на&nbsp;старте обучения`, `arrow-right`)
+	// end sModules
+
+mixin sModulesMpa2(data)
+	// start sModules
+	+b.sModules--mpa-check.section&attributes(attributes)
+		.container-fluid
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
+				+b.section-title.text-center
+					h2 Во&nbsp;время обучения&nbsp;вы
+				+e.row.row
+					+modulesItem2(`Пройдете стажировки у&nbsp;коллег из&nbsp;программы`, `check-rounded`, `летом 2023 года`)
+					+modulesItem2(`Сформулируете и решите управленческую задачу`, `check-rounded`, `при поддержке трекеров и&nbsp;коллег`)
+					+modulesItem2(`Защитите итоговый проект перед руководителями`, `check-rounded`, `декабря 2023 года`)
+	// end sModules
