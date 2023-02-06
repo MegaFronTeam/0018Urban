@@ -115,6 +115,94 @@
 	// &__slide {
 	// 	height: auto;
 	// }
+	&.sContact--mpa {
+		--sPT: 4px;
+		--sPB: 60px;
+		@include media-breakpoint-up(sm) {
+			--sPT: 16px;
+			--sPB: #{rem(110)};
+		}
+		@include media-breakpoint-up(md) {
+			--sPB: #{rem(150)};
+		}
+		position: relative;
+		background-image: url(../img/svg/sContact-bg-mpa.svg);
+		background-size: 57px 54px;
+		background-position: 0 100%;
+		@include media-breakpoint-up(md) {
+			background-size: rem(170) rem(160);
+		}
+		&::before,
+		&::after {
+			pointer-events: none;
+			// @include a-cent(y);
+			content: "";
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+			top: auto;
+			right: 50%;
+			left: auto;
+			bottom: 0;
+		}
+		&::before {
+			background-image: url(../img/svg/sContact-bg-mpa-1.svg);
+			width: calc(719px * 0.4);
+			height: calc(232px * 0.4);
+			transform: translate(30.3%, 0);
+			@include media-breakpoint-up(sm) {
+				width: calc(719px * 0.5);
+				height: calc(232px * 0.5);
+				transform: translate(25%, 0);
+			}
+			@include media-breakpoint-up(md) {
+				width: calc(719px * 0.6);
+				height: calc(232px * 0.6);
+				transform: translate(35%, 0);
+			}
+			@include media-breakpoint-up(lg) {
+				width: calc(719px * 0.8);
+				height: calc(232px * 0.8);
+				transform: translate(35%, 0);
+			}
+			@include media-breakpoint-up(xl) {
+				width: 719px;
+				height: 232px;
+				transform: translate(35%, 0);
+			}
+		}
+		&::after {
+			background-image: url(../img/svg/sContact-bg-mpa-2.svg);
+			z-index: 3;
+			width: calc(592px * 0.4);
+			height: calc(389px * 0.4);
+			transform: translate(127.3%, 0);
+			@include media-breakpoint-up(sm) {
+				width: calc(592px * 0.5);
+				height: calc(389px * 0.5);
+				transform: translate(125.3%, 0);
+			}
+			@include media-breakpoint-up(md) {
+				width: calc(592px * 0.6);
+				height: calc(389px * 0.6);
+				transform: translate(136.3%, 0);
+			}
+			@include media-breakpoint-up(lg) {
+				width: calc(592px * 0.8);
+				height: calc(389px * 0.8);
+				transform: translate(141.3%, 0);
+			}
+			@include media-breakpoint-up(xl) {
+				width: rem(592);
+				height: rem(389);
+				transform: translate(147.3%, 0);
+			}
+		}
+		.sContact__wrapper {
+			position: relative;
+			z-index: 2;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

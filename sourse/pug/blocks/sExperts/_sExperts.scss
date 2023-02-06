@@ -104,6 +104,12 @@
 	}
 
 	&.sExperts--mpa {
+		--sPT: 4px;
+		--sPB: 4px;
+		@include media-breakpoint-up(sm) {
+			--sPT: #{rem(16)};
+			--sPB: #{rem(16)};
+		}
 		.sExperts__wrapper {
 			background-color: var(--bs-white);
 			border-radius: rem(24);
@@ -121,7 +127,7 @@
 		}
 		.sExperts__row {
 			@include media-breakpoint-down(md) {
-				--bs-gutter-y: 32px;
+				--bs-gutter-y: ;
 			}
 		}
 		.sExperts__card {

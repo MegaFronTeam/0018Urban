@@ -111,7 +111,6 @@
 			}
 			@include media-breakpoint-down(sm) {
 				padding-bottom: 32px;
-
 			}
 			img {
 				height: 30px;
@@ -137,6 +136,12 @@
 				align-items: center;
 				justify-content: center;
 			}
+		}
+	}
+	&.footer--landing-mpa {
+		@include media-breakpoint-down(md) {
+			border-radius: $border-radius $border-radius 0 0;
+			border-top: 1px solid #c9cad1;
 		}
 	}
 	@include media-breakpoint-up(xl) {
