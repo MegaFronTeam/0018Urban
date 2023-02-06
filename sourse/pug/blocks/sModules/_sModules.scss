@@ -172,6 +172,8 @@
 	}
 
 	&.sModules--mpa {
+		position: relative;
+		z-index: 2;
 		.sModules__wrapper {
 			background-image: url(../img/svg/sModules-bg-mpa-sm.svg);
 			background-repeat: no-repeat;
