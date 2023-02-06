@@ -23,7 +23,7 @@ $file-format: woff2;
 @include font-face($default-font, $addr + "MoscowSans-Bold", 700, $file-formats: $file-format);
 @include font-face($default-font, $addr + "MoscowSans-ExtraBold", 800, $file-formats: $file-format);
 
-$primary-light: #c2d4ff;
+$primary-light: #e85967;
 $primary: #da2032;
 $primary-hover: #e85967;
 $primary-active: #ab0528;

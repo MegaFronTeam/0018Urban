@@ -107,8 +107,8 @@
 		--sPT: 4px;
 		--sPB: 4px;
 		@include media-breakpoint-up(sm) {
-			--sPT: #{rem(16)};
-			--sPB: #{rem(16)};
+			--sPT: 16px;
+			--sPB: 16px;
 		}
 		.sExperts__wrapper {
 			background-color: var(--bs-white);

@@ -259,6 +259,109 @@
 			}
 		}
 	}
+	&.sAboutUniver--mpa {
+		--sPT: 4px;
+		--sPB: 4px;
+		@include media-breakpoint-up(sm) {
+			--sPT: 16px;
+			--sPB: 16px;
+		}
+		.sAboutUniver__img-wrap {
+			padding: 0;
+			max-width: 530px;
+			&::before {
+				width: 100%;
+				height: 100%;
+			}
+			&::after {
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(181.04deg, rgba(0, 0, 0, 0) 12.86%, rgba(0, 0, 0, 0.644) 99.11%);
+				@include media-breakpoint-up(md) {
+					background-image: linear-gradient(200.94deg, rgba(0, 0, 0, 0.064) 1.51%, rgba(0, 0, 0, 0) 86.16%);
+				}
+			}
+		}
+		.sAboutUniver__text {
+			text-align: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			padding: 26px 24px;
+		}
+		.tabs__caption {
+			.tabs__btn {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: auto;
+				flex-grow: 1;
+				font-weight: 800;
+				line-height: 1;
+				font-size: 34px;
+				padding: 8px 10px;
+				@include media-breakpoint-up(lg) {
+					padding: 10px;
+					font-size: 40px;
+				}
+			}
+		}
+		.tabs__content {
+			h4 {
+				margin-bottom: 4px;
+				@include media-breakpoint-down(sm) {
+					font-size: 20px;
+				}
+				& + span {
+					display: block;
+					margin-bottom: 32px;
+					@include media-breakpoint-up(md) {
+						margin-bottom: 16px;
+					}
+					@include media-breakpoint-only(md) {
+						font-size: rem(16);
+					}
+				}
+			}
+			h6 {
+				color: var(--bs-primary);
+				margin-bottom: 4px;
+				font-size: rem(16);
+				@include media-breakpoint-up(md) {
+					font-size: rem(18);
+					color: var(--bs-body-color);
+				}
+				@include media-breakpoint-only(md) {
+					font-size: rem(16);
+				}
+				& + p {
+					margin-bottom: 32px;
+					@include media-breakpoint-up(md) {
+						margin-bottom: 16px;
+					}
+				}
+			}
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+				@include media-breakpoint-only(md) {
+					font-size: rem(16);
+				}
+			}
+		}
+		.sAboutUniver__wrapper {
+			background-color: var(--bs-light);
+			border-radius: rem(24);
+			padding: 2rem 1rem;
+			@include media-breakpoint-up(sm) {
+				padding: 2.5rem;
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 3rem 2.5rem;
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {
 	}
