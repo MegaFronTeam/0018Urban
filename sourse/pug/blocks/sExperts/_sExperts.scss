@@ -127,7 +127,8 @@
 		}
 		.sExperts__row {
 			@include media-breakpoint-down(md) {
-				--bs-gutter-y: ;
+				--bs-gutter-y: var(--bs-gutter-x);
+				--bs-gutter-x: 32px;
 			}
 		}
 		.sExperts__card {
