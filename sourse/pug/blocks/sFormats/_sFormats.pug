@@ -3,36 +3,36 @@ mixin sFormats(data)
 	+b.SECTION.sFormats.section#sFormats&attributes(attributes)
 		.container-fluid
 			+e.wrapper
-				+b.section-title.text-center
+				+b.section-title.text-center(data-aos="fade-up" data-aos-delay="150")
 					h2 Структура обучения
 				+e.inner
 					+e.head
 						+e.row.row
 							mixin item(h, ...items)
 								+e.col.col-md-4
-									+e.item
+									+e.item&attributes(attributes)
 										h4
 											span!= h
 										ul
 											each item in items
 												li!= item
 													+icon('arrow-right')
-													
-							+item('Очно', `Лекции`, `Мастер-классы экспертов`, `Решение кейсов`, `Тренинги`, `Стажировки`, `VR-тренажеры`)
-							+item('Дистанционно', `Вебинары`, `Общение в&nbsp;чате`, `Мастермайнд (групповые встречи для обмена опытом)`)
-							+item('Самостоятельная работа', `Онлайн-курсы`, `Домашние задания`)
-					+e.wrap
+
+							+item('Очно', `Лекции`, `Мастер-классы экспертов`, `Решение кейсов`, `Тренинги`, `Стажировки`, `VR-тренажеры`)(data-aos="fade-right" data-aos-duration="400")
+							+item('Дистанционно', `Вебинары`, `Общение в&nbsp;чате`, `Мастермайнд (групповые встречи для обмена опытом)`)(data-aos="fade-right" data-aos-delay="200" data-aos-duration="400")
+							+item('Самостоятельная работа', `Онлайн-курсы`, `Домашние задания`)(data-aos="fade-right" data-aos-delay="400" data-aos-duration="400")
+					+e.wrap(data-aos="fade-up" data-aos-delay="100" )
 						h4 Форматы поддержки для&nbsp;каждого участника
-						ul
+						ul(data-aos="fade-up" data-aos-delay="150")
 							mixin li(t)
 								li
 									+icon('check-rounded')
 									span!= t
 							+li(`Кураторы программы`)
-							+li(`Рабочая пятерка`)
 							+li(`Индивидуальный трекер (наставник)`)
-							+li(`Группа мастермайнд`)
 							+li(`Учебная онлайн-платформа`)
-							+li(`Telegram-канал программы и чат для участников`)
+							+li(`Рабочая пятерка`)
+							+li(`Группа мастермайнд`)
+							+li(`Telegram-канал программы <br> и&nbsp;чат для участников`)
 
 	// end sFormats

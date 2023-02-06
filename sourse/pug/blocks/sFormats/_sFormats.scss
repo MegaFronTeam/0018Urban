@@ -14,6 +14,12 @@
 		--bs-gutter-y: 32px;
 	}
 	.section-title {
+		h2 {
+			@extend .h3;
+			@include media-breakpoint-down(sm) {
+				font-size: 19px;
+			}
+		}
 	}
 	&__col {
 	}
@@ -21,19 +27,80 @@
 	}
 
 	&__wrapper {
+		position: relative;
+
 		background-color: var(--bs-white);
 
 		border-radius: rem(24);
 		padding: 2rem 1rem;
 		@include media-breakpoint-up(md) {
-			padding: 2rem 1rem 8rem;
+			padding: 2rem 1rem 9rem;
 			background-color: var(--bs-light);
+			background-image: url(../img/svg/sFormats-bg-mpa.svg);
+			background-repeat: no-repeat;
+			background-position: 0 95%;
 		}
 		@include media-breakpoint-up(lg) {
 			padding: 2.5rem 2.5rem 8rem;
 		}
 		@include media-breakpoint-up(xl) {
 			padding: 3rem 8.5rem 8rem;
+		}
+		&::before,
+		&::after {
+			@include media-breakpoint-up(md) {
+				pointer-events: none;
+				// @include a-cent(y);
+				content: "";
+				position: absolute;
+				background-repeat: no-repeat;
+				background-size: contain;
+				top: 77%;
+				right: 10%;
+				left: auto;
+				bottom: auto;
+			}
+			@include media-breakpoint-up(lg) {
+				top: 70%;
+				right: 10%;
+			}
+		}
+		&::before {
+			@include media-breakpoint-up(md) {
+				background-image: url(../img/svg/sFormats-bg-mpa-1.svg);
+				width: calc(rem(93) * 0.8);
+				height: calc(rem(189) * 0.8);
+				transform: translate(-119%, 25%);
+			}
+			@include media-breakpoint-up(lg) {
+				width: rem(93);
+				height: rem(189);
+				transform: translate(-118.5%, 25%);
+			}
+			// @include media-breakpoint-up(xl) {
+			// 	width: rem(93);
+			// 	height: rem(189);
+			// 	transform: translate(-118.5%, 25%);
+			// }
+		}
+		&::after {
+			z-index: 3;
+			@include media-breakpoint-up(md) {
+				background-image: url(../img/svg/sFormats-bg-mpa-2.svg);
+				width: calc(rem(270) * 0.8);
+				height: calc(rem(287) * 0.8);
+				transform: translate(50%, -18%);
+			}
+			@include media-breakpoint-up(lg) {
+				width: rem(270);
+				height: rem(287);
+				transform: translate(50%, -18%);
+			}
+			// @include media-breakpoint-up(xl) {
+			// 	width: rem(270);
+			// 	height: rem(287);
+			// 	transform: translate(50%, -18%);
+			// }
 		}
 	}
 	&__item {
@@ -114,6 +181,7 @@
 				@include media-breakpoint-up(md) {
 					margin-bottom: 20px;
 					padding-left: 45px;
+					// max-width: 360px;
 				}
 				&:last-child {
 					margin-bottom: 0;
@@ -158,6 +226,8 @@
 	}
 	&__inner {
 		@include media-breakpoint-up(md) {
+			position: relative;
+			z-index: 2;
 			background-color: var(--bs-white);
 			padding: 24px 16px 32px;
 			border-radius: $border-radius;
