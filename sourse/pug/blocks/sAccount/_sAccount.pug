@@ -52,14 +52,14 @@ mixin sAccount(validated)
 								+in-c('radio','В поиске работы','status')
 							//- +input('2011-2012','select', 'Год стажировки').js-choice
 
-							+input('Год стажировки','select', '2011-2012')(  data-placeholder="placeholder 1" class="сustom-select-js")
+							+input('2011-2012','select', 'Год стажировки')(data-placeholder="placeholder 1" class="сustom-select-js")
 
 							+input("Введите Вашу должность",'', 'Должность')
 							+input('ОИВ','text', 'ОИВ/Подведомственная организация')
 							//- +input('', 'text', 'Область экспертизы')(value="Область 1,Область 2" placeholder="sdfsdf").remove-btn--js
-							+input('Область экспертизы','select', 'Область экспертизы')(multiple data-placeholder="placeholder 1" class="сustom-select-js")
+							+input('','select', 'Область экспертизы')(multiple data-placeholder="Область экспертизы" class="сustom-select-js")
 							+input('Введите Ваш текст', 'textarea','Чем могу быть полезен')
-							+input('Интересы','select', 'О себе')(multiple data-placeholder="placeholder 1" class="сustom-select-js")
+							+input('','select', 'О себе')(multiple data-placeholder="Интересы" class="сustom-select-js")
 							+e.form-caption Эссе
 							//- +upload-field('Перетащите свой файл или загрузите с компьютера')
 							<input type="file"  class="filepond" name="filepond" multiple  data-allow-reorder="true" data-max-file-size="3MB" data-max-files="3">

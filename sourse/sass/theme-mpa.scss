@@ -1243,6 +1243,9 @@ body {
 		background-position: left 0 top 0, right 0 top 0;
 	}
 }
+.sForum__counter {
+	background-color: var(--bs-gray-medium);
+}
 .sForum__counter-img {
 	@media (max-width: 767.98px) {
 		background-color: var(--bs-white);
@@ -1259,6 +1262,7 @@ body {
 		background-repeat: no-repeat;
 		background-size: 150px 46px;
 		background-position: right 0 top 0;
+		padding-right: 140px;
 	}
 	&::before {
 		display: none;
@@ -1290,6 +1294,13 @@ body {
 	--bs-btn-border-color: var(--bs-light);
 	// font-size: 14px;
 }
+.sAlerts__item {
+	&.read {
+		.sAlerts__btn {
+			--bs-btn-bg: var(--bs-gray-medium);
+		}
+	}
+}
 // .form-wrap__title {
 // 	color: var(--bs-primary);
 // }
@@ -1310,7 +1321,7 @@ body {
 
 .select2-container--default .select2-selection--multiple {
 	padding-top: 0.116rem;
-	padding-bottom: 0.516rem;
+	padding-bottom: 0.416rem;
 }
 .select2-container--default .select2-selection--single {
 	padding-top: 0.316rem;
@@ -1519,6 +1530,23 @@ body {
 	& > .container {
 		max-width: calc(1536px + var(--bs-gutter-x)) !important;
 	}
+	.dd-group__head {
+		&:before {
+			background-color: var(--bs-light);
+			border: none;
+		}
+	}
+	.dd-group__item {
+		&:not(:first-child) {
+			border-top-color: var(--bs-gray-medium);
+		}
+		&.active {
+			.dd-group__head-toggle {
+				background-color: var(--bs-light);
+				color: var(--bs-secondary);
+			}
+		}
+	}
 }
 .form-check {
 	outline: none !important;
@@ -1553,10 +1581,14 @@ body {
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+	position: relative;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
 	display: flex !important;
 	align-items: center;
 	justify-content: center;
-	position: static;
 	color: inherit;
 	background-color: transparent;
 	border: none;
@@ -1564,12 +1596,41 @@ body {
 	height: 16px;
 	padding: 0;
 	margin-left: 4px;
+	&::after,
+	&::before {
+		content: "";
+		@include a-cent;
+		position: absolute;
+		width: 12px;
+		height: 2px;
+		background-color: var(--bs-white);
+		transform-origin: center;
+	}
+	&::after {
+		transform: rotate(45deg);
+	}
+	&::before {
+		transform: rotate(135deg);
+	}
 	span {
-		display: block;
-		line-height: 1;
+		display: none;
 	}
 	&:hover {
 		background-color: transparent;
+		&::after,
+		&::before {
+			background-color: var(--bs-body-color);
+		}
 	}
+}
 
+.alert--sm {
+	--bs-alert-padding-x: 11px;
+	--bs-alert-padding-y: 11px;
+	--bs-alert-border-radius: 4px;
+}
+
+.select2-container .select2-search--inline .select2-search__field {
+	border-radius: 0;
+	padding-top: 0;
 }
