@@ -17,9 +17,9 @@
 	],
 	"NavMPA":[
 		{ "name":"О программе", "url":"#sTerms"},
-		{	"name":"Структура обучения", "url":"#sStructure"},
+		{	"name":"Структура обучения", "url":"#sFormats"},
 		{"name":"Команда проекта", "url":"#sExperts"},
-		{"name":"Контакты", "url":"#sAboutUniver2"}
+		{"name":"Контакты", "url":"#sContact"}
 	],
 	"social":[
 		"vk","ok","telegram","whatsapp"

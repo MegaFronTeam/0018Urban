@@ -1764,3 +1764,7 @@ body {
 	--swiperBgDefHover: var(--bs-white);
 	--swiperBorderColorDefHover: var(--bs-primary-hover);
 }
+
+.topNav-btnWrap--help .topNav-btnWrap__btn-content {
+	z-index: 999;
+}
