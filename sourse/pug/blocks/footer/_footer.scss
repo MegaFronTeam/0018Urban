@@ -139,6 +139,7 @@
 		}
 	}
 	&.footer--landing-mpa {
+		background-color: var(--bs-body-bg);
 		@include media-breakpoint-down(md) {
 			border-radius: $border-radius $border-radius 0 0;
 			border-top: 1px solid #c9cad1;

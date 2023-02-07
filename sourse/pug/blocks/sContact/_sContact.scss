@@ -123,15 +123,9 @@
 			--sPB: #{rem(110)};
 		}
 		@include media-breakpoint-up(md) {
-			--sPB: #{rem(150)};
+			--sPB: #{rem(180)};
 		}
 		position: relative;
-		background-image: url(../img/svg/sContact-bg-mpa.svg);
-		background-size: 57px 54px;
-		background-position: 0 100%;
-		@include media-breakpoint-up(md) {
-			background-size: rem(170) rem(160);
-		}
 		&::before,
 		&::after {
 			pointer-events: none;
@@ -198,9 +192,31 @@
 				transform: translate(147.3%, 0);
 			}
 		}
+		& > .container-fluid {
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: calc(100% + var(--sPB));
+				background-image: url(../img/svg/sContact-bg-mpa.svg);
+				background-repeat: no-repeat;
+				width: 57px;
+				height: 54px;
+				background-size: contain;
+				transform: translateY(-100%);
+				@include media-breakpoint-up(md) {
+					width: rem(170);
+					height: rem(160);
+				}
+			}
+		}
 		.sContact__wrapper {
 			position: relative;
 			z-index: 2;
+		}
+		.sContact__img-wrap {
+			border-color: #c9cad1;
 		}
 	}
 	@include media-breakpoint-up(xl) {

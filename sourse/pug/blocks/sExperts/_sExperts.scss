@@ -151,6 +151,7 @@
 		}
 		.sExperts__caption {
 			font-size: 18px;
+			padding-left: 5%;
 			@include media-breakpoint-up(xl) {
 				font-size: rem(18);
 			}

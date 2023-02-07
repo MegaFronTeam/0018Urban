@@ -324,12 +324,12 @@
 				}
 			}
 			h6 {
-				color: var(--bs-primary);
+				// color: var(--bs-primary);
 				margin-bottom: 4px;
 				font-size: rem(16);
 				@include media-breakpoint-up(md) {
 					font-size: rem(18);
-					color: var(--bs-body-color);
+					// color: var(--bs-body-color);
 				}
 				@include media-breakpoint-only(md) {
 					font-size: rem(16);
