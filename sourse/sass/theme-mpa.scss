@@ -19,7 +19,9 @@ $default-font: "Moscow Sans";
 $addr: "../fonts/";
 $file-format: woff2;
 
+@include font-face($default-font, $addr + "MoscowSans-Light", 300, $file-formats: $file-format);
 @include font-face($default-font, $addr + "MoscowSans-Regular", 400, $file-formats: $file-format);
+@include font-face($default-font, $addr + "MoscowSans-Medium", 500, $file-formats: $file-format);
 @include font-face($default-font, $addr + "MoscowSans-Bold", 700, $file-formats: $file-format);
 @include font-face($default-font, $addr + "MoscowSans-ExtraBold", 800, $file-formats: $file-format);
 
@@ -291,6 +293,7 @@ body {
 		.events-filter__radio-wrap {
 			@media (min-width: 768px) {
 				background-color: var(--bs-light);
+				--bs-form-control-bg: transparent;
 			}
 		}
 		.events-filter__btn {
@@ -535,7 +538,7 @@ body {
 .sMainUnits__note-btn,
 .sProfile__request-btn,
 .sProfile__sent-btn {
-	font-weight: 600;
+	font-weight: 500;
 	--bs-btn-padding-y: 0.52rem;
 }
 
@@ -904,6 +907,69 @@ body {
 	}
 	.filepond--panel-root {
 		background-color: var(--bs-light);
+	}
+	.select2-container--default .select2-selection--multiple .select2-selection__choice:not(:last-child):after {
+		content: none;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice {
+		background-color: var(--bs-primary) !important;
+		border: none !important;
+		margin-right: 0;
+		padding: 4px 8px;
+		color: var(--bs-white);
+		border-radius: $border-radius;
+		display: inline-flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+		font-size: 14px;
+	}
+
+	.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+		position: relative;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		color: inherit;
+		background-color: transparent;
+		border: none;
+		width: 16px;
+		height: 16px;
+		padding: 0;
+		margin-left: 4px;
+		&::after,
+		&::before {
+			content: "";
+			@include a-cent;
+			position: absolute;
+			width: 12px;
+			height: 2px;
+			background-color: var(--bs-white);
+			transform-origin: center;
+		}
+		&::after {
+			transform: rotate(45deg);
+		}
+		&::before {
+			transform: rotate(135deg);
+		}
+		span {
+			display: none;
+		}
+		&:hover {
+			background-color: transparent;
+			&::after,
+			&::before {
+				background-color: var(--bs-body-color);
+			}
+		}
 	}
 }
 
@@ -1360,10 +1426,10 @@ body {
 		}
 	}
 }
-.sEvents .news-preview__btn--registred {
-	color: var(--bs-primary);
-	background-color: #fff;
-}
+// .sEvents .news-preview__btn--registred {
+// 	color: var(--bs-primary);
+// 	background-color: #fff;
+// }
 // .sNewsItem ul {
 // 	li {
 // 		&::before {
@@ -1560,70 +1626,6 @@ body {
 	}
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice:not(:last-child):after {
-	content: none;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
-	background-color: var(--bs-primary) !important;
-	border: none !important;
-	margin-right: 0;
-	padding: 4px 8px;
-	color: var(--bs-white);
-	border-radius: $border-radius;
-	display: inline-flex;
-	flex-direction: row-reverse;
-	align-items: center;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
-	font-size: 14px;
-}
-
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-	position: relative;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	display: flex !important;
-	align-items: center;
-	justify-content: center;
-	color: inherit;
-	background-color: transparent;
-	border: none;
-	width: 16px;
-	height: 16px;
-	padding: 0;
-	margin-left: 4px;
-	&::after,
-	&::before {
-		content: "";
-		@include a-cent;
-		position: absolute;
-		width: 12px;
-		height: 2px;
-		background-color: var(--bs-white);
-		transform-origin: center;
-	}
-	&::after {
-		transform: rotate(45deg);
-	}
-	&::before {
-		transform: rotate(135deg);
-	}
-	span {
-		display: none;
-	}
-	&:hover {
-		background-color: transparent;
-		&::after,
-		&::before {
-			background-color: var(--bs-body-color);
-		}
-	}
-}
-
 .alert--sm {
 	--bs-alert-padding-x: 11px;
 	--bs-alert-padding-y: 11px;
@@ -1634,3 +1636,16 @@ body {
 	border-radius: 0;
 	padding-top: 0;
 }
+
+.sEvents .news-preview__btn {
+	padding: 3px 16px 5px;
+}
+
+// .network-filter .select2-container--default .select2-selection--multiple .select2-selection__choice {
+// 	display: inline-flex;
+// }
+
+// .select2-container .select2-search--inline .select2-search__field {
+// 	margin-left: 0;
+// 	padding-left: 5px;
+// }
