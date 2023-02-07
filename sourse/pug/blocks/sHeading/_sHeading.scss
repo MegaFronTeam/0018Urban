@@ -79,7 +79,8 @@
 	// }
 
 	&.sHeading--mpa {
-		color: var(--ba-body-color);
+		color: var(--bs-body-color);
+
 		@include media-breakpoint-up(xl) {
 			--sPT: 140px;
 		}
@@ -142,6 +143,19 @@
 				width: rem(328);
 				height: rem(482);
 				transform: translate(113.3%, -23%);
+			}
+		}
+		& > picture {
+			pointer-events: none;
+			img {
+				@media (min-width: 1280px) {
+					height: rem(1020);
+					width: rem(891);
+					top: 55%;
+					left: 53%;
+					transform: translateY(-50%);
+					object-fit: none;
+				}
 			}
 		}
 		// & > img.img-bg {

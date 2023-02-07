@@ -18,7 +18,10 @@ mixin sHeading(data)
 mixin sHeadingMPA(data)
 	// start sHeading
 	+b.SECTION.sHeading--mpa.section.bg-wrap#sHeading&attributes(attributes)
-		+img('img/svg/sHeading-bg-mpa.svg', 'bg').img-bg
+		picture.picture-bg
+			source(srcset='img/svg/sHeading-bg-mpa-3.svg' media='(min-width:1280px)')
+			img.object-fit-js(src='img/svg/sHeading-bg-mpa.svg' alt='' loading='lazy')
+		//- +img('img/svg/sHeading-bg-mpa.svg', 'bg').img-bg
 		.container(data-aos="fade-up")
 			+e.row.row
 				.col-auto
