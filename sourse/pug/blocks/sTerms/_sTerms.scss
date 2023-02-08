@@ -150,8 +150,8 @@
 		--sPT: 0;
 		--sPB: 4px;
 		@include media-breakpoint-up(sm) {
-		--sPT: 0;
-		--sPB: 16px;
+			--sPT: 0;
+			--sPB: 16px;
 		}
 		.sTerms__title {
 			text-align: center;
@@ -163,6 +163,35 @@
 			}
 			&.strong {
 				font-weight: 800;
+			}
+		}
+		.sTerms__item--modules {
+			.sTerms__title {
+				.icon {
+					stroke-width: 6px;
+					@include media-breakpoint-up(md) {
+						display: none;
+					}
+				}
+			}
+			.sTerms__count {
+				.icon {
+					display: none;
+					fill: none;
+					stroke: var(--bs-body-color);
+					stroke-width: 6px;
+					stroke-linecap: round;
+					stroke-linejoin: round;
+					// font-size: rem(68);
+					font-size: 0.506em;
+					margin-left: rem(16);
+					@include media-breakpoint-up(md) {
+						display: block;
+					}
+					@include media-breakpoint-up(lg) {
+						margin-left: rem(24);
+					}
+				}
 			}
 		}
 		.sTerms__content--feature {
