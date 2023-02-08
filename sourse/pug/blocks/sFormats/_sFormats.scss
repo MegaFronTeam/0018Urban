@@ -203,11 +203,12 @@
 					top: 0;
 					fill: none;
 					stroke: currentColor;
-					stroke-width: 2px;
+					stroke-width: calc(2px * 1.4);
 					color: var(--bs-primary);
 					flex-shrink: 0;
 					font-size: 24px;
 					@include media-breakpoint-up(md) {
+						stroke-width: 2px;
 						font-size: 32px;
 					}
 				}

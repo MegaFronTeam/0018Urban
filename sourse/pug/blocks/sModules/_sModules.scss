@@ -200,6 +200,21 @@
 		}
 	}
 	&.sModules--mpa-check {
+		.sModules__item {
+			.icon {
+				fill: none;
+				stroke: currentColor;
+				stroke-width: calc(2px * 1.375);
+				color: var(--bs-primary);
+				font-size: 32px;
+				margin-right: 1rem;
+				flex-shrink: 0;
+				@include media-breakpoint-up(xl) {
+					stroke-width: 2px;
+					font-size: 44px;
+				}
+			}
+		}
 		.sModules__item-content {
 			font-size: 18px;
 			p {
