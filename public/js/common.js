@@ -87,7 +87,7 @@ const JSCCommon = {
 			[document.body].forEach(el => el.classList.remove("fixed"));
 		}
 		for (let menuItem of menuItems) {
-			menuItem.addEventListener('click', function() {
+			menuItem.addEventListener('click', function () {
 				document.body.classList.remove('fixed');
 				menu.classList.remove('active');
 				toggle.forEach(element => element.classList.remove("on"));
@@ -345,12 +345,12 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	
+
 	const dataPickers = document.querySelectorAll('.data-picker-wrap');
 	for (const dataPickerEll of dataPickers) {
 		const dataPicker = dataPickerEll.querySelector('.data-picker--js');
 		const dataPickerIcon = dataPickerEll.querySelector(`.data-picker ~ .icon`);
-		
+
 		new AirDatepicker(dataPicker, {
 			autoClose: false,
 			// inline: true,
@@ -359,13 +359,13 @@ function eventHandler() {
 				dataPickerIcon.classList.add('active');
 			},
 			onHide() {
-			dataPickerIcon.classList.remove('active');
-		},
-		navTitles: {
-			days: 'yyyy <i>MMMM</i>',
-		},
-	});
-}
+				dataPickerIcon.classList.remove('active');
+			},
+			navTitles: {
+				days: 'yyyy <i>MMMM</i>',
+			},
+		});
+	}
 
 	const selects = document.querySelectorAll('.js-choice');
 	if (selects) {
@@ -464,7 +464,7 @@ function eventHandler() {
 	const selectTabsBtn = document.querySelectorAll('.tabs-option');
 	const requestTabsBtn = document.querySelectorAll('.sRequest__tabs-btn');
 	const tabsContent = document.querySelectorAll('.sRequest__tabs-content');
-	
+
 
 
 
@@ -475,12 +475,15 @@ function eventHandler() {
 			let target = e.target.closest(".tabs-caption-select__head");
 			let targetActive = e.target.closest(".tabs-caption-select.active");
 			let targetBodyA = e.target.closest(".tabs-caption-select__body.active");
-			if (!targetActive) {
+			let innerBtnTarget = e.target.closest(".sRequest__tabs-btn");
+
+			if (!targetActive || innerBtnTarget) {
 				$(".tabs-caption-select").removeClass("active").find(".tabs-caption-select__body").removeClass("active")
 			}
-			if (target) { 
+			if (target) {
 				$(target).parent().toggleClass("active").find(".tabs-caption-select__body").toggleClass("active")
 			}
+			
 		})
 		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
 			const tab = e.target.closest('[data-tabs-path]');
@@ -762,19 +765,22 @@ function eventHandler() {
 		if (!targetToggleActive && !targetDropdownActive) {
 			dropdownActive.removeClass('active');
 			toggleActive.removeClass('active');
+			$('body').removeClass('fixed-mpa');
+
 		};
 		let toggle = event.target.closest('.toggle-contact-js');
 		if (toggle) {
 			let dropdown = document.querySelector(toggle.dataset.id);
 			dropdown.classList.toggle('active');
 			toggle.classList.toggle('active');
+			$('body').addClass('fixed-mpa');
 		};
 	});
 
 	AOS.init({
 		disable: 'mobile',
 		// offset: 200,
-		once: true, 
+		once: true,
 		duration: 600,
 		easing: 'ease-in-out-cubic',
 		// delay: 100,
