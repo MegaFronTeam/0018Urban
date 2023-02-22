@@ -46,6 +46,10 @@
 	&__copyright {
 		span {
 			display: inline-block;
+			margin-left: 4px;
+		}
+		span.org {
+			display: none;
 		}
 	}
 	&__design {

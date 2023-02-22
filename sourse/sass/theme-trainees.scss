@@ -33,7 +33,7 @@ $primary-visited: #f3ecfa;
 $primary-disabled: $light;
 $dark: #46414d;
 $body-color: $dark;
-$gray-600: #bdbdbd;
+$gray-600: #918b99;
 $secondary: $gray-600;
 $gray-medium: #c6c2cc;
 $light: #f5f5f5;
@@ -124,6 +124,7 @@ body {
 		background-color: var(--bs-primary);
 	}
 	@media (max-width: 991.98px) {
+		&.fixed,
 		&.fixed-mpa {
 			overflow: hidden;
 			position: absolute;
@@ -1805,8 +1806,15 @@ body {
 	--swiperBorderColorDefHover: var(--bs-primary-hover);
 }
 
-.topNav-btnWrap--help .topNav-btnWrap__btn-content {
-	z-index: 999;
+.topNav-btnWrap--help {
+	.topNav-btnWrap__btn {
+		@media (min-width: 992px) {
+			right: 16px;
+		}
+	}
+	.topNav-btnWrap__btn-content {
+		z-index: 999;
+	}
 }
 
 @media (min-width: 992px) {
@@ -1921,6 +1929,78 @@ body {
 			border-radius: 8px;
 			font-weight: bold;
 			margin-left: 0;
+		}
+	}
+}
+.footer {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: calc(16 / 12);
+	position: relative;
+	color: var(--bs-secondary);
+	z-index: 2;
+	@media (min-width: 992px) {
+		&::before,
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			height: 100%;
+			z-index: -1;
+		}
+		&::before {
+			background-color: #1a1230;
+			border-radius: 0px 32px 0px 0px;
+			left: 0;
+		}
+
+		&:after {
+			background-color: #361d52;
+			border-radius: 32px 0px 0px 0px;
+			right: 0;
+		}
+		.container-fluid {
+			padding-left: 72px;
+			padding-right: 72px;
+		}
+		.footer__row {
+			&::before,
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 100%;
+				width: 37px;
+				height: 32px;
+				z-index: -1;
+			}
+			&::before {
+				background-image: url("data:image/svg+xml,%3Csvg width='37' height='33' viewBox='0 0 37 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M37 32C35.8445 32.0537 34.7062 32.0526 33.5868 32H0V0C0 14.1938 13.8786 31.0738 33.5868 32H37Z' fill='%231A1230'/%3E%3C/svg%3E%0A");
+				left: 0;
+			}
+
+			&:after {
+				background-image: url("data:image/svg+xml,%3Csvg width='37' height='33' viewBox='0 0 37 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 32C1.15555 32.0537 2.29377 32.0526 3.41318 32H37V0C37 14.1938 23.1214 31.0738 3.41318 32H0Z' fill='%23361D52'/%3E%3C/svg%3E ");
+				right: 0;
+			}
+		}
+	}
+	.footer__row {
+		@media (min-width: 1200px) {
+			--bs-gutter-x: 32px;
+		}
+		@media (max-width: 699.98px) {
+			.col-sm {
+				flex: 0 0 auto;
+			}
+			.footer__design {
+				justify-content: flex-start;
+			}
+		}
+	}
+	.footer__copyright {
+		span.org {
+			display: inline-block;
 		}
 	}
 }

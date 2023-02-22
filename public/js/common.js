@@ -773,7 +773,7 @@ function eventHandler() {
 			let dropdown = document.querySelector(toggle.dataset.id);
 			dropdown.classList.toggle('active');
 			toggle.classList.toggle('active');
-			$('body').addClass('fixed-mpa');
+			$('body').toggleClass('fixed-mpa');
 		};
 	});
 
