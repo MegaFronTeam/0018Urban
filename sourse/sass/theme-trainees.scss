@@ -13,30 +13,30 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/mixins";
 @import "./node_modules/bootstrap/scss/utilities";
 
-$default-font: "Moscow Sans";
+$default-font: "GT Walsheim Pro";
+$secondary-font: "Circe";
 // $caption-font: "Roboto";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: "../fonts/";
 $file-format: woff2;
 
-@include font-face($default-font, $addr + "MoscowSans-Light", 300, $file-formats: $file-format);
-@include font-face($default-font, $addr + "MoscowSans-Regular", 400, $file-formats: $file-format);
-@include font-face($default-font, $addr + "MoscowSans-Medium", 500, $file-formats: $file-format);
-@include font-face($default-font, $addr + "MoscowSans-Bold", 700, $file-formats: $file-format);
-@include font-face($default-font, $addr + "MoscowSans-ExtraBold", 800, $file-formats: $file-format);
+@include font-face($default-font, $addr + "GTWalsheimPro-Regular", 400, $file-formats: $file-format);
+@include font-face($default-font, $addr + "GTWalsheimPro-Bold", 700, $file-formats: $file-format);
+@include font-face($secondary-font, $addr + "Circe-Regular", 400, $file-formats: $file-format);
+@include font-face($secondary-font, $addr + "Circe-Bold", 700, $file-formats: $file-format);
 
-$primary-light: #e85967;
-$primary: #da2032;
-$primary-hover: #e85967;
-$primary-active: #ab0528;
-$primary-visited: #da2032;
+// $primary-light: #e85967;
+$primary: #542d80;
+$primary-hover: #9881b3;
+$primary-active: #eeeaf2;
+$primary-visited: #f3ecfa;
 $primary-disabled: $light;
-$dark: #302525;
+$dark: #46414d;
 $body-color: $dark;
 $gray-600: #bdbdbd;
 $secondary: $gray-600;
-$gray-medium: #e8e8e8;
-$light: #f7f7f7;
+$gray-medium: #c6c2cc;
+$light: #F5F5F5;
 
 :root {
 	@media (min-width: 1537px) {
@@ -50,7 +50,7 @@ $light: #f7f7f7;
 	--bs-body-color: #{$body-color};
 	--bs-body-bg: var(--bs-light);
 	--bs-primary: #{$primary};
-	--bs-primary-light: #{$primary-light};
+	// --bs-primary-light: #{$primary-light};
 	--bs-primary-rgb: 218, 32, 50;
 	--bs-primary-hover: #{$primary-hover};
 	--bs-primary-rgb-hover: rgba(232, 89, 103, 0.2);
@@ -86,8 +86,11 @@ $light: #f7f7f7;
 	--fancybox-bg: #{rgba($gray-medium, 0.95)};
 
 	--chosen-bg: rgba(var(--bs-primary-rgb), 0.2);
-	--bs-font-sans-serif: Moscow Sans, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-		"Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--bs-font-sans-serif: GT Walsheim Pro, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		"Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+
+	--bs-font-monospace: Circe, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 	--calendar-arrow: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.0002 6L15.4102 7.41L10.8302 12L15.4102 16.59L14.0002 18L8.00016 12L14.0002 6Z' fill='#{$dark}'/%3e%3c/svg%3e ");
 	// --calendar-arrow: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='32' height='32' rx='16' fill='#{$primary}'/%3E%3Cpath d='M19.41 11.41L18 10L12 16L18 22L19.41 20.59L14.83 16L19.41 11.41Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -659,6 +662,14 @@ body {
 	display: none;
 }
 @media (max-width: 991.98px) {
+	.top-nav {
+		border-radius: 32px 32px 0px 0px;
+		box-shadow: none;
+	}
+	.top-nav::before {
+		border-radius: 32px 32px 0px 0px;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+	}
 	.toggle-menu-mobile {
 		order: -1;
 	}
@@ -668,6 +679,16 @@ body {
 	.top-nav__controls {
 		display: flex;
 		justify-content: space-between;
+	}
+}
+@media (min-width: 992px) {
+	.top-nav {
+		border-radius: 0 0 32px 32px;
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+	}
+	.top-nav::before {
+		border-radius: 0 0 32px 32px;
+		box-shadow: none;
 	}
 }
 
