@@ -592,21 +592,29 @@ body {
 	--bs-pagination-active-bg: var(--bs-primary);
 	--bs-pagination-active-border-color: var(--bs-primary);
 	--bs-pagination-color: var(--bs-body-color);
-	--bs-pagination-bg: var(--bs-white);
+	--bs-pagination-bg: transparent;
 	--bs-pagination-border-color: var(--bs-gray-medium);
-	--bs-pagination-hover-bg: var(--bs-white);
+	--bs-pagination-hover-bg: transparent;
 	--bs-pagination-hover-border-color: var(--bs-secondary);
 	--bs-pagination-hover-color: var(--bs-primary-hover);
 	--bs-pagination-focus-box-shadow: none;
 	--bs-pagination-focus-bg: var(--bs-white);
 	--bs-pagination-disabled-border-color: var(--bs-gray-medium);
+	--bs-pagination-disabled-color: var(--bs-secondary);
 }
 .page-link {
 	border-radius: var(--bs-pagination-border-radius);
 	background-color: var(--bs-pagination-bg);
 	border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
 	color: var(--bs-pagination-color);
+	&.page-link--prev,
+	&.page-link--next {
+		&::after {
+			border-color: currentColor;
+		}
+	}
 }
+
 
 .menu a {
 	font-size: 12px;
@@ -2002,5 +2010,13 @@ body {
 		span.org {
 			display: inline-block;
 		}
+	}
+}
+
+.pagination-nav {
+	justify-content: center;
+	padding: 32px 0;
+	@media (min-width: 992px) {
+		padding: 40px 0;
 	}
 }
