@@ -96,7 +96,6 @@ body {
 			opacity: 0.6;
 		}
 	}
-	
 }
 .enter-page {
 	.main-wrapper {
@@ -463,28 +462,28 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
 	/* Firefox */
-	@include media-breakpoint-up(sm) {
-		// --bs-primary: #dedede;
+	// --bs-primary: #dedede;
 
-		& {
-			scrollbar-width: auto;
-			scrollbar-color: #dedede transparent;
-		}
+	& {
+		scrollbar-width: auto;
+		scrollbar-color: #dedede transparent;
+	}
 
-		/* Chrome, Edge, and Safari */
-		&::-webkit-scrollbar {
-			width: 6px;
-		}
+	/* Chrome, Edge, and Safari */
+	&::-webkit-scrollbar {
+		width: 4px;
+		
+	}
 
-		&::-webkit-scrollbar-track {
-			background: transparent;
-		}
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
 
-		&::-webkit-scrollbar-thumb {
-			background-color: var(--bs-primary);
-			border-radius: 16px;
-			border: 0px solid transparent;
-		}
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba($color: $secondary, $alpha: 0.5);
+		border-radius: 16px;
+		border: 0px solid transparent;
+		border-radius: 2px;
 	}
 }
 
