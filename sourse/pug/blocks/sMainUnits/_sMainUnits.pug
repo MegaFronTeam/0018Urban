@@ -148,3 +148,118 @@ mixin sMainUnits(empty)
 							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
 							+e.forum-btn(href="#") Предложить идею
 	// end sMainUnits
+
+mixin sMainUnits2(empty)
+	// start sMainUnits
+	+b.SECTION.sMainUnits.section#sMainUnits&attributes(attributes)
+		.container-fluid
+			+e.row
+				+e.unit--lg.--module
+					+e.item--light
+						+b.modules-item
+							+e.head
+								+e.head-title
+									b Модуль&nbsp;6.
+									| Эффективные коммуникации директора школы. 
+								+e.head-title
+									b Тема:
+									| Прикладные психологические аспекты коммуникаций
+							+e.row.row
+								.col-sm
+									+e.content
+										+e.duration 11&nbsp;часов на&nbsp;занятие
+										+e.title(href="#") Прикладные психологические аспекты коммуникаций
+										+e.author Куприн Игорь Сергеевич
+										+e.btn.btn.btn-primary(href="#") Открыть расписание
+										+e.summary
+											b 49
+												span /99
+											p Всего пройдено занятий
+								+e.col.col-sm-auto
+									+e.image-wrap
+										+img('img/svg/tune-up.svg', 'bg')
+				+e.unit--sm
+					if empty
+						+main-unit('оповещения','').--light
+							+e.empty 
+								p Нет новых оповещений
+					else
+						//- +main-unit('оповещения','Все оповещения').--light
+						+main-unit('оповещения','Все оповещения').--dark
+							.swiper
+								.swiper-wrapper
+									- for (var x = 0; x < 3; x++)
+										.swiper-slide
+											+e.body.--notification
+												//- +e.note-date 15.11.2022 12:49:17
+												+e.date
+													+icon('calendar')
+													| 26 сентября
+												+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+												+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
+								+e.slider-nav
+									+arrow
+				+e.unit--sm
+					+main-unit('Нетворкинг','Всё сообщество').--light
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--network
+											+e.text
+												+e.name Райская Елена Сергеевна
+												+e.position Директор по развитию
+											+e.portrait-wrap(href="#")
+												+img('img/profile-14.jpg')
+											+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					+main-unit('Форум','Все форумы').--dark
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--forum
+											+e.forum-group Форум группы Название группы…
+											+e.forum-title(href="#") Развитие кадрового потенциала университета
+											+e.comments
+												+icon('msg')
+												| 5
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					+main-unit('Лента новостей','Все новости').--slider
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.slide-bg(href="#")
+											+e.body--newsline
+												+e.text
+													+e.tag Статья
+													+e.date
+														+icon('calendar')
+														| 26 сентября
+												+e.heading Встреча с академическим руководителем и студентами 
+											+img(`img/news-preview-1.jpg`)
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					//- +main-unit('Форум','Все форумы').--dark
+					+main-unit('Форум','Все форумы').--yellow
+						+e.body--forum
+							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
+							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
+							+e.forum-btn(href="#") Предложить идею
+	// end sMainUnits
