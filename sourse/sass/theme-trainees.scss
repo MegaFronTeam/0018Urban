@@ -643,8 +643,8 @@ a {
 .sAlerts__btn,
 .sEnter .form-wrap__btn,
 .sMainUnits__advice,
-.sMainUnits__forum-btn,
-.sMainUnits__header-btn,
+// .sMainUnits__forum-btn,
+// .sMainUnits__header-btn,
 .sMainUnits__note-btn,
 .sProfile__request-btn,
 .sProfile__sent-btn {
@@ -743,12 +743,6 @@ a {
 	padding-bottom: 4px;
 }
 
-.sMainUnits__note-btn {
-	--bs-btn-bg: transparent;
-	--bs-btn-padding-y: 3px;
-	--bs-btn-padding-x: 16px;
-}
-
 .pagination {
 	--bs-pagination-border-radius: 4px;
 	--bs-pagination-active-bg: var(--bs-primary);
@@ -805,13 +799,6 @@ a {
 	}
 }
 
-.sMainUnits__item--dark {
-	background-color: rgba($secondary, 0.5);
-	.sMainUnits__forum-btn {
-		--bs-btn-bg: var(--bs-dark);
-	}
-}
-
 @media (max-width: 991.98px) {
 	.menu-mobile {
 		border-radius: 24px 24px 0px 0px;
@@ -862,50 +849,172 @@ a {
 	}
 }
 
-.sMainUnits__slide-bg:after,
-.sMainUnits__slide-bg:before,
-.sMainUnits__item--light-bg:after {
-	// display: none;
-	background-image: none;
-}
-.sArticle__img-wrap--gradient:after,
-.sMainUnits__img-wrap {
-	background-image: var(--primary-gr);
-}
-.sMainUnits__slide-bg {
-	background-image: var(--primary-gr);
-}
-.sMainUnits__advice {
-	background-color: var(--bs-primary-hover);
-	color: var(--bs-white);
-}
-.sMainUnits__tag {
-	background: var(--bs-white);
-	border-color: var(--bs-secondary);
-	color: var(--bs-secondary);
-}
-.sMainUnits__body--newsline .sMainUnits__tag {
-	background: rgba(0, 0, 0, 0.45);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	color: #fff;
-}
+.sMainUnits {
+	.sMainUnits__header-btn {
+		--bs-btn-bg: var(--bs-dark-light);
+		--bs-btn-border-color: var(--bs-dark-light);
+		--bs-btn-hover-bg: var(--bs-secondary);
+		--bs-btn-hover-border-color: var(--bs-secondary);
+		--bs-btn-active-bg: var(--bs-gray-medium);
+		--bs-btn-active-border-color: var(--bs-gray-medium);
+		--bs-btn-disabled-bg: var(--bs-primary-disabled);
+		--bs-btn-disabled-border-color: var(--bs-primary-disabled);
+		--bs-btn-disabled-color: var(--bs-secondary);
+		&:hover {
+			background-color: var(--bs-btn-hover-bg);
+			border-color: var(--bs-btn-hover-border-color);
+		}
+		&:active {
+			background-color: var(--bs-btn-active-bg);
+			border-color: var(--bs-btn-active-border-color);
+		}
+	}
+	.sMainUnits__item--dark {
+		background-color: var(--bs-primary-active);
+	}
+	.sMainUnits__forum-btn {
+		--bs-btn-color: var(--bs-primary);
+		--bs-btn-bg: #FFD694;
+		--bs-btn-border-color: #FFD694;
+		--bs-btn-hover-color: var(--bs-white);
+		--bs-btn-hover-bg: #FFBE55;
+		--bs-btn-hover-border-color: #FFBE55;
+		--bs-btn-active-color: var(--bs-white);
+		--bs-btn-active-bg: #FFEED4;
+		--bs-btn-active-border-color: #FFEED4;
+		--bs-btn-disabled-color: var(--bs-secondary);
+		--bs-btn-disabled-bg: var(--bs-light);
+		--bs-btn-disabled-border-color: var(--bs-light);
+		&:hover {
+			background-color: var(--bs-btn-hover-bg);
+			border-color: var(--bs-btn-hover-border-color);
+			color: var(--bs-btn-hover-color);
+		}
+		&:active {
+			background-color: var(--bs-btn-active-bg);
+			border-color: var(--bs-btn-active-border-color);
+			color: var(--bs-btn-active-color);
+		}
+	}
+	.sMainUnits__note-btn {
+		--bs-btn-bg: transparent;
+		--bs-btn-padding-y: 3px;
+		--bs-btn-padding-x: 16px;
+	}
+	.sMainUnits__slide-bg:after,
+	.sMainUnits__slide-bg:before,
+	.sMainUnits__item--light-bg:after {
+		// display: none;
+		background-image: none;
+	}
+	.sMainUnits__img-wrap {
+		background-image: var(--primary-gr);
+	}
+	.sMainUnits__slide-bg {
+		background-image: var(--primary-gr);
+	}
+	.sMainUnits__advice {
+		background-color: var(--bs-primary-hover);
+		color: var(--bs-white);
+	}
+	.sMainUnits__tag {
+		background: var(--bs-white);
+		border-color: var(--bs-secondary);
+		color: var(--bs-secondary);
+	}
+	.sMainUnits__body--newsline .sMainUnits__tag {
+		background: rgba(0, 0, 0, 0.45);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		color: #fff;
+	}
 
-.sMainUnits__item--slider .sMainUnits__body {
-	position: absolute;
-	bottom: 44px;
-	left: 0;
-	padding-left: 16px;
-	max-width: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	& > * {
-		position: static;
+	.sMainUnits__item--slider .sMainUnits__body {
+		position: absolute;
+		bottom: 44px;
+		left: 0;
+		padding-left: 16px;
+		max-width: 100%;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		& > * {
+			position: static;
+		}
+	}
+	.sMainUnits__body--newsline .sMainUnits__heading {
+		max-width: rem(300);
+	}
+	.sMainUnits__item {
+		border-radius: var(--bd-radius-main);
+		padding: 16px;
+		@media (min-width: 992px) {
+			padding: 24px;
+		}
+	}
+	.sMainUnits__item--slider {
+		padding: 0;
+		@media (min-width: 992px) {
+			padding: 0;
+		}
+		.sMainUnits__body {
+		}
+	}
+	.sMainUnits__slider-nav {
+		bottom: 0;
+	}
+	.sMainUnits__unit--lg {
+		@media (max-width: 767.98px) {
+			grid-column: span 12;
+		}
+	}
+
+	.sMainUnits__slider-nav .swiper-button-next:after,
+	.sMainUnits__slider-nav .swiper-button-prev:after {
+		border-right: 2px solid currentColor;
+		border-top: 2px solid currentColor;
+		@include a-cent;
+		right: 2px;
+	}
+	.sMainUnits__slider-nav .swiper-button-next:hover:after,
+	.sMainUnits__slider-nav .swiper-button-prev:hover:after {
+		border-right: 2px solid currentColor;
+		border-top: 2px solid currentColor;
+	}
+	.sMainUnits__slider-nav {
+		.swiper-button-hand {
+			@include mt(0.2s);
+			color: var(--swiperColorDef);
+			background: var(--swiperBgDef);
+			border: 1px solid var(--swiperBorderColorDef);
+			--swiperColorDef: #565656;
+			--swiperBgDef: var(--bs-white);
+			--swiperBorderColorDef: var(--swiperBgDef);
+			--swiperColorDefHover: var(--bs-primary-hover);
+			--swiperBgDefHover: var(--swiperBgDef);
+			--swiperBorderColorDefHover: var(--bs-primary-hover);
+			&:hover {
+				color: var(--swiperColorDefHover);
+				background: var(--swiperBgDefHover);
+				border: 1px solid var(--swiperBorderColorDefHover);
+			}
+		}
+	}
+	.sMainUnits__item--light .swiper-button-hand,
+	.sMainUnits__item--light-bg .swiper-button-hand {
+		border: 1px solid var(--swiperBorderColorDef);
+		--swiperColorDef: var(--bs-primary);
+		--swiperBgDef: var(--bs-gray-medium);
+		--swiperBorderColorDef: var(---bs-light);
+		--swiperColorDefHover: var(--bs-primary-hover);
+		--swiperBgDefHover: var(--bs-white);
+		--swiperBorderColorDefHover: var(--bs-primary-hover);
 	}
 }
-.sMainUnits__body--newsline .sMainUnits__heading {
-	max-width: rem(300);
+
+.sArticle__img-wrap--gradient:after {
+	background-image: var(--primary-gr);
 }
+
 .sEnter {
 	position: relative;
 	background-color: var(--bs-white);
@@ -1414,10 +1523,7 @@ a {
 			left: -36px;
 		}
 	}
-	
 }
-
-
 
 .for-mob-bg {
 }
@@ -2852,47 +2958,6 @@ a {
 // .sForum__pagination-row .sForum__btn {
 // 	padding: 1px 26px 3px;
 // }
-.sMainUnits__slider-nav .swiper-button-next:after,
-.sMainUnits__slider-nav .swiper-button-prev:after {
-	border-right: 2px solid currentColor;
-	border-top: 2px solid currentColor;
-	@include a-cent;
-	right: 2px;
-}
-.sMainUnits__slider-nav .swiper-button-next:hover:after,
-.sMainUnits__slider-nav .swiper-button-prev:hover:after {
-	border-right: 2px solid currentColor;
-	border-top: 2px solid currentColor;
-}
-.sMainUnits__slider-nav {
-	.swiper-button-hand {
-		@include mt(0.2s);
-		color: var(--swiperColorDef);
-		background: var(--swiperBgDef);
-		border: 1px solid var(--swiperBorderColorDef);
-		--swiperColorDef: #565656;
-		--swiperBgDef: var(--bs-white);
-		--swiperBorderColorDef: var(--swiperBgDef);
-		--swiperColorDefHover: var(--bs-primary-hover);
-		--swiperBgDefHover: var(--swiperBgDef);
-		--swiperBorderColorDefHover: var(--bs-primary-hover);
-		&:hover {
-			color: var(--swiperColorDefHover);
-			background: var(--swiperBgDefHover);
-			border: 1px solid var(--swiperBorderColorDefHover);
-		}
-	}
-}
-.sMainUnits__item--light .swiper-button-hand,
-.sMainUnits__item--light-bg .swiper-button-hand {
-	border: 1px solid var(--swiperBorderColorDef);
-	--swiperColorDef: var(--bs-primary);
-	--swiperBgDef: var(--bs-gray-medium);
-	--swiperBorderColorDef: var(---bs-light);
-	--swiperColorDefHover: var(--bs-primary-hover);
-	--swiperBgDefHover: var(--bs-white);
-	--swiperBorderColorDefHover: var(--bs-primary-hover);
-}
 
 .topNav-btnWrap--help {
 	.topNav-btnWrap__btn {
