@@ -970,7 +970,13 @@ a {
 		background-image: none;
 	}
 	.sMainUnits__img-wrap {
-		background-image: var(--primary-gr);
+		background-image: linear-gradient(
+			180deg,
+			rgba(126, 80, 178, 0.5) 0%,
+			rgba(84, 45, 128, 0) 48.44%,
+			rgba(126, 80, 178, 0.5) 100%
+		);
+		// background-image: var(--primary-gr);
 	}
 	.sMainUnits__slide-bg {
 		background-image: var(--primary-gr);
@@ -1103,12 +1109,12 @@ a {
 			color: var(--swiperColorDef);
 			background: var(--swiperBgDef);
 			border: 1px solid var(--swiperBorderColorDef);
-			--swiperColorDef: #565656;
+			--swiperColorDef: var(--bs-primary);
 			--swiperBgDef: var(--bs-white);
 			--swiperBorderColorDef: var(--swiperBgDef);
-			--swiperColorDefHover: var(--bs-primary-hover);
-			--swiperBgDefHover: var(--swiperBgDef);
-			--swiperBorderColorDefHover: var(--bs-primary-hover);
+			--swiperColorDefHover: var(--bs-white);
+			--swiperBgDefHover: var(--bs-primary);
+			--swiperBorderColorDefHover: var(--bs-primary);
 			&:hover {
 				color: var(--swiperColorDefHover);
 				background: var(--swiperBgDefHover);
@@ -1118,13 +1124,12 @@ a {
 	}
 	.sMainUnits__item--light .swiper-button-hand,
 	.sMainUnits__item--light-bg .swiper-button-hand {
-		border: 1px solid var(--swiperBorderColorDef);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: var(--bs-gray-medium);
-		--swiperBorderColorDef: var(---bs-light);
-		--swiperColorDefHover: var(--bs-primary-hover);
-		--swiperBgDefHover: var(--bs-white);
-		--swiperBorderColorDefHover: var(--bs-primary-hover);
+		// --swiperColorDef: var(--bs-primary);
+		--swiperBgDef: var(--bs-light);
+		--swiperBorderColorDef: var(--bs-light);
+		// --swiperColorDefHover: var(--bs-primary-hover);
+		// --swiperBgDefHover: var(--bs-white);
+		// --swiperBorderColorDefHover: var(--bs-primary-hover);
 	}
 }
 
