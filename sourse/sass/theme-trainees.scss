@@ -2062,17 +2062,17 @@ a {
 		// 	padding: rem(2) rem(16) rem(4);
 		// }
 		--bs-btn-color: var(--bs-dark-light);
-		--bs-btn-bg: #FFBE55;
-    --bs-btn-border-color: #FFBE55;
-    --bs-btn-hover-color: var(--bs-secondary);
-    --bs-btn-hover-bg: #FFD694;
-    --bs-btn-hover-border-color: #FFD694;
-    --bs-btn-active-color: var(--bs-secondary);
-    --bs-btn-active-bg: #FFEED4;
-    --bs-btn-active-border-color: #FFEED4;
-    // --bs-btn-disabled-bg: var(--bs-primary-disabled);
-    // --bs-btn-disabled-border-color: var(--bs-primary-disabled);
-    // --bs-btn-disabled-color: var(--bs-secondary);
+		--bs-btn-bg: #ffbe55;
+		--bs-btn-border-color: #ffbe55;
+		--bs-btn-hover-color: var(--bs-secondary);
+		--bs-btn-hover-bg: #ffd694;
+		--bs-btn-hover-border-color: #ffd694;
+		--bs-btn-active-color: var(--bs-secondary);
+		--bs-btn-active-bg: #ffeed4;
+		--bs-btn-active-border-color: #ffeed4;
+		// --bs-btn-disabled-bg: var(--bs-primary-disabled);
+		// --bs-btn-disabled-border-color: var(--bs-primary-disabled);
+		// --bs-btn-disabled-color: var(--bs-secondary);
 	}
 	.useful-label--viewed {
 		@media (min-width: 576px) {
@@ -2080,39 +2080,110 @@ a {
 		}
 	}
 }
+.sForum {
+	// .sForum__item {
+	// 	@media (max-width: 767.98px) {
+	// 		& > :not(:last-child) {
+	// 			border-color: var(--bs-light);
+	// 		}
+	// 		&:last-child {
+	// 			border-bottom: none;
+	// 		}
 
-.sForum__counter {
-	@media (max-width: 767.98px) {
-		background-color: var(--bs-gray-medium);
+	// 		@media (max-width: 767.98px) {
+	// 			border-right: none;
+	// 			border-left: none;
+	// 			border-top: none;
+	// 			border-radius: 0;
+	// 			margin-bottom: 0;
+	// 			padding: 16px;
+	// 		}
+	// 	}
+	// }
+	.sForum__container {
+		padding: 12px 0 16px;
+		border-radius: var(--bd-radius-main);
+		@media (min-width: 768px) {
+			padding: 16px 0;
+		}
 	}
-}
-.sForum__counter-img {
-	@media (max-width: 767.98px) {
-		background-color: var(--bs-white);
+
+	.sForum__counter {
+		@media (max-width: 767.98px) {
+			background-color: var(--bs-gray-medium);
+			padding: 16px;
+			background-image: url(../img/multi-gradient-sm.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			border-radius: 16px;
+		}
 	}
-	background-color: var(--bs-light);
-}
-.sForum__theme {
-	color: var(--bs-body-color);
-}
-.sForum__header {
-	background-color: var(--bs-light);
-	@media (min-width: 576px) {
-		background-image: url(../img/svg/forum-bg-mpa.svg);
-		background-repeat: no-repeat;
-		background-size: 150px 46px;
-		background-position: right 0 top 0;
-		padding-right: 140px;
+	.sForum__item,
+	.sForum__themes-item {
+		border-color: var(--bs-light);
+		& > :not(:last-child) {
+			border-color: var(--bs-light);
+		}
+		&:last-child {
+			border-bottom: none;
+		}
+
+		@media (max-width: 767.98px) {
+			border-right: none;
+			border-left: none;
+			border-top: none;
+			border-radius: 0;
+			margin-bottom: 0;
+			padding: 16px;
+		}
 	}
-	&::before {
-		display: none;
+	.sForum__counter-img {
+		@media (max-width: 767.98px) {
+			background-color: var(--bs-white);
+		}
+		background-color: var(--bs-light);
+		.icon {
+			color: var(--bs-primary);
+		}
 	}
-	h1,
-	.h1,
-	h2,
-	.h2 {
-		text-align: left;
+	.sForum__theme {
 		color: var(--bs-body-color);
+	}
+	.sForum__header {
+		background-color: var(--bs-light);
+		background-image: url(../img/multi-gradient-sm.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: top;
+		padding: 16px 12px;
+		border-radius: 16px;
+		margin-left: 8px;
+		margin-right: 8px;
+		@media (min-width: 768px) {
+			padding: 24px 32px;
+			border-radius: 24px;
+			margin-left: 16px;
+			margin-right: 16px;
+		}
+
+		&::before {
+			display: none;
+		}
+		h1,
+		.h1,
+		h2,
+		.h2 {
+			@include rfs(28px, font-size);
+			text-align: left;
+			color: var(--bs-body-color);
+			@media (min-width: 1200px) {
+				font-size: 32px;
+			}
+			@media (max-width: 575.98px) {
+				font-size: 18px;
+			}
+		}
 	}
 }
 
