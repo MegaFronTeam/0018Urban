@@ -2180,7 +2180,7 @@ a {
 		.h2 {
 			@include rfs(28px, font-size);
 			text-align: left;
-			color: var(--bs-body-color);
+			color: var(--bs-primary);
 			@media (min-width: 1200px) {
 				font-size: 32px;
 			}
