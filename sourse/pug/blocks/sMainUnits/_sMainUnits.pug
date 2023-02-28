@@ -12,7 +12,8 @@ mixin sMainUnits(empty)
 		.container-fluid
 			+e.row
 				+e.unit--lg
-					+main-unit('Материалы','Все материалы').--light-bg
+					//- +main-unit('Материалы','Все материалы').--light-bg
+					+main-unit('Материалы','Все материалы').--yellow
 						.swiper
 							.swiper-wrapper
 								.swiper-slide
@@ -68,24 +69,29 @@ mixin sMainUnits(empty)
 							+e.empty 
 								p Нет новых оповещений
 					else
-						+main-unit('оповещения','Все оповещения').--light
+						//- +main-unit('оповещения','Все оповещения').--light
+						+main-unit('оповещения','Все оповещения').--dark
 							.swiper
 								.swiper-wrapper
-									.swiper-slide
-										+e.body.--notification
-											+e.note-date 15.11.2022 12:49:17
-											+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
-											+e.note-btn Посмотреть событие
-									.swiper-slide
-										+e.body.--notification
-											+e.note-date 15.11.2022 12:49:17
-											+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
-											+e.note-btn Посмотреть событие
-									.swiper-slide
-										+e.body.--notification
-											+e.note-date 15.11.2022 12:49:17
-											+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
-											+e.note-btn Посмотреть событие
+									- for (var x = 0; x < 3; x++)
+										.swiper-slide
+											+e.body.--notification
+												//- +e.note-date 15.11.2022 12:49:17
+												+e.date
+													+icon('calendar')
+													| 26 сентября
+												+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+												+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
 								+e.slider-nav
 									+arrow
 				+e.unit--sm
@@ -135,7 +141,8 @@ mixin sMainUnits(empty)
 							+e.slider-nav
 								+arrow
 				+e.unit--md
-					+main-unit('Форум','Все форумы').--dark
+					//- +main-unit('Форум','Все форумы').--dark
+					+main-unit('Форум','Все форумы').--yellow
 						+e.body--forum
 							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
 							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
