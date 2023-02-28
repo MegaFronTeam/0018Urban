@@ -1005,10 +1005,12 @@ a {
 		background-color: var(--bs-primary);
 		border: 1px solid var(--bs-primary);
 		color: var(--bs-white);
-	}еевна
-
+	}
+	.sMainUnits__header-title {
+		font-weight: 700;
+	}
 	.sMainUnits__body--newsline .sMainUnits__heading {
-		max-width: rem(300);
+		max-width: 335px;
 	}
 	.sMainUnits__item {
 		border-radius: var(--bd-radius-main);
