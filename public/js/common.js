@@ -627,11 +627,24 @@ function eventHandler() {
 		moreBtns.forEach(btn => {
 			btn.addEventListener('click', function (event) {
 				let profileBody = btn.closest('.profile-item').querySelector('.profile-item__body');
-				profileBody.classList.add('active');
-				btn.hidden = true;
+				profileBody.classList.toggle('active');
+				btn.classList.toggle('active');
+				// btn.hidden = true;
+				$(this).text($(this).text() == 'Скрыть' ? 'Подробнее' : 'Скрыть');
 			});
 		});
 	}
+	// const moreBtns = document.querySelectorAll('.profile-item__show-more');
+
+	// if (moreBtns) {
+	// 	moreBtns.forEach(btn => {
+	// 		btn.addEventListener('click', function (event) {
+	// 			let profileBody = btn.closest('.profile-item').querySelector('.profile-item__body');
+	// 			profileBody.classList.add('active');
+	// 			btn.hidden = true;
+	// 		});
+	// 	});
+	// }
 	// / Кнопка "подробнее" в карточках запросов контактов
 
 	// Мобильный фильтр в мероприятиях

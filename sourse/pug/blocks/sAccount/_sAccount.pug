@@ -24,7 +24,7 @@ mixin sAccount(validated)
 								h2 Информация
 							.tabs__btn.swiper-slide
 								h2 Контакты
-					.tabs__content.tabs__content--personal
+					.tabs__content.tabs__content--personal.active
 						+form-wrap
 							fieldset
 								+e.form-caption.--photo Фото
@@ -44,7 +44,7 @@ mixin sAccount(validated)
 								+input("Введите новый пароль",'password', 'Новый пароль')
 								+input("Введите пароль ещё раз",'password', 'Повторите пароль')
 								+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
-					.tabs__content.tabs__content--info.active
+					.tabs__content.tabs__content--info
 						+form-wrap
 							+e.form-caption Статус
 							.radio-wrap

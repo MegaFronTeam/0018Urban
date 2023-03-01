@@ -38,3 +38,5 @@
 
  # MPA-landing
  1. <https://megafronteam.github.io/0018Urban/public/MPA-landing.html> 
+ # trainees-landing
+ 1. <https://megafronteam.github.io/0018Urban/public/trainees-landing.html> 
