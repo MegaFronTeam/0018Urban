@@ -1396,6 +1396,7 @@ a {
 		z-index: 2;
 		min-height: unset;
 		background-color: transparent;
+		border: none;
 		// @media (min-width: 768px) {
 		// 	min-height: 436px;
 		// }
@@ -1632,6 +1633,27 @@ a {
 		pointer-events: none;
 	}
 }
+
+
+.sRequest {
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		max-height: rem(954);
+		left: 0;
+		bottom: 0;
+		z-index: -1;
+		background-image: url(../img/primary-bg-lg-rev.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position: bottom;
+		pointer-events: none;
+	}
+}
+
+
 
 .breadcrumb-item {
 	&:not(:first-child) a:before {
@@ -2130,6 +2152,7 @@ a {
 			max-width: unset;
 			line-height: calc(40 / 36);
 			@include rfs(36px, font-size);
+			color: var(--bs-primary);
 			margin-bottom: 16px;
 			@media (min-width: 1200px) {
 				font-size: 36px;
@@ -2276,6 +2299,20 @@ a {
 	}
 	.swiper-button-hand {
 		background-color: rgba($dark, 0.3);
+		&::after {
+			position: relative;
+		}
+		&-prev {
+			&::after {
+				left: 5%;
+			}
+		}
+		&-next {
+			&::after {
+				right: 5%;
+				
+			}
+		}
 	}
 	.sNewsItem__slider-caption {
 		text-align: center;
@@ -2376,7 +2413,7 @@ a {
 	ol {
 		li {
 			&:before {
-				color: #ffbe55;
+				color: var(--bs-primary);
 				font-weight: bold;
 			}
 		}
@@ -2964,9 +3001,10 @@ a {
 	width: 100% !important;
 }
 
-@media (max-width: 767.98px) {
-	.headerBlock .section-title .h1,
-	.headerBlock .section-title h1 {
+.headerBlock .section-title .h1,
+.headerBlock .section-title h1 {
+	color: var(--bs-primary);
+	@media (max-width: 767.98px) {
 		font-size: 32px;
 	}
 }
