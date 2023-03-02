@@ -23,7 +23,7 @@
 	],
 	"traineesNav":[
 		{ "name":"О программе", "url":"#sTerms"},
-		{	"name":"Структура программы", "url":"#sFormats"},
+		{	"name":"Структура программы", "url":"#sStructure"},
 		{"name":"Эксперты программы", "url":"#sExperts"},
 		{"name":"Об университете", "url":"#sAboutUniver2"},
 		{"name":"Контакты", "url":"#sContact"}

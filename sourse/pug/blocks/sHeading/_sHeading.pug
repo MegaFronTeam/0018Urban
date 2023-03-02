@@ -34,3 +34,23 @@ mixin sHeadingMPA(data)
 				h1 &laquo;МТА. Управление в&nbsp;транспортной отрасли&raquo;
 				p Станьте лучшим в&nbsp;своей отрасли
 	// end sHeading
+
+
+mixin sHeadingTrainees(data)
+	// start sHeading
+	+b.SECTION.sHeading--trainees.section.bg-wrap#sHeading&attributes(attributes)
+		+img('img/multi-gradient-lg.jpg', 'bg').img-bg
+		.container(data-aos="fade-up")
+			+e.row.row
+				.col-md-6.order-md-last
+					picture
+						source(srcset='img/header-trainees-bg.png' media='(min-width:576px)')
+						img.res-i(src='img/header-trainees-sm-bg.png' alt='' loading='lazy')
+				.col-md-6
+					+b.section-title
+						h1 
+							span.text-primary Программа MPA
+							| для директоров и&nbsp;управленческих команд образовательных организаций города Москвы
+						p 
+							span Старт программы 06&nbsp;октября
+	// end sHeading

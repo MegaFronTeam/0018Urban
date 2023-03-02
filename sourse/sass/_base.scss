@@ -1038,13 +1038,13 @@ iframe {
 	}
 }
 .trainees-landing {
-	--bs-body-bg: #e8e8e8;
-	.container-fluid,
-	.container {
-		@include media-breakpoint-down(sm) {
-			--bs-gutter-x: #{rem(16)};
-		}
-	}
+	--bs-body-bg: #f5f5f5;
+	// .container-fluid,
+	// .container {
+	// 	@include media-breakpoint-down(sm) {
+	// 		--bs-gutter-x: #{rem(16)};
+	// 	}
+	// }
 	.top-nav__row {
 		@include media-breakpoint-down(lg) {
 			display: flex;
@@ -1196,8 +1196,8 @@ iframe {
 		}
 		&__controls {
 			@include media-breakpoint-down(sm) {
-				margin-left: 2px;
-				margin-right: 2px;
+				margin-left: calc(var(--bs-gutter-x) * -1 / 2);
+				margin-right: calc(var(--bs-gutter-x) * -1 / 2);
 			}
 		}
 		@include media-breakpoint-down(lg) {
