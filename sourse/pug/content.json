@@ -21,6 +21,13 @@
 		{"name":"Команда проекта", "url":"#sExperts"},
 		{"name":"Контакты", "url":"#sContact"}
 	],
+	"traineesNav":[
+		{ "name":"О программе", "url":"#sTerms"},
+		{	"name":"Структура программы", "url":"#sFormats"},
+		{"name":"Эксперты программы", "url":"#sExperts"},
+		{"name":"Об университете", "url":"#sAboutUniver2"},
+		{"name":"Контакты", "url":"#sContact"}
+	],
 	"social":[
 		"vk","ok","telegram","whatsapp"
 	],

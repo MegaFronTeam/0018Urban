@@ -143,3 +143,40 @@ mixin top-navMPA()
 									span Выход
 						+menu-toggle()
 	// end top-nav
+
+mixin top-navTrainees() 
+	// start top-nav
+	+b.top-nav--trainees.block-with-lazy
+		.container-fluid
+			+e.row.row
+				+e.col-logo.d-none.d-lg-block.col-auto
+					+e.logo(href='/')
+						+img('img/svg/logo-trainees.svg')
+				+e.col-menu.col
+					.menu-mobile.menu-mobile--js
+						.menu-mobile__inner
+							//- +menu-toggle()
+							+traineesMnu()
+				+e.controls-col.col-auto
+					+e.controls
+						+e.logo.d-lg-none(href='/')
+							+img('img/svg/logo-trainees.svg')
+						+b.topNav-btnWrap--help.d-lg-none
+							+e.btn.toggle-contact-js(data-id= "#ddHelp")
+								+icon('help')
+						+menu-toggle()
+						+b.topNav-btnWrap--person
+							+e.btn.toggle-contact-js(data-id= "#ddPerson")
+								+icon('person')
+							+e.btn-content.dropdown-contact-js#ddPerson
+								a(href="#")
+									+icon('change-contact')
+									span Обмен контактами 
+									+e.btn-count 3
+								a(href="#")
+									+icon('tune')
+									span Настройки
+								a(href="#")
+									+icon('exit')
+									span Выход
+	// end top-nav

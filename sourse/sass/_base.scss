@@ -472,7 +472,6 @@ iframe {
 	/* Chrome, Edge, and Safari */
 	&::-webkit-scrollbar {
 		width: 4px;
-		
 	}
 
 	&::-webkit-scrollbar-track {
@@ -1020,6 +1019,201 @@ iframe {
 			}
 			.toggle-menu-mobile {
 				// --color: var(--bs-primary);
+				&:before {
+					@include a-cent1(y);
+					height: 32px;
+					border: none;
+					border-radius: 50%;
+				}
+				&.on {
+					span {
+						&:before,
+						&:after {
+							background-color: var(--bs-primary);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.trainees-landing {
+	--bs-body-bg: #e8e8e8;
+	.container-fluid,
+	.container {
+		@include media-breakpoint-down(sm) {
+			--bs-gutter-x: #{rem(16)};
+		}
+	}
+	.top-nav__row {
+		@include media-breakpoint-down(lg) {
+			display: flex;
+		}
+	}
+	.top-nav__controls-col {
+		@include media-breakpoint-down(lg) {
+			flex-grow: 1;
+		}
+	}
+
+	.top-nav__col-logo {
+		display: block;
+	}
+	.top-nav__col-menu {
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			top: 100%;
+		}
+	}
+	.sTerms {
+		position: relative;
+		z-index: 3;
+	}
+	.main-wrapper {
+		padding-top: 0;
+		padding-bottom: 64px;
+		@include media-breakpoint-up(lg) {
+			padding-bottom: 0;
+		}
+	}
+	.topNav-btnWrap--person {
+		.topNav-btnWrap__btn {
+			// min-width: 32px;
+			flex-shrink: 0;
+			padding: 0;
+			border-radius: 50%;
+			// background-color: var(--bs-white);
+			// box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+			border: none !important;
+			color: var(--bs-body-color);
+			@include media-breakpoint-up(lg) {
+				width: 32px;
+				height: 32px;
+				background-color: transparent;
+			}
+			.icon {
+				font-size: 24px;
+			}
+			&:hover {
+				// border-color: var(--bs-link-hover-color) !important;
+				color: var(--bs-link-hover-color);
+			}
+		}
+	}
+	.topNav-btnWrap--help {
+		@include media-breakpoint-up(lg) {
+			.topNav-btnWrap__btn {
+				color: var(--bs-body-color);
+				background-color: var(--bs-white);
+				&:hover {
+					color: var(--bs-primary);
+					background-color: var(--bs-white);
+				}
+				.icon {
+					color: currentColor;
+				}
+			}
+		}
+	}
+	.top-nav {
+		@include mt;
+		&::before {
+			@include mt;
+			@include media-breakpoint-down(lg) {
+				box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+			}
+		}
+		&:not(.fixed) {
+			@include media-breakpoint-up(lg) {
+				background-color: transparent;
+				box-shadow: none;
+				&::before {
+					background-color: transparent;
+					box-shadow: none;
+				}
+				// .topNav-btnWrap--person {
+				// 	.topNav-btnWrap__btn {
+				// 		border-color: var(--bs-white) !important;
+				// 		color: var(--bs-white);
+				// 		&:hover {
+				// 			border-color: var(--bs-light) !important;
+				// 			color: var(--bs-light);
+				// 		}
+				// 	}
+				// }
+				// .menu {
+				// 	a {
+				// 		color: var(--bs-white);
+				// 		&:hover {
+				// 			color: var(--bs-light);
+				// 		}
+				// 	}
+				// }
+			}
+		}
+		&__logo {
+			padding: 20px 0 14px;
+			img {
+				height: 30px;
+				width: auto;
+			}
+			@include media-breakpoint-up(lg) {
+				padding: 16px 0 11px;
+				padding-right: calc(var(--bs-gutter-x) / 2);
+				img {
+					height: 35px;
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				img {
+					height: 40px;
+				}
+			}
+		}
+		.menu {
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: 28px;
+				justify-content: flex-end;
+				margin-left: 0;
+			}
+
+			a {
+				// @include media-breakpoint-only(lg) {
+				// 	font-size: 13px;
+				// }
+				@include media-breakpoint-up(lg) {
+					font-size: 14px;
+					text-transform: none;
+				}
+
+				@include media-breakpoint-up(xl) {
+					font-size: rem(18);
+				}
+				&:hover {
+					color: var(--bs-link-hover-color);
+				}
+			}
+		}
+		&__controls {
+			@include media-breakpoint-down(sm) {
+				margin-left: 2px;
+				margin-right: 2px;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			.menu-mobile {
+				bottom: 0;
+			}
+			.topNav-btnWrap {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				&__btn {
+					box-shadow: none;
+				}
+			}
+			.toggle-menu-mobile {
+				// --color: var(--bs-primary);
+				order: unset;
 				&:before {
 					@include a-cent1(y);
 					height: 32px;

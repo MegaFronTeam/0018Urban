@@ -23,7 +23,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/footer/_footer.pug
 
 block variables
-	- let  mainPage= 'school-landing'
+	- let  mainPage= 'trainees-landing'
 	- let  bg= 'school-landing.jpg'
 
 block title
@@ -34,7 +34,7 @@ block pagecontent
 
 
 	+header()
-		+top-navLanding() 
+		+top-navTrainees() 
 	main
 		+sHeading()
 		+sTerms()
@@ -50,7 +50,7 @@ block pagecontent
 		+sReviews()
 		+sContact()
 
-	+footer-landing()
+	+footer()
 	//- +chat
 
 

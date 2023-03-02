@@ -20,16 +20,16 @@
 		<!-- для фиолетовой темы-->
 		<link href="css/theme-trainees.min.css" rel="stylesheet"/>
 	</head>
-	<body class=" school-landing theme-school" data-bg="school-landing.jpg">
+	<body class=" trainees-landing theme-school" data-bg="school-landing.jpg">
 		<div class="main-wrapper">
 			<!-- start header-->
 			<header class="header" id="header">
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav top-nav--trainees block-with-lazy">
 					<div class="container-fluid">
 						<div class="top-nav__row row">
-							<div class="top-nav__col-logo col-auto order-first">
-								<a class="top-nav__logo" href="/"><img src="img/svg/logotype.svg" alt="" loading="lazy"/>
+							<div class="top-nav__col-logo d-none d-lg-block col-auto">
+								<a class="top-nav__logo" href="/"><img src="img/svg/logo-trainees.svg" alt="" loading="lazy"/>
 								</a>
 							</div>
 							<div class="top-nav__col-menu col">
@@ -38,10 +38,9 @@
 										<nav>
 											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 												<li class="menu-item" itemprop="item"><a href="#sTerms" itemprop="url">О программе</a></li>
-												<li class="menu-item" itemprop="item"><a href="#sStructure" itemprop="url">Структура программы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#sFormats" itemprop="url">Структура программы</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sExperts" itemprop="url">Эксперты программы</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sAboutUniver2" itemprop="url">Об университете</a></li>
-												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Как поступить</a></li>
 												<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 											</ul>
 										</nav>
@@ -50,6 +49,17 @@
 							</div>
 							<div class="top-nav__controls-col col-auto">
 								<div class="top-nav__controls">
+									<a class="top-nav__logo d-lg-none" href="/"><img src="img/svg/logo-trainees.svg" alt="" loading="lazy"/>
+									</a>
+									<div class="topNav-btnWrap topNav-btnWrap--help d-lg-none">
+										<div class="topNav-btnWrap__btn toggle-contact-js" data-id="#ddHelp">
+											<svg class="icon icon-help ">
+												<use xlink:href="img/svg/sprite.svg#help"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
 									<div class="topNav-btnWrap topNav-btnWrap--person">
 										<div class="topNav-btnWrap__btn toggle-contact-js" data-id="#ddPerson">
 											<svg class="icon icon-person ">
@@ -69,8 +79,6 @@
 													<use xlink:href="img/svg/sprite.svg#exit"></use>
 												</svg><span>Выход</span></a>
 										</div>
-									</div>
-									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
 									</div>
 								</div>
 							</div>
@@ -837,26 +845,18 @@
 				</section>
 				<!-- end sContact-->
 			</main>
-			<footer class="footer footer footer--landing footer footer--landing-mpa section">
+			<footer class="footer section">
 				<div class="container-fluid">
 					<div class="footer__row row">
-						<div class="col-12 col-md">
-							<div class="footer__logos">
-								<div class="footer__row-sm row">
-									<div class="col-sm-auto"><img src="img/svg/footer-logo-1.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="col-sm-auto"><img src="img/svg/footer-logo-2.svg" alt="" loading="lazy"/>
-									</div>
-									<div class="col-sm-auto"><img src="img/svg/footer-logo-3.svg" alt="" loading="lazy"/>
-									</div>
-								</div>
-							</div>
+						<div class="col-auto">
+							<a class="footer__policy" href="#">Политика конфиденциальности
+							</a>
 						</div>
 						<div class="col-auto">
-							<div class="footer__copyright">© <span class="currentYear"></span>
+							<div class="footer__copyright">©<span class="currentYear"></span><span class="org">Высшая школа руководителей</span>
 							</div>
 						</div>
-						<div class="col-auto">
+						<div class="col-12 col-sm">
 							<div class="footer__design">
 								<svg class="icon icon-coalla-logo ">
 									<use xlink:href="img/svg/sprite.svg#coalla-logo"></use>

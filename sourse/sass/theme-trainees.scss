@@ -1634,7 +1634,6 @@ a {
 	}
 }
 
-
 .sRequest {
 	&::before {
 		content: "";
@@ -1652,8 +1651,6 @@ a {
 		pointer-events: none;
 	}
 }
-
-
 
 .breadcrumb-item {
 	&:not(:first-child) a:before {
@@ -2053,6 +2050,14 @@ a {
 	// 	background-image: none;
 	// }
 	.news-preview {
+		& > * {
+			z-index: 2;
+		}
+		.news-preview__img-wrap {
+			img {
+				z-index: -1;
+			}
+		}
 		&:hover {
 			.news-preview__img-wrap {
 				&:before {
@@ -2310,7 +2315,6 @@ a {
 		&-next {
 			&::after {
 				right: 5%;
-				
 			}
 		}
 	}
