@@ -38,3 +38,28 @@ mixin sAbout2(data)
 
 
 	// end sAbout
+
+mixin sAbout3(data)
+	// start sAbout
+	+b.sAbout--trainee.section#sAbout&attributes(attributes)
+		.container-fluid
+			+e.row.row
+				.col-md-4
+					+e.item(data-aos="fade-up" style="--aboutBg: #FFEED4;")
+						+img('img/svg/sAbout-5.svg')
+						h4 Миссия
+						p Обеспечить возможность руководителям образовательных организаций строить систему образования будущего, трансформировать образовательную организацию в&nbsp;двигатель изменений и&nbsp;площадку коммуникации города и&nbsp;жителей, эффективно выстраивать обучение вокруг потребностей ребенка и&nbsp;его семьи, стать новыми лидерами как в&nbsp;системе российского образования, так и&nbsp;на&nbsp;территориях города и&nbsp;региона.
+				+e.col.col-md-4
+					+e.item(data-aos="fade-up" data-aos-delay="150" style="--aboutBg: #EAE4F3;")
+						+img('img/svg/sAbout-6.svg')
+						h4 Цель
+						p Подготовка директоров и&nbsp;управленческих команд образовательных организаций для эффективного выполнения задач по&nbsp;организации деятельности, реализации стратегии и&nbsp;тактики развития современного образования.
+				.col-md-4
+					+e.item(data-aos="fade-up" data-aos-delay="300")
+						+img('img/svg/sAbout-7.svg')
+						h4 Для кого
+						ul
+							li Директора школ и&nbsp;колледжей и&nbsp;их&nbsp;заместители.
+							li Кадровый резерв на&nbsp;должность руководителя образовательной организации.
+
+	// end sAbout
