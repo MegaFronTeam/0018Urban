@@ -4,7 +4,7 @@ include ../blocks/header/_header.pug
 include ../blocks/topLine/_topLine.pug
 include ../blocks/top-nav/_top-nav.pug 
 include ../blocks/sHeading/_sHeading.pug
-include ../blocks/sTerms/_sTerms.pug
+include ../blocks/sDuration/_sDuration.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sSystem/_sSystem.pug
 include ../blocks/sFeatures/_sFeatures.pug
@@ -37,7 +37,8 @@ block pagecontent
 		+top-navTrainees() 
 	main
 		+sHeadingTrainees()
-		+sTerms()
+		//- +sTerms()
+		+sDuration()
 		+sAbout()
 		+sSystem()
 		+sFeatures()
