@@ -10,6 +10,17 @@ mixin modulesItem(p, i)
 			if block
 				block
 
+mixin modulesItem3(p, i)
+	+e.item(data-aos="fade-up" data-aos-delay="150")&attributes(attributes)
+		if i
+			+icon(`${i}`)
+		else
+			+e.icon
+				//- +img('img/svg/switch-check.svg')
+		p!= p
+		if block
+			block
+
 mixin modulesItem2(p, i, t)
 	+e.col.col-md-6.col-lg-4
 		+e.item(data-aos="fade-up" data-aos-delay="150")&attributes(attributes)
@@ -103,4 +114,31 @@ mixin sModulesTrainees(data)
 					+modulesItem(`Управлять публичными коммуникациями и&nbsp;информационными потоками.`, 'list-dot')
 					+modulesItem(`Выстраивать работу команд, нацеленных на&nbsp;высокую результативность.`, 'list-dot')
 				p В&nbsp;процессе обучения вы&nbsp;создадите новые решения по&nbsp;развитию вашей образовательной организации, разработаете и&nbsp;реализуете собственный проект изменений.
+	// end sModules
+
+mixin sModulesProgram(data)
+	// start sModules
+	+b.sModules--trainees.--program.section&attributes(attributes)
+		.container-fluid
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
+				+b.section-title.text-center
+					h2 Модули программы
+				+e.roww.row
+					.col-md-4
+						+e.items(style="--itemBgColor:#EAE4F3;")
+							+modulesItem3(`Управление воспитательным, образовательным процессом и оценка качества.`, 'list-dot')
+							+modulesItem3(`Профессиональное лидерство руководителя.`, 'list-dot')
+							+modulesItem3(`Эффективные коммуникации руководителя.`, 'list-dot')
+							+modulesItem3(`Управление человеческими ресурсами в системе руководителя.`, 'list-dot')
+					.col-md-4
+						+e.items(style="--itemBgColor:#FFFFFF;")
+							+modulesItem3(`Управление экономикой и хозяйством образовательной организации.`, 'list-dot')
+							+modulesItem3(`Управление рисками образовательной организации.`, 'list-dot')
+							+modulesItem3(`Управление публичными коммуникациями и информационными потоками.`, 'list-dot')
+					.col-md-4
+						+e.items(style="--itemBgColor:#FFEED4;")
+							+modulesItem3(`Видение и стратегия современного образования.`, 'list-dot')
+							+modulesItem3(`Современные технологии управления в образовании.`, 'list-dot')
+							+modulesItem3(`Принятие и реализация управленческих решений.`, 'list-dot')
+							+modulesItem3(`Управление клиентоориентированностью в образовании.`, 'list-dot')
 	// end sModules

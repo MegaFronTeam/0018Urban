@@ -277,6 +277,10 @@
 		}
 	}
 	&.sModules--trainees {
+		--sTPB: 24px;
+		@include media-breakpoint-up(md) {
+			--sTPB: 40px;
+		}
 		.sModules__row {
 			@include media-breakpoint-down(md) {
 				--bs-gutter-y: 16px;
@@ -320,9 +324,9 @@
 			z-index: 2;
 			line-height: calc(40 / 36);
 			@include rfs(36px, font-size);
-			margin-bottom: 24px;
-			@include media-breakpoint-up(md) {
-				margin-bottom: 40px;
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
 			}
 			@include media-breakpoint-up(xl) {
 				font-size: 36px;
@@ -347,14 +351,90 @@
 				fill: #ffbe55;
 				stroke: #ffbe55;
 				font-size: 20px;
+				margin-right: 12px;
 				@include media-breakpoint-up(xl) {
 					font-size: 24px;
+				}
+				@include media-breakpoint-only(md) {
+					margin-right: 8px;
 				}
 			}
 			p {
 				color: #3e4260;
 				@include media-breakpoint-up(xl) {
 					font-size: 18px;
+				}
+			}
+		}
+		&.sModules--program {
+			@include media-breakpoint-up(md) {
+				--sPT: #{rem(60)};
+				--sPB: #{rem(60)};
+			}
+			@include media-breakpoint-up(xl) {
+				--sPT: 64px;
+				--sPB: 64px;
+				--sTPB: 80px;
+			}
+			.sModules__wrapper {
+				@include media-breakpoint-up(md) {
+					background-color: transparent;
+					padding-top: 0;
+					padding-bottom: 0;
+					// padding: 0;
+					// margin-left: auto;
+					// margin-right: auto;
+					// max-width: 1140px;
+				}
+				@include media-breakpoint-only(md) {
+					padding-left: 0;
+					padding-right: 0;
+				}
+				@include media-breakpoint-down(sm) {
+					padding: 32px 16px 40px;
+				}
+			}
+			h2 {
+				&::before {
+					content: "";
+					position: absolute;
+					width: calc(100% + em(45));
+					height: calc(100% + em(20));
+					left: calc(-1 * em(45) / 2);
+					top: calc(-1 * em(20) / 2);
+					background-image: url("data:image/svg+xml,%3Csvg width='445' height='100' viewBox='0 0 445 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M68.4007 88.283C52.1439 87.8493 35.4275 81.2978 23.2735 74.1465C13.5027 68.3975 -0.00264108 59.282 1.05894 49.7252C2.66076 35.305 30.5992 27.1827 47.3921 22.3835C88.2246 10.714 136.646 2.42177 181.06 1.51743C235.158 0.415919 289.632 0.926709 343.48 4.48015C364.075 5.83923 384.665 7.75484 404.919 10.5749C412.993 11.6991 413.784 12.8633 416.852 17.6008C418.596 20.2941 422.924 22.8906 425.991 25.0499C429.369 27.4275 429.736 30.6778 430.307 33.7688C431.718 41.4008 433.989 49.1793 433.989 56.8781C433.989 61.9342 430.248 66.338 427.388 70.9298C424.025 76.3283 422.521 79.2335 415.709 82.9501C404.962 88.814 387.477 89.9396 374.327 91.2457C344.313 94.2265 313.19 93.1468 282.93 94.7163C262.412 95.7805 241.346 97.0072 220.792 97.3828C201.545 97.7344 182.027 97.7659 162.781 97.3828C150.931 97.1469 139.007 95.9014 127.174 95.9014C104.335 95.9014 82.6031 90.3793 60.9113 86.3783C48.5796 84.1038 35.5998 80.5753 24.4159 76.4321C17.1905 73.7553 8.64892 71.2174 7.91371 65.0891C6.47641 53.1084 8.32696 40.7576 20.4173 31.2293C35.9023 19.0258 58.5774 9.18479 82.8084 7.52753C105.445 5.97935 128.464 6.76569 151.229 6.76569C197.937 6.76569 246.084 6.99406 292.577 9.98236C322.295 11.8924 352.851 10.5749 382.705 10.5749C394.961 10.5749 407.231 10.2121 418.248 14.5534C431.951 19.9531 435.08 27.1349 440.209 36.7739C445.783 47.2505 445.313 54.9915 438.114 64.9621C432.597 72.6035 418.182 81.0488 406.443 84.4737C397.039 87.2173 386.706 87.8058 376.675 88.7062C364.563 89.7935 352.519 91.9163 340.434 92.8117C334.201 93.2735 328.295 95.3327 321.773 95.7321C309.391 96.4904 296.99 96.8185 284.58 97.5944C265.342 98.797 246.594 98.9488 227.203 98.9488C200.593 98.9488 173.668 99.4595 147.231 97.2558C132.45 96.0237 118.383 94.0602 103.817 92.2615C75.2279 88.731 44.0215 83.9899 24.7333 68.1364C8.75075 55 15.5542 44.3438 24.7333 28.021' stroke='%23FFBE55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+					z-index: -1;
+					background-size: 100% 100%;
+				}
+			}
+			.sModules__roww {
+				justify-content: center;
+				--bs-gutter-y: 16px;
+			}
+			.sModules__items {
+				height: 100%;
+				@include media-breakpoint-up(md) {
+					border-radius: var(--bd-radius-main);
+					background-color: var(--itemBgColor, #fff);
+					// padding: 24px 16px;
+				}
+				@include media-breakpoint-up(lg) {
+					padding: rem(32) rem(24);
+				}
+				@include media-breakpoint-up(xl) {
+					padding: 32px 24px;
+				}
+				@include media-breakpoint-only(md) {
+					padding: 8% 6%;
+				}
+				.sModules__item {
+					margin-bottom: 16px;
+					@include media-breakpoint-up(xl) {
+						margin-bottom: 24px;
+					}
+					&:last-child {
+						margin-bottom: 0;
+					}
 				}
 			}
 		}
