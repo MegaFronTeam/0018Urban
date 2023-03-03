@@ -79,6 +79,7 @@
 		background-color: $white;
 		padding: 16px 24px 22px;
 		margin-bottom: 50px;
+		max-width: 362px;
 		@include media-breakpoint-down(md) {
 			margin-left: 43px;
 			margin-right: 43px;
@@ -87,6 +88,12 @@
 			margin-bottom: 0;
 		}
 		&:nth-child(odd) {
+			@include media-breakpoint-down(md) {
+				img {
+					right: calc(100% - 15px);
+					bottom: -60px;
+				}
+			}
 			&::before {
 				@include media-breakpoint-down(md) {
 					top: -16px;
@@ -95,6 +102,12 @@
 			}
 		}
 		&:nth-child(even) {
+			@include media-breakpoint-down(md) {
+				img {
+					left: calc(100% - 15px);
+					bottom: -60px;
+				}
+			}
 			&::before {
 				@include media-breakpoint-down(md) {
 					top: -16px;
