@@ -419,6 +419,10 @@
 				}
 				@include media-breakpoint-down(md) {
 					background-color: transparent;
+					span {
+						font-weight: 700;
+						font-size: 12px;
+					}
 				}
 				b {
 					color: var(--bs-body-color);
