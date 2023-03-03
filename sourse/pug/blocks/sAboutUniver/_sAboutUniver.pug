@@ -148,3 +148,53 @@ mixin sAboutUniver3(data)
 									li Дополнительное образование
 									li Дополнительное образование
 	// end sAboutUniver
+
+
+mixin sAboutUniver4(data)
+	// start sAboutUniver
+	+b.SECTION.sAboutUniver--trainees.section#sAboutUniver&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+e.row.row
+					+e.col.col-md-5.col-xl-auto.order-md-last(data-aos="fade-up" data-aos-delay="300" )
+						+e.img-wrap.bg-wrap
+							+img('img/sAboutUniver-1.jpg', 'bg')
+							+e.text.d-md-none
+								h2 Специализации
+					.col-md(data-aos="fade-up" data-aos-delay="600" )
+						+b.section-title.d-none.d-md-block
+							h2 Специализации
+						.tabs
+							.tabs__caption
+								.tabs__btn.active
+									span Школа
+								.tabs__btn
+									span Среднее профессиональное образование
+								.tabs__btn
+									span Дополнительное образование
+							.tabs__content.active
+								ol
+									li Развитие системы сотрудничества и&nbsp;партнерств для школ
+									li Развитие клиентского опыта школы для разных целевых групп
+									li Проектирование образовательного опыта и&nbsp;образовательной среды в&nbsp;школе
+									li Создание образовательного опыта для разных категорий учащихся в&nbsp;школе
+									li Сопровождение школьников с&nbsp;особыми образовательными потребностями
+									li Развитие мотивации и&nbsp;талантов у&nbsp;разных категорий учащихся в&nbsp;школе
+									li Современные образовательные технологии в&nbsp;школе
+							.tabs__content
+								ol
+									li Среднее профессиональное образование
+									li Среднее профессиональное образование
+									li Среднее профессиональное образование
+									li Среднее профессиональное образование
+									li Среднее профессиональное образование
+									li Среднее профессиональное образование
+							.tabs__content
+								ol
+									li Дополнительное образование
+									li Дополнительное образование
+									li Дополнительное образование
+									li Дополнительное образование
+									li Дополнительное образование
+									li Дополнительное образование
+	// end sAboutUniver
