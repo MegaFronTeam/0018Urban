@@ -276,6 +276,89 @@
 			}
 		}
 	}
+	&.sModules--trainees {
+		.sModules__row {
+			@include media-breakpoint-down(md) {
+				--bs-gutter-y: 16px;
+			}
+			@include media-breakpoint-up(md) {
+				column-rule: 1px solid var(--bs-light);
+			}
+		}
+		.sModules__wrapper {
+			padding: 24px 16px;
+			@include media-breakpoint-up(sm) {
+				padding: 2.5rem 2.5rem 1.5rem;
+			}
+			@include media-breakpoint-up(xl) {
+				padding: 64px 64px 40px;
+			}
+			& > p {
+				color: var(--bs-primary);
+				font-size: 12px;
+				line-height: calc(24 / 20);
+				max-width: 47em;
+				margin-top: 24px;
+				@include media-breakpoint-up(sm) {
+					font-size: 16px;
+					margin-top: 32px;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 18px;
+				}
+				@include media-breakpoint-up(xl) {
+					margin-top: 40px;
+					font-size: 20px;
+				}
+			}
+		}
+		h2 {
+			position: relative;
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			z-index: 2;
+			line-height: calc(40 / 36);
+			@include rfs(36px, font-size);
+			margin-bottom: 24px;
+			@include media-breakpoint-up(md) {
+				margin-bottom: 40px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 36px;
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: 20px;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: calc(100% + em(50));
+				height: calc(100% + em(15));
+				left: calc(-1 * em(45) / 2);
+				top: calc(-1 * em(20) / 2);
+				background-image: url("data:image/svg+xml,%3Csvg width='415' height='79' viewBox='0 0 415 79' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M166.6 3.81057C169.167 2.25558 171.118 1.97859 174.32 1.79228C186.167 1.10296 198.334 1.66077 210.186 2.26127C256.36 4.60064 302.255 10.7941 347.055 22.8423C352.725 24.3669 421.669 42.4257 412.267 55.7135C407.859 61.9426 393.968 64.6712 387.371 66.2144C363.327 71.8384 338.122 73.3701 313.4 74.8572C261.759 77.9634 209.863 78.9823 158.022 76.7306C131.751 75.5896 105.341 74.0455 79.1793 70.949C60.176 68.6997 40.9591 65.6598 23.0518 58.5813C16.5401 56.0073 0.862086 50.0351 1.50226 40.3911C2.17924 30.1925 18.2868 23.8422 25.738 21.1749C51.5814 11.9238 80.3679 9.1615 107.861 7.53145C149.352 5.07151 189.783 8.66498 231.165 11.39' stroke='%23FFBE55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+				z-index: -1;
+				background-size: 100% 100%;
+			}
+		}
+		.sModules__item {
+			.icon {
+				fill: #ffbe55;
+				stroke: #ffbe55;
+				font-size: 20px;
+				@include media-breakpoint-up(xl) {
+					font-size: 24px;
+				}
+			}
+			p {
+				color: #3e4260;
+				@include media-breakpoint-up(xl) {
+					font-size: 18px;
+				}
+			}
+		}
+	}
 
 	@include media-breakpoint-up(xl) {
 	}
