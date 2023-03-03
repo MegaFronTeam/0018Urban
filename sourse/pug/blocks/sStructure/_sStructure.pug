@@ -93,3 +93,99 @@ mixin sStructure(data)
 						span академических <br> часов
 
 	// end sStructure
+
+mixin sStructure2(data)
+	// start sStructure
+	+b.SECTION.sStructure--trainees.section#sStructure&attributes(attributes)
+		.container-fluid
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
+				+b.section-title.text-center
+					h2 Структура программы
+				+e.inner
+					//- +b.braces.d-none.d-md-block
+					//- +b.braces--bottom.d-none.d-md-block
+					+e.base.d-none.d-md-block(data-aos="fade-up" data-aos-delay="150")
+						.row
+							.col
+								b Базовая часть
+							.col-auto
+								+e.hours
+									b 1630
+									span академических <br> часов
+					+e.action.d-none.d-md-flex
+						b(data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400") +
+						span (Специализация на&nbsp;выбор)
+					+e.row.row
+						.col-md-4
+							+e.item(data-aos="fade-right" data-aos-duration="400")
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b Школа
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
+									span академических <br> часов
+						.col.d-md-none
+							.text-center или
+						.col-md-4
+							+e.item(data-aos="fade-right" data-aos-delay="200" data-aos-duration="400")
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b СПО
+										span Среднее профессиональное образование
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
+									span академических <br> часов
+						.col.d-md-none
+							.text-center или
+						.col-md-4
+							+e.item(data-aos="fade-right" data-aos-delay="400" data-aos-duration="400")
+								+e.item-wrap
+									+e.action.d-md-none
+										b =
+									+e.base.d-md-none
+										b Базовая часть
+										+e.hours
+											b 1630
+											span академических <br> часов
+										+e.action.d-md-none
+											b +
+									+e.title
+										b ДО
+										span Дополнительное образование
+									+e.hours
+										b 110
+										span академических <br> часов
+								+e.hours.d-md-none
+									b 1740
+									span академических <br> часов
+				+e.action.d-none.d-md-flex
+					b(data-aos="zoom-in" data-aos-delay="100" data-aos-duration="400") =
+					+e.hours(data-aos="zoom-in" data-aos-delay="150" data-aos-duration="400")
+						b 1740
+						span академических <br> часов
+
+	// end sStructure
