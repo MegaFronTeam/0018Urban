@@ -246,7 +246,15 @@
 			--sPB: #{rem(167)};
 		}
 		&.sHeading:before {
-			content: none;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			z-index: -1;
+			@include media-breakpoint-up(md) {
+				background-image: url(../img/multi-gradient-lg.jpg);
+			}
+			@include media-breakpoint-down(md) {
+				background-image: url(../img/multi-gradient-sm.png);
+			}
 		}
 		.sHeading__row {
 			// align-items: flex-start;

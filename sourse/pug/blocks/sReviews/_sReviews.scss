@@ -88,6 +88,22 @@
 	&.sReviews--trainees {
 		--sTPB: 24px;
 		--sPB: 0;
+		position: relative;
+		&::before {
+			content: "";
+			height: 120%;
+			left: 0px;
+			top: -20%;
+			position: absolute;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			z-index: -1;
+			background-image: url(../img/sReviews-bg-sm.png);
+			@include media-breakpoint-up(md) {
+				content: none;
+			}
+		}
 
 		@include media-breakpoint-up(md) {
 			--sTPB: 32px;
@@ -96,6 +112,8 @@
 			--sTPB: 64px;
 		}
 		.sReviews__wrapper {
+			position: relative;
+			z-index: 3;
 			@include media-breakpoint-up(xl) {
 				padding: 55px;
 			}

@@ -246,6 +246,24 @@
 			--sPT: 64px;
 			--sPB: 64px;
 		}
+		position: relative;
+		&::before {
+			content: "";
+			height: 1500px;
+			left: 0px;
+			bottom: 60%;
+			position: absolute;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			z-index: -1;
+			background-image: url(../img/sStructure-bg-sm.png);
+			@include media-breakpoint-up(md) {
+				bottom: 15%;
+				height: 1200px;
+				background-image: url(../img/sStructure-bg-lg.png);
+			}
+		}
 
 		.section-title {
 			margin-bottom: 0;

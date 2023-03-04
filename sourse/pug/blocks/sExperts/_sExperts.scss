@@ -187,6 +187,43 @@
 		}
 	}
 	&.sExperts--trainees {
+		position: relative;
+		&::before {
+			content: "";
+			height: 1600px;
+			left: 0px;
+			bottom: 20%;
+			position: absolute;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			z-index: -1;
+			background-image: url(../img/sStructure-bg-sm.png);
+			@include media-breakpoint-up(md) {
+				bottom: auto;
+				top: 50%;
+				height: 1200px;
+				background-image: url(../img/sStructure-bg-lg.png);
+			}
+		}
+		&::after {
+			content: "";
+			height: 900px;
+			left: 0px;
+			top: 70%;
+			position: absolute;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			z-index: -1;
+			background-image: url(../img/sStructure-bg-sm-2.png);
+			@include media-breakpoint-up(md) {
+				bottom: auto;
+				top: calc(100% + 150px);
+				height: 900px;
+				background-image: url(../img/sStructure-bg-lg-2.png);
+			}
+		}
 		.section-title {
 			h2 {
 				position: relative;
