@@ -87,6 +87,8 @@
 	}
 	&.sReviews--trainees {
 		--sTPB: 24px;
+		--sPB: 0;
+
 		@include media-breakpoint-up(md) {
 			--sTPB: 32px;
 		}

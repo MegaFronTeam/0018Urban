@@ -78,3 +78,45 @@ mixin sContact2()
 										+icon('internet')
 										span mguu.ru
 	// end sContact
+
+
+mixin sContact3()
+	// start sContact
+	+b.SECTION.sContact--trainees.section#sContact&attributes(attributes)
+		.container-fluid
+			+e.wrapper(data-aos="fade-up" data-aos-delay="100" )
+				+b.section-title.text-center
+					h2 Контакты
+				+e.row.row
+					.col-md-6
+						+e.item(data-aos="fade-up" data-aos-delay="200" )
+							ul
+								li.mb-0
+									h4 Виктория Чистякова
+								li
+									span Куратор программы 
+
+								li
+									a(href="tel:+74959577575w4909") 
+										+icon('tel')
+										span +7 (495) 957-75-75, доб. 4909
+								li
+									a(href="mailto:ChistyakovaVA@edu.mos.ru") 
+										+icon('email')
+										span ChistyakovaVA@edu.mos.ru
+							+e.img-wrap.order-md-first
+								+img('img/contact-avatar.jpg', 'bg')
+					.col-md-6
+						+e.item(data-aos="fade-up" data-aos-delay="400" )
+							ul
+								li
+									h4 Университет Правительства Москвы
+								li
+									a(href="https://yandex.by/maps/-/CCUrRPfHCA" target="_blank")
+										+icon('map-pin')
+										span 107045, г. Москва, ул. Сретенка, д.&nbsp;28
+								li
+									a(href="https://mguu.ru" target="_blank")
+										+icon('internet')
+										span mguu.ru
+	// end sContact
