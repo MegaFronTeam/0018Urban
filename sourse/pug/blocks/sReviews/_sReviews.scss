@@ -85,7 +85,67 @@
 	&__caption {
 		margin-left: rem(8);
 	}
-
+	&.sReviews--trainees {
+		--sTPB: 24px;
+		@include media-breakpoint-up(md) {
+			--sTPB: 32px;
+		}
+		@include media-breakpoint-up(xl) {
+			--sTPB: 64px;
+		}
+		.sReviews__wrapper {
+			@include media-breakpoint-up(xl) {
+				padding: 55px;
+			}
+		}
+		.sReviews__caption {
+			h6 {
+				@include media-breakpoint-up(xl) {
+					margin-bottom: 4px;
+					font-size: 18px;
+					line-height: calc(24 / 18);
+				}
+			}
+			p {
+				@include media-breakpoint-up(xl) {
+					font-size: 18px;
+					line-height: calc(24 / 18);
+				}
+			}
+		}
+		.section-title {
+			h2 {
+				line-height: calc(40 / 36);
+				@include rfs(36px, font-size);
+				margin-bottom: 0;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 0;
+				}
+				@include media-breakpoint-up(xl) {
+					font-size: 36px;
+				}
+				@include media-breakpoint-down(sm) {
+					font-size: 20px;
+				}
+				span {
+					display: inline-block;
+					position: relative;
+					z-index: 2;
+					&::before {
+						content: "";
+						position: absolute;
+						width: calc(100% + em(30));
+						height: calc(100% + em(18));
+						left: calc(-1 * em(7) / 2);
+						top: calc(-1 * em(20) / 2);
+						background-image: url("data:image/svg+xml,%3Csvg width='278' height='80' viewBox='0 0 278 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M122.238 3.65465C124.361 2.03597 125.748 1.73073 127.957 1.50401C136.129 0.665219 144.204 1.09771 152.057 1.5774C182.647 3.44612 212.081 9.25789 239.307 21.0672C242.752 22.5615 284.772 40.2419 275.089 53.932C270.55 60.3497 260.486 63.2964 255.644 64.9486C237.998 70.9701 220.595 72.8212 203.529 74.6213C167.881 78.3813 132.585 80.0104 98.1459 78.2955C80.6938 77.4265 63.2492 76.147 46.3616 73.2777C34.0948 71.1935 21.8823 68.3035 11.5675 61.27C7.81666 58.7124 -1.27056 52.7848 1.58192 42.9188C4.59843 32.4854 17.0681 25.8114 22.7685 23.0004C42.54 13.2507 62.6701 10.101 81.643 8.12337C110.275 5.13894 136.673 8.3547 163.931 10.6719' stroke='%23FFBE55' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+						z-index: -1;
+						background-size: 100% 100%;
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

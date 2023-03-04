@@ -51,3 +51,32 @@ mixin sExpertsMPA(data)
 					+sExpertsCard(6, `Анна Иванова`, `Руководитель программы`, `Заместитель директора Корпоративного университета Транспортного комплекса`)
 					+sExpertsCard(7, `Инна Цыплакова`, `Куратор программы`, `Менеджер направлений &laquo;Адаптация&raquo; и&nbsp;&quot;Центр комплексных программ Кадровых сервисов Университета Правительства Москвы`)
 	// end sExperts
+
+
+mixin sExpertsTrainees(data)
+	// start sExperts
+	+b.SECTION.sExperts--trainees.section#sExperts&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+b.section-title.text-center
+					h2 Эксперты программы
+				+e.row.row
+					mixin sExpertsCard(i)
+						.col-6.col-sm-4.col-lg-3
+							+e.card(data-aos="fade-up" data-aos-delay="500" )
+								+e.img-wrap
+									+img(`img/sExperts-${i}.jpg`, 'bg')
+									+e.text
+										p Стаж работы 12&nbsp;лет. Окончил Ленинградский государственный университет имени А.С. Пушкина, Квалификация.
+								+e.caption
+									strong Татьяна Ливанова
+									span Преподаватель в МГУ
+					+sExpertsCard(1)
+					+sExpertsCard(2)
+					+sExpertsCard(1)
+					+sExpertsCard(3)
+					+sExpertsCard(4)
+					+sExpertsCard(1)
+					+sExpertsCard(2)
+					+sExpertsCard(1)
+	// end sExperts
