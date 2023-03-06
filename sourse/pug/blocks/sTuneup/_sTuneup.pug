@@ -3,7 +3,7 @@ mixin sTuneup(data)
 	+b.sTuneup.section#sTuneup&attributes(attributes)
 		.container-fluid
 			+e.wrapper
-				+e.item
+				+e.item(data-aos="zoom-in-up" data-aos-delay="100" )
 					h2 Настрой систему
 					p Для себя, для команды, для города
 					+img('img/sTuneup.png')
