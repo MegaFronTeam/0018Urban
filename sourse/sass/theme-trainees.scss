@@ -14,7 +14,7 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/utilities";
 
 $default-font: "GT Walsheim Pro";
-$secondary-font: "Circe";
+// $secondary-font: "Circe";
 // $caption-font: "Roboto";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: "../fonts/";
@@ -22,8 +22,8 @@ $file-format: woff2;
 
 @include font-face($default-font, $addr + "GTWalsheimPro-Regular", 400, $file-formats: $file-format);
 @include font-face($default-font, $addr + "GTWalsheimPro-Bold", 700, $file-formats: $file-format);
-@include font-face($secondary-font, $addr + "Circe-Regular", 400, $file-formats: $file-format);
-@include font-face($secondary-font, $addr + "Circe-Bold", 700, $file-formats: $file-format);
+// @include font-face($secondary-font, $addr + "Circe-Regular", 400, $file-formats: $file-format);
+// @include font-face($secondary-font, $addr + "Circe-Bold", 700, $file-formats: $file-format);
 
 // $primary-light: #e85967;
 $primary: #542d80;

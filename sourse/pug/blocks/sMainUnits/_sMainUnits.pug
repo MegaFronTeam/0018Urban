@@ -12,8 +12,8 @@ mixin sMainUnits(empty)
 		.container-fluid
 			+e.row
 				+e.unit--lg
-					//- +main-unit('Материалы','Все материалы').--light-bg
-					+main-unit('Материалы','Все материалы').--yellow
+					//- +main-unit('Материалы','Все материалы').--yellow
+					+main-unit('Материалы','Все материалы').--light-bg
 						.swiper
 							.swiper-wrapper
 								.swiper-slide
@@ -69,18 +69,19 @@ mixin sMainUnits(empty)
 							+e.empty 
 								p Нет новых оповещений
 					else
-						//- +main-unit('оповещения','Все оповещения').--light
-						+main-unit('оповещения','Все оповещения').--dark
+						//- +main-unit('оповещения','Все оповещения').--dark
+						+main-unit('оповещения','Все оповещения').--light
 							.swiper
 								.swiper-wrapper
 									- for (var x = 0; x < 3; x++)
 										.swiper-slide
 											+e.body.--notification
-												//- +e.note-date 15.11.2022 12:49:17
-												+e.date
-													+icon('calendar')
-													| 26 сентября
-												+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+												+e.note-date 15.11.2022 12:49:17
+												//- +e.date
+												//- 	+icon('calendar')
+												//- 	| 26 сентября
+												//- +e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+												+e.note-title По заданию  «Urban Лидер» получен  «Незачет»
 												+e.note-btn Посмотреть событие
 									//- .swiper-slide
 									//- 	+e.body.--notification
@@ -141,8 +142,8 @@ mixin sMainUnits(empty)
 							+e.slider-nav
 								+arrow
 				+e.unit--md
-					//- +main-unit('Форум','Все форумы').--dark
-					+main-unit('Форум','Все форумы').--yellow
+					//- +main-unit('Форум','Все форумы').--yellow
+					+main-unit('Форум','Все форумы').--dark
 						+e.body--forum
 							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
 							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
@@ -258,6 +259,150 @@ mixin sMainUnits2(empty)
 				+e.unit--md
 					//- +main-unit('Форум','Все форумы').--dark
 					+main-unit('Форум','Все форумы').--yellow
+						+e.body--forum
+							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
+							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
+							+e.forum-btn(href="#") Предложить идею
+	// end sMainUnits
+
+mixin sMainUnits3(empty)
+	// start sMainUnits
+	+b.SECTION.sMainUnits.section#sMainUnits&attributes(attributes)
+		.container-fluid
+			+e.row
+				+e.unit--lg
+					//- +main-unit('Материалы','Все материалы').--yellow
+					+main-unit('Урок','Расписание').--light-bg
+					//- 	.swiper
+					//- 		.swiper-wrapper
+					//- 			.swiper-slide
+					//- 				+e.body--materials
+					//- 					+e.details
+					//- 						+e.advice(href="#") Рекомендации
+					//- 						+e.date
+					//- 							+icon('calendar')
+					//- 							| 26 сентября
+					//- 						+e.time
+					//- 							+icon('clock')
+					//- 							| 7 миннут
+					//- 					+e.text
+					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
+					//- 						+e.tag Статья
+					//- 					+e.img-wrap(href="#")
+					//- 						+img('img/news-preview-4.jpg')
+					//- 			.swiper-slide
+					//- 				+e.body--materials
+					//- 					+e.details
+					//- 						+e.advice(href="#") Рекомендации
+					//- 						+e.date
+					//- 							+icon('calendar')
+					//- 							| 26 сентября
+					//- 						+e.time
+					//- 							+icon('clock')
+					//- 							| 7 миннут
+					//- 					+e.text
+					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
+					//- 						+e.tag Статья
+					//- 					+e.img-wrap(href="#")
+					//- 						+img('img/news-preview-4.jpg')
+					//- 			.swiper-slide
+					//- 				+e.body--materials
+					//- 					+e.details
+					//- 						+e.advice(href="#") Рекомендации
+					//- 						+e.date
+					//- 							+icon('calendar')
+					//- 							| 26 сентября
+					//- 						+e.time
+					//- 							+icon('clock')
+					//- 							| 7 миннут
+					//- 					+e.text
+					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
+					//- 						+e.tag Статья
+					//- 					+e.img-wrap(href="#")
+					//- 						+img('img/news-preview-4.jpg')
+					//- 		+e.slider-nav
+					//- 			+arrow
+				+e.unit--sm
+					if empty
+						+main-unit('оповещения','').--light
+							+e.empty 
+								p Нет новых оповещений
+					else
+						//- +main-unit('оповещения','Все оповещения').--dark
+						+main-unit('оповещения','Все оповещения').--light
+							.swiper
+								.swiper-wrapper
+									- for (var x = 0; x < 3; x++)
+										.swiper-slide
+											+e.body.--notification
+												+e.note-date 15.11.2022 12:49:17
+												//- +e.date
+												//- 	+icon('calendar')
+												//- 	| 26 сентября
+												//- +e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+												+e.note-title По заданию  «Urban Лидер» получен  «Незачет»
+												+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
+									//- .swiper-slide
+									//- 	+e.body.--notification
+									//- 		+e.note-date 15.11.2022 12:49:17
+									//- 		+e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
+									//- 		+e.note-btn Посмотреть событие
+								+e.slider-nav
+									+arrow
+				+e.unit--sm
+					+main-unit('Нетворкинг','Всё сообщество').--light
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--network
+											+e.text
+												+e.name Райская Елена Сергеевна
+												+e.position Директор по развитию
+											+e.portrait-wrap(href="#")
+												+img('img/profile-14.jpg')
+											+e.company Федеральное бюджетное учреждение «Агентство автомобильного транспорта»
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					+main-unit('Форум','Все форумы').--dark
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.body--forum
+											+e.forum-group Форум группы Название группы…
+											+e.forum-title(href="#") Развитие кадрового потенциала университета
+											+e.comments
+												+icon('msg')
+												| 5
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					+main-unit('Лента новостей','Все новости').--slider
+						.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 3; x++)
+									.swiper-slide
+										+e.slide-bg(href="#")
+											+e.body--newsline
+												+e.text
+													+e.tag Статья
+													+e.date
+														+icon('calendar')
+														| 26 сентября
+												+e.heading Встреча с академическим руководителем и студентами 
+											+img(`img/news-preview-1.jpg`)
+							+e.slider-nav
+								+arrow
+				+e.unit--md
+					//- +main-unit('Форум','Все форумы').--yellow
+					+main-unit('Форум','Все форумы').--dark
 						+e.body--forum
 							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
 							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.

@@ -9,6 +9,7 @@ $file-format: woff;
 
 @include font-face ($default-font, $addr + "Circe-Regular", 400, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Circe-Bold", 700, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Circe-ExtraBold", 800, $file-formats: $file-format);
 @include font-face ($caption-font, $addr + "Roboto-Regular", 400, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
