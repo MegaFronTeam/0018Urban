@@ -270,58 +270,45 @@ mixin sMainUnits3(empty)
 	+b.SECTION.sMainUnits.section#sMainUnits&attributes(attributes)
 		.container-fluid
 			+e.row
-				+e.unit--lg
+				+e.unit--lg.--module.--lesson
 					//- +main-unit('Материалы','Все материалы').--yellow
 					+main-unit('Урок','Расписание').--light-bg
-					//- 	.swiper
-					//- 		.swiper-wrapper
-					//- 			.swiper-slide
-					//- 				+e.body--materials
-					//- 					+e.details
-					//- 						+e.advice(href="#") Рекомендации
-					//- 						+e.date
-					//- 							+icon('calendar')
-					//- 							| 26 сентября
-					//- 						+e.time
-					//- 							+icon('clock')
-					//- 							| 7 миннут
-					//- 					+e.text
-					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
-					//- 						+e.tag Статья
-					//- 					+e.img-wrap(href="#")
-					//- 						+img('img/news-preview-4.jpg')
-					//- 			.swiper-slide
-					//- 				+e.body--materials
-					//- 					+e.details
-					//- 						+e.advice(href="#") Рекомендации
-					//- 						+e.date
-					//- 							+icon('calendar')
-					//- 							| 26 сентября
-					//- 						+e.time
-					//- 							+icon('clock')
-					//- 							| 7 миннут
-					//- 					+e.text
-					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
-					//- 						+e.tag Статья
-					//- 					+e.img-wrap(href="#")
-					//- 						+img('img/news-preview-4.jpg')
-					//- 			.swiper-slide
-					//- 				+e.body--materials
-					//- 					+e.details
-					//- 						+e.advice(href="#") Рекомендации
-					//- 						+e.date
-					//- 							+icon('calendar')
-					//- 							| 26 сентября
-					//- 						+e.time
-					//- 							+icon('clock')
-					//- 							| 7 миннут
-					//- 					+e.text
-					//- 						+e.heading(href="#") Первые выпускники «Urban Лидера» — программы, развивающей навыки управления командой в условиях изменений, — делятся впечатлениями об обучении.
-					//- 						+e.tag Статья
-					//- 					+e.img-wrap(href="#")
-					//- 						+img('img/news-preview-4.jpg')
-					//- 		+e.slider-nav
-					//- 			+arrow
+						+b.modules-item.--lesson
+							+e.head
+								.row
+									.col-sm-auto.order-sm-last
+										+e.date-time
+											+icon('calendar')
+											| 9 Фев (чт) 15:00
+									.col-sm
+										+e.title Модуль 1. Вводный
+
+								+e.topic Тема: Оранизационный план проведения мероприятия
+							+e.description
+								p Как проходит этот курс
+								ul
+									li 
+										+icon('clock')
+										span З&nbsp;ак.ч.
+									li 
+										+icon('person')
+										span Преподаватель: Летунова Александра Петровна Директор по&nbsp;развитию
+									li 
+										+icon('map-pin2')
+										span Место проведения: Лекторий &laquo;Urban Лидер&raquo;
+							+e.footer
+								.row
+									+e.coll.col-sm-auto.order-sm-last
+										+e.materials(href="#")
+											+icon('doc')
+											| Материалы модуля
+									.col-auto
+										+e.tag Обязательное
+									.col-auto
+										+e.task(href="#")
+											+icon('pen')
+											| Задание
+
 				+e.unit--sm
 					if empty
 						+main-unit('оповещения','').--light

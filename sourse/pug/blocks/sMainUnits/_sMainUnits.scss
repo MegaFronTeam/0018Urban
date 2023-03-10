@@ -67,6 +67,7 @@
 		&--light-bg {
 			position: relative;
 			background-color: $white;
+			z-index: 2;
 			&::after {
 				position: absolute;
 				content: "";
@@ -78,6 +79,7 @@
 				background-repeat: no-repeat;
 				background-size: auto 100%;
 				opacity: 0.5;
+				z-index: -1;
 			}
 		}
 		&--dark {
@@ -116,6 +118,10 @@
 				left: 16px;
 				bottom: 16px;
 			}
+		}
+		&.sMainUnits__item--lesson {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 	&__slide-bg {
@@ -622,8 +628,44 @@
 			grid-column: span 6;
 		}
 	}
+
 	.sMainUnits__item--yellow {
 		background-color: #ffeed4;
+	}
+	.sMainUnits__unit--lesson {
+		display: flex;
+		flex-direction: column;
+		.sMainUnits__item {
+			display: flex;
+			flex-direction: column;
+			padding: 8px 16px 16px 16px;
+			.modules-item__title {
+				margin-bottom: 0;
+				color: $dark-teal;
+			}
+			.modules-item__head {
+				font-size: 18px;
+				line-height: calc(24 / 18);
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.modules-item__topic {
+				font-weight: 700;
+			}
+		}
+
+		.sMainUnits__item--light-bg {
+			&::after {
+				opacity: 0.3;
+			}
+		}
+		.sMainUnits__header {
+			margin-bottom: 8px;
+		}
+		.modules-item {
+			height: auto;
+			flex-grow: 1;
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}
