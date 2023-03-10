@@ -170,6 +170,46 @@
 				--bs-btn-font-weight: 700;
 			}
 		}
+		&.sTask__answer--checking,
+		&.sTask__answer--failed,
+		&.sTask__answer--success {
+			border-radius: 4px;
+			.sTask__wrap {
+				padding: rem(16);
+			}
+		}
+		&.sTask__answer--checking {
+			background-color: rgba($color: #faf3c2, $alpha: 0.39);
+			.sTask__alert {
+				color: #C87D1B;
+				background-color: #FAF4C2;
+				border-color: #F8C86C;
+			}
+		}
+		&.sTask__answer--failed {
+			background-color: rgba($color: #fad6c2, $alpha: 0.2);
+			.sTask__alert {
+				color: #D15611;
+				background-color: #FAD6C2;
+				border-color: #F87D6C;
+			}
+		}
+		&.sTask__answer--success {
+			background-color: rgba($color: #dcf6f4, $alpha: 0.7);
+			.sTask__alert {
+				color: #008981;
+				background-color: #DCF6F4;
+				border-color: #00A89E;
+			}
+		}
+	}
+	&__alert {
+		font-weight: 400;
+		font-size: rem(14);
+		line-height: calc(16 / 14);
+		padding: rem(12) rem(11) rem(10);
+		border: 1px solid;
+		border-radius: 4px;
 	}
 
 	@include media-breakpoint-up(xl) {

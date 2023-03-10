@@ -30,26 +30,23 @@ block pagecontent
 	main
 		+headerBlock('Задание').headerBlock--task
 		+sTask('tag')
-			h3 Ваш ответ
-			+form-wrap
-				.form-wrap__input-wrap.form-group
-					textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите ваш ответ')
-					+e.LABEL.file-btn
-						input(type="file")
-						+icon('clip')
-						span Прикрепить файл
-				+btn('Отправить', 'submit').btn.btn-primary
+			+e.answer--checking
+				+e.alert Ваш ответ находится на&nbsp;проверке у&nbsp;преподавателя.
+				+e.wrap
+					h3 Ваш ответ
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. 
+					//- +form-wrap
+					//- 	.form-wrap__input-wrap.form-group
+					//- 		textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите ваш ответ')
+					//- 		+e.LABEL.file-btn
+					//- 			input(type="file")
+					//- 			+icon('clip')
+					//- 			span Прикрепить файл
+					//- 	+btn('Отправить', 'submit').btn.btn-primary
 			
 		//- +e.answer
 		//- 	.alert Ваш ответ находится на&nbsp;проверке у&nbsp;преподавателя.
-		//- 	h3 Ваш ответ
-		//- +e.answer
-		//- 	.alert Вы&nbsp;получили &laquo;Незачет&raquo;
-		//- 	h3 Ваш ответ
-		//- +e.answer
-		//- 	.alert Вы&nbsp;получили &laquo;Зачет&raquo;
-		//- 	h3 Ваш ответ
-			
+
 	+footer()
 	//- +chat
 

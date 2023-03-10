@@ -30,25 +30,19 @@ block pagecontent
 	main
 		+headerBlock('Задание').headerBlock--task
 		+sTask('tag')
-			h3 Ваш ответ
-			+form-wrap
-				.form-wrap__input-wrap.form-group
-					textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите ваш ответ')
-					+e.LABEL.file-btn
-						input(type="file")
-						+icon('clip')
-						span Прикрепить файл
-				+btn('Отправить', 'submit').btn.btn-primary
-			
-		//- +e.answer
-		//- 	.alert Ваш ответ находится на&nbsp;проверке у&nbsp;преподавателя.
-		//- 	h3 Ваш ответ
-		//- +e.answer
-		//- 	.alert Вы&nbsp;получили &laquo;Незачет&raquo;
-		//- 	h3 Ваш ответ
-		//- +e.answer
-		//- 	.alert Вы&nbsp;получили &laquo;Зачет&raquo;
-		//- 	h3 Ваш ответ
+			+e.answer--failed
+				+e.alert Вы&nbsp;получили &laquo;Незачет&raquo;
+				+e.wrap
+					p Все руководители хотели повысить эффективность своих команд, но&nbsp;каждый пришел с&nbsp;конкретной задачей. Например, один из&nbsp;участников отметил, что среди его сотрудников снижается проактивность. Все руководители хотели повысить эффективность своих команд, но&nbsp;каждый пришел с&nbsp;конкретной задачей. Например, один из&nbsp;участников отметил, что среди его сотрудников снижается проактивность, есть признаки выгорания и&nbsp;слабой мотивации. Как повысить вовлеченность и&nbsp;ответственность каждого за&nbsp;общий результат, выработать в&nbsp;коллективе новые общие ценности?
+					h3 Ваш ответ
+					+form-wrap
+						.form-wrap__input-wrap.form-group
+							textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите ваш ответ')
+							+e.LABEL.file-btn
+								input(type="file")
+								+icon('clip')
+								span Прикрепить файл
+						+btn('Отправить', 'submit').btn.btn-primary
 			
 	+footer()
 	//- +chat
