@@ -60,6 +60,23 @@
 			background-size: cover;
 		}
 	}
+	&.headerBlock--task {
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
+		--sTPB: 0;
+		.section-title {
+			h1 {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		@include media-breakpoint-down(md) {
+			--sPT: #{rem(24)};
+			--sPB: #{rem(24)};
+			background-size: cover;
+		}
+	}
 	&.faq {
 		--sPT: #{rem(35)};
 		--sPB: #{rem(20)};

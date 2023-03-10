@@ -517,7 +517,9 @@
 		align-self: flex-start;
 		margin-bottom: 40px;
 		font-size: 13px;
+		line-height: calc(16 / 13);
 		font-weight: 700;
+		padding: 3px 16px;
 	}
 	&__name {
 		max-width: 200px;

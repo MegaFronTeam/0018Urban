@@ -2,7 +2,7 @@ mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
 		span
 mixin mob-mnu()
-	-
+	//- -
 		//- let path = require('path');
 		//- let fs = require('fs');
 		//- var requestURL = 'top-nav.json';
@@ -32,6 +32,11 @@ mixin top-nav()
 							+mnu()
 				+e.controls-col.col-auto
 					+e.controls
+						+b.topNav-btnWrap
+							+e.btn--rating
+								+img('img/svg/good.svg')
+								// <img src="img/svg/normal.svg" alt="" loading="lazy">
+								// <img src="img/svg/poorly.svg" alt="" loading="lazy">
 						+b.topNav-btnWrap--help.d-lg-none
 							+e.btn.toggle-contact-js(data-id= "#ddHelp")
 								+icon('help')
@@ -48,6 +53,8 @@ mixin top-nav()
 							//- 	a(href="#")
 							//- 		+icon('help')
 							//- 		span FAQ
+						
+						
 						+b.topNav-btnWrap
 							+e.btn(href="#")
 								+icon('notifications')

@@ -33,6 +33,8 @@
 
 <!-- Новые страницы -->
  1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
+ 2. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
+ 3. 
 
  # School-landing
  1. <https://megafronteam.github.io/0018Urban/public/school-landing.html> 

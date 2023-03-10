@@ -538,6 +538,16 @@
 		&:hover {
 			color: var(--bs-primary-hover, #{$link-hover-color});
 		}
+		&.topNav-btnWrap__btn--rating {
+			img {
+				width: 24px;
+				height: auto;
+				max-width: 100%;
+				@include media-breakpoint-up(xl) {
+					width: rem(24);
+				}
+			}
+		}
 	}
 	&__btn-content {
 		position: absolute;
