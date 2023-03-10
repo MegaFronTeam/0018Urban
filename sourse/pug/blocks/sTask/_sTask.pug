@@ -1,4 +1,4 @@
-mixin sTask(data)
+mixin sTask(tag)
 	// start sTask
 	+b.sTask.section#sTask&attributes(attributes)
 		.container-fluid
@@ -10,27 +10,9 @@ mixin sTask(data)
 						li Участники в&nbsp;группах по&nbsp;семь человек в&nbsp;формате &laquo;равный&nbsp;&mdash; равному&raquo; обменивались лучшими практиками из&nbsp;личного управленческого опыта.
 						li Частью обучения стал индивидуальный план развития с&nbsp;поддержкой тьютора на&nbsp;каждом этапе.
 						li Эксперты оказывали персональную помощь участникам в&nbsp;решении конкретной управленческой задачи
-					+e.tag Необходим зачет
+					if tag
+						+e.tag Необходим зачет
 				
 				+e.answer
-					h3 Ваш ответ
-					+form-wrap
-						.form-wrap__input-wrap.form-group
-							textarea.form-wrap__input.form-control(name='textarea' placeholder='Введите ваш ответ')
-							+e.LABEL.file-btn
-								input(type="file")
-								+icon('clip')
-								span Прикрепить файл
-						+btn('Отправить', 'submit').btn.btn-primary
-					
-				//- +e.answer
-				//- 	.alert Ваш ответ находится на&nbsp;проверке у&nbsp;преподавателя.
-				//- 	h3 Ваш ответ
-				//- +e.answer
-				//- 	.alert Вы&nbsp;получили &laquo;Незачет&raquo;
-				//- 	h3 Ваш ответ
-				//- +e.answer
-				//- 	.alert Вы&nbsp;получили &laquo;Зачет&raquo;
-				//- 	h3 Ваш ответ
-					
+					block
 	// end sTask

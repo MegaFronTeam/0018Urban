@@ -34,7 +34,9 @@
 <!-- Новые страницы -->
  1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
  2. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
- 3. 
+ 3. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
+ 4. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
+ 5. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
 
  # School-landing
  1. <https://megafronteam.github.io/0018Urban/public/school-landing.html> 
