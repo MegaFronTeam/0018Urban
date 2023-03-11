@@ -23,6 +23,10 @@
 	--sPB: #{rem(80 * 0.5)};
 	--sTPB: #{rem(40 * 0.5)};
 
+
+	--bs-form-control-bg: #{$white};
+
+
 	--fancybox-content-color: var(--bs-body-color);
 	--swiperArrowSize: #{rem(32)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
