@@ -165,6 +165,7 @@
 }
 .pagination {
 	margin-bottom: 0;
+	--bs-border-radius: 4px;
 }
 .page-item {
 	&:not(:last-child) {
@@ -179,9 +180,9 @@
 	height: 32px;
 	width: auto;
 	min-width: 32px;
-	border-radius: 4px;
+	border-radius: var(--bs-pagination-border-radius);
 	font-size: 16px;
-	line-height: 1;
+	line-height: calc(24 / 16);
 }
 .pagination--conrols {
 	.page-item {
@@ -732,4 +733,3 @@
 .topNav-btnWrap--help .topNav-btnWrap__btn-content {
 	z-index: 100;
 }
-

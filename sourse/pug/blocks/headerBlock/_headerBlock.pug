@@ -39,6 +39,7 @@ mixin newsItemHeader(title, descr, register, registered)
 				.col-sm-6.order-sm-1
 					+e.img-wrap
 						+img('img/news-preview-5.jpg')
+	// end newsItemHeader
 
 mixin eventsHeader
 	+b.headerBlock--events.section#headerBlock&attributes(attributes)
@@ -63,18 +64,50 @@ mixin eventsHeader
 								+icon('calendar')
 
 
-mixin sUsefulHeader
+mixin sUsefulHeader(h, archive, brcr, ...items)
 	+b.headerBlock--useful.section#headerBlock&attributes(attributes)
+		if brcr
+			.container.container--breadcrumb
+				+breadcrumb('Главная',...items)
 		.container-fluid
 			+b.section-title.text-center
-				h1 Полезные материалы
-			+b.events-filter
-				+e.btn--js.d-md-none.BUTTON(data-toggle="#useful-dropdown") Фильтр
-				+e.filter-wrap(id="useful-dropdown")
-					+e.radio-wrap.radio-wrap
-						+in-c('radio','Все материалы','useful')(checked)
-						+in-c('radio','Обязательные','useful')
-						+in-c('radio','Факультативные','useful')
-						+in-c('radio','Рекомендации','useful')
+				h1!= h
+			+e.roww.row
+				.col
+					+b.events-filter
+						+e.btn--js.d-md-none.BUTTON(data-toggle="#useful-dropdown") Фильтр
+						+e.filter-wrap(id="useful-dropdown")
+							+e.radio-wrap.radio-wrap
+								+in-c('radio','Все материалы','useful')(checked)
+								+in-c('radio','Обязательные','useful')
+								+in-c('radio','Факультативные','useful')
+								+in-c('radio','Рекомендации','useful')
+				if archive
+					.col-lg-auto
+						+e.btn-archive--left.btn.btn-primary(href="#")
+							+icon('chevron-left')
+							span Вернуться во все материалы
+				else
+					.col-lg-auto.text-end
+						+e.btn-archive--right.btn.btn-primary(href="#")
+							span Архивные материалы
+							+icon('chevron-right')
 
-	// end newsItemHeader
+
+
+
+//- mixin sUsefulHeader
+//- 	+b.headerBlock--useful.section#headerBlock&attributes(attributes)
+//- 		.container-fluid
+//- 			+b.section-title.text-center
+//- 				h1 Полезные материалы
+//- 			+b.events-filter
+//- 				+e.btn--js.d-md-none.BUTTON(data-toggle="#useful-dropdown") Фильтр
+//- 				+e.filter-wrap(id="useful-dropdown")
+//- 					+e.radio-wrap.radio-wrap
+//- 						+in-c('radio','Все материалы','useful')(checked)
+//- 						+in-c('radio','Обязательные','useful')
+//- 						+in-c('radio','Факультативные','useful')
+//- 						+in-c('radio','Рекомендации','useful')
+
+	

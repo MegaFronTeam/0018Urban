@@ -19,7 +19,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Полезные материалы'
+	- let  title= 'Архивные материалы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -28,7 +28,7 @@ block pagecontent
 	+header()
 		+top-nav()
 	main
-		+sUsefulHeader('Полезные материалы')
+		+sUsefulHeader('Архивные материалы','archive', 'brcr', 'Полезные материалы', 'Архивные материалы')
 		+sUseful()
 			+useful-item(`Статья`, `Первые выпускники &laquo;Urban Лидера&raquo;&nbsp;&mdash; программы, развивающей навыки управления командой в&nbsp;условиях изменений,&nbsp;&mdash; делятся впечатлениями об&nbsp;обучении.`, '1')
 				+useful-label('', 'Рекомендации')(style= "--label-c: #008981; --label-bg: #4ED0C880;" )

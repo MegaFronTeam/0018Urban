@@ -37,6 +37,8 @@
  3. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
  4. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
  5. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
+ 6. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
+ 7. <https://megafronteam.github.io/0018Urban/public/15-2-useful-articles-archive.html>
 
  # School-landing
  1. <https://megafronteam.github.io/0018Urban/public/school-landing.html> 
