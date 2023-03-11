@@ -30,6 +30,7 @@
 		// --bs-gutter-y: var(--bs-gutter-x);
 		align-items: center;
 		flex-wrap: nowrap;
+		justify-content: space-between;
 	}
 	// .section-title {
 	// }
@@ -62,6 +63,12 @@
 		@include roww(12px, m);
 		display: flex;
 		align-items: center;
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: 16px;
+		}
+		@include media-breakpoint-up(lg) {
+			--bs-gutter-x: 12px;
+		}
 		@include media-breakpoint-up(xl) {
 			--bs-gutter-x: #{rem(12)};
 		}
@@ -70,6 +77,12 @@
 		}
 		a {
 			color: var(--bs-body-color, #{$body-color});
+		}
+	}
+	&__col-menu {
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			top: 100%;
 		}
 	}
 	// &__btn {
