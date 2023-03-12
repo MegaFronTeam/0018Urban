@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Заголовок Страницы</title>
+		<title>Обучение</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -22,42 +22,145 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class=" enter-page theme-school">
+	<body class=" training-page theme-school">
 		<div class="main-wrapper">
-			<!-- start sEnter-->
-			<section class="sEnter section" id="sEnter">
-				<div class="container">
-					<div class="sEnter__container">
-						<a class="sEnter__logo d-none d-sm-block" href="#"><img src="img/svg/logo-light.svg" alt="" loading="lazy"/>
-						</a>
-						<div class="sEnter__title">Вход
+			<!-- start header-->
+			<header class="header" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container-fluid">
+						<div class="top-nav__row row">
+							<div class="top-nav__col-logo col-auto order-first">
+								<a class="top-nav__logo" href="/"><img src="img/svg/logotype.svg" alt="" loading="lazy"/>
+								</a>
+							</div>
+							<div class="top-nav__col-menu col">
+								<div class="menu-mobile menu-mobile--js">
+									<div class="menu-mobile__inner">
+										<nav>
+											<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Расписание</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Материалы</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Форум</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Нетворкинг</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">События</a></li>
+												<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+							<div class="top-nav__controls-col col-auto">
+								<div class="top-nav__controls">
+									<div class="topNav-btnWrap">
+										<div class="topNav-btnWrap__btn topNav-btnWrap__btn--rating" data-tooltip="Все отлично! Продолжай также!"><img src="img/svg/good.svg" alt="" loading="lazy"/>
+											<!-- <img src="img/svg/normal.svg" alt="" loading="lazy">-->
+											<!-- <img src="img/svg/poorly.svg" alt="" loading="lazy">-->
+										</div>
+									</div>
+									<div class="topNav-btnWrap topNav-btnWrap--help d-lg-none">
+										<div class="topNav-btnWrap__btn toggle-contact-js" data-id="#ddHelp">
+											<svg class="icon icon-help ">
+												<use xlink:href="img/svg/sprite.svg#help"></use>
+											</svg>
+										</div>
+									</div>
+									<div class="topNav-btnWrap">
+										<a class="topNav-btnWrap__btn" href="#">
+											<svg class="icon icon-notifications ">
+												<use xlink:href="img/svg/sprite.svg#notifications"></use>
+											</svg>
+											<div class="topNav-btnWrap__btn-count">86
+											</div>
+										</a>
+									</div>
+									<div class="topNav-btnWrap topNav-btnWrap--person">
+										<div class="topNav-btnWrap__btn toggle-contact-js" data-id="#ddPerson">
+											<svg class="icon icon-person ">
+												<use xlink:href="img/svg/sprite.svg#person"></use>
+											</svg><span class="topNav-btnWrap__btn-text"> <span>Алексей А.</span><span>Участник</span></span>
+											<div class="topNav-btnWrap__btn-count"><span>3</span>
+											</div>
+										</div>
+										<div class="topNav-btnWrap__btn-content dropdown-contact-js" id="ddPerson"><a href="#">
+												<svg class="icon icon-change-contact ">
+													<use xlink:href="img/svg/sprite.svg#change-contact"></use>
+												</svg><span>Обмен контактами </span>
+												<div class="topNav-btnWrap__btn-count">3
+												</div></a><a href="#">
+												<svg class="icon icon-tune ">
+													<use xlink:href="img/svg/sprite.svg#tune"></use>
+												</svg><span>Настройки</span></a><a href="#">
+												<svg class="icon icon-exit ">
+													<use xlink:href="img/svg/sprite.svg#exit"></use>
+												</svg><span>Выход</span></a>
+										</div>
+									</div>
+									<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="form-wrap">
-							<form>
-								<div class="form-wrap__input-wrap form-group">
-									<label><input class="form-wrap__input form-control" name="email" type="email" placeholder="Электронная почта" required="required"/><span class="form-wrap__input-title">Электронная почта</span>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group">
-									<label><input class="form-wrap__input form-control validated" name="password" type="password" placeholder="Пароль" required="required"/><span class="form-wrap__input-title">Пароль</span>
-									</label>
-								</div>
-								<!-- +e.input-wrap-->
-								<div class="form-wrap__alert">Неверный пароль
-								</div>
-								<button class="form-wrap__btn">Войти
-								</button>
-							</form>
-						</div>
-						<a class="sEnter__recovery" href="2-3-enter-pass-recovery.html">Забыли пароль?
-						</a>
-					</div>
-					<div class="sEnter__row row">
 					</div>
 				</div>
-			</section>
-			<!-- end sEnter-->
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<main>
+				<!-- start sTraining-->
+				<div class="sTraining section" id="sTraining">
+					<div class="container-fluid">
+						<div class="sTraining__wrapper">
+							<div class="sTraining__row row">
+								<div class="sTraining__aside-col col-auto">
+									<div class="aside-head">
+										<div class="aside-head__title-wrap">
+											<div class="aside-head__title">Программа обучения
+											</div>
+											<div class="aside-head__progress">40% пройдено
+											</div>
+										</div>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+										<a class="aside-head__download-btn btn btn-outline-primary" href="#" download="download">Программа обучения.pdf
+											<svg class="icon icon-download ">
+												<use xlink:href="img/svg/sprite.svg#download"></use>
+											</svg>
+										</a>
+									</div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolor. Placeat explicabo libero modi? Aliquam in commodi tempora aut harum labore suscipit, ut exercitationem dolor necessitatibus accusantium? Deserunt, voluptates est!</p>
+								</div>
+								<div class="sTraining__content col">
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus quasi nulla aut debitis obcaecati officia soluta, velit eum nostrum mollitia itaque quae modi! Molestias voluptatem excepturi nobis laborum neque itaque distinctio reiciendis culpa porro, voluptates totam eligendi id ducimus commodi. Quod voluptas repellat sequi et numquam sunt est hic.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end sTraining-->
+			</main>
+			<footer class="footer section">
+				<div class="container-fluid">
+					<div class="footer__row row">
+						<div class="col-auto">
+							<a class="footer__policy" href="#">Политика конфиденциальности
+							</a>
+						</div>
+						<div class="col-auto">
+							<div class="footer__copyright">©<span class="currentYear"></span><span class="org">Высшая школа руководителей</span>
+							</div>
+						</div>
+						<div class="col-12 col-sm">
+							<div class="footer__design">
+								<svg class="icon icon-coalla-logo ">
+									<use xlink:href="img/svg/sprite.svg#coalla-logo"></use>
+								</svg><span>Сделано в&nbsp;Coalla Agency</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 			<div class="topNav-btnWrap topNav-btnWrap--help p-0">
 				<div class="topNav-btnWrap__btn d-none d-lg-flex toggle-contact-js" data-id="#ddHelp">
 					<svg class="icon icon-help ">

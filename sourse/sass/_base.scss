@@ -738,6 +738,12 @@ iframe {
 		}
 	}
 }
+.training-page {
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+}
 
 .school-landing {
 	--bs-body-bg: #eeeeee;

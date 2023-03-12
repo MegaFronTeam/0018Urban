@@ -1,0 +1,24 @@
+mixin sTraining(data)
+	// start sTraining
+	+b.sTraining.section#sTraining&attributes(attributes)
+		.container-fluid
+			+e.wrapper
+				+e.row.row
+					+e.aside-col.col-auto
+						+b.aside-head
+							+e.title-wrap
+								+e.title Программа обучения
+								+e.progress 40% пройдено
+							.progress
+								.progress-bar(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
+							+e.download-btn.btn.btn-outline-primary(href="#" download) Программа обучения.pdf
+								+icon('download')
+
+
+
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolor. Placeat explicabo libero modi? Aliquam in commodi tempora aut harum labore suscipit, ut exercitationem dolor necessitatibus accusantium? Deserunt, voluptates est!
+					
+					+e.content.col
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus quasi nulla aut debitis obcaecati officia soluta, velit eum nostrum mollitia itaque quae modi! Molestias voluptatem excepturi nobis laborum neque itaque distinctio reiciendis culpa porro, voluptates totam eligendi id ducimus commodi. Quod voluptas repellat sequi et numquam sunt est hic.
+
+	// end sTraining

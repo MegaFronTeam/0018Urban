@@ -1,0 +1,147 @@
+// start .sTraining
+.sTraining {
+	// --sPT: #{rem()};
+	// --sPB: #{rem()};
+	// --sTPB: #{rem()};
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	--sPT: 16px;
+	--sPB: 52px;
+	@include media-breakpoint-up(md) {
+		--sPT: 16px;
+		--sPB: 58px;
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: #{rem(16)};
+		--sPB: #{rem(58)};
+	}
+	&__row {
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+	}
+	.section-title {
+	}
+	&__aside-col {
+		@include media-breakpoint-up(md) {
+			width: rem(370);
+		}
+	}
+	&__content {
+		@include media-breakpoint-up(md) {
+			width: calc(100% - rem(370));
+		}
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	& > .container-fluid {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	// &__item {
+	// }
+
+	.aside-head {
+		padding: 16px;
+		background-color: var(--bs-white);
+		border-radius: $border-radius-sm;
+		margin-bottom: 16px;
+		@include media-breakpoint-up(xl) {
+			padding: rem(16);
+			margin-bottom: rem(16);
+		}
+		&__title-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			@include roww(10px, m);
+			margin-bottom: 10px;
+			margin-top: calc(-1 * var(--bs-gutter-x) / 2);
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(10);
+			}
+			& > * {
+				margin-top: calc(var(--bs-gutter-x) / 2);
+			}
+		}
+		&__title {
+			font-weight: 800;
+			font-size: 12px;
+			line-height: 1;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(12);
+			}
+		}
+		&__progress {
+			font-size: 14px;
+			line-height: calc(16 / 14);
+			color: $dark-teal;
+			@include media-breakpoint-up(xl) {
+				font-size: rem(14);
+			}
+		}
+		.progress {
+			display: flex;
+			height: 2px;
+			overflow: hidden;
+			background-color: var(--bs-light);
+			margin-bottom: 14px;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(14);
+			}
+		}
+		.progress-bar {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			overflow: hidden;
+			text-align: center;
+			white-space: nowrap;
+			background-color: var(--bs-primary);
+			transition: width 0.6s ease;
+		}
+		&__download-btn {
+			width: 100%;
+			padding: 3px 16px;
+			font-size: 14px;
+			line-height: calc(16 / 14);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include media-breakpoint-up(xl) {
+				padding: rem(3) rem(16);
+				font-size: rem(14);
+			}
+			.icon {
+				font-size: 16px;
+				margin-left: 8px;
+				@include media-breakpoint-up(xl) {
+					font-size: rem(16);
+					margin-left: rem(8);
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTraining
