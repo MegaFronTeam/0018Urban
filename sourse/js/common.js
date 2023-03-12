@@ -278,7 +278,7 @@ const JSCCommon = {
 				$(ChildHeads).click(function () {
 					let clickedHead = this;
 					$(this.parentElement).toggleClass('active');
-					$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+					$(this.parentElement).children('.dd-content-js').slideToggle(function () {
 						$(this).toggleClass('active');
 					});
 

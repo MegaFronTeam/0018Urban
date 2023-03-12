@@ -13,11 +13,32 @@ mixin sTraining(data)
 								.progress-bar(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
 							+e.download-btn.btn.btn-outline-primary(href="#" download) Программа обучения.pdf
 								+icon('download')
-
-
-
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, dolor. Placeat explicabo libero modi? Aliquam in commodi tempora aut harum labore suscipit, ut exercitationem dolor necessitatibus accusantium? Deserunt, voluptates est!
-					
+						+e.modules-wrap
+							mixin topicModule(t, c, activeClasses='')
+								+b.topicModule.dd-group-js&attributes(attributes)(class=activeClasses)
+									+e.head.dd-head-js
+										+e.title!= t
+										+e.count!= c
+										+icon('chevron-down')
+									+e.content.dd-content-js(class=activeClasses)
+										block
+							+topicModule(`Модуль&nbsp;1. Вводный`, `2/10`, 'active').topicModule--main
+								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+							+topicModule(`Модуль&nbsp;2. Оперативный уровень`, `0/10`, 'active').topicModule--main
+								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+							+topicModule(`Модуль&nbsp;3. Выпусники &laquo;Urban Лидер&raquo;`, `0/10`, 'active').topicModule--main
+								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+									span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit temporibus nesciunt inventore harum dolore possimus accusamus, consequatur voluptatem fugit dicta sunt nemo suscipit labore fugiat doloremque sit. Molestiae, at adipisci.
+							
+							
 					+e.content.col
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus quasi nulla aut debitis obcaecati officia soluta, velit eum nostrum mollitia itaque quae modi! Molestias voluptatem excepturi nobis laborum neque itaque distinctio reiciendis culpa porro, voluptates totam eligendi id ducimus commodi. Quod voluptas repellat sequi et numquam sunt est hic.
 
