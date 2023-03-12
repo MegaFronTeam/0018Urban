@@ -119,3 +119,45 @@ mixin thanx(h, p)
 		p!= p
 		+e.btn
 
+mixin topicModule(t, c, activeClasses='')
+	+b.topicModule.dd-group-js&attributes(attributes)(class=activeClasses)
+		+e.head.dd-head-js
+			+e.title!= t
+			+e.count!= c
+			+icon('chevron-down')
+		+e.content.dd-content-js(class=activeClasses)
+			block
+
+
+mixin topicItem(d, h)
+	+b.topicItem
+		.topicItem__rating
+			span 5
+			small баллов
+		.row
+			.col-auto
+				.topicItem__date-time
+					.topicItem__date!= d
+					.topicItem__day Фев (чт)
+					.topicItem__time 15:00
+			.col
+				.topicItem__wrap
+					h6!= h
+					.topicItem__links.row
+						.col-auto
+							.topicItem__tag Обязательное
+						.col-auto
+							a(href="#").topicItem__task
+								+icon('pen')
+								| Задание
+					ul
+						li 
+							+icon('person')
+							span Преподаватель: Летунова Александра Петровна Директор по&nbsp;развитию
+						li 
+							+icon('map-pin2')
+							span Место проведения: Лекторий &laquo;Urban Лидер&raquo;
+						li 
+							+icon('clock')
+							span З&nbsp;ак.ч.
+

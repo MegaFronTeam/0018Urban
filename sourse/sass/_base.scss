@@ -1403,7 +1403,7 @@ iframe {
 		padding: 1px 16px 1px;
 	}
 	&__task {
-		display: inline-flex;
+		display: flex;
 		align-items: center;
 		color: #757b8a;
 		&:hover {
