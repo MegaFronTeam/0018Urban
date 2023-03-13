@@ -1,50 +1,56 @@
-mixin sTraining(data)
+mixin sTraining(empty)
 	// start sTraining
 	+b.sTraining.section#sTraining&attributes(attributes)
 		.container-fluid
-			+e.wrapper
-				+e.row.row
-					+e.aside-col.col-auto
-						+b.aside-head
-							+e.title-wrap
-								+e.title Программа обучения
-								+e.progress 40% пройдено
-							.progress
-								.progress-bar(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
-							+e.download-btn.btn.btn-outline-primary(href="#" download) Программа обучения.pdf
-								+icon('download')
-						+e.modules-wrap
-							+topicModule(`Модуль&nbsp;1. Вводный`, `2/10`, 'active').topicModule--main
-								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`, 'active')
-									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-							+topicModule(`Модуль&nbsp;2. Оперативный уровень`, `0/10`).topicModule--main
-								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
-									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-							+topicModule(`Модуль&nbsp;3. Выпусники &laquo;Urban Лидер&raquo;`, `0/10`).topicModule--main
-								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
-									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
-									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
-									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-					+e.content-col.col
-						.content-wrap.content-wrap--js
-							a.close-btn(href="#").close-btn--js
-								+icon('chevron-left')
-								span Назад
-							block
+			if empty
+				+e.wrapper--empty
+					+e.icon-empty
+						+icon('schedule')
+					.h4 Расписание еще формируется
+			else
+				+e.wrapper
+					+e.row.row
+						+e.aside-col.col-auto
+							+b.aside-head
+								+e.title-wrap
+									+e.title Программа обучения
+									+e.progress 40% пройдено
+								.progress
+									.progress-bar(role='progressbar' style='width: 40%' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100')
+								+e.download-btn.btn.btn-outline-primary(href="#" download) Программа обучения.pdf
+									+icon('download')
+							+e.modules-wrap
+								+topicModule(`Модуль&nbsp;1. Вводный`, `2/10`, 'active').topicModule--main
+									+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`, 'active')
+										+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+									+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+										+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+								+topicModule(`Модуль&nbsp;2. Оперативный уровень`, `0/10`).topicModule--main
+									+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
+										+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+									+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+								+topicModule(`Модуль&nbsp;3. Выпусники &laquo;Urban Лидер&raquo;`, `0/10`).topicModule--main
+									+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
+										+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+									+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
+										+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+										+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+										+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+						+e.content-col.col
+							.content-wrap.content-wrap--js
+								a.close-btn(href="#").close-btn--js
+									+icon('chevron-left')
+									span Назад
+								block
 
 	// end sTraining

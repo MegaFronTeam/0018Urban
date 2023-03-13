@@ -1036,9 +1036,9 @@
 		--itemPaddingY: 16px;
 		--itemPaddingX: 24px;
 	}
-	@include media-breakpoint-up(lg) {
-		margin-bottom: 0;
-	}
+	// @include media-breakpoint-up(lg) {
+	// 	margin-bottom: 0;
+	// }
 	@include media-breakpoint-up(md) {
 		--itemPaddingX: 24px;
 	}

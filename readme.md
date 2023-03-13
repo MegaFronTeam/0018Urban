@@ -34,12 +34,13 @@
 <!-- Новые страницы -->
  1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
  2. <https://megafronteam.github.io/0018Urban/public/26-1-training.html>
- 3. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
- 4. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
- 5. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
- 6. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
- 7. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
- 8. <https://megafronteam.github.io/0018Urban/public/15-2-useful-articles-archive.html>
+ 3. <https://megafronteam.github.io/0018Urban/public/26-2-training-empty.html>
+ 4. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
+ 5. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
+ 6. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
+ 7. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
+ 8. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
+ 9. <https://megafronteam.github.io/0018Urban/public/15-2-useful-articles-archive.html>
 
  # School-landing
  1. <https://megafronteam.github.io/0018Urban/public/school-landing.html> 
