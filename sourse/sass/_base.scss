@@ -77,7 +77,7 @@ body {
 		overflow: hidden;
 	}
 
-	&.fixed, &.fixed-training {
+	&.fixed {
 		overflow: hidden;
 		position: absolute;
 		width: 100%;
@@ -94,6 +94,29 @@ body {
 		&::before {
 			z-index: 998;
 			opacity: 0.6;
+		}
+	}
+	&.fixed-training {
+		@include media-breakpoint-down(lg) {
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+			z-index: 999;
+
+			touch-action: none;
+			-webkit-overflow-scrolling: none;
+			overflow: hidden;
+			/* Other browsers */
+			overscroll-behavior: none;
+		}
+		&::before {
+			z-index: 996;
+			opacity: 0.6;
+			@include media-breakpoint-up(lg) {
+				content: none;
+			}
 		}
 	}
 }

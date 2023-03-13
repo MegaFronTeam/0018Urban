@@ -26,6 +26,9 @@
 		line-height: 24px;
 		letter-spacing: 1px;
 		font-weight: bold;
+		@include media-breakpoint-up(lg) {
+			font-size: 12px;
+		}
 		@include media-breakpoint-up(xl) {
 			padding: rem(20) calc(var(--bs-gutter-x) / 2);
 			font-size: rem(13);
@@ -187,5 +190,3 @@
 		}
 	}
 }
-
-

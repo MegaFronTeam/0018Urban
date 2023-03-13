@@ -809,12 +809,13 @@ function eventHandler() {
 		$('.topicItem--js').removeClass('active');
 		$(this).addClass('active');
 		$('.content-wrap--js').addClass('active');
-		$('body').addClass('.fixed-training');
+		$('body').addClass('fixed-training');
 	});
-	$('.close-btn--js').click(function () {
+	$('.close-btn--js').click(function (e) {
+		e.preventDefault();
 		$('.topicItem--js').removeClass('active');
 		$('.content-wrap--js').removeClass('active');
-		$('body').removeClass('.fixed-training');
+		$('body').removeClass('fixed-training');
 	})
 };
 if (document.readyState !== 'loading') {

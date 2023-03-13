@@ -40,8 +40,12 @@ mixin sTraining(data)
 									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
 									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
 									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
-					+e.content.col
+					+e.content-col.col
 						.content-wrap.content-wrap--js
+							a.close-btn(href="#").close-btn--js
+								+icon('chevron-left')
+								span Назад
 							block
+							+footer()
 
 	// end sTraining
