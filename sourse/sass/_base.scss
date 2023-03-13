@@ -77,7 +77,7 @@ body {
 		overflow: hidden;
 	}
 
-	&.fixed {
+	&.fixed, &.fixed-training {
 		overflow: hidden;
 		position: absolute;
 		width: 100%;

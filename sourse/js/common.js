@@ -270,33 +270,28 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	makeDDGroup() {
-		let parents = document.querySelectorAll('.dd-group-js');
-		for (let parent of parents) {
-			if (parent) {
-				// childHeads, kind of funny))
-				let ChildHeads = parent.querySelectorAll('.dd-head-js:not(.disabled)');
-				$(ChildHeads).click(function () {
-					let clickedHead = this;
-					$(this.parentElement).toggleClass('active');
-					$(this.parentElement).children('.dd-content-js').slideToggle(function () {
-						$(this).toggleClass('active');
-					});
 
-					// $(ChildHeads).each(function () {
-					// 	if (this === clickedHead) {
-					// 		//parent element gain toggle class, style head change via parent
-					// 	}
-					// 	else {
-					// 		$(this.parentElement).removeClass('active');
-					// 		$(this.parentElement).find('.dd-content-js').slideUp(function () {
-					// 			$(this).removeClass('active');
-					// 		});
-					// 	}
-					// });
+		$('.dd-head-js').click(function () {
+			let clickedHead = this;
+			$(this).parent().toggleClass('active');
+			$(this).next().slideToggle(function () {
+				$(this).toggleClass('active');
+			});
 
-				});
-			}
-		}
+			// $(ChildHeads).each(function () {
+			// 	if (this === clickedHead) {
+			// 		//parent element gain toggle class, style head change via parent
+			// 	}
+			// 	else {
+			// 		$(this.parentElement).removeClass('active');
+			// 		$(this.parentElement).find('.dd-content-js').slideUp(function () {
+			// 			$(this).removeClass('active');
+			// 		});
+			// 	}
+			// });
+
+
+		})
 	},
 	imgToSVG() {
 		const convertImages = (query, callback) => {
@@ -483,7 +478,7 @@ function eventHandler() {
 			if (target) {
 				$(target).parent().toggleClass("active").find(".tabs-caption-select__body").toggleClass("active")
 			}
-			
+
 		})
 		document.querySelector('.sRequest__tabs-caption').addEventListener('click', (e) => {
 			const tab = e.target.closest('[data-tabs-path]');
@@ -809,6 +804,18 @@ function eventHandler() {
 		var $searchfield = $(this).parent().find('.select2-search__field');
 		$searchfield.prop('disabled', true);
 	});
+
+	$('.topicItem--js').click(function () {
+		$('.topicItem--js').removeClass('active');
+		$(this).addClass('active');
+		$('.content-wrap--js').addClass('active');
+		$('body').addClass('.fixed-training');
+	});
+	$('.close-btn--js').click(function () {
+		$('.topicItem--js').removeClass('active');
+		$('.content-wrap--js').removeClass('active');
+		$('body').removeClass('.fixed-training');
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

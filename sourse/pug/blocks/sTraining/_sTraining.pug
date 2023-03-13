@@ -15,23 +15,33 @@ mixin sTraining(data)
 								+icon('download')
 						+e.modules-wrap
 							+topicModule(`Модуль&nbsp;1. Вводный`, `2/10`, 'active').topicModule--main
-								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
-									+topicItem(`9`, `Начинаем наш курс`)
+								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`, 'active')
+									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
 								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Начинаем наш курс`)
-							+topicModule(`Модуль&nbsp;2. Оперативный уровень`, `0/10`, 'active').topicModule--main
+									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+							+topicModule(`Модуль&nbsp;2. Оперативный уровень`, `0/10`).topicModule--main
 								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
-									+topicItem(`9`, `Начинаем наш курс`)
+									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
 								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Начинаем наш курс`)
-							+topicModule(`Модуль&nbsp;3. Выпусники &laquo;Urban Лидер&raquo;`, `0/10`, 'active').topicModule--main
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
+							+topicModule(`Модуль&nbsp;3. Выпусники &laquo;Urban Лидер&raquo;`, `0/10`).topicModule--main
 								+topicModule(`Тема: Выпусники &laquo;Urban Лидер&raquo;`, `2/4`)
-									+topicItem(`9`, `Начинаем наш курс`)
+									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
 								+topicModule(`Тема: Оранизационный план проведения мероприятия`, `0/3`)
-									+topicItem(`9`, `Начинаем наш курс`)
-							
-							
+									+topicItem(`9`, `Начинаем наш курс`, 'complete').--complete
+									+topicItem(`9`, `Как проходит этот курс`, 'complete').--complete
+									+topicItem(`10`, `Оранизационный план проведения мероприятия`)
 					+e.content.col
-						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatibus quasi nulla aut debitis obcaecati officia soluta, velit eum nostrum mollitia itaque quae modi! Molestias voluptatem excepturi nobis laborum neque itaque distinctio reiciendis culpa porro, voluptates totam eligendi id ducimus commodi. Quod voluptas repellat sequi et numquam sunt est hic.
+						.content-wrap.content-wrap--js
+							block
 
 	// end sTraining

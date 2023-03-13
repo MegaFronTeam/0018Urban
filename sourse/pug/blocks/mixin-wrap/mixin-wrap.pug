@@ -129,25 +129,22 @@ mixin topicModule(t, c, activeClasses='')
 			block
 
 
-mixin topicItem(d, h)
-	+b.topicItem
-		.topicItem__rating
-			span 5
-			small баллов
+mixin topicItem(d, h, complete)
+	+b.topicItem--js&attributes(attributes)
 		.row
 			.col-auto
-				.topicItem__date-time
-					.topicItem__date!= d
-					.topicItem__day Фев (чт)
-					.topicItem__time 15:00
+				+e.date-time
+					+e.date!= d
+					+e.day Фев (чт)
+					+e.time 15:00
 			.col
-				.topicItem__wrap
+				+e.wrap
 					h6!= h
-					.topicItem__links.row
+					+e.links.row
 						.col-auto
-							.topicItem__tag Обязательное
+							+e.tag Обязательное
 						.col-auto
-							a(href="#").topicItem__task
+							+e.task(href="#")
 								+icon('pen')
 								| Задание
 					ul
@@ -160,4 +157,8 @@ mixin topicItem(d, h)
 						li 
 							+icon('clock')
 							span З&nbsp;ак.ч.
+		if complete
+			+e.rating
+				span 5
+				small баллов
 
