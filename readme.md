@@ -1,14 +1,24 @@
+<!-- 13.03.2023 -->
+ 1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
+ 2. <https://megafronteam.github.io/0018Urban/public/26-1-training.html>
+ 3. <https://megafronteam.github.io/0018Urban/public/26-2-training-empty.html>
+ 4. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
+ 5. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
+ 6. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
+ 7. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
+ 8. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
+ 9. <https://megafronteam.github.io/0018Urban/public/15-2-useful-articles-archive.html>
 # 0018Urban
  <!-- 1. <https://megafronteam.github.io/0018Urban/public> -->
- 1. <https://megafronteam.github.io/0018Urban/public/00-modal.html>
- 2. <https://megafronteam.github.io/0018Urban/public/2-1-enter.html>
- 3. <https://megafronteam.github.io/0018Urban/public/2-2-enter-validated.html>
- 4. <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html>
+ 1.  <https://megafronteam.github.io/0018Urban/public/00-modal.html>
+ 2.  <https://megafronteam.github.io/0018Urban/public/2-1-enter.html>
+ 3.  <https://megafronteam.github.io/0018Urban/public/2-2-enter-validated.html>
+ 4.  <https://megafronteam.github.io/0018Urban/public/2-3-enter-pass-recovery.html>
  5. <https://megafronteam.github.io/0018Urban/public/4-1-account.html>
  6. <https://megafronteam.github.io/0018Urban/public/4-2-account.html>
  7. <https://megafronteam.github.io/0018Urban/public/5-1-main.html>
- 8. <https://megafronteam.github.io/0018Urban/public/5-1-main-notification.html>
- 9. <https://megafronteam.github.io/0018Urban/public/5-2-main-module.html>
+ 8.  <https://megafronteam.github.io/0018Urban/public/5-1-main-notification.html>
+ 9.  <https://megafronteam.github.io/0018Urban/public/5-2-main-module.html>
  10. <https://megafronteam.github.io/0018Urban/public/6-1-networking.html>
  11. <https://megafronteam.github.io/0018Urban/public/7-1-profile.html>
  12. <https://megafronteam.github.io/0018Urban/public/7-2-profile-request.html>
@@ -31,16 +41,6 @@
  29. <https://megafronteam.github.io/0018Urban/public/28-faq.html>
    
 
-<!-- Новые страницы -->
- 1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
- 2. <https://megafronteam.github.io/0018Urban/public/26-1-training.html>
- 3. <https://megafronteam.github.io/0018Urban/public/26-2-training-empty.html>
- 4. <https://megafronteam.github.io/0018Urban/public/27-1-task.html>
- 5. <https://megafronteam.github.io/0018Urban/public/27-2-task-being-checked.html>
- 6. <https://megafronteam.github.io/0018Urban/public/27-3-task-failed.html>
- 7. <https://megafronteam.github.io/0018Urban/public/27-4-task-success.html>
- 8. <https://megafronteam.github.io/0018Urban/public/15-1-useful-articles.html>
- 9. <https://megafronteam.github.io/0018Urban/public/15-2-useful-articles-archive.html>
 
  # School-landing
  1. <https://megafronteam.github.io/0018Urban/public/school-landing.html> 
