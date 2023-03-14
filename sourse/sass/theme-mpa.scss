@@ -398,10 +398,29 @@ body {
 		}
 	}
 }
+
+.headerBlock--task {
+	& > .container-fluid {
+		max-width: calc(100% - var(--bs-gutter-x));
+		padding: 16px;
+		background-image: url(../img/svg/network-1.svg), url(../img/svg/network-2.svg);
+		background-repeat: no-repeat, no-repeat;
+		background-size: 32px 60px, 70px 67px;
+		background-position: 0 100%, 100% 100%;
+		width: 1024px;
+		@media (min-width: 768px) {
+			background-size: 43px 81px, 101px 97px;
+		}
+		@media (min-width: 1537px) {
+			width: rem(1024);
+		}
+	}
+}
 .headerBlock.news,
 .headerBlock.faq,
 .headerBlock--events,
 .headerBlock--alerts,
+.headerBlock.headerBlock--task,
 .headerBlock--useful {
 	--sPT: 16px;
 	--sPB: 16px;
@@ -1346,6 +1365,7 @@ body {
 
 .headerBlock.faq,
 .headerBlock--alerts,
+.headerBlock--task,
 .headerBlock--useful,
 .headerBlock--events,
 .headerBlock.news {
@@ -1941,5 +1961,16 @@ body {
 				font-weight: 500;
 			}
 		}
+	}
+}
+.headerBlock + .section {
+	--sPT: 0;
+}
+.sTask {
+	.sTask__question {
+		border-color: var(--bs-gray-medium);
+	}
+	.form-control {
+		--bs-border-color: var(--bs-gray-medium);
 	}
 }

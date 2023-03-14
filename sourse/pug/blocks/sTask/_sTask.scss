@@ -21,7 +21,8 @@
 		background-color: var(--bs-white);
 		border-radius: $border-radius-sm;
 		padding: 32px 16px;
-		max-width: rem(1024);
+		width: 1024px;
+		max-width: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		@include media-breakpoint-up(sm) {
@@ -29,6 +30,9 @@
 		}
 		@include media-breakpoint-up(md) {
 			padding: rem(32) rem(48);
+		}
+		@media (min-width: 1537px) {
+			width: rem(1024);
 		}
 		p {
 			font-size: rem(18);
@@ -181,25 +185,25 @@
 		&.sTask__answer--checking {
 			background-color: rgba($color: #faf3c2, $alpha: 0.39);
 			.sTask__alert {
-				color: #C87D1B;
-				background-color: #FAF4C2;
-				border-color: #F8C86C;
+				color: #c87d1b;
+				background-color: #faf4c2;
+				border-color: #f8c86c;
 			}
 		}
 		&.sTask__answer--failed {
 			background-color: rgba($color: #fad6c2, $alpha: 0.2);
 			.sTask__alert {
-				color: #D15611;
-				background-color: #FAD6C2;
-				border-color: #F87D6C;
+				color: #d15611;
+				background-color: #fad6c2;
+				border-color: #f87d6c;
 			}
 		}
 		&.sTask__answer--success {
 			background-color: rgba($color: #dcf6f4, $alpha: 0.7);
 			.sTask__alert {
 				color: #008981;
-				background-color: #DCF6F4;
-				border-color: #00A89E;
+				background-color: #dcf6f4;
+				border-color: #00a89e;
 			}
 		}
 	}
