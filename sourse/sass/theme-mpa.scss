@@ -327,6 +327,10 @@ body {
 		}
 	}
 	&.headerBlock--useful {
+		.container--breadcrumb {
+			position: relative;
+			margin-top: calc(-1 * var(--sPT));
+		}
 		h1 {
 			@media (max-width: 575.98px) {
 				padding-left: rem(40);
@@ -731,11 +735,11 @@ body {
 				color: var(--bs-primary-hover);
 			}
 		}
-		.modules-item__task {
-			&:hover {
-				color: var(--bs-primary-hover);
-			}
-		}
+		// .modules-item__task {
+		// 	&:hover {
+		// 		color: var(--bs-primary-hover);
+		// 	}
+		// }
 		.modules-item__tag {
 			padding: 0 16px 2px;
 			color: #9d4b00;
