@@ -670,6 +670,34 @@ body {
 		justify-content: space-between;
 	}
 }
+.sMainUnits {
+	.modules-item {
+		&.modules-item--lesson {
+			.modules-item__head {
+				border: none;
+			}
+			.modules-item__title {
+				color: var(--bs-primary);
+			}
+		}
+		.modules-item__materials {
+			color: var(--bs-primary);
+			&:hover {
+				color: var(--bs-primary-hover);
+			}
+		}
+		.modules-item__task {
+			&:hover {
+				color: var(--bs-primary-hover);
+			}
+		}
+		.modules-item__tag {
+			padding: 0 16px 2px;
+			color: #9D4B00;
+			background-color: #FFD694;
+		}
+	}
+}
 
 .sMainUnits__slide-bg:after,
 .sMainUnits__slide-bg:before,
