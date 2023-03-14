@@ -26,12 +26,12 @@
 	&__aside-col {
 		width: 100%;
 		@include media-breakpoint-up(lg) {
-			width: rem(370);
+			width: rem(360);
 		}
 	}
 	&__content-col {
 		@include media-breakpoint-up(lg) {
-			width: calc(100% - rem(370));
+			width: calc(100% - rem(360));
 		}
 	}
 	.content-wrap {

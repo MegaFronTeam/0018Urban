@@ -693,8 +693,8 @@ body {
 		}
 		.modules-item__tag {
 			padding: 0 16px 2px;
-			color: #9D4B00;
-			background-color: #FFD694;
+			color: #9d4b00;
+			background-color: #ffd694;
 		}
 	}
 }
@@ -1814,6 +1814,119 @@ body {
 	--swiperBorderColorDefHover: var(--bs-primary-hover);
 }
 
-.topNav-btnWrap--help .topNav-btnWrap__btn-content {
-	z-index: 999;
+.topNav-btnWrap--help {
+	.topNav-btnWrap__btn-content {
+		z-index: 999;
+	}
+}
+.topNav-btnWrap--rating {
+	order: unset;
+}
+
+.sTraining {
+	.aside-head__title {
+		font-weight: 600;
+	}
+	.aside-head__progress {
+		color: var(--bs-primary);
+	}
+	.aside-head__download-btn {
+		--bs-btn-color: var(--bs-primary);
+		--bs-btn-bg: var(--bs-light);
+		--bs-btn-border-color: var(--bs-light);
+		--bs-btn-hover-color: #fff;
+		--bs-btn-hover-bg: var(--bs-primary-hover);
+		--bs-btn-hover-border-color: var(--bs-primary-hover);
+		--bs-btn-active-color: #fff;
+		--bs-btn-active-bg: var(--bs-primary-active);
+		--bs-btn-active-border-color: var(--bs-primary-active);
+		font-weight: 400;
+	}
+}
+.topicModule {
+	&.topicModule--main {
+		& > .topicModule__head {
+			.topicModule__title {
+				color: var(--bs-primary);
+			}
+		}
+	}
+	.topicModule__title {
+		font-weight: 600;
+	}
+	.topicModule__count {
+		color: var(--bs-body-color);
+	}
+}
+
+.topicItem {
+	&.topicItem--complete {
+		.topicItem__date-time {
+			color: #999eab;
+		}
+	}
+
+	&:hover,
+	&.active {
+		h6 {
+			color: var(--bs-primary);
+		}
+		&::before {
+			background-color: #edeff3;
+			// background-color: var(--bs-light);
+			opacity: 0.3;
+		}
+	}
+	.topicItem__tag {
+		color: #9d4b00;
+		background-color: #ffd694;
+		padding: 0 16px 2px;
+		font-weight: 800;
+	}
+	.topicItem__date-time {
+		font-weight: 300;
+	}
+	.topicItem__date {
+		font-weight: 500;
+	}
+	.topicItem__rating {
+		color: var(--bs-primary);
+		span {
+			font-weight: 500;
+		}
+		small {
+			font-weight: 300;
+		}
+	}
+}
+.courseItem {
+	.courseItem__head {
+		&:before {
+			background-color: #edeff3;
+			opacity: 0.3;
+		}
+	}
+	.courseItem__rating {
+		color: var(--bs-primary);
+	}
+	.courseItem__links-row {
+		a {
+			color: var(--bs-primary);
+			&:hover {
+				color: var(--bs-primary-hover);
+			}
+		}
+	}
+	.courseItem__content {
+		&.courseItem__content--empty {
+			&:before {
+				background-color: #edeff3;
+				opacity: 0.3;
+			}
+			p {
+				color: #c9cad1;
+				font-weight: 500;
+			}
+		}
+	}
 }
