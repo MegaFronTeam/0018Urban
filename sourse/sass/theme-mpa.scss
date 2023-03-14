@@ -406,7 +406,7 @@ body {
 				padding-right: var(--bs-btn-padding-x);
 			}
 			span {
-				line-height: calc(24 / 18);
+				line-height: rem(20);
 				padding-bottom: 2px;
 			}
 		}
