@@ -1842,6 +1842,19 @@ body {
 		--bs-btn-active-border-color: var(--bs-primary-active);
 		font-weight: 400;
 	}
+	.sTraining__wrapper {
+		.sTraining__icon-empty {
+			background-color: rgba($color: #{var(--bs-primary-rgb)}, $alpha: 0.1);
+			.icon {
+				color: var(--bs-primary);
+			}
+		}
+		&.sTraining__wrapper--empty {
+			.h4 {
+				font-weight: 500;
+			}
+		}
+	}
 }
 .topicModule {
 	&.topicModule--main {
