@@ -713,6 +713,11 @@ body {
 			}
 		}
 	}
+	.sMainUnits__header-title {
+		@include media-breakpoint-down(md) {
+			font-size: 10px;
+		}
+	}
 	.sMainUnits__header-btn,
 	.sMainUnits__note-btn,
 	.sMainUnits__forum-btn {
