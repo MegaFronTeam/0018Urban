@@ -271,8 +271,8 @@ mixin sMainUnits3(empty)
 		.container-fluid
 			+e.row
 				+e.unit--lg.--module.--lesson
-					//- +main-unit('Материалы','Все материалы').--yellow
-					+main-unit('Урок','Расписание').--light-bg
+					//- +main-unit('Урок','Расписание').--light-bg
+					+main-unit('Материалы','Все материалы').--yellow
 						+b.modules-item.--lesson
 							+e.head
 								.row
@@ -315,20 +315,20 @@ mixin sMainUnits3(empty)
 							+e.empty 
 								p Нет новых оповещений
 					else
-						//- +main-unit('оповещения','Все оповещения').--dark
-						+main-unit('оповещения','Все оповещения').--light
+						//- +main-unit('оповещения','Все оповещения').--light
+						+main-unit('оповещения','Все оповещения').--dark
 							.swiper
 								.swiper-wrapper
 									- for (var x = 0; x < 3; x++)
 										.swiper-slide
 											+e.body.--notification
-												+e.note-date 15.11.2022 12:49:17
-												//- +e.date
-												//- 	+icon('calendar')
-												//- 	| 26 сентября
+												//- +e.note-date 15.11.2022 12:49:17
+												+e.date
+													+icon('calendar')
+													| 26 сентября
 												//- +e.note-title Завтра 16.11.2022. запланировано событие «Встреча с академическим руководителем и студентами» , на которое Вы приглашены
-												+e.note-title По заданию  «Urban Лидер» получен  «Незачет»
-												+e.note-btn Перейти к заданию
+												+e.note-title По&nbsp;заданию получен &laquo;Незачет&raquo;
+												+e.note-btn Посмотреть событие
 									//- .swiper-slide
 									//- 	+e.body.--notification
 									//- 		+e.note-date 15.11.2022 12:49:17
@@ -357,13 +357,13 @@ mixin sMainUnits3(empty)
 							+e.slider-nav
 								+arrow
 				+e.unit--md
-					+main-unit('Форум','Все форумы').--dark
+					+main-unit('Работа над проектом','Все темы').--dark
 						.swiper
 							.swiper-wrapper
 								- for (var x = 0; x < 3; x++)
 									.swiper-slide
 										+e.body--forum
-											+e.forum-group Форум группы Название группы…
+											+e.forum-group Название группы…
 											+e.forum-title(href="#") Развитие кадрового потенциала университета
 											+e.comments
 												+icon('msg')
@@ -379,19 +379,19 @@ mixin sMainUnits3(empty)
 										+e.slide-bg(href="#")
 											+e.body--newsline
 												+e.text
-													+e.tag Статья
+													+e.tag Вебинар
 													+e.date
 														+icon('calendar')
-														| 26 сентября
-												+e.heading Встреча с академическим руководителем и студентами 
+														| 30 сентября
+												+e.heading Встреча с&nbsp;академическим руководителем и&nbsp;студентами
 											+img(`img/news-preview-1.jpg`)
 							+e.slider-nav
 								+arrow
 				+e.unit--md
-					//- +main-unit('Форум','Все форумы').--yellow
-					+main-unit('Форум','Все форумы').--dark
+					//- +main-unit('Форум','Все форумы').--dark
+					+main-unit('Идеи','Все темы').--yellow
 						+e.body--forum
-							+e.forum-title(href="#") Предложите идею публикации на нашем портале «Urban Лидер»
-							+e.forum-group Вы можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её рассмотрит и свяжется с вами.
+							+e.forum-title(href="#") Предложите идею публикации на&nbsp;нашем портале.
+							+e.forum-group Вы&nbsp;можете предложить публикацию идеи/проекта, новости, мероприятия, материала. Отправьте заявку, администратор её&nbsp;рассмотрит и&nbsp;свяжется с&nbsp;вами.
 							+e.forum-btn(href="#") Предложить идею
 	// end sMainUnits
