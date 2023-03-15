@@ -871,3 +871,23 @@ body {
 		}
 	}
 }
+
+.headerBlock--useful {
+	.headerBlock__btn-archive {
+		--bs-btn-color: #4069c7;
+		--bs-btn-bg: rgba(81, 132, 250, 0.3);
+		--bs-btn-border-color: transparent;
+		--bs-btn-padding-y: 0.42rem;
+		font-weight: 500;
+		width: rem(326);
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
+		&.headerBlock__btn-archive--left {
+			padding-right: var(--bs-btn-padding-y);
+		}
+	}
+}
+.sUseful {
+	--sPT: #{rem(12)};
+}
