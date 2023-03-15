@@ -1657,6 +1657,7 @@ a {
 .sUseful,
 .sForum,
 .sAlerts,
+.sTask,
 .sNews {
 	&::before {
 		content: "";
@@ -3595,14 +3596,14 @@ a {
 	}
 	.sTraining__wrapper {
 		.sTraining__icon-empty {
-			background-color: #EEEAF2;
+			background-color: #eeeaf2;
 			width: 100px;
 			height: 100px;
 			.icon {
 				font-size: 60px;
 				color: var(--bs-primary);
 			}
-		}	
+		}
 	}
 }
 
@@ -3679,4 +3680,37 @@ a {
 	.topicItem__links {
 		align-items: center;
 	}
+}
+
+.headerBlock--task {
+	&::after,
+	&::before {
+		content: none;
+	}
+	& + .section {
+		--sPT: 0;
+	}
+}
+
+.headerBlock--useful {
+	.headerBlock__btn-archive {
+		--bs-btn-color: var(--bs-primary);
+		--bs-btn-bg: rgba(84, 45, 128, 0.2);
+		--bs-btn-border-color: transparent;
+		--bs-btn-padding-y: 0.42rem;
+		font-weight: 400;
+		// width: rem(326);
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+		// span {
+		// 	line-height: inherit;
+		// }
+		&.headerBlock__btn-archive--left {
+			padding-right: var(--bs-btn-padding-y);
+		}
+	}
+}
+.sUseful {
+	--sPT: #{rem(12)};
 }
