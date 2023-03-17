@@ -1023,6 +1023,10 @@
 				font-size: 18px;
 				flex-shrink: 0;
 				margin-right: 3px;
+				&.icon-map-pin2 {
+					stroke: currentColor;
+					stroke-width: 0.5px;
+				}
 			}
 			span {
 				display: block;

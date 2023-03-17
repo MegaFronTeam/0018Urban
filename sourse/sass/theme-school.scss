@@ -680,6 +680,7 @@ body {
 				}
 			}
 			.modules-item__topic {
+				max-width: 25em;
 				@media (max-width: 767.98px) {
 					font-size: 16px;
 				}
@@ -897,3 +898,5 @@ body {
 .sUseful {
 	--sPT: #{rem(12)};
 }
+
+
