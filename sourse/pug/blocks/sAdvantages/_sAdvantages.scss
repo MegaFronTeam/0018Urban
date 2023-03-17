@@ -52,8 +52,8 @@
 						margin-bottom: 95px;
 					}
 					img {
-						left: calc(100% + 24px);
-						top: 16px;
+						left: calc(100% + 5px);
+						top: 24px;
 					}
 				}
 				&::before {
@@ -75,8 +75,8 @@
 						margin-bottom: 56px;
 					}
 					img {
-						right: calc(100% + 24px);
-						top: 16px;
+						right: calc(100% + 5px);
+						top: 24px;
 					}
 				}
 
@@ -159,7 +159,7 @@
 		img {
 			position: absolute;
 			@include media-breakpoint-up(md) {
-				width: calc(var(--bs-gutter-x) - 48px);
+				width: calc(var(--bs-gutter-x) - 100px);
 				height: auto;
 			}
 		}
