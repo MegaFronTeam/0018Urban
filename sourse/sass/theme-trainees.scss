@@ -1015,6 +1015,47 @@ a {
 			padding: 24px;
 		}
 	}
+	.sMainUnits__unit--lesson {
+		.modules-item__head {
+			border: none;
+		}
+		.sMainUnits__item {
+			.modules-item__title {
+				color: var(--bs-primary);
+			}
+			padding: 16px;
+			@media (min-width: 992px) {
+				padding: 24px;
+			}
+		}
+		.modules-item__tag {
+			font-weight: 700;
+			font-size: 12px;
+			line-height: calc(16 / 12);
+			padding: 0.5px 16px 1.5px;
+			color: #00906e;
+			background-color: #c6ebe0;
+		}
+		.modules-item__task {
+			color: var(--bs-dark-light);
+			font-size: 12px;
+			line-height: calc(16 / 12);
+		}
+		.modules-item__materials {
+			display: flex;
+			color: var(--bs-primary);
+			font-size: 12px;
+			line-height: calc(16 / 12);
+			&:hover {
+				color: var(--bs-primary-hover);
+			}
+		}
+		.modules-item__footer {
+			.row {
+				align-items: center;
+			}
+		}
+	}
 
 	.sMainUnits__date,
 	.sMainUnits__time {
@@ -1616,6 +1657,7 @@ a {
 .sUseful,
 .sForum,
 .sAlerts,
+.sTask,
 .sNews {
 	&::before {
 		content: "";
@@ -3518,4 +3560,157 @@ a {
 			width: 16px;
 		}
 	}
+}
+
+.topNav-btnWrap--rating {
+	order: unset;
+}
+
+.sTraining {
+	.content-wrap {
+		.close-btn {
+			font-family: "Montserrat";
+		}
+	}
+	&__aside-col {
+		width: 100%;
+		@include media-breakpoint-up(lg) {
+			width: 370px;
+		}
+		@media (min-width: 1537px) {
+			width: rem(370);
+		}
+	}
+	.aside-head__title {
+		font-family: "Montserrat";
+		font-weight: 600;
+	}
+	.aside-head__progress {
+		font-family: "Montserrat";
+		font-weight: 400;
+		color: var(--bs-primary);
+	}
+	.aside-head__download-btn {
+		font-family: "Montserrat";
+		font-weight: 400;
+	}
+	.sTraining__wrapper {
+		.sTraining__icon-empty {
+			background-color: #eeeaf2;
+			width: 100px;
+			height: 100px;
+			.icon {
+				font-size: 60px;
+				color: var(--bs-primary);
+			}
+		}
+	}
+}
+
+.topicModule {
+	&.topicModule--main {
+		& > .topicModule__head {
+			.topicModule__title {
+				color: var(--bs-primary);
+			}
+		}
+	}
+}
+
+.courseItem {
+	.courseItem__head {
+		&::before {
+			background-color: transparent;
+			opacity: 1;
+			background-image: url(../img/courseItem-sm-bg.jpg);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			@include media-breakpoint-up(sm) {
+				background-image: url(../img/courseItem-bg.jpg);
+			}
+		}
+	}
+
+	.courseItem__rating {
+		color: var(--bs-primary);
+	}
+	.courseItem__links-row {
+		a {
+			color: var(--bs-primary);
+			&:hover {
+				color: var(--bs-link-hover-color);
+			}
+		}
+	}
+}
+
+.topicItem {
+	&:hover,
+	&.active {
+		h6 {
+			color: var(--bs-primary);
+		}
+	}
+	&.topicItem--complete {
+		.topicItem__date-time {
+			color: #999eab;
+		}
+	}
+	.topicItem__date-time {
+		font-family: "Montserrat";
+	}
+	.topicItem__tag {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: calc(16 / 12);
+		color: #00906e;
+		background-color: #c6ebe0;
+		@include media-breakpoint-down(sm) {
+			font-size: 10px;
+		}
+	}
+	.topicItem__task {
+		font-size: 12px;
+		line-height: calc(16 / 12);
+	}
+	.topicItem__rating {
+		color: var(--bs-primary);
+		font-family: "Montserrat";
+	}
+	.topicItem__links {
+		align-items: center;
+	}
+}
+
+.headerBlock--task {
+	&::after,
+	&::before {
+		content: none;
+	}
+	& + .section {
+		--sPT: 0;
+	}
+}
+
+.headerBlock--useful {
+	.headerBlock__btn-archive {
+		--bs-btn-color: var(--bs-primary);
+		--bs-btn-bg: rgba(84, 45, 128, 0.2);
+		--bs-btn-border-color: transparent;
+		--bs-btn-padding-y: 0.42rem;
+		font-weight: 400;
+		// width: rem(326);
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+		// span {
+		// 	line-height: inherit;
+		// }
+		&.headerBlock__btn-archive--left {
+			padding-right: var(--bs-btn-padding-y);
+		}
+	}
+}
+.sUseful {
+	--sPT: #{rem(12)};
 }
