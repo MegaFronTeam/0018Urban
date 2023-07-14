@@ -41,7 +41,7 @@ mixin newsItemHeader(title, descr, register, registered)
 						+img('img/news-preview-5.jpg')
 	// end newsItemHeader
 
-mixin eventsHeader
+mixin eventsHeader()
 	+b.headerBlock--events.section#headerBlock&attributes(attributes)
 		.container-fluid
 			+b.section-title.text-center
@@ -63,6 +63,38 @@ mixin eventsHeader
 							span.custom-input__text.form-check-label
 								+icon('calendar')
 
+
+mixin eventsHeader2(title='Мероприятия', btn=true)
+	+b.headerBlock--events.section#headerBlock&attributes(attributes)
+		.container-fluid
+			+b.section-title.text-center
+				h1!=title
+			+b.events-filter
+				//- +e.btn--js.d-md-none(data-toggle="#events-dropdown") Фильтр
+				+e.filter-wrap(id="events-dropdown")
+					//- +input("Все",'select')(class="сustom-select-js" data-placeholder="Группа" ).d-md-none
+					+select('', 'Все', 'Прошедшие', 'Мои').d-md-none
+					+select('', 'Все', 'Прошедшие', 'Мои').d-md-none
+					+e.radio-wrap--text.radio-wrap
+						+in-c('radio','Все','events')(checked)
+						+in-c('radio','Прошедшие','events')
+						+in-c('radio','Мои','events')
+					+e.radio-wrap--text.radio-wrap
+						+in-c('radio','Все','events2')(checked)
+						+in-c('radio','Мероприятия','events2')
+						+in-c('radio','Дни Рождения','events2')
+						+in-c('radio','Занятия','events2')
+					+e.radio-wrap--icon.radio-wrap
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name="events-app" type="radio" checked="checked")
+							span.custom-input__text.form-check-label
+								+icon('list')
+						label.custom-input.form-check
+							input.custom-input__input.form-check-input(name="events-app" type="radio")
+							span.custom-input__text.form-check-label
+								+icon('calendar')
+					if btn
+						+e.btn-create.btn.btn-primary(href='#') Создать занятие
 
 mixin sUsefulHeader(h, archive, brcr, ...items)
 	+b.headerBlock--useful.section#headerBlock&attributes(attributes)

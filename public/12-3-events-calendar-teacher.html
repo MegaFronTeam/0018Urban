@@ -110,18 +110,44 @@
 				<div class="headerBlock headerBlock--events section" id="headerBlock">
 					<div class="container-fluid">
 						<div class="section-title text-center">
-							<h1>Мероприятия</h1>
+							<h1>События</h1>
 						</div>
 						<div class="events-filter">
-							<div class="events-filter__btn events-filter__btn--js d-md-none" data-toggle="#events-dropdown">Фильтр
-							</div>
 							<div class="events-filter__filter-wrap" id="events-dropdown">
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<label>
+										<select class="events-filter__input form-control">
+											<option>Все</option>
+											<option>Прошедшие</option>
+											<option>Мои</option>
+										</select>
+									</label>
+								</div>
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<label>
+										<select class="events-filter__input form-control">
+											<option>Все</option>
+											<option>Прошедшие</option>
+											<option>Мои</option>
+										</select>
+									</label>
+								</div>
 								<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все мероприятия</span>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все</span>
 									</label>
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Прошедшие мероприятия</span>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Прошедшие</span>
 									</label>
-									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Мои мероприятия</span>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Мои</span>
+									</label>
+								</div>
+								<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio"/><span class="custom-input__text form-check-label">Мероприятия</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio"/><span class="custom-input__text form-check-label">Дни Рождения</span>
+									</label>
+									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio"/><span class="custom-input__text form-check-label">Занятия</span>
 									</label>
 								</div>
 								<div class="events-filter__radio-wrap events-filter__radio-wrap--icon radio-wrap">
@@ -138,12 +164,14 @@
 											</svg></span>
 									</label>
 								</div>
+								<a class="events-filter__btn-create btn btn-primary" href="#">Создать занятие
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- start sEvents-->
-				<section class="sEvents section" id="sEvents">
+				<section class="sEvents section calendar" id="sEvents">
 					<div class="event-calendar">
 						<div class="event-calendar__header">
 							<button class="event-calendar__button event-calendar__button--prev">
@@ -411,246 +439,58 @@
 					<div class="container-fluid">
 						<div class="sEvents__row row">
 							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-5.jpg" alt="" loading="lazy"/>
+								<a class="news-preview news-preview--2" href="#">
+									<div class="news-preview__img-wrap">
 									</div>
 									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
+										<div class="news-preview__date">13 сентября 09:00 – 11:00
 										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
+										<div class="news-preview__online">
+											<svg class="icon icon-pin ">
+												<use xlink:href="img/svg/sprite.svg#pin"></use>
+											</svg>Онлайн
 										</div>
 									</div>
 									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
+										<div class="news-preview__done"><img src="img/svg/check.svg" alt="" loading="lazy"/>Проведено
 										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
+										<div class="news-preview__title">Выпусники «Urban Лидер»
+										</div>
+										<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+										</div>
+										<div class="news-preview__category">Модуль
+										</div>
+										<div class="news-preview__icon"><img src="img/svg/outlook-icon-2.svg" alt="" loading="lazy"/>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
+								<article class="profile-item profile-item--second" href="#">
+									<div class="profile-item__header"><img class="outlook-img" src="img/svg/outlook-icon-2.svg" alt="" loading="lazy"/>
+										<div class="profile-item__header-text">
+											<h2>Агадуллина Елена</h2>
+											<div class="profile-item__age">41 год
+											</div>
 										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
+										<div class="profile-item__header-img">
+											<a class="profile-item__img-wrap" href="#"><img src="img/profile-1.jpg" alt="" loading="lazy"/>
+											</a>
 										</div>
 									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
+									<div class="profile-item__body">
+										<div class="profile-item__position">Менеджер по развитию
 										</div>
-										<div class="news-preview__btn">Регистрация
+										<div class="profile-item__company">ОИВ<br>Подведомственная организация 
 										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
+										<ul class="profile-item__groups-list">
+											<li></li>
+										</ul>
 									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-6.jpg" alt="" loading="lazy"/>
+									<div class="profile-item__btn">Посмотреть профиль
 									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-7.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-8.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-5.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn">Регистрация
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-5.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn">Регистрация
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
+								</article>
+								<!-- /.product-item-->
 							</div>
 							<div class="col-sm-6 col-lg-4">
 								<a class="news-preview" href="#">
@@ -671,175 +511,6 @@
 										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
 										</div>
 										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-7.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-8.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn news-preview__btn--registred">Вы зарегистрированы 
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-5.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn">Регистрация
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-5.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-sm-6 col-lg-4">
-								<a class="news-preview" href="#">
-									<div class="news-preview__img-wrap"><img src="img/news-preview-4.jpg" alt="" loading="lazy"/>
-									</div>
-									<div class="news-preview__details">
-										<div class="news-preview__category">Вебинар
-										</div>
-										<div class="news-preview__date">26 сентября
-										</div>
-										<div class="news-preview__like">
-											<svg class="icon icon-like ">
-												<use xlink:href="img/svg/sprite.svg#like"></use>
-											</svg>14
-										</div>
-									</div>
-									<div class="news-preview__title-block">
-										<div class="news-preview__title">Как совершенствовать организцию приёма обучения
-										</div>
-										<div class="news-preview__btn">Регистрация
 										</div>
 										<div class="news-preview__icon"><img src="img/svg/outlook-icon.svg" alt="" loading="lazy"/>
 										</div>
@@ -847,17 +518,6 @@
 								</a>
 							</div>
 						</div>
-						<nav class="pagination-nav">
-							<ul class="pagination">
-								<li class="page-item disabled"><a class="page-link page-link--prev" href="#"></a></li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item"><a class="page-link" href="#">4</a></li>
-								<li class="page-item"><a class="page-link" href="#">5</a></li>
-								<li class="page-item"><a class="page-link page-link--next" href="#"></a></li>
-							</ul>
-						</nav>
 					</div>
 				</section>
 				<!-- end sEvents-->

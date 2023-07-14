@@ -6,11 +6,33 @@ mixin newsListItem(img, cat, date='26 сентября',title="Встреча с
 			+e.details
 				+e.category= cat
 				+e.date= date
+				+e.like
+					+icon('like')
+					| 14
 			+e.title-block
 				+e.title!= title
 				if btn
 					+e.btn&attributes(attributes)= btn
+				+e.icon: +img('img/svg/outlook-icon.svg')
 
+mixin newsListItem2(cat, date='26 сентября', title="Выпусники «Urban Лидер»", text="Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна", done=true)
+	.col-sm-6.col-lg-4
+		+b.news-preview--2(href="#")
+			+e.img-wrap
+			+e.details
+				+e.date= date
+				+e.online
+					+icon('pin')
+					| Онлайн
+			+e.title-block
+				if done
+					+e.done
+						+img('img/svg/check.svg')
+						| Проведено
+				+e.title!= title
+				+e.text!= text
+				+e.category= cat
+				+e.icon: +img('img/svg/outlook-icon-2.svg')
 mixin sNews(data)
 	// start sNews
 	+b.SECTION.sNews.section#sNews&attributes(attributes)

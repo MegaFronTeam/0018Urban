@@ -46,6 +46,7 @@
 		border-radius: 16px;
 		background: var(--bs-primary-active, #008981);
 		color: $white;
+		max-width: rem(313);
 		&--registred {
 			color: var(--bs-primary-active, #008981);
 			background: rgba(255, 255, 255, 0.75);

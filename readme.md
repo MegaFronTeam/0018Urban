@@ -1,3 +1,8 @@
+#### 11.07.2023
+1. <https://megafronteam.github.io/0018Urban/public/12-3-events-calendar-teacher.html>
+1. <https://megafronteam.github.io/0018Urban/public/12-3-events-calendar-teacher-2.html>
+1. <https://megafronteam.github.io/0018Urban/public/12-1-events-2.html>
+
 <!-- 13.03.2023 -->
  1. <https://megafronteam.github.io/0018Urban/public/5-2-main-module-2.html>
  2. <https://megafronteam.github.io/0018Urban/public/26-1-training.html>

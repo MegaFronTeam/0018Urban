@@ -1,6 +1,8 @@
-mixin profile-item(name, img, age, position, company, interests=[], groups=[])
-	+b.ARTICLE.profile-item(href='#')
+mixin profile-item(name, img, age, position, company, interests=[], groups=[], outlook)
+	+b.ARTICLE.profile-item&attributes(attributes)(href='#')
 		+e.header
+			if outlook
+				+img('img/svg/outlook-icon-2.svg').outlook-img
 			+e.header-text
 				h2= name
 				+e.age= age

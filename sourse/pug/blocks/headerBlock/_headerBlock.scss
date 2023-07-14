@@ -247,7 +247,13 @@
 	.choices {
 		margin-bottom: 0;
 	}
-
+	&--2 {
+		.events-filter__radio-wrap--icon {
+			@include media-breakpoint-down(md) {
+				width: calc(100% - var(--bs-gutter-x));
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 
@@ -516,7 +522,7 @@
 		@include media-breakpoint-down(sm) {
 			&:not(:last-child) {
 				margin-bottom: 0;
-				padding-bottom: 0;
+				// padding-bottom: 0;
 			}
 		}
 		&--icon {
@@ -579,6 +585,12 @@
 		}
 		&:not(:last-child) {
 			margin-right: 8px;
+		}
+	}
+	&__btn-create {
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			max-width: rem(248);
 		}
 	}
 }
