@@ -15,7 +15,7 @@ mixin newsListItem(img, cat, date='26 сентября',title="Встреча с
 					+e.btn&attributes(attributes)= btn
 				+e.icon: +img('img/svg/outlook-icon.svg')
 
-mixin newsListItem2(cat, date='26 сентября', title="Выпусники «Urban Лидер»", text="Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна", done=true)
+mixin newsListItem2(cat, date='26 сентября', title="Выпусники «Urban Лидер»", text="Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна", done=true, error, online='Онлайн')
 	.col-sm-6.col-lg-4
 		+b.news-preview--2(href="#")
 			+e.img-wrap
@@ -23,12 +23,16 @@ mixin newsListItem2(cat, date='26 сентября', title="Выпусники �
 				+e.date= date
 				+e.online
 					+icon('pin')
-					| Онлайн
+					!= online
 			+e.title-block
 				if done
 					+e.done
-						+img('img/svg/check.svg')
+						//- +img('img/svg/check.svg')
 						| Проведено
+				if error
+					+e.done--cancel
+						+img('img/svg/error.svg')
+						| Отменено
 				+e.title!= title
 				+e.text!= text
 				+e.category= cat
