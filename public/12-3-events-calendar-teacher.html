@@ -108,7 +108,7 @@
 						</div>
 						<div class="events-filter">
 							<div class="events-filter__filter-wrap" id="events-dropdown">
-								<div class="events-filter__input-wrap form-group d-md-none">
+								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
 									<label>
 										<select class="events-filter__input form-control">
 											<option>Все</option>
@@ -117,7 +117,7 @@
 										</select>
 									</label>
 								</div>
-								<div class="events-filter__input-wrap form-group d-md-none">
+								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
 									<label>
 										<select class="events-filter__input form-control">
 											<option>Все</option>
@@ -665,6 +665,23 @@
 						<div class="form-wrap__agree">Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на <a href="#">обработку ваших персональных данных</a>.
 						</div>
 					</form>
+				</div>
+			</div>
+		</div>
+		<div id="modal-warning" style="display: none">
+			<div class="modal-win modal-win--warning">
+				<div class="h4">Вы уверены что хотите удалить выбранное?</div>
+				<div class="modal-win__footer-btn">
+					<div class="row">
+						<div class="modal-win__col col-md-auto">
+							<a class="modal-win__btn btn btn-primary" href="#">Удалить
+							</a>
+						</div>
+						<div class="modal-win__col col-md-auto">
+							<a class="modal-win__btn btn btn-dark" href="#">Не удалять
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

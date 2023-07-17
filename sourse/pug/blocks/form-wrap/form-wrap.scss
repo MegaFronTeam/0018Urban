@@ -477,6 +477,9 @@ input::-webkit-inner-spin-button {
 			color: var(--bs-body-color, #{$body-color});
 		}
 	}
+	.air-datepicker-nav--action {
+		--adp-nav-arrow-color: #000;
+	}
 	&--content {
 		@media (min-width: 430px) {
 			padding-left: 70px;

@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Создание занятия</title>
+		<title>Занятие</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no">
@@ -102,11 +102,14 @@
 			<!-- end header-->
 			<main>
 				<!-- start sAccount-->
-				<section class="sAccount sAccount--create-activity section" id="sAccount">
+				<section class="sAccount sAccount--create-activity sAccount--create-activity-2 section" id="sAccount">
 					<div class="sAccount__container container">
+						<div class="sAccount__warning"><img src="img/svg/error.svg" alt="" loading="lazy"/>
+							<p>Занятие отменено. Вернуть в <a href="#">запланированные</a>.</p>
+						</div>
 						<div class="sAccount__top">
 							<div class="section-title text-center">
-								<h1>Создание занятия</h1>
+								<h1>Занятие</h1>
 							</div>
 						</div>
 						<div class="sAccount__body">
@@ -121,17 +124,17 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content--personal active">
+								<div class="tabs__content tabs__content--personal">
 									<div class="form-wrap">
 										<form>
 											<div class="form-wrap__row row">
 												<div class="col-md-6">
 													<div class="data-picker-wrap">
 														<div class="form-wrap__input-wrap form-group">
-															<label><input class="form-wrap__input form-control date-input data-picker data-picker--js is-invalid" name="datettime" type="text" placeholder="чч. мм. гг." readonly="readonly" autocomplete="off"/><span class="form-wrap__input-title">Дата рождения</span>
+															<label><input class="form-wrap__input form-control date-input data-picker data-picker--js" name="datettime" type="text" placeholder="чч. мм. гг." readonly="readonly" autocomplete="off"/><span class="form-wrap__input-title">Дата проведения</span>
 																<svg class="icon icon-calendar ">
 																	<use xlink:href="img/svg/sprite.svg#calendar"></use>
-																</svg><span class="invalid-feedback">Заполните поле</span>
+																</svg>
 															</label>
 														</div>
 														<!-- +e.input-wrap-->
@@ -160,14 +163,42 @@
 												</div>
 												<div class="col-md-6 col-lg-4">
 													<div class="form-wrap__input-wrap form-group">
-														<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Укажите аудиторию"/><span class="form-wrap__input-title">Аудитория</span>
+														<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Укажите аудиторию"/><span class="form-wrap__input-title">Тип занятия</span>
 														</label>
 													</div>
 													<!-- +e.input-wrap-->
 												</div>
 												<div class="col-md-6 col-lg-4">
 													<div class="form-wrap__input-wrap form-group">
-														<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название"/><span class="form-wrap__input-title">Предмет</span>
+														<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="Введите название"/><span class="form-wrap__input-title">Аудитория</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-lg-12">
+													<div class="form-wrap__input-wrap form-group">
+														<label>
+															<select class="form-wrap__input form-select сustom-select-js" name="select" multiple="multiple" data-placeholder="Модуль">
+																<option value="Модуль" selected="selected">Модуль</option>
+																<option value=" placeholder 1">placeholder 1</option>
+																<option value=" placeholder 2">placeholder 2</option>
+																<option value=" placeholder 3">placeholder 3</option>
+																<option value=" placeholder 4">placeholder 4</option>
+															</select><span class="form-wrap__input-title">Основной педагог</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-lg-12">
+													<div class="form-wrap__input-wrap form-group">
+														<label>
+															<select class="form-wrap__input form-select сustom-select-js" name="select" multiple="multiple" data-placeholder="Модуль">
+																<option value="Модуль" selected="selected">Модуль</option>
+																<option value=" placeholder 1">placeholder 1</option>
+																<option value=" placeholder 2">placeholder 2</option>
+																<option value=" placeholder 3">placeholder 3</option>
+																<option value=" placeholder 4">placeholder 4</option>
+															</select><span class="form-wrap__input-title">Дополнительные педагоги</span>
 														</label>
 													</div>
 													<!-- +e.input-wrap-->
@@ -179,21 +210,62 @@
 													</div>
 													<!-- +e.input-wrap-->
 												</div>
-											</div>
-											<div class="form-wrap__footer-btn row">
-												<div class="form-wrap__col col-md-auto">
-													<a class="form-wrap__btn btn btn-primary" href="#">Продолжить
-													</a>
-												</div>
-												<div class="form-wrap__col col-md-auto">
-													<a class="form-wrap__btn btn btn-dark" href="#">Отмена
+												<div class="col-12">
+													<a class="form-wrap__btn-save btn btn-outline-primary" href="#">Сохранить
 													</a>
 												</div>
 											</div>
 										</form>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content">
+								<div class="tabs__content tabs__content active">
+									<div class="events-filter">
+										<div class="events-filter__filter-wrap">
+											<div class="events-filter__input-wrap form-group">
+												<label><input class="events-filter__input form-control" name="text" type="text" placeholder=""/><span class="events-filter__input-title">Номер сессии</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+											<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
+												<label>
+													<select class="events-filter__input form-control">
+														<option>Все</option>
+														<option>Прошедшие</option>
+														<option>Мои</option>
+													</select><span class="form-wrap__input-title">Вовлеченность</span>
+												</label>
+											</div>
+											<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
+												<label>
+													<select class="events-filter__input form-control">
+														<option>Все</option>
+														<option>Прошедшие</option>
+														<option>Мои</option>
+													</select><span class="form-wrap__input-title">Прогресс</span>
+												</label>
+											</div>
+											<div class="events-filter__wrapper d-none d-md-block"><span>Вовлеченность</span>
+												<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Низкая</span>
+													</label>
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Низкая</span>
+													</label>
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Высокая</span>
+													</label>
+												</div>
+											</div>
+											<div class="events-filter__wrapper d-none d-md-block"><span>Прогресс</span>
+												<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Низкая</span>
+													</label>
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio"/><span class="custom-input__text form-check-label">Низкая</span>
+													</label>
+													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events2" type="radio"/><span class="custom-input__text form-check-label">Высокая</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="sAccount__filter sAccount__filter--js">
 										<div class="sAccount__input-wrap form-group"><input class="sAccount__input form-control" name="text" type="text" placeholder="Введите название группы или фамилию ученика"/>
 										</div>
@@ -239,321 +311,132 @@
 																<p>Еркова Дарья Валерьевна</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Летунова Александра Петровна</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Артюхова Светлана Владимировна</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Прохоров Илья Сергеевич</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка" disabled="disabled"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Петров Никита Александрович</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка" disabled="disabled"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Иванова Ольга Николаевна</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка"/>
+															</div>
 														</div>
 														<div class="sAccount__projects-group-item">
 															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
 																<p>Егорова Нина Федоровна</p>
 															</label>
 															<div class="link-wrap"><a href="mailto:nina@yandex.ru">nina@yandex.ru</a></div>
-														</div>
-											</div>
-											<div class="sAccount__projects-group">
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input main-checkbox" name="checkbox" type="checkbox"/>
-																<div class="h4">Проектная группа №4</div>
-															</label>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-											</div>
-											<div class="sAccount__projects-group">
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input main-checkbox" name="checkbox" type="checkbox"/>
-																<div class="h4">Проектная группа №3</div>
-															</label>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Еркова Дарья Валерьевна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Летунова Александра Петровна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Артюхова Светлана Владимировна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Прохоров Илья Сергеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Петров Никита Александрович</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Иванова Ольга Николаевна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Егорова Нина Федоровна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:nina@yandex.ru">nina@yandex.ru</a></div>
-														</div>
-											</div>
-											<div class="sAccount__projects-group">
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input main-checkbox" name="checkbox" type="checkbox"/>
-																<div class="h4">Проектная группа №4</div>
-															</label>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-											</div>
-											<div class="sAccount__projects-group">
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input main-checkbox" name="checkbox" type="checkbox"/>
-																<div class="h4">Проектная группа №3</div>
-															</label>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Еркова Дарья Валерьевна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Летунова Александра Петровна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Артюхова Светлана Владимировна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Прохоров Илья Сергеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Петров Никита Александрович</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Иванова Ольга Николаевна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Егорова Нина Федоровна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:nina@yandex.ru">nina@yandex.ru</a></div>
-														</div>
-											</div>
-											<div class="sAccount__projects-group">
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input main-checkbox" name="checkbox" type="checkbox"/>
-																<div class="h4">Проектная группа №4</div>
-															</label>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Комаров Алексей Андеевич</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a></div>
-														</div>
-														<div class="sAccount__projects-group-item">
-															<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
-																<p>Дрозд Арина Даниловна</p>
-															</label>
-															<div class="link-wrap"><a href="mailto:arina@yandex.ru">arina@yandex.ru</a></div>
+															<div class="sAccount__input-wrap sAccount__input-wrap--select form-group">
+																<select class="sAccount__input form-select" name="select">
+																	<option value="Был" selected="selected">Был</option>
+																	<option value=" placeholder 1">placeholder 1</option>
+																	<option value=" placeholder 2">placeholder 2</option>
+																	<option value=" placeholder 3">placeholder 3</option>
+																	<option value=" placeholder 4">placeholder 4</option>
+																</select>
+															</div>
+															<div class="sAccount__input-wrap form-group">
+																<input class="sAccount__input form-control" name="text" type="text" placeholder="Оценка"/>
+															</div>
 														</div>
 											</div>
 										</div>
 									</div>
-									<div class="sAccount__footer-btn">
-										<div class="row">
-											<div class="sAccount__col col-md-auto">
-												<a class="sAccount__btn btn btn-primary" href="#">Продолжить
-												</a>
-											</div>
-											<div class="sAccount__col col-md-auto">
-												<a class="sAccount__btn btn btn-dark" href="#">Отмена
-												</a>
-											</div>
-										</div>
-									</div>
+									<a class="sAccount__btn-save btn btn-outline-primary" href="#" data-src="modal-warning" data-fancybox="modal">Сохранить
+									</a>
 								</div>
 							</div>
 						</div>

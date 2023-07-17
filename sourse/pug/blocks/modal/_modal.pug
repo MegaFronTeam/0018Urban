@@ -44,6 +44,14 @@ mixin modal()
 				+input('Введите описание', 'textarea','Описание идеи/проекта')(required)
 				+e.BUTTON.btn.btn(type="submit") Oтправить
 				+e.agree Нажимая кнопку &laquo;Отправить&raquo; вы&nbsp;принимаете условия согласия на #[a(href="#") обработку ваших персональных данных].
+				
+	div(id="modal-warning"  style="display: none" )
+		+b.modal-win--warning
+			.h4 Вы уверены что хотите удалить выбранное?
+			+e.footer-btn
+				.row
+					+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Удалить
+					+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Не удалять
 	// #submit-idea
 
 	

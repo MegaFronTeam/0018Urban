@@ -73,8 +73,20 @@ mixin eventsHeader2(title='Мероприятия', btn=true)
 				//- +e.btn--js.d-md-none(data-toggle="#events-dropdown") Фильтр
 				+e.filter-wrap(id="events-dropdown")
 					//- +input("Все",'select')(class="сustom-select-js" data-placeholder="Группа" ).d-md-none
-					+select('', 'Все', 'Прошедшие', 'Мои').d-md-none
-					+select('', 'Все', 'Прошедшие', 'Мои').d-md-none
+					//- +select('', 'Все', 'Прошедшие', 'Мои').d-md-none
+					//- +select('', 'Все', 'Прошедшие', 'Мои').d-md-none
+					+e.input-wrap--select.form-group.d-md-none
+						label
+							+e.SELECT.input.form-control
+								option Все
+								option Прошедшие
+								option Мои
+					+e.input-wrap--select.form-group.d-md-none
+						label
+							+e.SELECT.input.form-control
+								option Все
+								option Прошедшие
+								option Мои
 					+e.radio-wrap--text.radio-wrap
 						+in-c('radio','Все','events')(checked)
 						+in-c('radio','Прошедшие','events')

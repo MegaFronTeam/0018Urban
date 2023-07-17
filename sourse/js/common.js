@@ -819,14 +819,34 @@ function eventHandler() {
 	});
 
 	$('.sAccount__filter--js input').on('input', function() {
-		console.log(123);
 		if(this.value.length > 0) {
 			$('.sAccount__filter--js .sAccount__filter-dropdown').addClass('active');
 		} else {
 			$('.sAccount__filter--js .sAccount__filter-dropdown').removeClass('active')
 		}
 	});
-
+	$('.sAccount__projects-group-wrap .custom-input__input').on('click', function(){
+		// if(this.classList.contains('delete') && this.checked == true) {
+		// 	for (const item of $('.sAccount__projects-group-wrap .custom-input__input')) {
+		// 		item.checked = true;
+		// 	}
+		// } else if (this.classList.contains('delete') && this.checked == false) {
+		// 	for (const item of $('.sAccount__projects-group-wrap .custom-input__input')) {
+		// 		item.checked = false;
+		// 	}
+		// }
+		if (this.classList.contains('main-checkbox') && this.checked == true) {
+			let checkboxes = this.closest('.sAccount__projects-group').querySelectorAll('input');
+			for (const item of checkboxes) {
+				item.checked = true;
+			}
+		} else if (this.classList.contains('main-checkbox') && this.checked == false) {
+			let checkboxes = this.closest('.sAccount__projects-group').querySelectorAll('input');
+			for (const item of checkboxes) {
+				item.checked = false;
+			}
+		};
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

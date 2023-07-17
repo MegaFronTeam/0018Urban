@@ -76,7 +76,7 @@ mixin sAccount(validated)
 							+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
 	// end sAccount
 
-mixin sAccount(validated)
+mixin sAccount2(validated)
 	// start sAccount
 	+b.SECTION.sAccount--create-activity.section#sAccount&attributes(attributes)
 		+e.container.container
@@ -136,18 +136,20 @@ mixin sAccount(validated)
 								+e.filter-item Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
 								+e.filter-item Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
 						mixin groupItem(title, text, email)
-							+in-c('checkbox', 'Проектная группа №3', name= typ, title, text, email)
-								if title
-									.h4!= title
-								else
-									p!= text
+							+e.projects-group-item
+								+in-c('checkbox', 'Проектная группа №3', name= typ, title, text)(class=(title ? 'main-checkbox' : ''))
+									if title
+										.h4!= title
+									else
+										p!= text
 								if email
-									a(href=`mailto:${email}`)!= email 
+									.link-wrap
+										a(href=`mailto:${email}`)!= email 
 						+e.projects-group-wrap
+							+in-c('checkbox').delete
+								+icon('delete')
 							+e.projects-group-row
 								+e.projects-group
-									+in-c('checkbox')
-										+icon('delete')
 									+groupItem('Проектная группа №3', '', '')
 									+groupItem('', 'Еркова Дарья Валерьевна', 'erkova@yandex.ru')
 									+groupItem('', 'Летунова Александра Петровна', 'ivanov@yandex.ru')
@@ -204,6 +206,138 @@ mixin sAccount(validated)
 									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
 									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
 									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
-						+e.footer-btn.row
-							+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Продолжить
-							+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Отмена
+						+e.footer-btn
+							.row
+								+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Продолжить
+								+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Отмена
+
+
+mixin sAccount3(warning)
+	// start sAccount
+	+b.SECTION.sAccount--create-activity.--create-activity-2.section#sAccount&attributes(attributes)
+		+e.container.container
+			if warning
+				+e.warning
+					+img('img/svg/error.svg')
+					p Занятие отменено. Вернуть в #[a(href="#") запланированные].
+			+e.top
+				+b.section-title.text-center
+					h1 Занятие
+			+e.body
+				.tabs
+					.tabs__slider.tabs__slider--js.swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide.active
+								h2 Информация
+							.tabs__btn.swiper-slide
+								h2 Ученики
+					.tabs__content.tabs__content--personal
+						+form-wrap()
+							+e.row.row
+								.col-md-6
+									.data-picker-wrap
+										+input("чч. мм. гг.",'text', 'Дата проведения','datettime')(readonly autocomplete="off"  class="date-input").data-picker--js
+											+icon('calendar')
+								.col-md-6
+									+input("00:00 – 00:00", 'text', 'Время проведения')
+								.col-md-6.col-lg-4
+									+input('Модуль','select', 'Тип занятия')(data-placeholder="Модуль" class="сustom-select-js")
+								.col-md-6.col-lg-4
+									+input("Укажите аудиторию", 'text', 'Тип занятия')
+								.col-md-6.col-lg-4
+									+input("Введите название", 'text', 'Аудитория')
+								.col-lg-12
+									+input('Модуль','select', 'Основной педагог')(multiple data-placeholder="Модуль" class="сustom-select-js")
+								.col-lg-12
+									+input('Модуль','select', 'Дополнительные педагоги')(multiple data-placeholder="Модуль" class="сustom-select-js")
+								.col-lg-12
+									+input('Введите Ваш текст', 'textarea', 'Комментарии')
+								.col-12
+									+e.btn-save.btn.btn-outline-primary(href='#') Сохранить
+					.tabs__content.tabs__content.active
+						+b.events-filter
+							//- +e.btn--js.d-md-none(data-toggle="#events-dropdown") Фильтр
+							+e.filter-wrap
+								+input("", 'text', 'Номер сессии')
+								+e.input-wrap--select.form-group.d-md-none
+									label
+										+e.SELECT.input.form-control
+											option Все
+											option Прошедшие
+											option Мои
+										span.form-wrap__input-title Вовлеченность
+								+e.input-wrap--select.form-group.d-md-none
+									label
+										+e.SELECT.input.form-control
+											option Все
+											option Прошедшие
+											option Мои
+										span.form-wrap__input-title Прогресс
+								+e.wrapper.d-none.d-md-block
+									span Вовлеченность
+									+e.radio-wrap--text.radio-wrap
+										+in-c('radio','Низкая','events')(checked)
+										+in-c('radio','Низкая','events')
+										+in-c('radio','Высокая','events')
+								+e.wrapper.d-none.d-md-block
+									span Прогресс
+									+e.radio-wrap--text.radio-wrap
+										+in-c('radio','Низкая','events2')(checked)
+										+in-c('radio','Низкая','events2')
+										+in-c('radio','Высокая','events2')
+						+e.filter--js
+							+input('Введите название группы или фамилию ученика', 'text', '')
+							+e.filter-dropdown
+								+e.filter-item Проектная группа №6
+								+e.filter-item Проектная группа №1
+								+e.filter-item Проектная группа №2
+								+e.filter-item Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+								+e.filter-item Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+								+e.filter-item Проектная группа №6
+								+e.filter-item Проектная группа №1
+								+e.filter-item Проектная группа №2
+								+e.filter-item Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+								+e.filter-item Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+						mixin groupItem(title, text, email, inputs, ifDisabled=false)
+							+e.projects-group-item
+								+in-c('checkbox', 'Проектная группа №3', name= typ, title, text)(class=(title ? 'main-checkbox' : ''))
+									if title
+										.h4!= title
+									else
+										p!= text
+								if email
+									.link-wrap
+										a(href=`mailto:${email}`)!= email 
+								if inputs
+									.sAccount__input-wrap.sAccount__input-wrap--select.form-group
+										select.sAccount__input.form-select(name='select')
+											option(value='Был' selected='selected') Был
+											option(value=' placeholder 1') placeholder 1
+											option(value=' placeholder 2') placeholder 2
+											option(value=' placeholder 3') placeholder 3
+											option(value=' placeholder 4') placeholder 4
+									.sAccount__input-wrap.form-group
+										if ifDisabled
+											input.sAccount__input.form-control(name='text' type='text' placeholder='Оценка' disabled)
+										else
+											input.sAccount__input.form-control(name='text' type='text' placeholder='Оценка')
+						+e.projects-group-wrap
+							+in-c('checkbox').delete
+								+icon('delete')
+							+e.projects-group-row
+								+e.projects-group
+									+groupItem('Проектная группа №3', '', '')
+									+groupItem('', 'Еркова Дарья Валерьевна', 'erkova@yandex.ru', true)
+									+groupItem('', 'Летунова Александра Петровна', 'ivanov@yandex.ru', true)
+									+groupItem('', 'Артюхова Светлана Владимировна', 'svetlana@yandex.ru', true)
+									+groupItem('', 'Прохоров Илья Сергеевич', 'ivanpetrov@yandex.ru', true, true)
+									+groupItem('', 'Петров Никита Александрович', 'erkova@yandex.ru', true, true)
+									+groupItem('', 'Иванова Ольга Николаевна', 'olyaivanova@yandex.ru', true)
+									+groupItem('', 'Егорова Нина Федоровна', 'nina@yandex.ru', true)
+						+e.btn-save.btn.btn-outline-primary(href='#' data-src='modal-warning' data-fancybox="modal") Сохранить
+			if warning
+			else
+				+e.footer-btn
+					.row
+						+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Провести занятие
+						+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Отменить занятие
