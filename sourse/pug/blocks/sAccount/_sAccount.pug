@@ -107,6 +107,7 @@ mixin sAccount(validated)
 									.data-picker-wrap
 										+input("чч. мм. гг.",'text', 'Дата рождения','datettime')(readonly autocomplete="off"  class="date-input").data-picker--js.is-invalid
 											+icon('calendar')
+											span.invalid-feedback Заполните поле
 								.col-md-6
 									+input("00:00 – 00:00", 'text', 'Время проведения')
 								.col-md-6.col-lg-4
@@ -118,6 +119,91 @@ mixin sAccount(validated)
 								.col-lg-12
 									+input('Введите Ваш текст', 'textarea', 'Комментарии')
 							+e.footer-btn.row
-								.col-auto: +e.btn.btn.btn-primary(href='#') Продолжить
-								.col-auto: +e.btn.btn.btn-dark(href='#') Отмена
-					.tabs__content.tabs__content 2
+								+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Продолжить
+								+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Отмена
+					.tabs__content.tabs__content
+						+e.filter--js
+							+input('Введите название группы или фамилию ученика', 'text', '')
+							+e.filter-dropdown
+								+e.filter-item Проектная группа №6
+								+e.filter-item Проектная группа №1
+								+e.filter-item Проектная группа №2
+								+e.filter-item Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+								+e.filter-item Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+								+e.filter-item Проектная группа №6
+								+e.filter-item Проектная группа №1
+								+e.filter-item Проектная группа №2
+								+e.filter-item Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+								+e.filter-item Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+						mixin groupItem(title, text, email)
+							+in-c('checkbox', 'Проектная группа №3', name= typ, title, text, email)
+								if title
+									.h4!= title
+								else
+									p!= text
+								if email
+									a(href=`mailto:${email}`)!= email 
+						+e.projects-group-wrap
+							+e.projects-group-row
+								+e.projects-group
+									+in-c('checkbox').delete
+										+icon('delete')
+									+groupItem('Проектная группа №3', '', '')
+									+groupItem('', 'Еркова Дарья Валерьевна', 'erkova@yandex.ru')
+									+groupItem('', 'Летунова Александра Петровна', 'ivanov@yandex.ru')
+									+groupItem('', 'Артюхова Светлана Владимировна', 'svetlana@yandex.ru')
+									+groupItem('', 'Прохоров Илья Сергеевич', 'ivanpetrov@yandex.ru')
+									+groupItem('', 'Петров Никита Александрович', 'erkova@yandex.ru')
+									+groupItem('', 'Иванова Ольга Николаевна', 'olyaivanova@yandex.ru')
+									+groupItem('', 'Егорова Нина Федоровна', 'nina@yandex.ru')
+								+e.projects-group
+									+groupItem('Проектная группа №4', '', '')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+								+e.projects-group
+									+groupItem('Проектная группа №3', '', '')
+									+groupItem('', 'Еркова Дарья Валерьевна', 'erkova@yandex.ru')
+									+groupItem('', 'Летунова Александра Петровна', 'ivanov@yandex.ru')
+									+groupItem('', 'Артюхова Светлана Владимировна', 'svetlana@yandex.ru')
+									+groupItem('', 'Прохоров Илья Сергеевич', 'ivanpetrov@yandex.ru')
+									+groupItem('', 'Петров Никита Александрович', 'erkova@yandex.ru')
+									+groupItem('', 'Иванова Ольга Николаевна', 'olyaivanova@yandex.ru')
+									+groupItem('', 'Егорова Нина Федоровна', 'nina@yandex.ru')
+								+e.projects-group
+									+groupItem('Проектная группа №4', '', '')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+								+e.projects-group
+									+groupItem('Проектная группа №3', '', '')
+									+groupItem('', 'Еркова Дарья Валерьевна', 'erkova@yandex.ru')
+									+groupItem('', 'Летунова Александра Петровна', 'ivanov@yandex.ru')
+									+groupItem('', 'Артюхова Светлана Владимировна', 'svetlana@yandex.ru')
+									+groupItem('', 'Прохоров Илья Сергеевич', 'ivanpetrov@yandex.ru')
+									+groupItem('', 'Петров Никита Александрович', 'erkova@yandex.ru')
+									+groupItem('', 'Иванова Ольга Николаевна', 'olyaivanova@yandex.ru')
+									+groupItem('', 'Егорова Нина Федоровна', 'nina@yandex.ru')
+								+e.projects-group
+									+groupItem('Проектная группа №4', '', '')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+									+groupItem('', 'Комаров Алексей Андеевич', 'komarovalex@yandex.ru')
+									+groupItem('', 'Дрозд Арина Даниловна', 'arina@yandex.ru')
+						+e.footer-btn.row
+							+e.col.col-md-auto: +e.btn.btn.btn-primary(href='#') Продолжить
+							+e.col.col-md-auto: +e.btn.btn.btn-dark(href='#') Отмена

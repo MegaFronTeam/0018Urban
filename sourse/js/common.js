@@ -816,7 +816,17 @@ function eventHandler() {
 		$('.topicItem--js').removeClass('active');
 		$('.content-wrap--js').removeClass('active');
 		$('body').removeClass('fixed-training');
-	})
+	});
+
+	$('.sAccount__filter--js input').on('input', function() {
+		console.log(123);
+		if(this.value.length > 0) {
+			$('.sAccount__filter--js .sAccount__filter-dropdown').addClass('active');
+		} else {
+			$('.sAccount__filter--js .sAccount__filter-dropdown').removeClass('active')
+		}
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

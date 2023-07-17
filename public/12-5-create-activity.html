@@ -131,7 +131,7 @@
 															<label><input class="form-wrap__input form-control date-input data-picker data-picker--js is-invalid" name="datettime" type="text" placeholder="чч. мм. гг." readonly="readonly" autocomplete="off"/><span class="form-wrap__input-title">Дата рождения</span>
 																<svg class="icon icon-calendar ">
 																	<use xlink:href="img/svg/sprite.svg#calendar"></use>
-																</svg>
+																</svg><span class="invalid-feedback">Заполните поле</span>
 															</label>
 														</div>
 														<!-- +e.input-wrap-->
@@ -181,11 +181,11 @@
 												</div>
 											</div>
 											<div class="form-wrap__footer-btn row">
-												<div class="col-auto">
+												<div class="form-wrap__col col-md-auto">
 													<a class="form-wrap__btn btn btn-primary" href="#">Продолжить
 													</a>
 												</div>
-												<div class="col-auto">
+												<div class="form-wrap__col col-md-auto">
 													<a class="form-wrap__btn btn btn-dark" href="#">Отмена
 													</a>
 												</div>
@@ -193,7 +193,219 @@
 										</form>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content">2</div>
+								<div class="tabs__content tabs__content">
+									<div class="sAccount__filter sAccount__filter--js">
+										<div class="sAccount__input-wrap form-group"><input class="sAccount__input form-control" name="text" type="text" placeholder="Введите название группы или фамилию ученика"/>
+										</div>
+										<!-- +e.input-wrap-->
+										<div class="sAccount__filter-dropdown">
+											<div class="sAccount__filter-item">Проектная группа №6
+											</div>
+											<div class="sAccount__filter-item">Проектная группа №1
+											</div>
+											<div class="sAccount__filter-item">Проектная группа №2
+											</div>
+											<div class="sAccount__filter-item">Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+											</div>
+											<div class="sAccount__filter-item">Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+											</div>
+											<div class="sAccount__filter-item">Проектная группа №6
+											</div>
+											<div class="sAccount__filter-item">Проектная группа №1
+											</div>
+											<div class="sAccount__filter-item">Проектная группа №2
+											</div>
+											<div class="sAccount__filter-item">Прохоров Илья Сергеевич,  prohorov@mail.ru,  проектная группа №6
+											</div>
+											<div class="sAccount__filter-item">Прохоров Игорь Юрьевич,  prohorov.i@mail.ru,  проектная группа №6
+											</div>
+										</div>
+									</div>
+									<div class="sAccount__projects-group-wrap">
+										<div class="sAccount__projects-group-row">
+											<div class="sAccount__projects-group">
+												<label class="custom-input form-check"><input class="custom-input__input form-check-input delete" name="checkbox" type="checkbox"/>
+													<svg class="icon icon-delete ">
+														<use xlink:href="img/svg/sprite.svg#delete"></use>
+													</svg>
+												</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №3</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Еркова Дарья Валерьевна</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Летунова Александра Петровна</p><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Артюхова Светлана Владимировна</p><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Прохоров Илья Сергеевич</p><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Петров Никита Александрович</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Иванова Ольга Николаевна</p><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Егорова Нина Федоровна</p><a href="mailto:nina@yandex.ru">nina@yandex.ru</a>
+														</label>
+											</div>
+											<div class="sAccount__projects-group">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №4</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+											</div>
+											<div class="sAccount__projects-group">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №3</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Еркова Дарья Валерьевна</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Летунова Александра Петровна</p><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Артюхова Светлана Владимировна</p><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Прохоров Илья Сергеевич</p><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Петров Никита Александрович</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Иванова Ольга Николаевна</p><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Егорова Нина Федоровна</p><a href="mailto:nina@yandex.ru">nina@yandex.ru</a>
+														</label>
+											</div>
+											<div class="sAccount__projects-group">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №4</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+											</div>
+											<div class="sAccount__projects-group">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №3</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Еркова Дарья Валерьевна</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Летунова Александра Петровна</p><a href="mailto:ivanov@yandex.ru">ivanov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Артюхова Светлана Владимировна</p><a href="mailto:svetlana@yandex.ru">svetlana@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Прохоров Илья Сергеевич</p><a href="mailto:ivanpetrov@yandex.ru">ivanpetrov@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Петров Никита Александрович</p><a href="mailto:erkova@yandex.ru">erkova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Иванова Ольга Николаевна</p><a href="mailto:olyaivanova@yandex.ru">olyaivanova@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Егорова Нина Федоровна</p><a href="mailto:nina@yandex.ru">nina@yandex.ru</a>
+														</label>
+											</div>
+											<div class="sAccount__projects-group">
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<div class="h4">Проектная группа №4</div>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Комаров Алексей Андеевич</p><a href="mailto:komarovalex@yandex.ru">komarovalex@yandex.ru</a>
+														</label>
+														<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/>
+															<p>Дрозд Арина Даниловна</p><a href="mailto:arina@yandex.ru">arina@yandex.ru</a>
+														</label>
+											</div>
+										</div>
+									</div>
+									<div class="sAccount__footer-btn row">
+										<div class="sAccount__col col-md-auto">
+											<a class="sAccount__btn btn btn-primary" href="#">Продолжить
+											</a>
+										</div>
+										<div class="sAccount__col col-md-auto">
+											<a class="sAccount__btn btn btn-dark" href="#">Отмена
+											</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

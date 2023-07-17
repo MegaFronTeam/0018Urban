@@ -19,6 +19,22 @@
  		width: 100%;
  		display: block;
  	}
+	.invalid-feedback,
+	.valid-feedback {
+		// position: absolute;
+		top: 100%;
+		left: rem(8);
+		order: -1;
+		font-size: rem(12);
+		line-height: 1.33;
+		margin-left: rem(8);
+	}
+	.invalid-feedback {
+		color: $red;
+	}
+	.valid-feedback {
+		color: $success;
+	}
 }
 
 
