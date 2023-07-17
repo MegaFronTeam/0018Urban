@@ -75,3 +75,49 @@ mixin sAccount(validated)
 							+in-c('checkbox','Требуется одобрение для показа контактов')
 							+e.button.BUTTON(type="submit").btn.btn-primary Сохранить
 	// end sAccount
+
+mixin sAccount(validated)
+	// start sAccount
+	+b.SECTION.sAccount--create-activity.section#sAccount&attributes(attributes)
+		+e.container.container
+			+e.top
+				+b.section-title.text-center
+					h1 Создание занятия
+				//- +form-wrap
+				//- 	if validated
+				//- 		+b.account-title.validated
+				//- 			+in-c('checkbox','Опубликовать анкету на сайте','published')
+				//- 			+e.caption Заполните обязательные поля, отмеченные звездочкой
+				//- 	else
+				//- 		+b.account-title
+				//- 			+in-c('checkbox','Опубликовать анкету на сайте','published')
+				//- 			+e.caption Для публикации вашей анкеты на сайте, необходимо заполнить все поля, отмеченные звездочкой
+			+e.body
+				.tabs
+					.tabs__slider.tabs__slider--js.swiper
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide.active
+								h2 Информация
+							.tabs__btn.swiper-slide
+								h2 Ученики
+					.tabs__content.tabs__content--personal.active
+						+form-wrap()
+							+e.row.row
+								.col-md-6
+									.data-picker-wrap
+										+input("чч. мм. гг.",'text', 'Дата рождения','datettime')(readonly autocomplete="off"  class="date-input").data-picker--js.is-invalid
+											+icon('calendar')
+								.col-md-6
+									+input("00:00 – 00:00", 'text', 'Время проведения')
+								.col-md-6.col-lg-4
+									+input('Модуль','select', 'Тип занятия')(data-placeholder="Модуль" class="сustom-select-js")
+								.col-md-6.col-lg-4
+									+input("Укажите аудиторию", 'text', 'Аудитория')
+								.col-md-6.col-lg-4
+									+input("Введите название", 'text', 'Предмет')
+								.col-lg-12
+									+input('Введите Ваш текст', 'textarea', 'Комментарии')
+							+e.footer-btn.row
+								.col-auto: +e.btn.btn.btn-primary(href='#') Продолжить
+								.col-auto: +e.btn.btn.btn-dark(href='#') Отмена
+					.tabs__content.tabs__content 2

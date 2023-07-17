@@ -1,12 +1,16 @@
 .form-wrap{
  	&__input-wrap{
-			// @extend .form-group;
-			
-		}
-		&__input{
-			// @extend .form-control;
+		// @extend .form-group;
+		
+	}
+	&__input{
+		// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		resize: none;
+		&.is-invalid,
+		&.is-valid {
+			background-image: none;
+		}
  	}
  	&__btn{
  		cursor: pointer;

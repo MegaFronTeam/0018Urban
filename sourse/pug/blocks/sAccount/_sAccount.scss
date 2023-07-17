@@ -322,6 +322,48 @@
 			width: calc(100% - #{rem(100)} * 2);
 		}
 	}
+
+	&--create-activity {
+		.tabs {
+			&__slider {
+				max-width: max-content;
+			}
+		}
+		.sAccount {
+			&__container {
+				max-width: 1024px !important;
+			}
+		}
+		.form-wrap {
+			&__row {
+				--bs-gutter-x: #{rem(16)};
+				--bs-gutter-y: #{rem(32)};
+			}
+			&__input-wrap {
+				--bs-border-color: #999EAB;
+			}
+			&__input {
+				&::placeholder {
+					color: #999EAB;
+				}
+			}
+		}
+		.select2 {
+			@include media-breakpoint-down(lg) {
+				width: 100% !important;
+			}
+		}
+		.select2-container .select2-selection--single .select2-selection__rendered {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.select2-selection.select2-selection--single {
+			border-color: #999EAB !important;
+		}
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			color: #2B2015;
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
