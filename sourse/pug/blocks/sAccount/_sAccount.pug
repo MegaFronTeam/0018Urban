@@ -247,9 +247,32 @@ mixin sAccount3(warning)
 								.col-md-6.col-lg-4
 									+input("Введите название", 'text', 'Аудитория')
 								.col-lg-12
-									+input('Модуль','select', 'Основной педагог')(multiple data-placeholder="Модуль" class="сustom-select-js")
+									//- +input('Модуль','select', 'Основной педагог')(multiple data-placeholder="Модуль" class="сustom-select-js")
+									+e.teacher-list
+										span Основной педагог
+										+e.teacher-list-wrap
+											mixin teacherItem()
+												.col-auto
+													+e.teacher 
+														| Летунова Александра Петровна
+														.close
+											.row
+												+teacherItem()
 								.col-lg-12
-									+input('Модуль','select', 'Дополнительные педагоги')(multiple data-placeholder="Модуль" class="сustom-select-js")
+									//- +input('Модуль','select', 'Дополнительные педагоги')(multiple data-placeholder="Модуль" class="сustom-select-js")
+									+e.teacher-list
+										span Основной педагог
+										+e.teacher-list-wrap
+											mixin teacherItem()
+												.col-auto
+													+e.teacher 
+														| Летунова Александра Петровна
+														.close
+											.row
+												+teacherItem()
+												+teacherItem()
+												+teacherItem()
+												+teacherItem()
 								.col-lg-12
 									+input('Введите Ваш текст', 'textarea', 'Комментарии')
 								.col-12
@@ -276,21 +299,21 @@ mixin sAccount3(warning)
 								+e.wrapper.d-none.d-md-block
 									span Вовлеченность
 									+e.radio-wrap--text.radio-wrap
-										//- +in-c('radio','Низкая','events')(checked)
-										//- +in-c('radio','Низкая','events')
-										//- +in-c('radio','Высокая','events')
-										.custom-input.form-check
-											.custom-input__text.form-check-label Низкая
-										.custom-input.form-check
-											.custom-input__text.form-check-label Низкая
-										.custom-input.form-check
-											.custom-input__text.form-check-label Высокая
+										+in-c('checkbox','Низкая','events2')(checked)
+										+in-c('checkbox','Низкая','events2')
+										+in-c('checkbox','Высокая','events2')
+										//- .custom-input.form-check
+										//- 	.custom-input__text.form-check-label Низкая
+										//- .custom-input.form-check
+										//- 	.custom-input__text.form-check-label Низкая
+										//- .custom-input.form-check
+										//- 	.custom-input__text.form-check-label Высокая
 								+e.wrapper.d-none.d-md-block
 									span Прогресс
 									+e.radio-wrap--text.radio-wrap
-										+in-c('radio','Низкая','events2')(checked)
-										+in-c('radio','Низкая','events2')
-										+in-c('radio','Высокая','events2')
+										+in-c('checkbox','Низкая','events2')(checked)
+										+in-c('checkbox','Низкая','events2')
+										+in-c('checkbox','Высокая','events2')
 						+e.filter--js
 							+input('Введите название группы или фамилию ученика', 'text', '')
 							+e.filter-dropdown

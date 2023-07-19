@@ -174,7 +174,8 @@ const JSCCommon = {
 	timeMask() {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input.time-mask'));
-		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		// InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		InputTel.forEach(element => element.setAttribute("pattern", "[0-9]+:[0-9]+ - [0-9]+:[0-9]+"));
 		Inputmask({ "mask": "99:99 - 99:99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
@@ -894,20 +895,22 @@ function eventHandler() {
 		};
 	});
 
-	let radioWrapBtns = document.querySelectorAll('.sAccount .events-filter__radio-wrap.radio-wrap .custom-input');
+	let radioWrapBtns = document.querySelectorAll('.sAccount .events-filter__radio-wrap.radio-wrap .custom-input__input');
 	if(radioWrapBtns.length > 0) {
-		document.addEventListener('click', function(event) {
-			let activeInput = event.target.closest('.sAccount .events-filter__radio-wrap.radio-wrap .custom-input');
-			if(activeInput) {
-				for (const radioWrapBtn of radioWrapBtns) {
-					if (radioWrapBtn.classList.contains('active')) {
-						radioWrapBtn.classList.remove('active');
+		for (const radioWrapBtn of radioWrapBtns) {
+			radioWrapBtn.addEventListener('click', function() {
+				this.closest('.events-filter__radio-wrap.radio-wrap').querySelectorAll('.custom-input__input').forEach((item) => {
+					if (radioWrapBtn !== item) {
+						item.checked = false;
 					}
-				}
-				activeInput.classList.add('active');
-			};
-		})
+				})
+			});
+		}
 	}
+
+	$('.form-wrap__teacher .close').click(function() {
+		$(this.closest('.col-auto')).hide();
+	});
 
 };
 if (document.readyState !== 'loading') {
