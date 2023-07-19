@@ -205,10 +205,12 @@
 			@include block(400, 272);
 		}
 		.profile-item {
+			height: 100%;
 			&__block {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
 				@include media-breakpoint-down(sm) {
-					display: flex;
-					flex-direction: column;
 					position: absolute;
 					top: 16px;
 					left: 16px;
