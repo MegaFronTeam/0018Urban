@@ -231,7 +231,7 @@ mixin sAccount3(warning)
 								h2 Информация
 							.tabs__btn.swiper-slide
 								h2 Ученики
-					.tabs__content.tabs__content--personal
+					.tabs__content.tabs__content--personal.active
 						+form-wrap()
 							+e.row.row
 								.col-md-6
@@ -239,7 +239,7 @@ mixin sAccount3(warning)
 										+input("чч. мм. гг.",'text', 'Дата проведения','datettime')(readonly autocomplete="off"  class="date-input").data-picker--js
 											+icon('calendar')
 								.col-md-6
-									+input("00:00 – 00:00", 'text', 'Время проведения')
+									+input("00:00 – 00:00", 'text', 'Время проведения').time-mask
 								.col-md-6.col-lg-4
 									+input('Модуль','select', 'Тип занятия')(data-placeholder="Модуль" class="сustom-select-js")
 								.col-md-6.col-lg-4
@@ -254,7 +254,7 @@ mixin sAccount3(warning)
 									+input('Введите Ваш текст', 'textarea', 'Комментарии')
 								.col-12
 									+e.btn-save.btn.btn-outline-primary(href='#') Сохранить
-					.tabs__content.tabs__content.active
+					.tabs__content.tabs__content
 						+b.events-filter
 							//- +e.btn--js.d-md-none(data-toggle="#events-dropdown") Фильтр
 							+e.filter-wrap
@@ -276,9 +276,15 @@ mixin sAccount3(warning)
 								+e.wrapper.d-none.d-md-block
 									span Вовлеченность
 									+e.radio-wrap--text.radio-wrap
-										+in-c('radio','Низкая','events')(checked)
-										+in-c('radio','Низкая','events')
-										+in-c('radio','Высокая','events')
+										//- +in-c('radio','Низкая','events')(checked)
+										//- +in-c('radio','Низкая','events')
+										//- +in-c('radio','Высокая','events')
+										.custom-input.form-check
+											.custom-input__text.form-check-label Низкая
+										.custom-input.form-check
+											.custom-input__text.form-check-label Низкая
+										.custom-input.form-check
+											.custom-input__text.form-check-label Высокая
 								+e.wrapper.d-none.d-md-block
 									span Прогресс
 									+e.radio-wrap--text.radio-wrap

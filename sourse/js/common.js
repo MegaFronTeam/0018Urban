@@ -170,6 +170,13 @@ const JSCCommon = {
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
 		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
+
+	timeMask() {
+		// mask for input
+		let InputTel = [].slice.call(document.querySelectorAll('input.time-mask'));
+		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
+		Inputmask({ "mask": "99:99 - 99:99", showMaskOnHover: false }).mask(InputTel);
+	},
 	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -325,6 +332,7 @@ function eventHandler() {
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
+	JSCCommon.timeMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.getCurrentYear('.currentYear');
@@ -423,6 +431,44 @@ function eventHandler() {
 			const tooltip = btn.nextElementSibling;
 			const popperInstance = Popper.createPopper(btn, tooltip, {
 				placement: 'right',
+				modifiers: [
+					{
+						name: 'offset',
+						options: {
+							offset: [0, 8],
+						},
+					},
+				],
+			});
+			function show() {
+				tooltip.setAttribute('data-show', '');
+				popperInstance.update();
+			}
+
+			function hide() {
+				tooltip.removeAttribute('data-show');
+			}
+
+			const showEvents = ['mouseenter', 'focus'];
+			const hideEvents = ['mouseleave', 'blur'];
+
+			showEvents.forEach((event) => {
+				btn.addEventListener(event, show);
+			});
+
+			hideEvents.forEach((event) => {
+				btn.addEventListener(event, hide);
+			});
+		})
+	}
+
+	// Tooltip
+	const tooltipButtons2 = document.querySelectorAll('.news-preview__text');
+	if (tooltipButtons2) {
+		tooltipButtons2.forEach((btn) => {
+			const tooltip = btn.nextElementSibling;
+			const popperInstance = Popper.createPopper(btn, tooltip, {
+				placement: 'auto',
 				modifiers: [
 					{
 						name: 'offset',
@@ -847,6 +893,22 @@ function eventHandler() {
 			}
 		};
 	});
+
+	let radioWrapBtns = document.querySelectorAll('.sAccount .events-filter__radio-wrap.radio-wrap .custom-input');
+	if(radioWrapBtns.length > 0) {
+		document.addEventListener('click', function(event) {
+			let activeInput = event.target.closest('.sAccount .events-filter__radio-wrap.radio-wrap .custom-input');
+			if(activeInput) {
+				for (const radioWrapBtn of radioWrapBtns) {
+					if (radioWrapBtn.classList.contains('active')) {
+						radioWrapBtn.classList.remove('active');
+					}
+				}
+				activeInput.classList.add('active');
+			};
+		})
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

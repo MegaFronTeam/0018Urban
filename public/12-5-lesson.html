@@ -121,7 +121,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content--personal">
+								<div class="tabs__content tabs__content--personal active">
 									<div class="form-wrap">
 										<form>
 											<div class="form-wrap__row row">
@@ -139,7 +139,7 @@
 												</div>
 												<div class="col-md-6">
 													<div class="form-wrap__input-wrap form-group">
-														<label><input class="form-wrap__input form-control" name="text" type="text" placeholder="00:00 – 00:00"/><span class="form-wrap__input-title">Время проведения</span>
+														<label><input class="form-wrap__input form-control time-mask" name="text" type="text" placeholder="00:00 – 00:00"/><span class="form-wrap__input-title">Время проведения</span>
 														</label>
 													</div>
 													<!-- +e.input-wrap-->
@@ -215,7 +215,7 @@
 										</form>
 									</div>
 								</div>
-								<div class="tabs__content tabs__content active">
+								<div class="tabs__content tabs__content">
 									<div class="events-filter">
 										<div class="events-filter__filter-wrap">
 											<div class="events-filter__input-wrap form-group">
@@ -243,12 +243,15 @@
 											</div>
 											<div class="events-filter__wrapper d-none d-md-block"><span>Вовлеченность</span>
 												<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Низкая</span>
-													</label>
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Низкая</span>
-													</label>
-													<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio"/><span class="custom-input__text form-check-label">Высокая</span>
-													</label>
+													<div class="custom-input form-check">
+														<div class="custom-input__text form-check-label">Низкая</div>
+													</div>
+													<div class="custom-input form-check">
+														<div class="custom-input__text form-check-label">Низкая</div>
+													</div>
+													<div class="custom-input form-check">
+														<div class="custom-input__text form-check-label">Высокая</div>
+													</div>
 												</div>
 											</div>
 											<div class="events-filter__wrapper d-none d-md-block"><span>Прогресс</span>

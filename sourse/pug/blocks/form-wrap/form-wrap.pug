@@ -3,12 +3,12 @@ mixin form-head()
 		input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(placeholder,  t='text', label, name= t, select)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(name=name placeholder=placeholder)&attributes(attributes)
 		else if t== "select"
-			+e.SELECT.input.form-select( name= name)&attributes(attributes)
+			+e.SELECT.input.form-select(name= name)&attributes(attributes)
 				if placeholder
 					option(value= placeholder selected)= placeholder
 				- for (var x = 1; x < 5; x++)
@@ -22,7 +22,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.INPUT.input.form-control(name=name type=t )&attributes(attributes)
 		else
 			+e.INPUT.input.form-control(name=name type=t placeholder=placeholder)&attributes(attributes)
-	+e.input-wrap.form-group
+	+e.input-wrap.form-group(class=select)
 		if label
 			label
 				+t(t,placeholder, name)&attributes(attributes)

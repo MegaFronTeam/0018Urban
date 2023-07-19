@@ -34,7 +34,10 @@ mixin newsListItem2(cat, date='26 сентября', title="Выпусники �
 						+img('img/svg/error.svg')
 						| Отменено
 				+e.title!= title
-				+e.text!= text
+				+e.text-wrap
+					+e.text()!= text
+					.tooltip(role="tooltip") Егорова Нина Федоровна, Летунова Александра Петровна, Николаев Анатолий Борисович 
+						.arrow(data-popper-arrow)
 				+e.category= cat
 				+e.icon: +img('img/svg/outlook-icon-2.svg')
 mixin sNews(data)

@@ -108,24 +108,26 @@
 						</div>
 						<div class="events-filter">
 							<div class="events-filter__filter-wrap" id="events-dropdown">
-								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
-									<label>
-										<select class="events-filter__input form-control">
-											<option>Все</option>
-											<option>Прошедшие</option>
-											<option>Мои</option>
-										</select>
-									</label>
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<select class="events-filter__input form-select сustom-select-js" name="select" data-placeholder="Все">
+										<option value="Все" selected="selected">Все</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
-								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
-									<label>
-										<select class="events-filter__input form-control">
-											<option>Все</option>
-											<option>Прошедшие</option>
-											<option>Мои</option>
-										</select>
-									</label>
+								<!-- +e.input-wrap-->
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<select class="events-filter__input form-select сustom-select-js" name="select" data-placeholder="Все">
+										<option value="Все" selected="selected">Все</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
+								<!-- +e.input-wrap-->
 								<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все</span>
 									</label>
@@ -193,27 +195,29 @@
 							</div>
 							<div class="col-sm-6 col-lg-4">
 								<article class="profile-item profile-item--second" href="#">
-									<div class="profile-item__header">
-										<div class="profile-item__header-text">
-											<h2>Агадуллина Елена</h2>
-											<div class="profile-item__age">41 год
+									<div class="profile-item__block">
+										<div class="profile-item__header"><img class="outlook-img" src="img/svg/outlook-icon-2.svg" alt="" loading="lazy"/>
+											<div class="profile-item__header-text">
+												<h2>Агадуллина Елена</h2>
+												<div class="profile-item__age">41 год
+												</div>
+											</div>
+											<div class="profile-item__header-img">
+												<a class="profile-item__img-wrap" href="#"><img src="img/profile-1.jpg" alt="" loading="lazy"/>
+												</a>
 											</div>
 										</div>
-										<div class="profile-item__header-img">
-											<a class="profile-item__img-wrap" href="#"><img src="img/profile-1.jpg" alt="" loading="lazy"/>
-											</a>
+										<div class="profile-item__body">
+											<div class="profile-item__position">Менеджер по развитию
+											</div>
+											<div class="profile-item__company">ОИВ<br>Подведомственная организация 
+											</div>
+											<ul class="profile-item__groups-list">
+												<li></li>
+											</ul>
 										</div>
-									</div>
-									<div class="profile-item__body">
-										<div class="profile-item__position">Менеджер по развитию
+										<div class="profile-item__btn">Посмотреть профиль
 										</div>
-										<div class="profile-item__company">ОИВ<br>Подведомственная организация 
-										</div>
-										<ul class="profile-item__groups-list">
-											<li></li>
-										</ul>
-									</div>
-									<div class="profile-item__btn">Посмотреть профиль
 									</div>
 								</article>
 								<!-- /.product-item-->
@@ -311,7 +315,12 @@
 										</div>
 										<div class="news-preview__title">Выпусники «Urban Лидер»
 										</div>
-										<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+										<div class="news-preview__text-wrap">
+											<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+											</div>
+											<div class="tooltip" role="tooltip">Егорова Нина Федоровна, Летунова Александра Петровна, Николаев Анатолий Борисович 
+												<div class="arrow" data-popper-arrow="data-popper-arrow"></div>
+											</div>
 										</div>
 										<div class="news-preview__category">Модуль
 										</div>
@@ -407,7 +416,12 @@
 									<div class="news-preview__title-block">
 										<div class="news-preview__title">Выпусники «Urban Лидер»
 										</div>
-										<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+										<div class="news-preview__text-wrap">
+											<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+											</div>
+											<div class="tooltip" role="tooltip">Егорова Нина Федоровна, Летунова Александра Петровна, Николаев Анатолий Борисович 
+												<div class="arrow" data-popper-arrow="data-popper-arrow"></div>
+											</div>
 										</div>
 										<div class="news-preview__category">Модуль
 										</div>

@@ -1,30 +1,58 @@
-mixin profile-item(name, img, age, position, company, interests=[], groups=[], outlook)
+mixin profile-item(name, img, age, position, company, interests=[], groups=[], outlook, blockClass)
 	+b.ARTICLE.profile-item&attributes(attributes)(href='#')
-		+e.header
-			if outlook
-				+img('img/svg/outlook-icon-2.svg').outlook-img
-			+e.header-text
-				h2= name
-				+e.age= age
-			+e.header-img
-				+e.img-wrap(href="#")
-					if img!="8"
-						+img(`img/profile-${img}.jpg`)
-		+e.body
-			if position
-				+e.position= position
-			if company
-				+e.company!= company
-			//- +e.text!= p
-			if interest
-				+e.interest-list.UL
-					each interest in interests
-						li= interest
-			if groups
-				+e.groups-list.UL
-					each group in groups
-						li= group
-		+e.btn Посмотреть профиль
+		if blockClass
+			+e.block
+				+e.header
+					if outlook
+						+img('img/svg/outlook-icon-2.svg').outlook-img
+					+e.header-text
+						h2= name
+						+e.age= age
+					+e.header-img
+						+e.img-wrap(href="#")
+							if img!="8"
+								+img(`img/profile-${img}.jpg`)
+				+e.body
+					if position
+						+e.position= position
+					if company
+						+e.company!= company
+					//- +e.text!= p
+					if interest
+						+e.interest-list.UL
+							each interest in interests
+								li= interest
+					if groups
+						+e.groups-list.UL
+							each group in groups
+								li= group
+				+e.btn Посмотреть профиль
+		else
+			+e.header
+				if outlook
+					+img('img/svg/outlook-icon-2.svg').outlook-img
+				+e.header-text
+					h2= name
+					+e.age= age
+				+e.header-img
+					+e.img-wrap(href="#")
+						if img!="8"
+							+img(`img/profile-${img}.jpg`)
+			+e.body
+				if position
+					+e.position= position
+				if company
+					+e.company!= company
+				//- +e.text!= p
+				if interest
+					+e.interest-list.UL
+						each interest in interests
+							li= interest
+				if groups
+					+e.groups-list.UL
+						each group in groups
+							li= group
+			+e.btn Посмотреть профиль
 	// /.product-item
 
 mixin networkFilter

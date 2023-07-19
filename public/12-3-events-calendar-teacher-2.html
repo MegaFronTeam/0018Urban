@@ -108,24 +108,26 @@
 						</div>
 						<div class="events-filter">
 							<div class="events-filter__filter-wrap" id="events-dropdown">
-								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
-									<label>
-										<select class="events-filter__input form-control">
-											<option>Все</option>
-											<option>Прошедшие</option>
-											<option>Мои</option>
-										</select>
-									</label>
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<select class="events-filter__input form-select сustom-select-js" name="select" data-placeholder="Все">
+										<option value="Все" selected="selected">Все</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
-								<div class="events-filter__input-wrap events-filter__input-wrap--select form-group d-md-none">
-									<label>
-										<select class="events-filter__input form-control">
-											<option>Все</option>
-											<option>Прошедшие</option>
-											<option>Мои</option>
-										</select>
-									</label>
+								<!-- +e.input-wrap-->
+								<div class="events-filter__input-wrap form-group d-md-none">
+									<select class="events-filter__input form-select сustom-select-js" name="select" data-placeholder="Все">
+										<option value="Все" selected="selected">Все</option>
+										<option value=" placeholder 1">placeholder 1</option>
+										<option value=" placeholder 2">placeholder 2</option>
+										<option value=" placeholder 3">placeholder 3</option>
+										<option value=" placeholder 4">placeholder 4</option>
+									</select>
 								</div>
+								<!-- +e.input-wrap-->
 								<div class="events-filter__radio-wrap events-filter__radio-wrap--text radio-wrap">
 									<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="events" type="radio" checked="checked"/><span class="custom-input__text form-check-label">Все</span>
 									</label>
@@ -448,7 +450,12 @@
 										</div>
 										<div class="news-preview__title">Выпусники «Urban Лидер»
 										</div>
-										<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+										<div class="news-preview__text-wrap">
+											<div class="news-preview__text">Летунова Александра Петровна, Прохоров Илья Сергеевич, Иванова Ольга НиколаевнаИванова Ольга НиколаевнаИванова Ольга Николаевна
+											</div>
+											<div class="tooltip" role="tooltip">Егорова Нина Федоровна, Летунова Александра Петровна, Николаев Анатолий Борисович 
+												<div class="arrow" data-popper-arrow="data-popper-arrow"></div>
+											</div>
 										</div>
 										<div class="news-preview__category">Модуль
 										</div>
@@ -491,7 +498,7 @@
 									<div class="news-preview__details">
 										<div class="news-preview__category">Вебинар
 										</div>
-										<div class="news-preview__date">26 сентября
+										<div class="news-preview__date">26 сентября 15:00
 										</div>
 										<div class="news-preview__like">
 											<svg class="icon icon-like ">
