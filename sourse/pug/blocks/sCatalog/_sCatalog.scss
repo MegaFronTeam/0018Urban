@@ -200,12 +200,12 @@
 		@extend .btn, .btn-primary;
 	}
 	&--second {
+		height: 100%;
 		@include media-breakpoint-down(sm) {
-			min-height: 240px;
+			min-height: 250px;
 			@include block(400, 272);
 		}
 		.profile-item {
-			height: 100%;
 			&__block {
 				display: flex;
 				flex-direction: column;

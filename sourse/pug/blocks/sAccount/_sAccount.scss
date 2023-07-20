@@ -193,8 +193,11 @@
 		position: absolute;
 		right: 10px;
 		// top: 55%;
-		top: 37px;
+		top: 33px;
 		font-size: 18px;
+		@include media-breakpoint-up(md) {
+			top: 37px;
+		}
 	}
 
 	.upload-field {
@@ -649,6 +652,14 @@
 						}
 					}
 				}
+				.select2 {
+					width: 100% !important;
+				}
+				.select2-selection.select2-selection--single {
+					font-size: 14px;
+					padding: 3px 23px 3px 7px !important;
+					border-color: #c9cad1 !important;
+				}
 			}
 			&__btn-save {
 				display: block;
@@ -754,7 +765,7 @@
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: contain;
-					cursor: pointer;
+					// cursor: pointer;
 				}
 			}
 		}

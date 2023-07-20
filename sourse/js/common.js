@@ -908,9 +908,9 @@ function eventHandler() {
 		}
 	}
 
-	$('.form-wrap__teacher .close').click(function() {
-		$(this.closest('.col-auto')).hide();
-	});
+	// $('.form-wrap__teacher .close').click(function() {
+	// 	$(this.closest('.col-auto')).hide();
+	// });
 
 };
 if (document.readyState !== 'loading') {
